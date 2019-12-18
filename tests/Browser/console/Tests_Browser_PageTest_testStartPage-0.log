@@ -1,0 +1,20 @@
+[
+    {
+        "level": "WARNING",
+        "message": "http:\/\/schoki2.loc\/events - A cookie associated with a cross-site resource at http:\/\/youtube.com\/ was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at https:\/\/www.chromestatus.com\/feature\/5088147346030592 and https:\/\/www.chromestatus.com\/feature\/5633521622188032.",
+        "source": "other",
+        "timestamp": 1576680381967
+    },
+    {
+        "level": "WARNING",
+        "message": "http:\/\/schoki2.loc\/events - A cookie associated with a cross-site resource at http:\/\/doubleclick.net\/ was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at https:\/\/www.chromestatus.com\/feature\/5088147346030592 and https:\/\/www.chromestatus.com\/feature\/5633521622188032.",
+        "source": "other",
+        "timestamp": 1576680382375
+    },
+    {
+        "level": "WARNING",
+        "message": "deprecation 0 'window.webkitStorageInfo' is deprecated. Please use 'navigator.webkitTemporaryStorage' or 'navigator.webkitPersistentStorage' instead.",
+        "source": "deprecation",
+        "timestamp": 1576680385641
+    }
+]

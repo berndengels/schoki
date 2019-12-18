@@ -1,0 +1,53 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import '~tinymce/skins/content/default/content.css';
+
+// Variables
+@import 'variables';
+@import 'mixins';
+
+.tox-dialog {
+    button.tox-tbtn {
+        &.tox-browse-url {
+            display: none;
+        }
+    }
+    .tox-dialog__body {
+        .tox-dialog__body-nav {
+            div {
+                display: none;
+            }
+            div:first-child {
+                //                display: inline-block;
+            }
+        }
+        .myTiny {
+            * {
+                font-family: $font-family-sans-serif;
+                font-weight: 200;
+                color: #fff !important;
+                background-color: $body-bg-red !important;
+
+                a {
+                    color: $sYellow;
+                }
+                a:hover {
+                    color: #ff0;
+                }
+            }
+        }
+    }
+}
+#tinymce {
+    font-family: $font-family-sans-serif;
+    font-weight: 200;
+    color: #fff !important;
+    background-color: $body-bg-red !important;
+
+    a {
+        color: $sYellow;
+    }
+    a:hover {
+        color: #ff0;
+    }
+}

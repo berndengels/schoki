@@ -1,0 +1,16 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app-admin.css": "/css/app-admin.css",
+    "/css/red.css": "/css/red.css",
+    "/css/dark.css": "/css/dark.css",
+    "/css/tiny.css": "/css/tiny.css",
+    "/js/app-admin.js": "/js/app-admin.js",
+    "/js/admin.js": "/js/admin.js",
+    "/vendor/calendar/css/zabuto_calendar.min.css": "/vendor/calendar/css/zabuto_calendar.min.css",
+    "/vendor/calendar/js/zabuto_calendar.min.js": "/vendor/calendar/js/zabuto_calendar.min.js",
+    "/vendor/dropzone/js/dropzone.min.js": "/vendor/dropzone/js/dropzone.min.js",
+    "/vendor/dropzone/css/dropzone.min.css": "/vendor/dropzone/css/dropzone.min.css",
+    "/vendor/jstree/js/jstree.min.js": "/vendor/jstree/js/jstree.min.js",
+    "/vendor/jstree/js/jstree.js": "/vendor/jstree/js/jstree.js",
+    "/vendor/cropperjs/css/cropper.css": "/vendor/cropperjs/css/cropper.css"
+}

@@ -1,0 +1,172 @@
+
+{#% extends "MyEventBundle::layout.html.twig" %#}
+{% extends "::base.html.twig" %}
+{% import "MyTemplateBundle:Media:media.html.twig" as macro %}
+
+{% set curTime = today|date('H') %}
+{% set isPartyTime = (curTime >= 0 and curTime <= 6) %}
+{% block title %}
+Schokoladen Events
+{% if(category!='') %}{{ category }}{% endif %}
+{% if(theme!='') %}{{ theme }}{% endif %}
+{% if(curPage > 1) %}{{ curPage }}{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<h3>Veranstaltungen</h3>
+{% if entities|length == 0 %}
+<h3>Keine Einträge vorhanden</h3>
+{% else %}
+
+{% spaceless %}
+
+<div class="pager">{{ entities.render()|raw }}</div>
+<div id="events">
+
+{% for i,e in entities %}
+    {% if isPartyTime %}
+        {% set isToday = (e.eventDate|date('Y/m/d') == "yesterday"|date('Y/m/d')) %}
+    {% else %}
+        {% set isToday = (e.eventDate|date('Y/m/d') == "now"|date('Y/m/d')) %}
+    {% endif %}
+
+	{% set img1 = e.getImage(0) %}
+	{% set img2 = e.getImage(1) %}
+	{% set videos = e.getVideos() %}
+	{% set audios = e.getAudios() %}
+	{% set description = e.description|raw|preg_replace("/<p[^>]*>/i",'')|preg_replace("#<p[ \t]*/>#i",'<br />')|preg_replace("#<script[^>]*>|</script>#i",'') %}
+	{% if (use_event_category==true and e.getCategory!='') %}
+	{% set catName = '<span class="category">' ~ e.getCategory ~ '</span> &nbsp;' %}
+	{% else %}
+	{% set catName = '' %}
+	{% endif %}
+
+	<a name="a{{ i }}"></a>
+	<div class="event">
+		<div class="header" title="close panel">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="date">
+						{% if (e.eventDate) %}
+
+							{% if isToday %}
+								<span class="category" style="letter-spacing:8px;"><b>HEUTE IS</b></span><br />
+							{% else %}
+								{{ germanDate(e.eventDate) }}<br/>
+							{% endif %}
+
+						{% endif %}
+						{% if (e.eventTime) %}{{ e.eventTime }}{% else %}{{ default_event_time }}{% endif %} Uhr
+						{% if(e.price!='' and e.price!=0) %}<br />{{ e.price }} €{% endif %}
+					</td>
+
+					<td class="title">
+						{{ catName|raw }}
+						<span title="{{ e.title|striptags }}">
+							{% if(e.theme and e.theme.icon!='') %}
+								<img align="right" class="title_icon" rel="{{ url_theme_icon ~ "/" ~ e.theme.icon  }}" src="{{ (url_theme_icon ~ "/" ~ e.theme.icon)|apply_filter('themeicon') }}" alt="{{ e.theme.name }}" title="{{ e.theme.name }}" />
+							{% endif %}
+							{#{ e.title|striptags|truncate(title_max_len) }#}
+							{{ e.title|striptags }}
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="c{{ i }}" class="content implode">
+			<div class="inner">
+                <p>
+                    {#% for i,img in e.getImages() %#}
+                    {% if(img1) %}
+                        {% set imgFile = url_image ~ "/" ~ img1.internalFilename %}
+                        <img class="tt l" w="{{ img1.width }}" h="{{ img1.height }}" rel="{{ imgFile }}" src="{{ imgFile|apply_filter('listview') }}" alt="{{ img1.title }}" title="{{ img1.title }}" />
+                    {% endif %}
+                    {#% endfor %#}
+                    {% if(e.subtitle!='') %} <span class="b">{{ e.subtitle|raw }}</span><br /> {% endif %}
+                    {% if(img2) %}
+                    {% set imageFile = url_image ~ "/" ~ img2.internalFilename %}
+                    <img class="tt r" w="{{ img2.width }}" h="{{ img2.height }}" rel="{{ imageFile }}" src="{{ imageFile|apply_filter('listview') }}" alt="{{ img2.title }}" title="{{ img2.title }}" />
+                    {% endif %}
+                        {{ description|raw|preg_replace('#(<br[ /].>){3,}#i','<br /><br />') }}
+                    {% if(null!=e.links) %}
+                        {{ e.links|parseurl|raw }}
+                    {% endif %}
+
+					{% if(null!=audios) %}
+                    {% for a in audios %}
+                    {{ macro.media("audio", a.internalFilename, a.title) }}
+                    {% endfor %}
+                    {% endif %}
+
+                    {% if(null!=videos) %}
+                    {% for v in videos %}
+                    {{ macro.media("video", v.internalFilename, v.title) }}
+                    {% endfor %}
+                    {% endif %}
+                    <br />
+                </p>
+			</div>
+		</div>
+		<div class="footer">
+			<div id="t{{ i }}" class="trigger more">&raquo; more</div>
+		</div>
+	</div>
+
+{% endfor %}
+
+</div>
+<div class="pager">{{ entities.render()|raw }}</div>
+
+{% endspaceless %}
+
+{% endif %}
+
+<script type="text/javascript">
+/*<![CDATA[*/
+$(document).ready(function(){
+	$("#events").myExpander({
+		minHeight: minH,
+		explodeFirst: true,
+		contentClass: "content"
+	});
+	myToolTyp('.tt');
+	replaceYoutubeHolder();
+	var eDates = {{ eventDates|raw }};
+	eventCalendar(eDates);
+//	hoverExplode();
+    {% if (firstStart==1 and null!=myOverlay) %}
+	myOverlayStartShow();
+	{% endif %}
+
+	{% if(enable_piwik_stat == 1 and null == app.user) %}
+	myPiwik();
+	window.setInterval(function(){
+		myPiwik()
+	},parseInt(check_visits_interval));
+	{% endif %}
+});
+/*]]>*/
+</script>
+
+{% endblock %}
+
+{% block sidebarCalendar %}
+    <h4>EventCalendar</h4>
+    <div id="eventCalendar"></div>
+{% endblock sidebarCalendar %}
+
+{% block sidebarPiwik %}
+    {% include "MyTemplateBundle:Piwik:piwik.html.twig" %}
+{% endblock sidebarPiwik %}
+
+{% block overlayStart %}
+    {% if not (myOverlay is null) %}
+        {% set imgFile = (myOverlay.image != null) ? url_image ~ "/" ~ myOverlay.image : null %}
+        {% if not (imgFile is null) %}
+        <img {% if not (myOverlay.text is null) %}style="margin:0 10px 10px 0;" align="left"{% else %} align="center"{% endif %} src="{{ imgFile }}" width="{{ myOverlay.width }}" heigt="{{ myOverlay.height }}" alt="{{ myOverlay.title }}" title="{{ myOverlay.title }}" />
+        {% endif %}
+        {% if not (myOverlay.text is null) %}{{ myOverlay.text|raw|preg_replace('#(<br[ /].>){3,}#i','<br /><br />') }}{% endif %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Models;
+
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Carbon;
+
+/**
+ * App\Models\Images
+ *
+ * @property int $id
+ * @property int|null $event_id
+ * @property int|null $page_id
+ * @property int|null $event_periodic_id
+ * @property int|null $event_template_id
+ * @property string $external_filename
+ * @property string $internal_filename
+ * @property string|null $title
+ * @property string $extension
+ * @property int $filesize
+ * @property int|null $updated_by
+ * @property int $created_by
+ * @property Carbon $created_at
+ * @property Carbon|null $updated_at
+ * @property int|null $eventPeriodic_id
+ * @property int|null $width
+ * @property int|null $height
+ * @property-read User $createdBy
+ * @property-read EventPeriodic|null $eventPeriodic
+ * @property-read User|null $updatedBy
+ * @method static Builder|Images newModelQuery()
+ * @method static Builder|Images newQuery()
+ * @method static Builder|Images query()
+ * @method static Builder|Images whereCreatedAt($value)
+ * @method static Builder|Images whereCreatedBy($value)
+ * @method static Builder|Images whereEventId($value)
+ * @method static Builder|Images whereEventPeriodicId($value)
+ * @method static Builder|Images whereEventTemplateId($value)
+ * @method static Builder|Images whereExtension($value)
+ * @method static Builder|Images whereExternalFilename($value)
+ * @method static Builder|Images whereFilesize($value)
+ * @method static Builder|Images whereHeight($value)
+ * @method static Builder|Images whereId($value)
+ * @method static Builder|Images whereInternalFilename($value)
+ * @method static Builder|Images wherePageId($value)
+ * @method static Builder|Images whereTitle($value)
+ * @method static Builder|Images whereUpdatedAt($value)
+ * @method static Builder|Images whereUpdatedBy($value)
+ * @method static Builder|Images whereWidth($value)
+ * @mixin Eloquent
+ * @property-read Event|null $event
+ * @property-read Page|null $page
+ */
+class Images extends Media
+{
+//	use HasUser;
+
+    protected $table = 'images';
+}
