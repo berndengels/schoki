@@ -7,9 +7,11 @@
 /public_html/tinymce/
 /public_html/leaflet/
 /public_html/reports/
+/public_html/uploads/
 /public_html/media/images/
 /public_html/media/audios/
 /public_html/media/videos/
+/platform/sql/
 /app/Libs/Tree/
 /app/Libs/Tree.zip
 /storage/*.key
