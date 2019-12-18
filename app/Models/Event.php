@@ -103,7 +103,8 @@ class Event extends Model
         'links',
         'event_date',
         'event_time',
-        'is_published'
+        'is_periodic',
+        'is_published',
     ];
     protected $dates = ['created_at','updated_at'];
 	protected $eventLink;

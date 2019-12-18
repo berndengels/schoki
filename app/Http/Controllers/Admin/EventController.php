@@ -20,6 +20,7 @@ use App\Models\Event;
 use App\Repositories\EventRepository;
 use App\Repositories\EventPeriodicRepository;
 use App\Forms\EventForm;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
@@ -102,7 +103,7 @@ class EventController extends MainController
 		$override = $request->post('override');
 
 		$attributes = [
-			'is_periodic' 	=> true,
+			'is_periodic' 	=> 1,
 			'title'			=> $eventPeriodic->title,
 			'subtitle'		=> $eventPeriodic->subtitle,
 			'description'	=> $eventPeriodic->description,
@@ -130,12 +131,6 @@ class EventController extends MainController
 
     public function store(SaveEventRequest $request, $id = 0)
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-        $saved = null;
         try {
             if($id > 0) {
                 Event::find($id)->update($request->validated());
@@ -173,7 +168,7 @@ class EventController extends MainController
 				$event = new Event();
 
 				$attributes = [
-					'is_periodic' 	=> false,
+					'is_periodic' 	=> 0,
 					'title'			=> $template->title,
 					'subtitle'		=> $template->subtitle,
 					'description'	=> $template->description,
@@ -198,4 +193,23 @@ class EventController extends MainController
 				return view('admin.form.'.$this->entity, $data);
 			}
 	}
+
+    public function delete( $id ) {
+        $model  = static::$model;
+        if($model) {
+            /**
+             * @var $entity Model
+             */
+            $entity = $model::find($id);
+            if($entity) {
+                $entity->delete();
+                if(0 == $entity->is_periodic && isset($entity->images)) {
+                    $this->removeImages($entity->images);
+                }
+                return redirect()->route('admin.'.$this->entity.'List');
+            }
+        }
+        return null;
+    }
+
 }

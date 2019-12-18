@@ -110,15 +110,16 @@
                         $btnConfirm = $('#wrapperBtnSubmitOverride'),
                         $confirmReset = $('#wrapperConfirmReset'),
                         $btnConfirmReset = $('button','#wrapperConfirmReset'),
-                        $override = $('#override')
+                        $override = $('#override'),
+                        $isPeriodic = $('#isPeriodic')
                     ;
 
                     console.info('event');
                     console.debug(result);
 
                     if(result.entity) {
-
                         $override.val(result.entity.id);
+                        $isPeriodic.val(1);
                         $confirmReset.removeClass('d-none');
                         $btnConfirm.removeClass('d-none');
 
@@ -133,6 +134,7 @@
 
                         $helpBlock.removeClass('d-none').html(html);
                         $btnConfirmReset.click(function(){
+                            $isPeriodic.val(0);
                             $('#event_date').val('');
                             $helpBlock.addClass('d-none');
                             $confirmReset.addClass('d-none');

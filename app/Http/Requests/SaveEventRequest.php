@@ -18,7 +18,10 @@ class SaveEventRequest extends FormRequest
 
     protected function validationData()
     {
-        return array_merge(['is_published' => false], $this->all());
+        return array_merge([
+            'is_published'  => false,
+            'is_periodic'   => false,
+        ], $this->all());
     }
 
     /**
@@ -39,6 +42,7 @@ class SaveEventRequest extends FormRequest
             'images'        => '',
             'links'         => '',
             'is_published'  => 'boolean',
+            'is_periodic'   => 'boolean',
         ];
     }
 
