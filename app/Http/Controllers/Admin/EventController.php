@@ -80,13 +80,10 @@ class EventController extends MainController
 			'templateSelectForm'=> null,
 		]);
 	}
-
+/*
 	public function checkForPeriodicDate( Request $request ) {
 		$date		= $request->post('date');
 		$repo		= new EventPeriodicRepository();
-        /**
-         * @var $entity EventEntity
-         */
         $entity		= $repo->getPeriodicEventByDate($date, true, true);
 		$response	= [
             'date'		=> $date,
@@ -95,7 +92,7 @@ class EventController extends MainController
 
 		return response()->json($response);
 	}
-
+*/
 	public function override( FormBuilder $formBuilder, Request $request, $id = 0 )
 	{
 		parent::initReservedDates();
@@ -138,17 +135,17 @@ class EventController extends MainController
         if(!$validator->valid()) {
             return redirect()->back()->withErrors($validator->errors())->withInput();
         }
-
+        $saved = null;
         try {
             if($id > 0) {
                 Event::find($id)->update($request->validated());
             } else {
-                Event::create($request->validated());
+                $saved = Event::create($request->validated());
+                $id = $saved->id;
             }
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
         }
-
         $override = $request->post('override');
         $template = $request->post('template');
 
@@ -156,7 +153,7 @@ class EventController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.eventEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.eventList');
@@ -176,11 +173,11 @@ class EventController extends MainController
 				$event = new Event();
 
 				$attributes = [
-					'is_periodic' 	=> true,
+					'is_periodic' 	=> false,
 					'title'			=> $template->title,
 					'subtitle'		=> $template->subtitle,
 					'description'	=> $template->description,
-					'links'			=> $template->links,
+					'links'			=> $template->links->count() > 0 ? $template->links->join("\n") : '',
 					'category'		=> $template->category,
 					'theme'			=> $template->theme,
 					'images'		=> $template->images,
