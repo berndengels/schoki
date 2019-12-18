@@ -80,7 +80,7 @@ class EventController extends MainController
 			'templateSelectForm'=> null,
 		]);
 	}
-/*
+
 	public function checkForPeriodicDate( Request $request ) {
 		$date		= $request->post('date');
 		$repo		= new EventPeriodicRepository();
@@ -92,7 +92,7 @@ class EventController extends MainController
 
 		return response()->json($response);
 	}
-*/
+
 	public function override( FormBuilder $formBuilder, Request $request, $id = 0 )
 	{
 		parent::initReservedDates();
@@ -106,12 +106,12 @@ class EventController extends MainController
 			'title'			=> $eventPeriodic->title,
 			'subtitle'		=> $eventPeriodic->subtitle,
 			'description'	=> $eventPeriodic->description,
-			'links'			=> $eventPeriodic->links,
 			'category'		=> $eventPeriodic->category,
 			'theme'			=> $eventPeriodic->theme,
 			'images'		=> $eventPeriodic->images,
 			'event_time'	=> $eventPeriodic->event_time,
 			'event_date'	=> $request->post('event_date'),
+            'links'			=> $eventPeriodic->links->count() > 0 ? $eventPeriodic->links->join("\n") : '',
 			'override'		=> $override,
 		];
 
