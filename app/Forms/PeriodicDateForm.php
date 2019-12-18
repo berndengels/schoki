@@ -24,21 +24,29 @@ class PeriodicDateForm extends Form
         $periodicWeekdayId  = $model ? $model->periodic_weekday_id : null;
 
         $this
-            ->add('position', Field::ENTITY, [
-                'label' => '',
+            ->add('periodic_position_id', Field::ENTITY, [
+                'label' => 'Position',
                 'label_show' => false,
                 'property' => 'name',
                 'class' => PeriodicPosition::class,
                 'selected'  => $periodicPositionId,
                 'empty_value'  => $id ? null : 'Bitte wählen ...',
+                'rules' => ['required'],
+                'error_messages' => [
+                    'periodic_position_id.required' => 'Bitte eine Datums-Position angeben.'
+                ],
             ])
-            ->add('weekday', Field::ENTITY, [
-                'label' => '',
+            ->add('periodic_weekday_id', Field::ENTITY, [
+                'label' => 'Wochentag',
                 'label_show' => false,
                 'property' => 'name_de',
                 'class' => PeriodicWeekday::class,
                 'selected'  => $periodicWeekdayId,
                 'empty_value'  => $id ? null : 'Bitte wählen ...',
+                'rules' => ['required'],
+                'error_messages' => [
+                    'periodic_position_id.required' => 'Bitte einen Wochentag angeben.'
+                ],
             ])
             ->add('periodic_dates', 'static', [
                 'tag' => 'div', // Tag to be used for holding static data,

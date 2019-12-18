@@ -8,6 +8,8 @@
  */
 namespace App\Http\Controllers\Admin;
 
+use App\Models\PeriodicPosition;
+use App\Models\PeriodicWeekday;
 use Auth;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
@@ -51,7 +53,11 @@ class EventPeriodicController extends MainController
         $event  = ($id > 0) ? EventPeriodic::findOrFail($id): null;
         $form   = $formBuilder->create(EventPeriodicForm::class, ['model' => $event]);
 
+        if(!$form->isValid()) {
+            die('error');
+        }
 		$dates = '';
+
 		if($id > 0) {
 			$eventDateTime = new EventDateTime();
 			$dates = $eventDateTime->getPeriodicEventDates($event->periodicPosition->search_key, $event->periodicWeekday->name_en);
@@ -72,17 +78,27 @@ class EventPeriodicController extends MainController
 
     public function store( SaveEventPediodicRequest $request, $id = 0)
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
+        $form = $this->form(EventPeriodicForm::class);
+        if (!$form->isValid()) {
+            return redirect()->back()->withErrors($form->getErrors())->withInput();
         }
+        $periodicDate = $request->post('periodicDate');
+        $exist = EventPeriodic::wherePeriodicPositionId($periodicDate['periodic_position_id'])
+            ->wherePeriodicWeekdayId($periodicDate['periodic_weekday_id'])
+            ->first()
+        ;
+        if($exist) {
+            return redirect()->back()->with('error', 'Für dieses zyklischde Datum existiert bereits periodisches Event ("'.$exist->title.'")!');
+        }
+
+        $validated = array_merge($request->validated(), $periodicDate);
 
         try {
             if($id > 0) {
-                EventPeriodic::find($id)->update($request->validated());
+                EventPeriodic::find($id)->update($validated);
             } else {
-                EventPeriodic::create($request->validated());
+                $saved = EventPeriodic::create($validated);
+                $id = $saved->id;
             }
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
@@ -92,11 +108,10 @@ class EventPeriodicController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.eventPeriodicEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.eventPeriodicList');
         }
     }
-
 }

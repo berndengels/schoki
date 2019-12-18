@@ -92,9 +92,21 @@ class EventPeriodic extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'subtitle'];
+    protected $fillable = [
+        'title',
+        'subtitle',
+        'category_id',
+        'theme_id',
+        'periodic_position_id',
+        'periodic_weekday_id',
+        'periodicDate',
+        'description',
+        'links',
+        'event_time',
+        'is_published',
+    ];
 
-    protected $dates = ['start_date','created_at','updated_at'];
+    protected $dates = ['created_at','updated_at'];
 
 //    protected $appends = array('eventDates');
 

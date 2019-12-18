@@ -29,7 +29,9 @@ class EventPeriodicForm extends MainForm
         $categoryId = $model ? $this->getModel()->category_id : null;
         $themeId    = $model ? $this->getModel()->theme_id : null;
 		$eventTime	= ($model && $model->event_time) ? str_replace('.',':',$model->event_time) : config('event.defaultEventTime');
-
+        if(!$this->isValid()) {
+            dd($this->getErrors());
+        }
         $this
             ->add('id','hidden')
             ->add('is_published', Field::CHECKBOX)
@@ -44,8 +46,8 @@ class EventPeriodicForm extends MainForm
                 'empty_value'  => 'Bitte wählen ...',
             ])
             ->add('periodicDate', 'form', [
-                'label' => 'Termin',
-                'class' => $this->formBuilder->create(PeriodicDateForm::class, [], [
+                'label' => 'periodischer Termin',
+                'class' => $this->formBuilder->create(PeriodicDateForm::class, ['errors' => $this->getErrors()], [
                     'model' => $model,
                 ]),
             ])
@@ -57,10 +59,8 @@ class EventPeriodicForm extends MainForm
 				]
 			])
             ->add('title', Field::TEXT, [
-//				'rules' => 'required|min:3|max:160'
             ])
             ->add('subtitle', Field::TEXT, [
-//                'rules' => 'max:100'
             ])
             ->add('description', Field::TEXTAREA, [
 				'attr'  => ['id' => 'tinymce'],

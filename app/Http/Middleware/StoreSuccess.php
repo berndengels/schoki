@@ -24,10 +24,10 @@ class StoreSuccess
      * @param Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         if( in_array($request->submit, $this->_valideSubmitValues) ) {
-            return $next($request)->with('success','Datensatz erfolgreich gespeichert!');
+//             return $next($request)->with('success','Datensatz erfolgreich gespeichert!');
         }
         return $next($request);
     }

@@ -2,7 +2,11 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
 
 class SaveEventPediodicRequest extends FormRequest
 {
@@ -29,7 +33,6 @@ class SaveEventPediodicRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
             'title'         => 'required|string|min:3|max:160',
             'subtitle'      => 'max:100',
             'event_time'    => 'required',
@@ -46,7 +49,6 @@ class SaveEventPediodicRequest extends FormRequest
     {
         return [
             'category_id.required'  => 'Bitte eine Kategorie auswählen!',
-            'event_date.required'   => 'Bitte ein Veranstaltungs-Datum angeben!',
             'event_time.required'   => 'Bitte die Uhrzeit der Veranstaltungs angeben!',
             'title.required'        => 'Bitte den Titel eintragen!',
             'title.min'             => 'Der Titel muß mindestens 3 Zeichen lang sein.',
