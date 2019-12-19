@@ -77,7 +77,7 @@ class Theme extends Model
 	 */
 	public function events()
 	{
-		return $this->hasMany('App\Models\Event');
+		return $this->hasMany(Event::class);
 	}
 
 	/**
@@ -85,6 +85,34 @@ class Theme extends Model
 	 */
 	public function eventTemplates()
 	{
-		return $this->hasMany('App\Models\EventTemplate');
+		return $this->hasMany(EventTemplate::class);
 	}
+
+    /**
+     * @return HasMany
+     */
+    public function eventPeriodics()
+    {
+        return $this->hasMany(EventPeriodic::class);
+    }
+
+    public function delete()
+    {
+        $count = $this->events->count();
+        if($count > 0) {
+            return back()
+                ->with('error','Es existieren noch Events ('.$count.') mit dieser Kategorie! Bitte vorher löschen.');
+        }
+        $count = $this->eventTemplates->count();
+        if($count > 0) {
+            return back()
+                ->with('error','Es existieren noch Event Templates ('.$count.') mit dieser Kategorie! Bitte vorher löschen.');
+        }
+        $count = $this->eventPeriodics->count();
+        if($count > 0) {
+            return back()
+                ->with('error','Es existieren noch periodische Event ('.$count.') mit dieser Kategorie! Bitte vorher löschen.');
+        }
+        return parent::delete();
+    }
 }

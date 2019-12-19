@@ -65,4 +65,19 @@ class MusicStyle extends Model
     {
         return $this->hasMany(Message::class);
     }
+
+    public function delete()
+    {
+        $count = $this->users->count();
+        if($count > 0) {
+            return back()
+                ->with('error','Es existieren noch User ('.$count.') mit dieser Kategorie! Bitte vorher löschen.');
+        }
+        $count = $this->messages->count();
+        if($count > 0) {
+            return back()
+                ->with('error','Es existieren noch Nachrichtens ('.$count.') mit dieser Kategorie! Bitte vorher löschen.');
+        }
+        return parent::delete();
+    }
 }
