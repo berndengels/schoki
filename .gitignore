@@ -8,9 +8,12 @@
 /public_html/leaflet/
 /public_html/reports/
 /public_html/uploads/
+/public_html/source/
+/public_html/thumbs/
 /public_html/media/images/
 /public_html/media/audios/
 /public_html/media/videos/
+/public_html/filemanager/
 /platform/sql/
 /app/Libs/Tree/
 /app/Libs/Tree.zip
