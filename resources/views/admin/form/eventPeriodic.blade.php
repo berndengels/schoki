@@ -29,7 +29,7 @@
     @endif
 
     @include('admin.templates.newImages')
-    @include('admin.templates.dropzoneTarget', ['images' => $form->images])
+    @include('admin.templates.dropzoneTarget', ['items' => $form->images])
     @include('admin.templates.imageEditorInline')
 
     {!! form_rest($form) !!}
