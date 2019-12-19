@@ -42,7 +42,7 @@ class EventTemplateController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.eventTemplateEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.eventTemplateList');
