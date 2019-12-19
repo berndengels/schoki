@@ -14,6 +14,7 @@
 /public_html/media/audios/
 /public_html/media/videos/
 /public_html/filemanager/
+/public_html/vendor/
 /platform/sql/
 /app/Libs/Tree/
 /app/Libs/Tree.zip
@@ -39,4 +40,3 @@ composer.lock
 package-lock.json
 phpunit.dusk.xml
 webpack.mix.js
-/public_html/vendor/
