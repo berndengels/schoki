@@ -797,6 +797,7 @@ class UploadHandler
             case 'gif':
             case 'png':
                 imagecolortransparent($new_img, imagecolorallocate($new_img, 0, 0, 0));
+            case 'png':
                 imagealphablending($new_img, false);
                 imagesavealpha($new_img, true);
                 break;

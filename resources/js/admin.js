@@ -129,9 +129,9 @@ var initEditor = function (options) {
                     }
                 );
             },
-            external_filemanager_path:"/vendor/filemanager/",
-            filemanager_title:"Responsive Filemanager" ,
-            external_plugins: { "filemanager" : "/vendor/filemanager/plugin.min.js"}
+            external_filemanager_path: "/filemanager/",
+            external_plugins: { "filemanager" : "/filemanager/plugin.min.js"},
+            filemanager_title: "Responsive Filemanager",
         }
     );
     /*
@@ -176,21 +176,21 @@ function addNewImage(response, type)
 
     $(".btnRemoveAdded").click(
         function () {
-                var target = $(this).data('target');
-                removeFile(target, 'img');
-                console.log(target);
+            var target = $(this).data('target');
+            removeFile(target, 'Image');
+            console.log(target);
         }
     );
 }
 
-function addNewFile(response, type)
+function addNewImage(response)
 {
     var filename = response.internal_filename,
-        $newImages = $('#new'+ type + 'Wrapper'),
+        $newImages = $('#newImagesWrapper'),
         $imgContainer = $('#newImages','#newImagesWrapper'),
-        $div = $('<div class="imgItem text-center">');
+        $div = $('<div class="ImageItem text-center">');
 
-    $("<img class='addImg'>").attr(
+    $("<img class='addImage'>").attr(
         {
             src: uploadWebPath +"/"+ filename,
             rel: filename
@@ -199,7 +199,7 @@ function addNewFile(response, type)
 
     $('<div class="btnWrapper"><input class="btn btn-sm btn-outline-danger btnRemoveAdded" type="button" data-target="'+filename+'" value="löschen"></div>')
         .appendTo($div);
-    $("<input name='addedImgages["+filename+"]' class='addImg' type='hidden' rel='"+filename+"'>")
+    $("<input name='addedImgages["+filename+"]' class='addImage' type='hidden' rel='"+filename+"'>")
         .val(JSON.stringify(response))
         .appendTo($div);
 
@@ -209,9 +209,9 @@ function addNewFile(response, type)
 
     $(".btnRemoveAdded").click(
         function () {
-                var target = $(this).data('target');
-                removeFile(target, 'Img');
-                console.log(target);
+            var target = $(this).data('target');
+            removeFile(target, 'Image');
+            console.log(target);
         }
     );
 }
@@ -221,7 +221,7 @@ function addNewAudio(response)
     var filename = response.internal_filename,
         $newFiles = $('#newAudiosWrapper'),
         $container = $('#newAudios','#newAudiosWrapper'),
-        $div = $('<div class="audioItem text-center">');
+        $div = $('<div class="AudioItem text-center">');
 
     $("<img class='addAudio'>").attr(
         {
@@ -242,19 +242,18 @@ function addNewAudio(response)
 
     $(".btnRemoveAdded").click(
         function () {
-                var target = $(this).data('target');
-                removeFile(target, 'Audio');
-                console.log(target);
+            var target = $(this).data('target');
+            removeFile(target, 'Audio');
+            console.log(target);
         }
     );
 }
 
-function removeFile(filename, type)
-{
-
+function removeFile(filename, type) {
     var formData = new FormData();
     formData.append('id', ID);
     formData.append('filename', filename);
+    formData.append('type', type);
     formData.append('_token', $('[name="_token"]').val());
 
     $.post(
@@ -264,9 +263,10 @@ function removeFile(filename, type)
             processData: false,
             contentType: false,
             success(response) {
+                console.info('deleteDropfile');
                 console.info(response);
                 if(response.success) {
-                    $(type + "[rel='"+filename+"']").parent('div.' + type + 'Item').remove();
+                    $("[rel='"+filename+"']").parent('div.' + type + 'Item').remove();
                 }
             },
             error(xhr,err) {
@@ -278,7 +278,6 @@ function removeFile(filename, type)
 }
 
 var initCropper = function (filename, filenameOrig, img, myDropzone) {
-
     cropperOptions = {
         autoCrop: true,
         viewMode: 1,
@@ -286,7 +285,7 @@ var initCropper = function (filename, filenameOrig, img, myDropzone) {
         //                aspectRatio: 4/3,
         rotatable: false,
         //                minCanvasHeight: maxImageHeight,
-        minCropBoxHeight: maxImageHeight,
+        minCropBoxHeight: maxImageHeight || 300,
         minCropBoxWidth: 300,
     };
 
@@ -296,7 +295,6 @@ var initCropper = function (filename, filenameOrig, img, myDropzone) {
     }
     console.info('cropper ready');
     cropper = new Cropper(img, cropperOptions);
-
 
     img.addEventListener(
         'ready', function () {
@@ -342,26 +340,24 @@ var initCropper = function (filename, filenameOrig, img, myDropzone) {
                     formData.append('croppedImage', blob);
                     formData.append('_token', $('[name="_token"]').val());
 
-                    $.post(
-                        {
-                            url: '/admin/file/uploadCropped',
-                            data: formData,
-                            processData: false,
-                            contentType: false,
-                            success(response) {
-                                 myDropzone.removeFile(blob);
-                                if(cropper) {
-                                    cropper.clear();
-                                }
-                                 $('#imgEditor').collapse("hide");
-                                 $(document).trigger('cropperSaved', response);
-                            },
-                            error(xhr,err) {
-                                 console.error('Upload error');
-                                 console.error(err);
-                            },
-                        }
-                    );
+                    $.post({
+                        url: '/admin/file/uploadCropped',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success(response) {
+                            myDropzone.removeFile(blob);
+                            if(cropper) {
+                                cropper.clear();
+                            }
+                            $('#imgEditor').collapse("hide");
+                            $(document).trigger('cropperSaved', response);
+                        },
+                        error(xhr,err) {
+                             console.error('Upload error');
+                             console.error(err);
+                        },
+                    });
                 },'image/jpeg', 0.7
             );
         }
@@ -381,12 +377,13 @@ var initDropzone = function (options) {
         $cropperView,
         dropzoneReset = false,
         dropzoneOptions = {
-            url: "/admin/file/upload",
+            url: options.url || "/admin/file/upload",
+            type: options.type,
             params: {
                 _token: $('meta[name="csrf-token"]').attr('content')
             },
-            paramName: "image",
-            maxFilesize: cropperMaxFilesize, // MB
+            paramName: options.paramName || "image",
+            maxFilesize: options.maxFilesize || 10, // MB
             maxFiles: 1,
             uploadMultiple: false,
             addRemoveLinks: true,
@@ -398,26 +395,26 @@ var initDropzone = function (options) {
             dictMaxFilesExceeded: 'Es darf nur eine Datei gleichzeitig hochgeladen werden!',
             //                dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpeg, .jpg, .png, .gif',
             //                acceptedFiles: ".jpeg,.jpg,.png,.gif",
-            dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpeg, .jpg',
-            acceptedFiles: ".jpeg,.jpg",
+            dictInvalidFileType: options.dictInvalidFileType || 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpeg, .jpg',
+            acceptedFiles: options.acceptedFiles || ".jpeg,.jpg",
             timeout: 10000,
     },
+    dropzoneTarget = "#dropzoneTarget";
+
+    if("Image" === dropzoneOptions.type) {
         initCropperView = function () {
             var $container = $('#imgEditor');
             return $container;
-        },
-        dropzoneTarget = "#dropzoneTarget",
-        $dropzoneTarget = $(dropzoneTarget);
-
-
+        };
+    }
 
     Dropzone.autoDiscover = false;
     myDropzone = new Dropzone(dropzoneTarget, dropzoneOptions);
     myDropzone.on(
-        "maxfilesexceeded", function (file) {
-            this.removeFile(file);
-        }
-    )
+            "maxfilesexceeded", function (file) {
+                this.removeFile(file);
+            }
+        )
         .on(
             "error", function (file, error) {
                 var fileSize = (file.size/1000000).toFixed(1),
@@ -438,15 +435,18 @@ var initDropzone = function (options) {
                 fileName = result.internal_filename;
                 fileNameOrig = currentFile.name;
                 dropzoneReset = false;
-                $cropperView = initCropperView();
-                $cropperView.collapse('show');
 
-                var image = document.createElement('img');
-                image.id = 'img'+c;
-                image.src = '/uploads/' + fileName;
-                image.className = 'img-responsive';
-                $cropperView.find('.img-container').html(image);
-                cropper = initCropper(fileName, fileNameOrig, image, myDropzone);
+                if("Image" === dropzoneOptions.type) {
+                    $cropperView = initCropperView();
+                    $cropperView.collapse('show');
+
+                    var image = document.createElement('img');
+                    image.id = 'img'+c;
+                    image.src = '/uploads/' + fileName;
+                    image.className = 'img-responsive';
+                    $cropperView.find('.img-container').html(image);
+                    cropper = initCropper(fileName, fileNameOrig, image, myDropzone);
+                }
                 c++;
             }
         )
@@ -464,17 +464,30 @@ var initDropzone = function (options) {
                         },
                         dataType: 'json',
                         success: function (data) {
-                            $('#imgEditor').collapse("hide");
-                            $('[rel="'+fileName+'"]','#newImages').remove();
+                            switch(dropzoneOptions.type) {
+                                case "Image":
+                                    $('#imgEditor').collapse("hide");
+                                    $('[rel="'+fileName+'"]','#newImages').remove();
+                                    break;
+                                case "Audio":
+                                    $('[rel="'+fileName+'"]','#newAudios').remove();
+                                    break;
+                            }
                         }
                     }
                 );
             }
         );
-
     $(document).on(
         'cropperSaved', function (evt, response) {
-            addNewImage(response);
+            switch(dropzoneOptions.type) {
+                case 'Image':
+                    addNewImage(response);
+                    break;
+                case 'Audio':
+                    addNewAudio(response);
+                    break;
+            }
         }
     );
 

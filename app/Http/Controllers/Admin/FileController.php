@@ -41,7 +41,6 @@ class FileController extends Controller
 			 */
 			$file       = $request->file('image');
 			$fileName   = $file->getClientOriginalName();
-//			$extension  = $file->getClientOriginalExtension();
 			$extension  = $file->getExtension();
 
 			$hashName   = $file->hashName();
@@ -123,7 +122,6 @@ class FileController extends Controller
 	}
 
 	public function editorUpload( $data ) {
-		dd($data);
 		$response = [
 			'success'   => false,
 //			'error'     => $e->getMessage(),

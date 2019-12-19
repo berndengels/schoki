@@ -2,7 +2,7 @@
 
 if (!isset($_SESSION['RF']) || $_SESSION['RF']["verify"] != "RESPONSIVEfilemanager")
 {
-	die('forbiden');
+//	die('forbiden');
 }
 require dirname(__FILE__) . '/Response.php';
 

@@ -56,6 +56,7 @@ define('DEBUG_ERROR_MESSAGE', true); // TRUE or FALSE
 |    |   |   |   |- responsivefilemanager
 |    |   |   |   |   |- plugin.min.js
 */
+
 $config = array(
 
     /*
@@ -75,7 +76,7 @@ $config = array(
     | with start and final /
     |
     */
-    'upload_dir' => '/../uploads/',
+    'upload_dir' => '/source/',
     /*
     |--------------------------------------------------------------------------
     | relative path from filemanager folder to upload folder
@@ -84,7 +85,7 @@ $config = array(
     | with final /
     |
     */
-    'current_path' => '../../uploads/',
+    'current_path' => '../source/',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +96,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_base_path' => '../../thumbs/',
+    'thumbs_base_path' => '../thumbs/',
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +107,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_upload_dir' => '/../thumbs/',
+    'thumbs_upload_dir' => '/thumbs/',
 
 
     /*
@@ -227,7 +228,7 @@ $config = array(
     | default language file name
     |--------------------------------------------------------------------------
     */
-    'default_language' => "de",
+    'default_language' => "en_EN",
 
     /*
     |--------------------------------------------------------------------------
@@ -380,7 +381,7 @@ $config = array(
     //**********************
     //Allowed extensions (lowercase insert)
     //**********************
-	'ext_img'                                 => array( 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'ico' ), //Images
+    'ext_img'                                 => array( 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'ico' ), //Images
     'ext_file'                                => array( 'doc', 'docx', 'rtf', 'pdf', 'xls', 'xlsx', 'txt', 'csv', 'html', 'xhtml', 'psd', 'sql', 'log', 'fla', 'xml', 'ade', 'adp', 'mdb', 'accdb', 'ppt', 'pptx', 'odt', 'ots', 'ott', 'odb', 'odg', 'otp', 'otg', 'odf', 'ods', 'odp', 'css', 'ai', 'kmz','dwg', 'dxf', 'hpgl', 'plt', 'spl', 'step', 'stp', 'iges', 'igs', 'sat', 'cgm', 'tiff',''), //Files
     'ext_video'                               => array( 'mov', 'mpeg', 'm4v', 'mp4', 'avi', 'mpg', 'wma', "flv", "webm" ), //Video
     'ext_music'                               => array( 'mp3', 'mpga', 'm4a', 'ac3', 'aiff', 'mid', 'ogg', 'wav' ), //Audio
@@ -391,7 +392,7 @@ $config = array(
     //  If you insert an extensions blacklist array the filemanager don't check any extensions but simply block the extensions in the list
     //  otherwise check Allowed extensions configuration
     //*********************
-    'ext_blacklist'							  => ['exe','bat'],
+    'ext_blacklist'							  => false,//['exe','bat','jpg'],
 
 
     //Empty filename permits like .htaccess, .env, ...
@@ -567,9 +568,9 @@ return array_merge(
         'tui_defaults_config' => array(
             //'common.bi.image'                   => $config['common.bi.image'],
             //'common.bisize.width'               => $config['common.bisize.width'],
-            //'common.bisize.height'              => $config['common.bisize.height'], 
+            //'common.bisize.height'              => $config['common.bisize.height'],
             'common.backgroundImage'            => $config['common.backgroundImage'],
-            'common.backgroundColor'            => $config['common.backgroundColor'], 
+            'common.backgroundColor'            => $config['common.backgroundColor'],
             'common.border'                     => $config['common.border'],
             'header.backgroundImage'            => $config['header.backgroundImage'],
             'header.backgroundColor'            => $config['header.backgroundColor'],

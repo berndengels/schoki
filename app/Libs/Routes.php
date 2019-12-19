@@ -43,8 +43,6 @@ class Routes
 
 	public static function getPublicRoutes()
 	{
-		return self::getPageRoutes()
-            ->merge(self::getPageRoutes())
-            ;
+		return self::getPageRoutes()->merge(self::getRoutes('public'));
 	}
 }

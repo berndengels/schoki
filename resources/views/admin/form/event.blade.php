@@ -30,7 +30,7 @@
     @endif
 
     @include('admin.templates.newImages')
-    @include('admin.templates.dropzoneTarget', ['images' => $form->images])
+    @include('admin.templates.dropzoneTarget', ['items' => $form->images])
     @include('admin.templates.imageEditorInline')
 
     {!! form_rest($form) !!}
@@ -157,8 +157,16 @@
             uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
             maxImageHeight = {!! config('event.maxImageHeight') !!},
             cropperMaxFilesize = {!! config('event.maxImageFileSize') !!}
-         ;
-        initDropzone();
+            dropzoneOptions = {
+                type: 'Image',
+                paramName: 'image',
+                maxFilesize: {!! config('event.maxImageFileSize') !!},
+                dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .mp3, .m4a',
+                acceptedFiles: ".jpeg,.jpg",
+                url: "/admin/file/upload",
+            };
+
+        initDropzone(dropzoneOptions);
 
         var $myDate = $('input[type=date]');
 

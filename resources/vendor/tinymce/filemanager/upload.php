@@ -7,9 +7,9 @@ try {
 
     include 'include/utils.php';
 
-    if ($_SESSION['RF']["verify"] != "RESPONSIVEfilemanager") {
-        response(trans('forbidden') . AddErrorLocation(), 403)->send();
-        exit;
+    if (!isset($_SESSION['RF']["verify"]) || $_SESSION['RF']["verify"] != "RESPONSIVEfilemanager") {
+//        response(trans('forbidden') . AddErrorLocation(), 403)->send();
+//        exit;
     }
 
     include 'include/mime_type_lib.php';
@@ -175,7 +175,7 @@ try {
         $uploadConfig['upload_dir'] = $config['ftp_temp_folder'];
     }
 
-    //print_r($uploadConfig);die();
+    //print_r($_FILES);die();
     $upload_handler = new UploadHandler($uploadConfig, true, $messages);
 } catch (Exception $e) {
     $return = array();
