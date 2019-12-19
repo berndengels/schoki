@@ -26,6 +26,7 @@ class PageForm extends MainForm
                 'attr'  => ['id' => 'tinymce'],
             ])
         ;
+/*
 		if( $model && $model->audios && $model->audios->count() > 0 ) {
 			$this->add('audios', 'collection', [
 				'prototype'     => true,
@@ -42,7 +43,7 @@ class PageForm extends MainForm
 				]
 			]);
 		}
-
+*/
 		$this->addSubmits();
 
         if( $id > 0 ) {
