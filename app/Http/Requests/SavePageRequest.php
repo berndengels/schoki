@@ -29,7 +29,6 @@ class SavePageRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
             'title'         => 'required|string|min:3|max:160',
             'body'          => '',
             'is_published'  => 'boolean',

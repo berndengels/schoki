@@ -29,12 +29,6 @@ class PageController extends MainController
     public function store( SavePageRequest $request, $id = 0 )
     {
         $entity = ($id > 0) ? Page::find($id) : new Page();
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
         $values = $request->validated();
 
         $entity->title          = $values['title'];
@@ -50,7 +44,7 @@ class PageController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.pageEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.pageList');

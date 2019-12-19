@@ -27,17 +27,12 @@ class ThemeController extends MainController
 
     public function store(SaveThemeRequest $request, $id = 0 )
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
         try {
             if($id > 0) {
                 Theme::find($id)->update($request->validated());
             } else {
-                Theme::create($request->validated());
+                $saved = Theme::create($request->validated());
+                $id = $saved->id;
             }
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
@@ -45,7 +40,7 @@ class ThemeController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.themeEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.themeList');

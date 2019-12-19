@@ -29,7 +29,6 @@ class SaveEventTemplateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
             'title'         => 'required|string|min:3|max:160',
             'subtitle'      => 'max:100',
             'category_id'   => 'required',

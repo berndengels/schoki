@@ -29,12 +29,6 @@ class MusicStyleController extends MainController
 
 	public function store( SaveMusicStyleRequest $request, $id = 0 )
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
         $entity = ($id > 0) ? MusicStyle::find($id) : new MusicStyle();
 
         $values = $request->validated();
@@ -49,7 +43,7 @@ class MusicStyleController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.musicStyleEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.musicStyleList');

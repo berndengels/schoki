@@ -29,7 +29,6 @@ class SaveCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
             'name'          => 'required|min:3|max:50',
             'slug'          => '',
             'icon'          => '',

@@ -47,7 +47,15 @@ class Theme extends Model
 		'name',
 	];
 	protected $table = 'theme';
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'name',
+        'slug',
+        'icon',
+        'icon_orig',
+        'default_time',
+        'default_price',
+        'is_published',
+    ];
 
     public $timestamps = false;
 

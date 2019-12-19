@@ -83,16 +83,10 @@ class UserController extends MainController
     public function store( SaveUserRequest $request, $id = 0 )
     {
         $user   = ($id > 0) ? User::find($id) : new User();
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
         $values = $request->validated();
 
-        $user->username = $values['username'];
-        $user->email    = $values['email'];
+        $user->username         = $values['username'];
+        $user->email            = $values['email'];
         $user->enabled          = isset($values['enabled']) ? 1 : 0;
         $user->is_super_admin   = ($this->isAdmin && isset($values['is_super_admin'])) ? 1 : null;
 
@@ -120,7 +114,7 @@ class UserController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.userEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.userList');

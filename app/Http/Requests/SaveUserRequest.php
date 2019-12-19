@@ -33,13 +33,12 @@ class SaveUserRequest extends FormRequest
     {
         $id = $this->request->get('id');
         return [
-            'id'        => '',
             'username'  => 'required|min:3|max:50',
             'email'     => (!$id) ? 'required|email|unique:my_user,email' : 'required|email',
             'password'  => (!$id) ? 'required|alpha_num|between:6,20' : 'nullable|alpha_num|between:6,20',
             'enabled'           => 'boolean',
-            'music_style_id'    => '',
             'is_super_admin'    => 'boolean',
+            'music_style_id'    => '',
         ];
     }
 

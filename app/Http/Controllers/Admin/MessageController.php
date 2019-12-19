@@ -82,10 +82,10 @@ class MessageController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.messageEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
-                return redirect()->route('admin.categoryList');
+                return redirect()->route('admin.messageList');
         }
     }
 }

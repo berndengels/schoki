@@ -24,7 +24,6 @@ class SaveMusicStyleRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'    => '',
             'name'  => 'required',
         ];
     }

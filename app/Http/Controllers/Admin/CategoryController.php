@@ -27,17 +27,12 @@ class CategoryController extends MainController
 
     public function store(SaveCategoryRequest $request, $id = 0 )
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
         try {
             if($id > 0) {
                 Category::find($id)->update($request->validated());
             } else {
-                Category::create($request->validated());
+                $saved = Category::create($request->validated());
+                $id = $saved->id;
             }
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
@@ -45,7 +40,7 @@ class CategoryController extends MainController
 
         switch($request->submit) {
             case 'save':
-                return back();
+                return redirect()->route('admin.categoryEdit', ['id' => $id]);
             case 'saveAndBack':
             default:
                 return redirect()->route('admin.categoryList');

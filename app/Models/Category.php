@@ -43,7 +43,14 @@ class Category extends Model
 	use Sortable;
 
 	protected $table = 'category';
-    protected $fillable = ['name','slug','icon'];
+    protected $fillable = [
+        'name',
+        'slug',
+        'icon',
+        'default_time',
+        'default_price',
+        'is_published',
+    ];
     public $timestamps = false;
 	public $sortable = [
 		'name',
