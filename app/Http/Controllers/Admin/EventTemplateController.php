@@ -27,16 +27,12 @@ class EventTemplateController extends MainController
 
     public function store(SaveEventTemplateRequest $request, $id = 0 )
     {
-        $validator = Validator::make($request->post(), $request->rules(), $request->messages());
-
-        if(!$validator->valid()) {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
         try {
             if($id > 0) {
                 EventTemplate::find($id)->update($request->validated());
             } else {
-                EventTemplate::create($request->validated());
+                $saved = EventTemplate::create($request->validated());
+                $id = $saved->id;
             }
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());

@@ -61,7 +61,14 @@ class EventTemplate extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'subtitle'];
+    protected $fillable = [
+        'category_id',
+        'theme_id',
+        'title',
+        'subtitle',
+        'description',
+        'links',
+    ];
     protected $dates = ['created_at','updated_at'];
 	protected $eventLink;
 	public $descriptionSanitized;
