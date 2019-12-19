@@ -87,7 +87,7 @@ class EventPeriodicController extends MainController
             ->wherePeriodicWeekdayId($periodicDate['periodic_weekday_id'])
             ->first()
         ;
-        if($exist) {
+        if($exist && $id === 0) {
             return redirect()->back()->with('error', 'Für dieses zyklischde Datum existiert bereits periodisches Event ("'.$exist->title.'")!');
         }
 
