@@ -48,8 +48,7 @@ class BandContactForm
                 'placeholder'   => 'Dein Name',
                 'featured'      => true,
                 'required'      => true,
-                'validator'     => 'required',
-//                'hint'          => 'Bitte Deinen Namen eintragen!',
+                'validator'     => 'string',
             ],
             [
                 'type'          => 'input',
@@ -61,8 +60,7 @@ class BandContactForm
                 'placeholder'   => 'Deine Email-Adresse',
                 'featured'      => true,
                 'required'      => true,
-                'validator'     => 'required',
-//                'hint'          => 'Bitte Deine Email Adresse eintragen!',
+                'validator'     => 'email',
             ],
             [
                 'type'          => 'textArea',
@@ -74,8 +72,7 @@ class BandContactForm
                 'featured'      => true,
                 'required'      => true,
                 'rows'          => 4,
-                'validator'     => 'required',
-//                'hint'          => 'Bitte eine Nachricht eintragen!',
+                'validator'     => 'string',
             ],
         ],
     ];
@@ -114,13 +111,13 @@ class BandContactForm
             'model'         => 'music_style_id',
             'required'      => true,
             'default'       => null,
-            'value'         => null,
-            'values'        => MusicStyleResource::collection( MusicStyle::all()->sortBy('name') ),
-            'validator'     => 'required',
+//            'value'         => null,
+            'validator'     => 'integer',
             'selectOptions' => [
                 'noneSelectedText'      => 'bitte wählen',
                 'hideNoneSelectedText'  =>  false,
             ],
+            'values'        => MusicStyleResource::collection( MusicStyle::all()->sortBy('name') ),
         ];
 
         $fields = $this->schemaData['fields'];

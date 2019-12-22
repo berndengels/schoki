@@ -81,6 +81,52 @@ class Fields extends Entity
     public $selectOptions = null;
 
     /**
+     * @var string
+     */
+    public $buttonText = '';
+
+    /**
+     * @var bool
+     */
+    public $validateBeforeSubmit = false;
+
+    /**
+     * @param string $buttonText
+     * @return $this
+     */
+    public function setButtonText(string $buttonText): self
+    {
+        $this->buttonText = $buttonText;
+        return $this;
+    }
+
+    /**
+     * @param bool $validateBeforeSubmit
+     * @return $this
+     */
+    public function setValidateBeforeSubmit(bool $validateBeforeSubmit): self
+    {
+        $this->validateBeforeSubmit = $validateBeforeSubmit;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getButtonText(): string
+    {
+        return $this->buttonText;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isValidateBeforeSubmit(): bool
+    {
+        return $this->validateBeforeSubmit;
+    }
+
+    /**
      * @return string
      */
     public function getNoneSelectedText(): string
