@@ -42,9 +42,17 @@
         uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
         maxImageHeight = {!! config('event.maxImageHeight') !!},
         cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
-        periodicDates = [{!! $dates !!}];
+        periodicDates = [{!! $dates !!}],
+        dropzoneOptions = {
+            type: 'Image',
+            paramName: 'image',
+            maxFilesize: {!! config('event.maxImageFileSize') !!},
+            dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .mp3, .m4a',
+            acceptedFiles: ".jpeg,.jpg",
+            url: "/admin/file/upload",
+        };
 
-    initDropzone();
+    initDropzone(dropzoneOptions);
 
     $('.multi-collapse').on('shown.bs.collapse', function () {
         $('html, body').animate({ scrollTop: ($('#btnImageCollapse').offset().top)}, 'slow');

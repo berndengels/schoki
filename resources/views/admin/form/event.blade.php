@@ -156,7 +156,7 @@
         var ID = {{ $id ?? 'null' }},
             uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
             maxImageHeight = {!! config('event.maxImageHeight') !!},
-            cropperMaxFilesize = {!! config('event.maxImageFileSize') !!}
+            cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
             dropzoneOptions = {
                 type: 'Image',
                 paramName: 'image',

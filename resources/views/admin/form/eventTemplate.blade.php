@@ -44,18 +44,26 @@
             maxImageHeight = {!! config('event.maxImageHeight') !!},
             cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
             tinymceOptions = {
-            selector: '#tinymce',
-            plugins: 'preview code advlist autolink link paste lists charmap preview media help',
-            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link autolink media code preview help',
-            image_advtab: true,
-            width: 800,
-            height: 600,
-            paste_as_text: false,
-            images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
-        };
+                selector: '#tinymce',
+                plugins: 'preview code advlist autolink link paste lists charmap preview media help',
+                toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link autolink media code preview help',
+                image_advtab: true,
+                width: 800,
+                height: 600,
+                paste_as_text: false,
+                images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
+            },
+            dropzoneOptions = {
+                type: 'Image',
+                paramName: 'image',
+                maxFilesize: {!! config('event.maxImageFileSize') !!},
+                dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .mp3, .m4a',
+                acceptedFiles: ".jpeg,.jpg",
+                url: "/admin/file/upload",
+            };
 
         initEditor(tinymceOptions);
-        initDropzone();
+        initDropzone(dropzoneOptions);
 
         $('.multi-collapse').on('shown.bs.collapse', function () {
             $('html, body').animate({ scrollTop: ($('#btnImageCollapse').offset().top)}, 'slow');
