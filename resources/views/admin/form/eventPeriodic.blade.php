@@ -47,7 +47,7 @@
             type: 'Image',
             paramName: 'image',
             maxFilesize: {!! config('event.maxImageFileSize') !!},
-            dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .mp3, .m4a',
+            dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpg, .jpeg',
             acceptedFiles: ".jpeg,.jpg",
             url: "/admin/file/upload",
         };
