@@ -53,13 +53,16 @@ class MenuRepository {
         return Menu::whereName($name)->get()->toTree();
     }
 
-    public function getTopMenu() {
+    public function getTopMenu($forApi = false) {
         $topMenuType    = MenuItemType::where('type', 'topMenuRoot')->first();
         $topMenu 	    = Menu::select(['id'])->where('menu_item_type_id', $topMenuType->id)->first();
 
-        $query = Menu::where('is_published',1)
-            ->with('menuItemType')
-        ;
+        $query = Menu::where('is_published',1);
+        if($forApi) {
+            $query = $query->where('api_enabled', 1);
+        }
+        $query->with('menuItemType');
+
         return $query
             ->defaultOrder()
             ->descendantsOf($topMenu->id)
@@ -67,13 +70,16 @@ class MenuRepository {
             ;
     }
 
-    public function getBottomMenu() {
+    public function getBottomMenu($forApi = false) {
         $bottomMenuType	= MenuItemType::where('type', 'bottomMenuRoot')->first();
         $bottomMenu 	= Menu::select(['id'])->where('menu_item_type_id', $bottomMenuType->id)->first();
 
-        $query = Menu::where('is_published',1)
-            ->with('menuItemType')
-        ;
+        $query = Menu::where('is_published',1);
+        if($forApi) {
+            $query = $query->where('api_enabled', 1);
+        }
+        $query->with('menuItemType');
+
         return $query
             ->defaultOrder()
             ->descendantsOf($bottomMenu->id)->where('is_published',1)

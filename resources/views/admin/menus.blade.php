@@ -140,6 +140,7 @@
                                 $('#fa_icon', formId).val(d.fa_icon);
                                 $('input[name=id]', formId).val(d.id);
                                 $('#is_published', formId).prop('checked', (1 == d.is_published) ? true : false);
+                                $('#api_enabled', formId).prop('checked', (1 == d.api_enabled) ? true : false);
                                 $('#url', formId).val(d.url);
                                 $('#menuItemType', formId).val("");
 

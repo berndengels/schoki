@@ -27,13 +27,13 @@ class SpaMenuController extends Controller
 
     public function top()
     {
-        $result = $this->repo->getTopMenu();
+        $result = $this->repo->getTopMenu(true);
         return response()->json($result);
     }
 
     public function bottom()
     {
-        $result = $this->repo->getBottomMenu();
+        $result = $this->repo->getBottomMenu(true);
         return response()->json($result);
     }
 }

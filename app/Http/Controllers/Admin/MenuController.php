@@ -150,6 +150,7 @@ class MenuController extends Controller
 						'url'	        => $node->url,
 						'menuItemType'	=> isset($node->menuItemType) ? $node->menuItemType : null,
 						'is_published' 	=> isset($node->is_published) ? $node->is_published : null,
+                        'api_enabled' 	=> isset($node->api_enabled) ? $node->api_enabled : null,
 					];
 				} else {
 					$result = ['error' => 'no node found by id: ' . $id];
@@ -161,6 +162,7 @@ class MenuController extends Controller
 					'name' 			=> $text,
 					'lvl'			=> $lvl,
 					'is_published'	=> 0,
+                    'api_enabled'   => 0,
 				]);
 				$node->save();
 				$result = [
@@ -264,6 +266,7 @@ class MenuController extends Controller
                 $node->fa_icon				= $data['fa_icon'];
 				$node->name					= $data['name'];
 				$node->is_published 		= isset($data['is_published']) ? 1 : 0;
+                $node->api_enabled 		    = isset($data['api_enabled']) ? 1 : 0;
 				$node->menu_item_type_id	= $type;
 
 				$result = $node->save();

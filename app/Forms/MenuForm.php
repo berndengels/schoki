@@ -22,6 +22,7 @@ class MenuForm extends Form
         $this
             ->add('id', Field::HIDDEN)
             ->add('is_published', Field::CHECKBOX)
+            ->add('api_enabled', Field::CHECKBOX)
             ->add('name', Field::TEXT, [
                 'rules' => 'required',
             ])
