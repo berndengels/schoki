@@ -41,4 +41,3 @@ yarn.lock
 composer.lock
 package-lock.json
 phpunit.dusk.xml
-webpack.mix.js
