@@ -13,7 +13,7 @@
 @section('content')
     {!! form_start($form) !!}
     {!! form_until($form, 'remove') !!}
-    @if ($errors->has('g-recaptcha-response'))
+    @if (isset($errors) && $errors->has('g-recaptcha-response'))
         <div class="captcha-error text-warning mx-auto">
             <!--b>{--!! $errors->first('g-recaptcha-response') !!--}</b-->
             <b>Bitte das Captcha bedienen.</b>
