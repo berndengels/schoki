@@ -20,7 +20,7 @@ class SaveEventRequest extends FormRequest
     {
         return array_merge([
             'is_published'  => false,
-            'is_periodic'   => false,
+            'is_periodic'   => 0,
         ], $this->all());
     }
 
@@ -42,7 +42,7 @@ class SaveEventRequest extends FormRequest
             'images'        => '',
             'links'         => '',
             'is_published'  => 'boolean',
-            'is_periodic'   => 'boolean',
+            'is_periodic'   => '',
         ];
     }
 

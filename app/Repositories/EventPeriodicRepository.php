@@ -37,7 +37,7 @@ class EventPeriodicRepository {
         return $events;
     }
 
-	public function getPeriodicEventByDate( $dateString, $formated = true, $isPublic = false ) : EventEntity
+	public function getPeriodicEventByDate( $dateString, $formated = true, $isPublic = false )
 	{
         $found = $this->getAllPeriodicDates($formated, $isPublic)->first(function ($entity, $date) use($dateString)  {
             if($date === $dateString) {

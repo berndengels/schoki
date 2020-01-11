@@ -29,6 +29,7 @@ class EventForm extends MainForm
     {
         $model      = $this->getModel() ?: null;
         $id         = $model ? $model->id : null;
+        $isPeriodic = ($id) ? $model->is_periodic : 0;
         $categoryId = ($model && $model->category) ? $model->category->id : null;
         $themeId    = ($model && $model->theme) ? $model->theme->id : null;
 		$eventTime	= ($model && $model->event_time) ? str_replace('.',':',$model->event_time) : config('event.defaultEventTime');
@@ -41,7 +42,8 @@ class EventForm extends MainForm
             ->add('is_periodic', Field::HIDDEN, [
                 'attr' => [
                     'id' => 'isPeriodic',
-                ]
+                ],
+                'value' => $isPeriodic,
             ])
             ->add('id', Field::HIDDEN, [
 				'attr' => [

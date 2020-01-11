@@ -93,8 +93,16 @@
         datepicker.on('changeDate', function(e, data) {
 //        $('#event_date').on('change', function(e) {
 //            var eventDate = new Date(e.date);
-            var eventDate = $(this).val();
-//            eventDate = eventDate.toISOString().split('T')[0];
+            var eventDate = $(this).val(),
+                $helpBlock = $('.help-block','#wrapperEventDate'),
+                $btnConfirm = $('#wrapperBtnSubmitOverride'),
+                $confirmReset = $('#wrapperConfirmReset'),
+                $btnConfirmReset = $('button','#wrapperConfirmReset'),
+                $override = $('#override'),
+                $isPeriodic = $('#isPeriodic')
+            ;
+
+            //            eventDate = eventDate.toISOString().split('T')[0];
             console.info($(this).val());
 
             $.post({
@@ -104,15 +112,11 @@
                     _token: $('[name="_token"]').val()
                 },
                 dataType: 'json',
+                error: function(err){
+                    $isPeriodic.val(0);
+                    console.error(err);
+                },
                 success: function (result) {
-                    var
-                        $helpBlock = $('.help-block','#wrapperEventDate'),
-                        $btnConfirm = $('#wrapperBtnSubmitOverride'),
-                        $confirmReset = $('#wrapperConfirmReset'),
-                        $btnConfirmReset = $('button','#wrapperConfirmReset'),
-                        $override = $('#override'),
-                        $isPeriodic = $('#isPeriodic')
-                    ;
 
                     console.info('event');
                     console.debug(result);
@@ -134,13 +138,14 @@
 
                         $helpBlock.removeClass('d-none').html(html);
                         $btnConfirmReset.click(function(){
-                            $isPeriodic.val(0);
+                            $isPeriodic.val(false);
                             $('#event_date').val('');
                             $helpBlock.addClass('d-none');
                             $confirmReset.addClass('d-none');
                             $btnConfirm.addClass('d-none');
                         });
                     } else {
+                        $isPeriodic.val(0);
                         $btnConfirm.addClass('d-none');
                         $confirmReset.addClass('d-none');
                     }
