@@ -33,15 +33,17 @@ class SaveEventPediodicRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'         => 'required|string|min:3|max:160',
-            'subtitle'      => 'max:100',
-            'event_time'    => 'required',
-            'category_id'   => 'required',
-            'theme_id'      => '',
-            'description'   => '',
-            'images'        => '',
-            'links'         => '',
-            'is_published'  => 'boolean',
+            'title'             => 'required|string|min:3|max:160',
+            'subtitle'          => 'max:100',
+            'event_time'        => 'required',
+            'category_id'       => 'required',
+            'periodic_position' => 'required',
+            'periodic_weekday'  => 'required',
+            'theme_id'          => '',
+            'description'       => '',
+            'images'            => '',
+            'links'             => '',
+            'is_published'      => 'boolean',
         ];
     }
 
@@ -54,6 +56,8 @@ class SaveEventPediodicRequest extends FormRequest
             'title.min'             => 'Der Titel muß mindestens 3 Zeichen lang sein.',
             'title.max'             => 'Der Titel darf maximal 160 Zeichen enhalten.',
             'subtitle.max'          => 'Der Untertitel darf maximal 100 Zeichen lang sein.',
+            'periodic_position.required'   => 'Bitte die Position das Datums angeben!',
+            'periodic_weekday.required'    => 'Bitte den Wochentag das Datums angeben!',
         ];
     }
 }

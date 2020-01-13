@@ -43,6 +43,8 @@ use Kalnoy\Nestedset\QueryBuilder;
  * @method static Builder|Menu whereRgt($value)
  * @method static Builder|Menu whereUrl($value)
  * @mixin Eloquent
+ * @property int|null $api_enabled
+ * @method static Builder|Menu whereApiEnabled($value)
  */
 class Menu extends Model
 {

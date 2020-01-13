@@ -53,18 +53,17 @@ class EventPeriodicController extends MainController
         $event  = ($id > 0) ? EventPeriodic::findOrFail($id): null;
         $form   = $formBuilder->create(EventPeriodicForm::class, ['model' => $event]);
 
-        if(!$form->isValid()) {
-            die('error');
-        }
 		$dates = '';
 
 		if($id > 0) {
 			$eventDateTime = new EventDateTime();
-			$dates = $eventDateTime->getPeriodicEventDates($event->periodicPosition->search_key, $event->periodicWeekday->name_en);
-			array_walk($dates, function(&$v){
-				$v = "'$v'";
-			});
-			$dates = implode(',', $dates);
+			$dates = $eventDateTime->getPeriodicEventDates($event->periodic_position, $event->periodic_weekday);
+			if($dates && count($dates) > 0) {
+                array_walk($dates, function(&$v){
+                    $v = "'$v'";
+                });
+                $dates = implode(',', $dates);
+            }
 		}
 
         return view('admin.form.eventPeriodic', [
@@ -82,22 +81,19 @@ class EventPeriodicController extends MainController
         if (!$form->isValid()) {
             return redirect()->back()->withErrors($form->getErrors())->withInput();
         }
-        $periodicDate = $request->post('periodicDate');
-        $exist = EventPeriodic::wherePeriodicPositionId($periodicDate['periodic_position_id'])
-            ->wherePeriodicWeekdayId($periodicDate['periodic_weekday_id'])
+        $exist = EventPeriodic::wherePeriodicPosition($request['periodic_position'])
+            ->wherePeriodicWeekday($request['periodic_weekday'])
             ->first()
         ;
         if($exist && $id === 0) {
             return redirect()->back()->with('error', 'Für dieses zyklischde Datum existiert bereits periodisches Event ("'.$exist->title.'")!');
         }
 
-        $validated = array_merge($request->validated(), $periodicDate);
-
         try {
             if($id > 0) {
-                EventPeriodic::find($id)->update($validated);
+                EventPeriodic::find($id)->update($request->validated());
             } else {
-                $saved = EventPeriodic::create($validated);
+                $saved = EventPeriodic::create($request->validated());
                 $id = $saved->id;
             }
         } catch(Exception $e) {

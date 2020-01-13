@@ -13,4 +13,23 @@ return [
 	'maxImageFileSize'  => env('MAX_IMAGE_FILESIZE', 3), // MB
 	'paginationLimit' 	=> 10,
 	'eventsPaginationLimit'	=> 30,
+    'periodicPosition'  => [
+        1           => 'jede Woche',
+        2           => 'jeden zweiten',
+        3           => 'jeden dritten',
+        4           => 'jeden vierten',
+        'first'     => 'monatlich jeden ersten',
+        'second'    => 'monatlich jeden zweiten',
+        'third'     => 'monatlich jeden dritten',
+        'last'      => 'monatlich jeden letzten',
+    ],
+    'periodicWeekday'   => [
+        'monday'        => 'Montag',
+        'tuesday'       => 'Dienstag',
+        'wednesday'     => 'Mittwoch',
+        'thursday'      => 'Donnerstag',
+        'friday'        => 'Freitag',
+        'saturday'      => 'Samstag',
+        'sunday'        => 'Sonntag',
+    ],
 ];

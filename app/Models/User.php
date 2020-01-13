@@ -85,7 +85,7 @@ class User extends Authenticatable implements JWTSubject
      * @var string
      */
     protected $table = 'my_user';
-	protected  $primaryKey = 'id';
+	protected $primaryKey = 'id';
 	public $incrementing = true;
     /**
      * The attributes that are mass assignable.
@@ -134,12 +134,12 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function eventsCreated()
 	{
-		return $this->hasMany(App\Models\Even::class, 'created_by', 'id');
+		return $this->hasMany(Event::class, 'created_by', 'id');
 	}
 
 	public function eventsUpdated()
 	{
-		return $this->hasMany(App\Models\Event::class, 'updated_by', 'id');
+		return $this->hasMany(Event::class, 'updated_by', 'id');
 	}
 
 	/**
@@ -147,12 +147,12 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function eventTemplatesCreated()
 	{
-		return $this->hasMany(App\Models\EventTemplate::class, 'created_by', 'id');
+		return $this->hasMany(EventTemplate::class, 'created_by', 'id');
 	}
 
 	public function eventTemplatesUpdated()
 	{
-		return $this->hasMany(App\Models\EventTemplate::class, 'updated_by', 'id');
+		return $this->hasMany(EventTemplate::class, 'updated_by', 'id');
 	}
 
 	/**
@@ -160,7 +160,7 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function eventsPeriodicCreated()
 	{
-		return $this->hasMany(App\Models\EventPeriodic::class, 'created_by', 'id');
+		return $this->hasMany(EventPeriodic::class, 'created_by', 'id');
 	}
 
 	/**
@@ -168,7 +168,7 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function eventsPeriodicUpdated()
 	{
-		return $this->hasMany(App\Models\EventPeriodic::class, 'updated_by', 'id');
+		return $this->hasMany(EventPeriodic::class, 'updated_by', 'id');
 	}
 
 	/**
@@ -176,7 +176,7 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function pagesCreated()
 	{
-		return $this->hasMany(App\Models\Page::class, 'created_by', 'id');
+		return $this->hasMany(Page::class, 'created_by', 'id');
 	}
 
 	/**
@@ -184,7 +184,7 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function pagesUpdated()
 	{
-		return $this->hasMany(App\Models\Page::class, 'updated_by', 'id');
+		return $this->hasMany(Page::class, 'updated_by', 'id');
 	}
 
 	/**
@@ -192,7 +192,7 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function newsletterCreated()
 	{
-		return $this->hasMany(App\Models\Newsletter::class, 'created_by', 'id');
+		return $this->hasMany(Newsletter::class, 'created_by', 'id');
 	}
 
 	/**
@@ -200,6 +200,6 @@ class User extends Authenticatable implements JWTSubject
 	 */
 	public function newsletterUpdated()
 	{
-		return $this->hasMany(App\Models\Newsletter::class, 'updated_by', 'id');
+		return $this->hasMany(Newsletter::class, 'updated_by', 'id');
 	}
 }

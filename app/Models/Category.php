@@ -37,6 +37,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Category whereName($value)
  * @method static Builder|Category whereSlug($value)
  * @mixin Eloquent
+ * @property-read Collection|EventPeriodic[] $eventPeriodics
+ * @property-read int|null $event_periodics_count
  */
 class Category extends Model
 {

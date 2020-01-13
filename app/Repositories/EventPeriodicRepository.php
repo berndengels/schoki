@@ -22,9 +22,7 @@ class EventPeriodicRepository {
 
     public function getPeriodicDates( EventPeriodic $entity, $formated = true, $isPublic = false )
 	{
-        $weekday    = ucfirst($entity->periodicWeekday->name_en);
-        $position   = $entity->periodicPosition->search_key;
-        $dates      = $this->eventDateTime->getPeriodicEventDates($position, $weekday, $formated, $isPublic);
+        $dates = $this->eventDateTime->getPeriodicEventDates($entity->periodic_position, $entity->periodic_weekday, $formated, $isPublic);
 		return $dates;
     }
 
@@ -100,9 +98,12 @@ class EventPeriodicRepository {
 		$data = [];
 		if( $entities->count() ) {
 			foreach ($entities as $index => $entity) {
-				foreach ($this->getPeriodicDates($entity, $formated, $isPublic) as $date) {
-					$data[$date] = $entity;
-				}
+			    $dates = $this->getPeriodicDates($entity, $formated, $isPublic);
+			    if($dates && count($dates) > 0) {
+                    foreach ($dates as $date) {
+                        $data[$date] = $entity;
+                    }
+                }
 			}
 
 			$repo = new EventEntityRepository();

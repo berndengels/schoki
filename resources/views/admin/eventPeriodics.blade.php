@@ -19,7 +19,7 @@
         <tr>
             <td>{{ $item->id }} </td>
             <td class="col-sm-auto">{{ $item->title }}</td>
-            <td>{{ $item->periodicPosition->name }} {{ $item->periodicWeekday->name_de }}</td>
+            <td>{{ $item->periodicPosition }} {{ $item->periodicWeekday }}</td>
             <td class="text-center d-none d-sm-table-cell">@if($item->createdBy) {{ $item->createdBy->username }} @else <br> @endif </td>
             <td class="text-center d-none d-sm-table-cell">@if($item->updatedBy) {{ $item->updatedBy->username }} @else <br> @endif </td>
             <td class="text-center d-none d-sm-table-cell"><i class="@if($item->is_published) ion-md-checkmark-circle-outline text-success @else ion-md-close-circle-outline text-danger @endif"></i></td>

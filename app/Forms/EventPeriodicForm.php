@@ -8,6 +8,7 @@
  */
 namespace App\Forms;
 
+use Carbon\Carbon;
 use App\Models\Image;
 use Kris\LaravelFormBuilder\Field;
 
@@ -19,7 +20,6 @@ class EventPeriodicForm extends MainForm
         'files'     => true,
         'enctype'   => 'multipart/form-data',
         'url'       => '/admin/eventsPeriodic/store/',
-//        'class'     => 'dropzone',
     ];
 
     public function buildForm()
@@ -29,9 +29,9 @@ class EventPeriodicForm extends MainForm
         $categoryId = $model ? $this->getModel()->category_id : null;
         $themeId    = $model ? $this->getModel()->theme_id : null;
 		$eventTime	= ($model && $model->event_time) ? str_replace('.',':',$model->event_time) : config('event.defaultEventTime');
-        if(!$this->isValid()) {
-            dd($this->getErrors());
-        }
+        $periodicPosition = $model ? $model->periodic_position : null;
+        $periodicWeekday  = $model ? $model->periodic_weekday : null;
+
         $this
             ->add('id','hidden')
             ->add('is_published', Field::CHECKBOX)
@@ -45,12 +45,38 @@ class EventPeriodicForm extends MainForm
                 'selected'  => $themeId,
                 'empty_value'  => 'Bitte wählen ...',
             ])
-            ->add('periodicDate', 'form', [
-                'label' => 'periodischer Termin',
-                'class' => $this->formBuilder->create(PeriodicDateForm::class, ['errors' => $this->getErrors()], [
-                    'model' => $model,
-                ]),
+            ->add('periodic_position', Field::SELECT, [
+                'label' => 'Position',
+                'choices'   => config('event.periodicPosition'),
+                'selected'  => $periodicPosition,
+                'empty_value'  => $id ? null : 'Bitte wählen ...',
+                'rules' => ['required'],
+                'error_messages' => [
+                    'periodic_position.required' => 'Bitte eine Datums-Position angeben.'
+                ],
             ])
+            ->add('periodic_weekday', Field::SELECT, [
+                'label' => 'Wochentag',
+                'choices'   => config('event.periodicWeekday'),
+                'selected'  => $periodicWeekday,
+                'empty_value'  => $id ? null : 'Bitte wählen ...',
+                'rules' => ['required'],
+                'error_messages' => [
+                    'periodic_position.required' => 'Bitte einen Wochentag angeben.'
+                ],
+            ])
+            ->add('periodic_dates', 'static', [
+                'tag' => 'div', // Tag to be used for holding static data,
+                'label' => 'periodische Termine',
+                'label_show' => true,
+                'attr' => [
+                    'class' => 'datepicker',
+                    'data-provide' => 'datepicker',
+                    'data-date-format' => 'yyyy-mm-dd',
+                    'data-date-end-date' => Carbon::now('Europe/Berlin')->addMonth(6)->format('Y-m-d'),
+                ],
+            ])
+
 			->add('event_time', Field::TIME, [
 //				'rules' => 'required',
 				'default_value'	=> $eventTime,

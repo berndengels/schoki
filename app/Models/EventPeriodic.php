@@ -15,8 +15,9 @@ use Illuminate\Support\Collection;
 use Kyslik\ColumnSortable\Sortable;
 
 /**
- * Class Event
+ * Class EventPeriodic
  *
+ * @package App\Models
  * @property int $id
  * @property int|null $theme_id
  * @property int $category_id
@@ -38,10 +39,9 @@ use Kyslik\ColumnSortable\Sortable;
  * @property-read int|null $audios_count
  * @property-read Category $category
  * @property-read User $createdBy
+ * @property-read mixed $event_dates
  * @property-read \Illuminate\Database\Eloquent\Collection|Images[] $images
  * @property-read int|null $images_count
- * @property-read PeriodicPosition $periodicPosition
- * @property-read PeriodicWeekday $periodicWeekday
  * @property-read Theme|null $theme
  * @property-read User|null $updatedBy
  * @property-read \Illuminate\Database\Eloquent\Collection|Videos[] $videos
@@ -73,17 +73,14 @@ class EventPeriodic extends Model
 {
 	use Sortable, HasUser;
 
-	public $sortable = [
+    /**
+     * @var array
+     */
+    public $sortable = [
 		'category',
 		'title',
 		'created_at',
 	];
-
-	/**
-     * @var Collection;
-     */
-    private $_eventDates = null;
-	public $descriptionSanitized;
 
     /**
      * @var string
@@ -97,8 +94,8 @@ class EventPeriodic extends Model
         'subtitle',
         'category_id',
         'theme_id',
-        'periodic_position_id',
-        'periodic_weekday_id',
+        'periodic_position',
+        'periodic_weekday',
         'periodicDate',
         'description',
         'links',
@@ -106,37 +103,17 @@ class EventPeriodic extends Model
         'is_published',
     ];
 
+    /**
+     * @var array
+     */
     protected $dates = ['created_at','updated_at'];
-
-//    protected $appends = array('eventDates');
-
-    public static function boot() {
-        parent::boot();
-        $repo   = new EventPeriodicRepository();
-
-        EventPeriodic::retrieved(function($entity) use ($repo) {
-            $dates  = $repo->getPeriodicDates($entity, true, true);
-            $entity->_eventDates = $dates;
-			$wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
-			$entity->descriptionSanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), $entity->description);
-        });
-    }
-
     /**
-     * @return BelongsTo
+     * @var array
      */
-    public function periodicPosition()
-    {
-        return $this->belongsTo('App\Models\PeriodicPosition');
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function periodicWeekday()
-    {
-        return $this->belongsTo('App\Models\PeriodicWeekday');
-    }
+    protected $appends = [
+        'event_dates',
+        'description_sanitized',
+    ];
 
     /**
      * @return BelongsTo
@@ -200,8 +177,20 @@ class EventPeriodic extends Model
 		}
 	}
 
-	public function getEventDates()
+	public function getDescriptionSanitizedAttribute()
     {
-        return $this->_eventDates;
+        $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
+        $descriptionSanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), $this->description);
+        return $descriptionSanitized;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEventDatesAttribute()
+    {
+        $repo = new EventPeriodicRepository();
+        $data = $repo->getPeriodicDates($this, true, true);
+        return $data;
     }
 }

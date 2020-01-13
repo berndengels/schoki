@@ -60,7 +60,6 @@ class Audios extends Media
      */
     public function page()
     {
-        return $this->belongsTo(App\Models\Page::class);
+        return $this->belongsTo(Page::class);
     }
-
 }

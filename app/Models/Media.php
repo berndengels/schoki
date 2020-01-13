@@ -28,16 +28,16 @@ class Media extends Model
 
 	public function page()
 	{
-		return $this->belongsTo('App\Models\Page');
+		return $this->belongsTo(Page::class);
 	}
 
     public function event()
     {
-        return $this->belongsTo('App\Models\Event');
+        return $this->belongsTo(Event::class);
     }
 
     public function eventPeriodic()
     {
-        return $this->belongsTo('App\Models\EventPeriodic');
+        return $this->belongsTo(EventPeriodic::class);
     }
 }

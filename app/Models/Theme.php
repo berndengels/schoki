@@ -38,6 +38,8 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|Theme whereName($value)
  * @method static Builder|Theme whereSlug($value)
  * @mixin Eloquent
+ * @property-read Collection|EventPeriodic[] $eventPeriodics
+ * @property-read int|null $event_periodics_count
  */
 class Theme extends Model
 {
