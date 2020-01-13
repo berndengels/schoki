@@ -37,11 +37,13 @@ class EventTemplateForm extends MainForm
 				]
 			])
             ->add('category_id', Field::ENTITY, [
+                'label' => 'Kategorie',
                 'class' => 'App\Models\Category',
                 'selected'  => $categoryId,
                 'empty_value'  => $id ? null : 'Bitte wählen ...',
             ])
             ->add('theme_id', Field::ENTITY, [
+                'label' => 'Thema',
                 'class' => 'App\Models\Theme',
                 'selected'  => $themeId,
                 'empty_value'  => 'Bitte wählen ...',
