@@ -8,33 +8,15 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Models\PeriodicPosition;
-use App\Models\PeriodicWeekday;
-use Auth;
-use Carbon\Carbon;
-use Carbon\CarbonPeriod;
-use Carbon\CarbonInterval;
-use App\Libs\EventDateTime;
-use App\Models\Theme;
-use App\Models\Category;
+use Cache;
 use Exception;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\DB;
-use App\Models\Event;
-use App\Models\Images;
-use Illuminate\Http\Request;
+use App\Libs\EventDateTime;
 use App\Models\EventPeriodic;
 use App\Forms\EventPeriodicForm;
-use App\Http\Requests\UploadRequest;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Str;
-use Kris\LaravelFormBuilder\Form;
 use Kris\LaravelFormBuilder\FormBuilder;
-use App\Http\Controllers\Admin\MainController;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 use App\Http\Requests\SaveEventPediodicRequest;
+use Illuminate\Contracts\Support\Renderable;
 
 class EventPeriodicController extends MainController
 {
@@ -96,6 +78,7 @@ class EventPeriodicController extends MainController
                 $saved = EventPeriodic::create($request->validated());
                 $id = $saved->id;
             }
+            Cache::flush();
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
         }

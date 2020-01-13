@@ -8,6 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
+use Cache;
 use Exception;
 use App\Entities\EventEntity;
 use App\Forms\EventTemplateSelectForm;
@@ -138,6 +139,7 @@ class EventController extends MainController
                 $saved = Event::create($request->validated());
                 $id = $saved->id;
             }
+            Cache::flush();
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
         }

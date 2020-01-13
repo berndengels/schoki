@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Eluceo\iCal\Property\Event\Geo;
-use Illuminate\Http\Response;
+use Cache;
+use Route;
 use Carbon\Carbon;
 use App\Models\Event;
 use App\Helper\MyDate;
+use Laravelium\Feed\Feed;
 use App\Entities\EventEntity;
+use Illuminate\Http\Response;
+use Eluceo\iCal\Property\Event\Geo;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\App;
 use App\Repositories\EventEntityRepository;
 use App\Repositories\EventPeriodicRepository;
-use Illuminate\Routing\Controller as BaseController;
-use Laravelium\Feed\Feed;
+use App\Http\Controllers\Controller as BaseController;
 use Eluceo\iCal\Component\Calendar as iCal;
 use Eluceo\iCal\Component\Event as iCalEvent;
-use Route;
 
 class EventController extends BaseController
 {
@@ -35,7 +36,10 @@ class EventController extends BaseController
 
 	public function __construct()
 	{
-        $this->actualEvents = Event::allActualMerged();
+        if (!Cache::has($this->cacheEventKey)) {
+            Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+        }
+        $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
 	}
 
 	public function show($date)

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\SPA;
 
-use Carbon\Carbon;
+use Cache;
 use App\Models\Event;
 use App\Entities\EventEntity;
 use App\Http\Controllers\Controller;
@@ -18,8 +18,10 @@ class SpaEventController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth:api')->except(['events']);
-		$this->actualEvents = Event::allActualMerged();
+        if (!Cache::has($this->cacheEventKey)) {
+            Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+        }
+        $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
         SpaEventResource::withoutWrapping();
 	}
 

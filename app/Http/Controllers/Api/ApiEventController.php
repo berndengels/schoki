@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use Cache;
 use App\Models\Event;
 use App\Entities\EventEntity;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EventResource;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 
 class ApiEventController extends Controller
@@ -19,9 +18,11 @@ class ApiEventController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth:api')->except(['events']);
-		$this->actualEvents = Event::allActualMerged();
-	}
+        if (!Cache::has($this->cacheEventKey)) {
+            Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+        }
+        $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
+    }
 
     /**
      * Display a listing of the resource.

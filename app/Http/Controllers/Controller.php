@@ -16,6 +16,7 @@ class Controller extends BaseController
      * @var null|Agent
      */
     public $agent = null;
+    protected $cacheEventKey = 'events';
 
     public function __construct()
     {

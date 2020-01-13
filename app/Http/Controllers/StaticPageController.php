@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Egulias\EmailValidator\Exception\ExpectingDomainLiteralClose;
+use Illuminate\View\View;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Routing\Controller as BaseController;
+use App\Http\Controllers\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\View\View;
 
 /**
  * Class PageController
