@@ -44,8 +44,8 @@ Route::get('/events', 'EventController@getActualMergedEvents')->name('public.eve
 Route::get('/events/show/{date}', 'EventController@show')->name('public.event.eventsShow');
 Route::get('/events/calendar', 'EventController@calendar')->name('public.eventCalendar');
 //Route::post('/events/lazy/{date}', 'EventController@lazy')->name('public.eventLazy');
-Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');
-Route::post('/events/lazyByTheme/{theme}/{date}', 'EventController@lazyByTheme')->name('public.eventLazyByTheme');
+//Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');
+//Route::post('/events/lazyByTheme/{theme}/{date}', 'EventController@lazyByTheme')->name('public.eventLazyByTheme');
 
 $categories = Category::where('is_published', 1)->get();
 foreach($categories as $item) {

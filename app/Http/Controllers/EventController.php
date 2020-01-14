@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Cache;
 use Route;
 use Carbon\Carbon;
 use App\Models\Event;
 use App\Helper\MyDate;
 use Laravelium\Feed\Feed;
+use Illuminate\Support\Str;
 use App\Entities\EventEntity;
 use Illuminate\Http\Response;
 use Eluceo\iCal\Property\Event\Geo;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cache;
 use App\Repositories\EventEntityRepository;
 use App\Repositories\EventPeriodicRepository;
 use App\Http\Controllers\Controller as BaseController;
@@ -126,18 +127,25 @@ class EventController extends BaseController
 
 	public function getActualMergedEventsByCategory()
 	{
-		$routeArr = explode('.', Route::currentRouteName()) ;
-		$slug = array_pop($routeArr);
+		$routeArr   = explode('.', Route::currentRouteName()) ;
+		$slug       = array_pop($routeArr);
+		$cacheKey   = $this->cacheEventCategoryKey . ucfirst( Str::camel($slug));
 
-		$repo 		= new EventPeriodicRepository();
-		$repoEntity	= new EventEntityRepository();
+        if(!Cache::has($cacheKey)) {
+            $repo 		= new EventPeriodicRepository();
+            $repoEntity	= new EventEntityRepository();
 
-		$periodicEvents	= $repo->getAllPeriodicDatesByCategory($slug);
-		$datedEvents	= Event::byCategorySlug($slug)->get()->keyBy('event_date');
+            $periodicEvents	= $repo->getAllPeriodicDatesByCategory($slug);
+            $datedEvents	= Event::byCategorySlug($slug)->get()->keyBy('event_date');
 
-		$mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
+            $mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
 //		$data = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.eventsPaginationLimit'));
-		$this->actualEventsByCategory = $periodicEvents->merge($mappedEvents)->sortKeys();
+            $this->actualEventsByCategory = $periodicEvents->merge($mappedEvents)->sortKeys();
+            Cache::put($cacheKey, $this->actualEventsByCategory, config('cache.ttl'));
+        } else {
+            $this->actualEventsByCategory = Cache::get($cacheKey, collect([]));
+        }
+
 		return view('public.events-lazy', [
 //			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
 			'data'	=> $this->actualEventsByCategory,
@@ -148,17 +156,23 @@ class EventController extends BaseController
 
 	public function getActualMergedEventsByTheme()
 	{
-		$routeArr = explode('.', Route::currentRouteName()) ;
-		$slug = array_pop($routeArr);
+		$routeArr   = explode('.', Route::currentRouteName()) ;
+		$slug       = array_pop($routeArr);
+        $cacheKey   = $this->cacheEventThemeKey . ucfirst( Str::camel($slug));
 
-		$repo 		= new EventPeriodicRepository();
-		$repoEntity	= new EventEntityRepository();
+        if(!Cache::has($cacheKey)) {
+            $repo 		= new EventPeriodicRepository();
+            $repoEntity	= new EventEntityRepository();
 
-		$periodicEvents	= $repo->getAllPeriodicDatesByTheme($slug);
-		$datedEvents	= Event::byThemeSlug($slug)->get()->keyBy('event_date');
-		$mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
+            $periodicEvents	= $repo->getAllPeriodicDatesByTheme($slug);
+            $datedEvents	= Event::byThemeSlug($slug)->get()->keyBy('event_date');
+            $mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
 //		$data = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.eventsPaginationLimit'));
-		$this->actualEventsByTheme = $periodicEvents->merge($mappedEvents)->sortKeys();
+            $this->actualEventsByTheme = $periodicEvents->merge($mappedEvents)->sortKeys();
+            Cache::put($cacheKey, $this->actualEventsByTheme, config('cache.ttl'));
+        } else {
+            $this->actualEventsByTheme = Cache::get($cacheKey, collect([]));
+        }
 
 //		return view('public.events-lazy', ['theme' => $slug, 'data' => $data ]);
 		return view('public.events-lazy', [
@@ -200,26 +214,19 @@ class EventController extends BaseController
 		$event = $this->actualEvents->get($date);
 		return view('public.templates.event', ['event' => $event ]);
 	}
-
+/*
 	public function lazyByCategory($category , $date)
 	{
-//		$category = Category::where('slug', $category);
-		/**
-		 * @var $event EventEntity
-		 */
 		$event = Event::MergedByDateAndCategory( $date, $category );
 		return view('public.templates.event', ['event' => $event ]);
 	}
 
 	public function lazyByTheme($theme , $date)
 	{
-		/**
-		 * @var $event EventEntity
-		 */
 		$event = $this->actualEventsByTheme->get($date);
 		return view('public.templates.event', ['event' => $event ]);
 	}
-
+*/
 	public function ical() {
 		$iCal = new iCal(config('app.url'));
 		$iCal

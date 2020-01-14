@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use Cache;
 use App\Models\Event;
 use App\Entities\EventEntity;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EventResource;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Cache;
 
 class ApiEventController extends Controller
 {

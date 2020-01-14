@@ -8,6 +8,10 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
+/**
+ * Class Controller
+ * @package App\Http\Controllers
+ */
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -16,8 +20,35 @@ class Controller extends BaseController
      * @var null|Agent
      */
     public $agent = null;
+    /**
+     * @var string
+     */
     protected $cacheEventKey = 'events';
+    /**
+     * @var string
+     */
+    protected $cacheEventCategoryKey = 'eventsByCategory';
+    /**
+     * @var string
+     */
+    protected $cacheEventThemeKey = 'eventsByTheme';
 
+    /**
+     * @var string
+     */
+    protected $apiCacheEventKey = 'apiEvents';
+    /**
+     * @var string
+     */
+    protected $apiCacheEventCategoryKey = 'apiEventsByCategory';
+    /**
+     * @var string
+     */
+    protected $apiCacheEventThemeKey = 'apiEventsByTheme';
+
+    /**
+     * Controller constructor.
+     */
     public function __construct()
     {
 //        $this->middleware('web-public');
