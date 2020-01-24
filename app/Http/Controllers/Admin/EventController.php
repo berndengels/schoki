@@ -98,26 +98,26 @@ class EventController extends MainController
 	public function override( FormBuilder $formBuilder, Request $request, $id = 0 )
 	{
 		parent::initReservedDates();
-		$eventPeriodicId = $request->post('override');
-		$eventPeriodic = EventPeriodic::find($eventPeriodicId);
+		$eventPeriodicId    = $request->post('override');
+		$eventPeriodic      = EventPeriodic::find($eventPeriodicId);
 		$event = $id > 0 ? Event::find($id) : new Event();
-		$override = $request->post('override');
 
-		$attributes = [
-			'is_periodic' 	=> 1,
-			'title'			=> $eventPeriodic->title,
-			'subtitle'		=> $eventPeriodic->subtitle,
-			'description'	=> $eventPeriodic->description,
-			'category'		=> $eventPeriodic->category,
-			'theme'			=> $eventPeriodic->theme,
-			'images'		=> $eventPeriodic->images,
-			'event_time'	=> $eventPeriodic->event_time,
-			'event_date'	=> $request->post('event_date'),
-            'links'			=> $eventPeriodic->links->count() > 0 ? $eventPeriodic->links->join("\n") : '',
-			'override'		=> $override,
-		];
-
-		$event->setRawAttributes($attributes);
+        if( $eventPeriodicId > 0 && $eventPeriodic ) {
+            $attributes = [
+                'is_periodic' 	=> 1,
+                'title'			=> $eventPeriodic->title,
+                'subtitle'		=> $eventPeriodic->subtitle,
+                'description'	=> $eventPeriodic->description,
+                'category'		=> $eventPeriodic->category,
+                'theme'			=> $eventPeriodic->theme,
+                'images'		=> $eventPeriodic->images,
+                'event_time'	=> $eventPeriodic->event_time,
+                'event_date'	=> $request->post('event_date'),
+                'links'			=> $eventPeriodic->links->count() > 0 ? $eventPeriodic->links->join("\n") : '',
+                'override'		=> $eventPeriodicId,
+            ];
+            $event->setRawAttributes($attributes);
+        }
 
 		$form  = $formBuilder->create(EventForm::class, ['model' => $event]);
 		$formOptions    = [
