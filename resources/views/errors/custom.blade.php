@@ -11,7 +11,7 @@
             <p>---------------------------------------------------------------------------------</p>
         </div>
         <div class="row">
-            <h3>due to the current situation we'll also stay closed starting tonight.<br>we'll try and re-schedule all cancelled shows as soon as possible.<br>stay healthy and safe everyone.</h3>
+            <h3>due to the current situation we'll also stay closed.<br>we'll try and re-schedule all cancelled shows as soon as possible.<br>stay healthy and safe everyone.</h3>
         </div>
     </div>
 @endsection
