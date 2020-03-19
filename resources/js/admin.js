@@ -398,8 +398,8 @@ var initDropzone = function (options) {
             dictInvalidFileType: options.dictInvalidFileType || 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpeg, .jpg',
             acceptedFiles: options.acceptedFiles || ".jpeg,.jpg",
             timeout: 10000,
-    },
-    dropzoneTarget = "#dropzoneTarget";
+        },
+        dropzoneTarget = "#dropzoneTarget";
 
     if("Image" === dropzoneOptions.type) {
         initCropperView = function () {

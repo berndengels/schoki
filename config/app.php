@@ -197,6 +197,8 @@ return [
 		Abrigham\LaravelEmailExceptions\EmailExceptionsServiceProvider::class,
 //        Kevinsimard\CookielessSession\Middleware\StartSession::class,
         App\Providers\CustomPasswordResetServiceProvider::class,
+        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
+        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
     ],
 
     /*
