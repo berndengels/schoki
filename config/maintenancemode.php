@@ -79,7 +79,6 @@ return [
      * @var array
      */
     'exempt-environments' => [],
-
     /**
      * A list of exemption classes to execute
      *
@@ -104,5 +103,6 @@ return [
          * EnvironmentWhitelist exempts installations with environments matched in the "exempt-environments" config
          */
         MisterPhilip\MaintenanceMode\Exemptions\EnvironmentWhitelist::class,
+        App\Exemption\RoutesEnabled::class,
     ],
 ];
