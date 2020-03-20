@@ -49,6 +49,17 @@ html, body {
         background-position-y: 55px;
     }
 
+    #frmDonate {
+        label {
+            font-family: "Arial Black";
+            vertical-align: top;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 2.0rem;
+            margin-right: 1.0rem;
+        }
+    }
+
     .card {
         margin-top: 20px;
         background-color: transparent;
