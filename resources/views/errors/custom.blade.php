@@ -3,18 +3,18 @@
 @section('title', __('Wir haben geschlossen'))
 @section('sidebarLeft', '')
 @section('content')
-    <div class="container">
+    <div class="container mx-1">
         <div class="row">
             <h5>Aufgrund der aktuellen Lage bleiben wir geschlossen.<br>Passt auf Euch auf und bleibt gesund!</h5>
         </div>
         <div class="row">
-            <p>---------------------------------------------------------------------------------</p>
+            <p>----------------------------------------------------------------</p>
         </div>
         <div class="row">
             <h5>due to the current situation we'll also stay closed.<br>we'll try and re-schedule all cancelled shows as soon as possible.<br>stay healthy and safe everyone.</h5>
         </div>
         <div class="row">
-            <p>---------------------------------------------------------------------------------</p>
+            <p>----------------------------------------------------------------</p>
         </div>
         <div class="row">
             <div class="">
@@ -38,7 +38,7 @@
                     <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
                 </form>
                 <div class="row">
-                    <p>---------------------------------------------------------------------------------</p>
+                    <p>----------------------------------------------------------------</p>
                 </div>
                 <p>
                     oder alternativ per Überweisung:<br>
@@ -49,7 +49,7 @@
                     Wir danken allen Freunden von ganzem Herzen. Viva Schokoladen!
                 </p>
                 <div class="row">
-                    <p>---------------------------------------------------------------------------------</p>
+                    <p>----------------------------------------------------------------</p>
                 </div>
                 <p>
                     or alternatively via invoice:<br>
