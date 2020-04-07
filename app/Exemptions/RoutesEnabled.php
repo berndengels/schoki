@@ -15,6 +15,7 @@ class RoutesEnabled extends MaintenanceModeExemption
         '/contact/formBands',
         '/static/map',
         '/page/*',
+        '/events/*',
     ];
 
     /**
