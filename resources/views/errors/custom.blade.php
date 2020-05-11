@@ -3,7 +3,7 @@
 @section('title', __('Wir haben geschlossen'))
 @section('sidebarLeft', '')
 @section('content')
-    <div class="container mx-1">
+    <div class="container mx-4">
         <div class="row">
             <h5>Aufgrund der aktuellen Lage bleiben wir geschlossen.<br>Passt auf Euch auf und bleibt gesund!</h5>
         </div>
