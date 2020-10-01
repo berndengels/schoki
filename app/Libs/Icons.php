@@ -33,7 +33,7 @@ class Icons {
 			self::$instance = new self();
 		}
 		$basePath = app()->basePath();
-		self::$iconPath = $basePath . '/node_modules/ionicons/dist/collection/build/ionicons/svg';
+        self::$iconPath = $basePath . '/node_modules/ionicons/dist/ionicons/svg';
 		self::$filePath = $basePath . '/public_html/img/icons';
 		self::$fileWebPath = '/img/icons';
 
