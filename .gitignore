@@ -37,7 +37,8 @@ npm-debug.log
 yarn-error.log
 composer.lock
 yarn.lock
-.htaccess
+/.htaccess
 composer.lock
 package-lock.json
 phpunit.dusk.xml
+/webpack.mix.js

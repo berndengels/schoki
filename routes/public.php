@@ -78,5 +78,5 @@ Route::get('/logout', function() {
 });
 
 Route::fallback(function () {
-    return redirect()->route('public.events');
+    //return redirect()->route('public.events');
 });

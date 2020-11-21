@@ -2,7 +2,6 @@
 
 namespace App\Exemption;
 
-use Illuminate\Support\Facades\Route;
 use MisterPhilip\MaintenanceMode\Exemptions\MaintenanceModeExemption;
 
 class RoutesEnabled extends MaintenanceModeExemption
