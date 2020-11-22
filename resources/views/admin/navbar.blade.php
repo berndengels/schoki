@@ -59,6 +59,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownMedia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMedia">
                         <!--a class="dropdown-item ajax" href="/admin/services/makeThumbs">Make Thumbs</a-->
+                        <a class="dropdown-item" href="/admin/services/dumpdb">Dump Database</a>
                         <a class="dropdown-item ajax" href="/admin/services/syncImages">Sync Images</a>
                         <a class="dropdown-item ajax" href="/admin/services/cropImages">Crop Images</a>
                         <a class="dropdown-item ajax" href="/admin/services/sanitizeImageDB">Sanitize Images DB</a>

@@ -20,7 +20,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
 use Spatie\DbDumper\Compressors\GzipCompressor;
-use Spatie\DbDumper\Databases\MySql as MySqlDumper;
+use App\Libs\MySqlDumper;
 
 class ServiceController extends Controller
 {
@@ -43,24 +43,27 @@ class ServiceController extends Controller
 
 	public function dumpDb() {
 	    $dbName = env('DB_DATABASE');
-	    $file = base_path() . '/database/dumps/' . (Carbon::now())->format('Ymd') . '_' . $dbName . '.sql';
+	    $file = base_path() . '/database/snapshots/' . (Carbon::now())->format('Ymd') . '_' . $dbName . '.sql.gz';
+        $dumper = MySqlDumper::create()
+            ->setDumpBinaryPath(env('DB_BINARY_PATH'))
+            ->setDbName($dbName)
+            ->setHost(env('DB_HOST'))
+            ->setUserName(env('DB_USERNAME'))
+//            ->setPassword(env('DB_PASSWORD'))
+            ->setPort(env('DB_PASSWORD') ?: 3306)
+            ->setDefaultCharacterSet('utf8')
+            ->addExtraOption('--insert-ignore')
+            ->addExtraOption('--add-drop-table')
+            ->useCompressor(new GzipCompressor())
+//            ->getDumpCommand($file, 'credentials.txt')
+        ;
 	    try {
-            MySqlDumper::create()
-                ->setDbName($dbName)
-                ->setHost(env('DB_HOST'))
-                ->setUserName(env('DB_USERNAME'))
-                ->setPassword(env('DB_PASSWORD'))
-                ->doNotUseColumnStatistics()
-                ->setDefaultCharacterSet('utf8')
-                ->addExtraOption('-e')
-                ->addExtraOption('--insert-ignores')
-                ->addExtraOption('--add-drop-table')
-                ->useCompressor(new GzipCompressor())
-                ->dumpToFile($file)
-            ;
-            return "create dump: $file";
+	        $dumper->dumpToFile($file);
+            return "dump to: $file";
+
         } catch(Exception $e) {
-	        return $e->getMessage();
+	        echo $e->getMessage().'<br>';
+	        return '<pre>' . $e->getTraceAsString() . '</pre>';
         }
     }
 
