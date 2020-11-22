@@ -16,7 +16,7 @@ class SaveUserRequest extends FormRequest
         return true;
     }
 
-    protected function validationData()
+    public function validationData()
     {
         return array_merge([
             'enabled'           => false,

@@ -104,6 +104,7 @@ Route::prefix('admin')->group(function () {
 	Route::get('/messages/delete/{id}', 'Admin\MessageController@delete')->name('admin.messageDelete');
 	Route::post('/messages/store/{id?}', 'Admin\MessageController@store')->name('admin.messageStore');
 
+    Route::get('/services/dumpdb', 'Admin\ServiceController@dumpDb')->name('admin.service.dumpDb');
 	Route::get('/services/syncImages', 'Admin\ServiceController@syncImages')->name('admin.service.syncImages');
 	Route::get('/services/makeThumbs', 'Admin\ServiceController@makeThumbs')->name('admin.service.makeThumbs');
     Route::get('/services/sanitizeImageDB', 'Admin\ServiceController@sanitizeImageDB')->name('admin.service.sanitizeImageDB');
@@ -112,9 +113,9 @@ Route::prefix('admin')->group(function () {
 	Route::get('/services/sanitizeFilePermissions', 'Admin\ServiceController@sanitizeFilePermissions')->name('admin.service.sanitizeFilePermissions');
 	Route::get('/services/browserTestReport', 'Admin\ServiceController@browserTestReport')->name('admin.service.browserTestReport');
 	Route::get('/dusk/runBrowserTest', 'Admin\DuskController@runBrowserTest')->name('admin.dusk.runBrowserTest');
-	Route::get('/terminal/{view?}', 'Admin\TerminalController@index')->name('admin.terminal.index');
-	Route::get('/terminal/endpoint', 'Admin\TerminalController@endpoint')->name('admin.terminal.endpoint');
-	Route::get('/terminal/media', 'Admin\TerminalController@media')->name('admin.terminal.media');
+//	Route::get('/terminal/{view?}', 'Admin\TerminalController@index')->name('admin.terminal.index');
+//	Route::get('/terminal/endpoint', 'Admin\TerminalController@endpoint')->name('admin.terminal.endpoint');
+//	Route::get('/terminal/media', 'Admin\TerminalController@media')->name('admin.terminal.media');
 	Route::get('/cache/flush', 'Admin\CacheController@flush')->name('admin.service.cacheFlush');
 	Route::get('/cache/clear', 'Admin\CacheController@clear')->name('admin.service.cacheClear');
     Route::get('/cache/forget/{key}', 'Admin\CacheController@forget')->name('admin.service.cacheForget');

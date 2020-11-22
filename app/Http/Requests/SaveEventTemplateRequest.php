@@ -16,7 +16,7 @@ class SaveEventTemplateRequest extends FormRequest
         return true;
     }
 
-    protected function validationData()
+    public function validationData()
     {
         return array_merge(['is_published' => false], $this->all());
     }

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Route;
 use Carbon\Carbon;
 use App\Models\Event;
@@ -117,6 +120,7 @@ class EventController extends BaseController
 */
 	public function getActualMergedEvents()
 	{
+
 		return view('public.events-lazy', [
 //			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
 			'data'	=> $this->actualEvents,

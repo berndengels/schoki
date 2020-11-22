@@ -68,6 +68,11 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|EventPeriodic whereUpdatedAt($value)
  * @method static Builder|EventPeriodic whereUpdatedBy($value)
  * @mixin Eloquent
+ * @property string $periodic_position
+ * @property string $periodic_weekday
+ * @property-read mixed $description_sanitized
+ * @method static Builder|EventPeriodic wherePeriodicPosition($value)
+ * @method static Builder|EventPeriodic wherePeriodicWeekday($value)
  */
 class EventPeriodic extends Model
 {

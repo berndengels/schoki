@@ -19,6 +19,8 @@ use App\Helper\FilePermissions;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
+use Spatie\DbDumper\Compressors\GzipCompressor;
+use Spatie\DbDumper\Databases\MySql as MySqlDumper;
 
 class ServiceController extends Controller
 {
@@ -38,6 +40,29 @@ class ServiceController extends Controller
 			return $next($request);
 		});
 	}
+
+	public function dumpDb() {
+	    $dbName = env('DB_DATABASE');
+	    $file = base_path() . '/database/dumps/' . (Carbon::now())->format('Ymd') . '_' . $dbName . '.sql';
+	    try {
+            MySqlDumper::create()
+                ->setDbName($dbName)
+                ->setHost(env('DB_HOST'))
+                ->setUserName(env('DB_USERNAME'))
+                ->setPassword(env('DB_PASSWORD'))
+                ->doNotUseColumnStatistics()
+                ->setDefaultCharacterSet('utf8')
+                ->addExtraOption('-e')
+                ->addExtraOption('--insert-ignores')
+                ->addExtraOption('--add-drop-table')
+                ->useCompressor(new GzipCompressor())
+                ->dumpToFile($file)
+            ;
+            return "create dump: $file";
+        } catch(Exception $e) {
+	        return $e->getMessage();
+        }
+    }
 
 	public function browserTestReport()
 	{

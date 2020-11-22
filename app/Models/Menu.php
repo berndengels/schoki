@@ -45,6 +45,8 @@ use Kalnoy\Nestedset\QueryBuilder;
  * @mixin Eloquent
  * @property int|null $api_enabled
  * @method static Builder|Menu whereApiEnabled($value)
+ * @method static Collection|static[] all($columns = ['*'])
+ * @method static Collection|static[] get($columns = ['*'])
  */
 class Menu extends Model
 {

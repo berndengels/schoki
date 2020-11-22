@@ -4,12 +4,11 @@ namespace App\Console\Commands;
 
 use Illuminate\Support\Facades\App;
 use Symfony\Component\Process\Process;
-use Recca0120\Terminal\Contracts\TerminalCommand;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Laravel\Dusk\Console\DuskCommand as VendorDuskCommand;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
-class DuskCommand extends VendorDuskCommand implements TerminalCommand
+class DuskCommand extends VendorDuskCommand
 {
     /**
      * The name and signature of the console command.

@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5|^8.0",
-        "abrigham/laravel-email-exceptions": "^3.0",
+        "abrigham/laravel-email-exceptions": "^2.1",
         "anhskohbo/no-captcha": "^3.3",
         "eluceo/ical": "^0.16.1",
         "eternicode/bootstrap-datepicker": "^1.9",
@@ -21,15 +21,19 @@
         "kalnoy/nestedset": "^5.0",
         "kris/laravel-form-builder": "^1.40",
         "kyslik/column-sortable": "^6.4",
+        "laravel/cashier": "^12.5",
         "laravel/framework": "^6.20",
+        "laravel/telescope": "3.x",
         "laravel/tinker": "^2.5",
         "laravelium/feed": "6.0.*",
         "lavary/laravel-menu": "^1.7",
         "misterphilip/maintenance-mode": "^2.0",
         "orchestra/imagine": "^4.0",
+        "spatie/db-dumper": "^2.18",
         "spatie/laravel-newsletter": "^4.8",
         "spatie/laravel-permission": "^3.17",
-        "symfony/process": "^4.2"
+        "symfony/process": "^4.2",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
