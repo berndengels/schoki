@@ -171,7 +171,7 @@ return [
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-        Orchestra\Imagine\ImagineServiceProvider::class,
+//        Orchestra\Imagine\ImagineServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
@@ -189,7 +189,7 @@ return [
 		Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 		Ixudra\Curl\CurlServiceProvider::class,
 		Barryvdh\Debugbar\ServiceProvider::class,
-		Abrigham\LaravelEmailExceptions\EmailExceptionsServiceProvider::class,
+//		Abrigham\LaravelEmailExceptions\EmailExceptionsServiceProvider::class,
 //        Kevinsimard\CookielessSession\Middleware\StartSession::class,
         App\Providers\CustomPasswordResetServiceProvider::class,
         MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
