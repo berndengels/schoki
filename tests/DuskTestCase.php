@@ -3,12 +3,9 @@
 namespace Tests;
 
 use App\Models\User;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\File;
 use Laravel\Dusk\Browser;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverDimension;
-//use Laravel\Dusk\TestCase as BaseTestCase;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;

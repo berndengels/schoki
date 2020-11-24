@@ -51,7 +51,7 @@ class AddressController extends MainController
 		})
 			->sortable()
 			->paginate($this->paginationLimit)
-			->appends(Input::except('page'))
+			->appends($request->except('page'))
 		;
 
 

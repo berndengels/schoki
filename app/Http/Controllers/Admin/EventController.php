@@ -69,7 +69,7 @@ class EventController extends MainController
 		$data = EventRepository::getEventsUntilDate($this->today, $request->get('search'))
 			->sortable()
 			->paginate($this->paginationLimit)
-			->appends(Input::except('page'))
+			->appends($request->except('page'))
 		;
 		$form = $formBuilder->create(SearchForm::class, ['url'	=> route('admin.eventArchiveSearch')]);
 
