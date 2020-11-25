@@ -189,7 +189,6 @@ return [
 		Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 		Ixudra\Curl\CurlServiceProvider::class,
 		Barryvdh\Debugbar\ServiceProvider::class,
-//		Abrigham\LaravelEmailExceptions\EmailExceptionsServiceProvider::class,
 //        Kevinsimard\CookielessSession\Middleware\StartSession::class,
         App\Providers\CustomPasswordResetServiceProvider::class,
         MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,

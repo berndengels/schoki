@@ -2,16 +2,13 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use Throwable;
-
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-//use Abrigham\LaravelEmailExceptions\Exceptions\EmailHandler as ExceptionHandler;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+//use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Exceptions\EmailHandler;
 
-class Handler extends ExceptionHandler
+class Handler extends EmailHandler
 {
     /**
      * A list of the exception types that are not reported.
