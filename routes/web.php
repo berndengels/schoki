@@ -244,7 +244,7 @@ foreach (Theme::where('is_published','=',1)->pluck('slug') as $slug) {
 	})->name('public.theme'.ucfirst($slug));
 }
 */
-Route::permanentRedirect('/', '/events');
+#Route::permanentRedirect('/', '/events');
 
 Route::get('/logout', function() {
     Auth::logout();

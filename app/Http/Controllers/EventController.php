@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Route;
 use Carbon\Carbon;
@@ -187,10 +188,8 @@ class EventController extends BaseController
 		]);
 	}
 
-	public function calendar()
+	public function calendar($year, $month)
 	{
-		$selectedYear	= request()->get('year');
-		$selectedMonth	= request()->get('month');
 		$dates = [];
 		$result = ['error' => true];
 
@@ -198,8 +197,8 @@ class EventController extends BaseController
 		 * @var $event EventEntity
 		 */
 		foreach($this->actualEvents as $date => $event) {
-			list($year,$month,) = explode('-', $date);
-			if($selectedYear == $year && $selectedMonth == $month) {
+			list($y,$m,) = explode('-', $date);
+			if($year == $y && $month == $m) {
 				$dates[] = $event->toCalendarData();
 			}
 		}

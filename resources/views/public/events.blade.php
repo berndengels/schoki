@@ -130,7 +130,7 @@
                     next: '<ion-icon name="arrow-dropright-circle"></ion-icon>'
                 },
                 ajax: {
-                    url: "/events/calendar",
+                    url: "/calendar/" + year + "/" + month,
                     modal: true,
                 },
                 legend: false, // object array, [{type: string, label: string, classname: string}]
