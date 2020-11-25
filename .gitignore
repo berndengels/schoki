@@ -19,6 +19,7 @@ yarn-error.log
 composer.lock
 yarn.lock
 /.htaccess
+/.jshintrc
 composer.lock
 package-lock.json
 phpunit.dusk.xml
