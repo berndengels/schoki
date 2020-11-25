@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:http://schoki.loc
+PRODID:http://schoki.test
 X-WR-CALNAME:Schokoladen Events
 X-WR-CALDESC:Schokoladen Berlin-Mitte Veranstaltungs-Plan https://www.schok
  oladen-mitte.de
@@ -10,7 +10,7 @@ TZID:Europe/Berlin
 X-LIC-LOCATION:Europe/Berlin
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5fbe56849376d
+UID:5fbea54e03825
 DTSTART;TZID=Europe/Berlin:20201201T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -52,10 +52,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568493b26
+UID:5fbea54e042c6
 DTSTART;TZID=Europe/Berlin:20201206T203000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -64,7 +64,7 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’N
+SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
 CLASS:PUBLIC
 DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
@@ -74,7 +74,7 @@ DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
  \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
  ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html
+ ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
 X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
  Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
   Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
@@ -88,14 +88,14 @@ X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten
  gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
  br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
  ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>
+ ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568493cfa
+UID:5fbea54e0448b
 DTSTART;TZID=Europe/Berlin:20201208T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -137,10 +137,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568493eb9
+UID:5fbea54e04630
 DTSTART;TZID=Europe/Berlin:20201215T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -182,10 +182,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe56849406f
+UID:5fbea54e047d5
 DTSTART;TZID=Europe/Berlin:20201220T200000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -211,10 +211,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe56849421e
+UID:5fbea54e049c3
 DTSTART;TZID=Europe/Berlin:20201222T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -256,10 +256,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe5684943cd
+UID:5fbea54e04bfa
 DTSTART;TZID=Europe/Berlin:20201229T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -301,10 +301,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe56849457d
+UID:5fbea54e04dbe
 DTSTART;TZID=Europe/Berlin:20210103T203000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -313,7 +313,7 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’N
+SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
 CLASS:PUBLIC
 DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
@@ -323,7 +323,7 @@ DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
  \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
  ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html
+ ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
 X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
  Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
   Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
@@ -337,14 +337,14 @@ X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten
  gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
  br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
  ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>
+ ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe56849472e
+UID:5fbea54e04f64
 DTSTART;TZID=Europe/Berlin:20210105T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -386,10 +386,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe5684948de
+UID:5fbea54e05101
 DTSTART;TZID=Europe/Berlin:20210112T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -431,10 +431,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568494a8c
+UID:5fbea54e0529b
 DTSTART;TZID=Europe/Berlin:20210117T200000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -460,10 +460,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568494c38
+UID:5fbea54e05435
 DTSTART;TZID=Europe/Berlin:20210119T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -505,10 +505,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568494de5
+UID:5fbea54e055cc
 DTSTART;TZID=Europe/Berlin:20210126T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -550,10 +550,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568494f94
+UID:5fbea54e05842
 DTSTART;TZID=Europe/Berlin:20210207T203000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -562,7 +562,7 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’N
+SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
 CLASS:PUBLIC
 DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
@@ -572,7 +572,7 @@ DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
  dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
  \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
  ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html
+ ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
 X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
  Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
   Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
@@ -586,14 +586,14 @@ X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten
  gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
  br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
  ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>
+ ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbe568495148
+UID:5fbea54e05a11
 DTSTART;TZID=Europe/Berlin:20210221T200000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -619,6 +619,6 @@ X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20201125T130508Z
+DTSTAMP:20201125T184118Z
 END:VEVENT
 END:VCALENDAR

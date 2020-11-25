@@ -33,3 +33,4 @@ phpunit.dusk.xml
 /webpack.mix.js
 /_ide_helper.php
 /perms
+/.valet-env.php
