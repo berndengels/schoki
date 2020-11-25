@@ -25,3 +25,4 @@ package-lock.json
 phpunit.dusk.xml
 /webpack.mix.js
 /_ide_helper.php
+/perms
