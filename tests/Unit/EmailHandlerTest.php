@@ -5,8 +5,10 @@ namespace Tests\Unit;
 use Mail;
 use Mockery;
 use Exception;
+use Tests\TestCase;
 use BadMethodCallException;
-use Orchestra\Testbench\TestCase;
+use App\Exceptions\EmailHandler;
+//use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\Cache;
 
 class EmailHandlerTest extends TestCase
@@ -17,13 +19,13 @@ class EmailHandlerTest extends TestCase
      */
     protected $emailHandlerMock;
 
-    public function setUp()
+    protected function setUp() : void
     {
         parent::setUp();
 
         // set up our email handler mock
         $this->emailHandlerMock = Mockery::mock(
-            'Abrigham\LaravelEmailExceptions\Exceptions\EmailHandler'
+            EmailHandler::class
         )->makePartial()->shouldAllowMockingProtectedMethods();
     }
 
