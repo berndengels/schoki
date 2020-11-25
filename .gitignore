@@ -11,6 +11,7 @@
 /.idea/
 .env
 .env.dusk
+.env.dev
 .env.schoki.prod
 .env.schoki.staging
 .env.schoki.dusk.prod
