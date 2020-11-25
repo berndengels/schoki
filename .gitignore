@@ -10,6 +10,11 @@
 /stuff/
 /.idea/
 .env
+.env.dusk
+.env.schoki.prod
+.env.schoki.staging
+.env.schoki.dusk.prod
+.env.schoki.dusk.staging
 .DS_Store
 .phpunit.result.cache
 Homestead.json
