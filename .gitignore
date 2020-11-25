@@ -18,11 +18,13 @@ npm-debug.log
 yarn-error.log
 composer.lock
 yarn.lock
-/.htaccess
-/.jshintrc
-composer.lock
 package-lock.json
 phpunit.dusk.xml
+/.htaccess
+/.editorconfig
+/.jshintrc
+/.phpstorm.meta.php
+/.phpunit.result.cache
 /webpack.mix.js
 /_ide_helper.php
 /perms
