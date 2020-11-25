@@ -47,7 +47,7 @@ class AfterLoginPage extends Page
 			->assertPathIs('/admin/events')
 			->screenshot($screenName)
 		;
-		@chmod( DuskTestCase::getScreenPath().'/'.$screenName . '.png' );
+		@chmod( DuskTestCase::getScreenPath().'/'.$screenName . '.png', 0666 );
 		DuskTestCase::createJpeg($screenName);
 	}
 

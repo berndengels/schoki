@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Models\User;
+use Laravel\Dusk\TestCase;
 use Laravel\Dusk\Browser;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverDimension;
@@ -10,11 +11,10 @@ use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\WebDriverCapabilityType;
-use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;
 use Intervention\Image\ImageManagerStatic as StaticImage;
 use Intervention\Image\Image;
 
-abstract class DuskTestCase extends BaseTestCase
+abstract class DuskTestCase extends TestCase
 {
     use CreatesApplication;
 

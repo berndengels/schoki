@@ -36,7 +36,7 @@ class StartPage extends Page
 			->assertSee('Events')
 			->screenshot($screenName)
 		;
-		@chmod( DuskTestCase::getScreenPath().'/'.$screenName . '.png' );
+		@chmod( DuskTestCase::getScreenPath().'/'.$screenName . '.png', 0666 );
 
 		DuskTestCase::createJpeg($screenName);
 	}
