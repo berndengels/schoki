@@ -11,6 +11,7 @@ namespace App\Forms;
 
 //use App\Models\Role;
 
+use App\Models\User;
 use App\Models\MusicStyle;
 use Kris\LaravelFormBuilder\Form;
 use Kris\LaravelFormBuilder\Field;
@@ -24,6 +25,9 @@ class UserForm extends MainForm
 
     public function buildForm()
     {
+        /**
+         * @var $model User
+         */
 		$model	= $this->getModel() ?: null;
 		$id     = $model ? $this->getModel()->id : null;
 
@@ -42,8 +46,8 @@ class UserForm extends MainForm
 				'class' => MusicStyle::class,
 				'label' => 'Musik Stile für Bandanfragen',
 				'empty_value'  => 'Bitte wählen ...',
-				'selected' => null,
-				'multiple' => true,
+                'selected' => ($model) ? $model->musicStyles : null,
+                'multiple' => true,
 				'help_block' => [
 					'text' => 'Bandanfragen werden an Eure Musik-Stile weitergeleitet',
 					'tag' => 'p',
