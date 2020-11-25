@@ -14,6 +14,7 @@
         "eternicode/bootstrap-datepicker": "^1.9",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
+        "garygreen/pretty-routes": "^1.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
         "ixudra/curl": "^6.21",
