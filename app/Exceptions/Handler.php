@@ -5,10 +5,10 @@ namespace App\Exceptions;
 use Throwable;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-//use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use App\Exceptions\EmailHandler;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+//use App\Exceptions\EmailHandler;
 
-class Handler extends EmailHandler
+class Handler extends ExceptionHandler
 {
     /**
      * A list of the exception types that are not reported.
