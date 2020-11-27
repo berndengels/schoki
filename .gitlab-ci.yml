@@ -12,7 +12,6 @@ build:
     script: echo "Building the app"
 
 deploy_staging:
-    name: staging
     stage: deploy
     script:
         - echo "Deploy to staging server from the $CI_COMMIT_BRANCH branch"
@@ -23,7 +22,6 @@ deploy_staging:
         - master
 
 deploy_prod:
-    name: prod
     stage: deploy
     script:
         - echo "Deploy to prodction server from the $CI_COMMIT_BRANCH branch."
