@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SaveEventTemplateRequest;
+use App\Http\Requests\EventTemplateRequest;
 use Exception;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class EventTemplateController extends MainController
     static protected $model = EventTemplate::class;
     static protected $form	= EventTemplateForm::class;
 
-    public function store(SaveEventTemplateRequest $request, $id = 0 )
+    public function store(EventTemplateRequest $request, $id = 0 )
     {
         try {
             if($id > 0) {

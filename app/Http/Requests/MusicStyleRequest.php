@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SaveAddressRequest extends FormRequest
+class MusicStyleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,19 +24,14 @@ class SaveAddressRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
-            'address_category_id'   => 'required',
-            'email'          => 'required|email',
-            'token'          => '',
+            'name'  => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'address_category_id.required' => 'Bitte die Kategorie der Adresse eintragen!',
-            'email.required' => 'Bitte eine Email Adresse eintragen!',
-            'email.eamil'    => 'Das ist keine korrekte Email-Adresse!.',
+            'name.required' => 'Bitte einen Namen eintragen!',
         ];
     }
 }

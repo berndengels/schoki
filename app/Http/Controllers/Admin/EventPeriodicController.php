@@ -15,7 +15,7 @@ use App\Models\EventPeriodic;
 use App\Forms\EventPeriodicForm;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
-use App\Http\Requests\SaveEventPediodicRequest;
+use App\Http\Requests\EventPediodicRequest;
 use Illuminate\Contracts\Support\Renderable;
 
 class EventPeriodicController extends MainController
@@ -57,7 +57,7 @@ class EventPeriodicController extends MainController
         ]);
     }
 
-    public function store( SaveEventPediodicRequest $request, $id = 0)
+    public function store(EventPediodicRequest $request, $id = 0)
     {
         $form = $this->form(EventPeriodicForm::class);
         if (!$form->isValid()) {

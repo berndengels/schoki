@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SaveThemeRequest;
+use App\Http\Requests\ThemeRequest;
 use App\Models\Theme;
 use App\Forms\ThemeForm;
 use Exception;
@@ -25,7 +25,7 @@ class ThemeController extends MainController
     static protected $model = Theme::class;
     static protected $form = ThemeForm::class;
 
-    public function store(SaveThemeRequest $request, $id = 0 )
+    public function store(ThemeRequest $request, $id = 0 )
     {
         try {
             if($id > 0) {

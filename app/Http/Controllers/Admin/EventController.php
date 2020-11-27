@@ -13,7 +13,7 @@ use Exception;
 use App\Entities\EventEntity;
 use App\Forms\EventTemplateSelectForm;
 use App\Forms\SearchForm;
-use App\Http\Requests\SaveEventRequest;
+use App\Http\Requests\EventRequest;
 use App\Models\EventPeriodic;
 use App\Models\EventTemplate;
 use Illuminate\Contracts\Support\Renderable;
@@ -130,7 +130,7 @@ class EventController extends MainController
 		return view('admin.form.'.$this->entity, $formOptions);
 	}
 
-    public function store(SaveEventRequest $request, $id = 0)
+    public function store(EventRequest $request, $id = 0)
     {
         try {
             if($id > 0) {

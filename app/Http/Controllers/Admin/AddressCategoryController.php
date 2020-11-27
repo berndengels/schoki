@@ -10,7 +10,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Entities\Newsletter\ContactEntity;
-use App\Http\Requests\SaveAddressCategoryRequest;
+use App\Http\Requests\AddressCategoryRequest;
 use Exception;
 use Illuminate\Http\Request;
 use App\Models\AddressCategory;
@@ -28,7 +28,7 @@ class AddressCategoryController extends MainController {
 	static protected $model	= AddressCategory::class;
 	static protected $form	= AddressCategoryForm::class;
 
-	public function store( SaveAddressCategoryRequest $request, $id = 0 )
+	public function store(AddressCategoryRequest $request, $id = 0 )
 	{
         $validator = Validator::make($request->post(), $request->rules(), $request->messages());
 

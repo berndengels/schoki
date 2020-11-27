@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SaveUserRequest;
+use App\Http\Requests\UserRequest;
 use App\Models\MusicStyle;
 use Exception;
 use Hash;
@@ -80,7 +80,7 @@ class UserController extends MainController
 		return redirect()->route('admin.userList', ['msg' => 'Passwörter von ' . $count . ' Usern zurückgesetzt!']);
 	}
 
-    public function store( SaveUserRequest $request, $id = 0 )
+    public function store(UserRequest $request, $id = 0 )
     {
         $user   = ($id > 0) ? User::find($id) : new User();
         $values = $request->validated();

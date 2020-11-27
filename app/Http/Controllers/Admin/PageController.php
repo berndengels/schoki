@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SavePageRequest;
+use App\Http\Requests\PageRequest;
 use App\Models\Page;
 use App\Forms\PageForm;
 use Exception;
@@ -26,7 +26,7 @@ class PageController extends MainController
     static protected $model = Page::class;
     static protected $form = PageForm::class;
 
-    public function store( SavePageRequest $request, $id = 0 )
+    public function store(PageRequest $request, $id = 0 )
     {
         $entity = ($id > 0) ? Page::find($id) : new Page();
         $values = $request->validated();

@@ -9,7 +9,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Forms\AddressCategoryFilterForm;
-use App\Http\Requests\SaveAddressRequest;
+use App\Http\Requests\AddressRequest;
 use App\Models\Address;
 use App\Forms\SearchForm;
 use App\Forms\AddressForm;
@@ -76,7 +76,7 @@ class AddressController extends MainController
 		]);
 	}
 
-	public function store( SaveAddressRequest $request, $id = 0 )
+	public function store(AddressRequest $request, $id = 0 )
     {
         $validator = Validator::make($request->post(), $request->rules(), $request->messages());
 

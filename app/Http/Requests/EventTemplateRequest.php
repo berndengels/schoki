@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SaveEventRequest extends FormRequest
+class EventTemplateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -18,10 +18,7 @@ class SaveEventRequest extends FormRequest
 
     public function validationData()
     {
-        return array_merge([
-            'is_published'  => false,
-            'is_periodic'   => 0,
-        ], $this->all());
+        return array_merge(['is_published' => false], $this->all());
     }
 
     /**
@@ -34,15 +31,12 @@ class SaveEventRequest extends FormRequest
         return [
             'title'         => 'required|string|min:3|max:160',
             'subtitle'      => 'max:100',
-            'event_date'    => 'required|date',
-            'event_time'    => 'required',
             'category_id'   => 'required',
             'theme_id'      => '',
             'description'   => '',
             'images'        => '',
             'links'         => '',
             'is_published'  => 'boolean',
-            'is_periodic'   => '',
         ];
     }
 

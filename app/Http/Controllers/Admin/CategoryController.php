@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SaveCategoryRequest;
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use App\Forms\CategoryForm;
 use Exception;
@@ -25,7 +25,7 @@ class CategoryController extends MainController
     static protected $model	= Category::class;
     static protected $form	= CategoryForm::class;
 
-    public function store(SaveCategoryRequest $request, $id = 0 )
+    public function store(CategoryRequest $request, $id = 0 )
     {
         try {
             if($id > 0) {

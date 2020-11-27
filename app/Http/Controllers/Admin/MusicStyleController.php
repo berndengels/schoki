@@ -8,7 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SaveMusicStyleRequest;
+use App\Http\Requests\MusicStyleRequest;
 use Exception;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -27,7 +27,7 @@ class MusicStyleController extends MainController
     static protected $form = MusicStyleForm::class;
 	static protected $orderBy = 'name';
 
-	public function store( SaveMusicStyleRequest $request, $id = 0 )
+	public function store(MusicStyleRequest $request, $id = 0 )
     {
         $entity = ($id > 0) ? MusicStyle::find($id) : new MusicStyle();
 

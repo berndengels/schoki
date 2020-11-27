@@ -8,7 +8,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 
-class SaveEventPediodicRequest extends FormRequest
+class EventPediodicRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
