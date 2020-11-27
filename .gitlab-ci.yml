@@ -1,0 +1,34 @@
+stages:
+    - test
+    - build
+    - deploy
+
+test:
+    stage: test
+    script: echo "Running tests"
+
+build:
+    stage: build
+    script: echo "Building the app"
+
+deploy_staging:
+    name: staging
+    stage: deploy
+    script:
+        - echo "Deploy to staging server from the $CI_COMMIT_BRANCH branch"
+    environment:
+        name: staging
+        url: https://test.schokoladen-mitte.de
+    only:
+        - master
+
+deploy_prod:
+    name: prod
+    stage: deploy
+    script:
+        - echo "Deploy to prodction server from the $CI_COMMIT_BRANCH branch."
+    environment:
+        name: staging
+        url: https://www.schokoladen-mitte.de
+    only:
+        - master
