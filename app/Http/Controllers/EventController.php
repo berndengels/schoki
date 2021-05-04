@@ -41,10 +41,14 @@ class EventController extends BaseController
 
 	public function __construct()
 	{
-        if (!Cache::has($this->cacheEventKey)) {
-            Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+	    if(app()->environment('dev')) {
+            $this->actualEvents = Event::allActualMerged();
+        } else {
+            if (!Cache::has($this->cacheEventKey)) {
+                Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+            }
+            $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
         }
-        $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
 	}
 
 	public function show($date)
@@ -121,7 +125,6 @@ class EventController extends BaseController
 */
 	public function getActualMergedEvents()
 	{
-
 		return view('public.events-lazy', [
 //			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
 			'data'	=> $this->actualEvents,

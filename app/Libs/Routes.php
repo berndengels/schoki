@@ -27,7 +27,7 @@ class Routes
 
 		foreach($routes as $k => $r) {
 			if( !preg_match("/\{[^\}]+\}/", $r->uri) ) {
-				$uri = '/'.$r->uri;
+				$uri = $r->uri;
 				self::$routes[$uri] = $uri;
 			}
 		}

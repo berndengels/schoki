@@ -42,11 +42,9 @@ Route::get('/ical', 'EventController@ical')->name('public.ical');
 Route::get('/remove/address/show/{token}', 'ContactController@removeAddressShow')->name('public.removeAddressShow');
 Route::post('/remove/address/hard/{token}', 'ContactController@removeAddressHard')->name('public.removeAddressHard');
 
-Route::prefix('')->group(function () {
-    Route::get('', 'EventController@getActualMergedEvents')->name('public.events');
-    Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
-    Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
-});
+Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
+Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
+Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
 
 //Route::post('/events/lazy/{date}', 'EventController@lazy')->name('public.eventLazy');
 //Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');
@@ -54,15 +52,11 @@ Route::prefix('')->group(function () {
 
 $categories = Category::where('is_published', 1)->get();
 foreach($categories as $item) {
-	Route::get('/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')
-		->name('public.eventsByCategory.' . $item->slug)
-	;
+	Route::get('/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')->name('public.eventsByCategory.' . $item->slug);
 }
 $themes = Theme::where('is_published', 1)->get();
 foreach($themes as $item) {
-	Route::get('/theme/'.$item->slug, 'EventController@getActualMergedEventsByTheme')
-		->name('public.eventsByTheme.'. $item->slug)
-	;
+	Route::get('/theme/'.$item->slug, 'EventController@getActualMergedEventsByTheme')->name('public.eventsByTheme.'. $item->slug);
 }
 Route::get('/page/{slug}', 'PageController@get')->name('public.page');
 

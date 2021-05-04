@@ -1,9 +1,5 @@
 <?php
 
-use App\Helper\MyDate;
-use App\Models\Event;
-use App\Models\Theme;
-use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();

@@ -171,6 +171,10 @@ class EventEntity extends Entity {
 		return $this->links;
 	}
 
+    public function getLinksArray() {
+        return collect(preg_split('/[\n\r]+/', $this->links)) ?? collect([]);
+    }
+
 	public function getHtmlLinks()
 	{
 		if($this->links && $this->links->count()) {
@@ -184,9 +188,9 @@ class EventEntity extends Entity {
 	/**
 	 * @param mixed $links
 	 */
-	public function setLinks($links) {
-		if('' !== $links) {
-			$this->links = collect(preg_split("/[\n\r]+/", $links));
+	public function setLinks($links = null) {
+		if($links) {
+			$this->links = $links;
 		}
 		return $this;
 	}
@@ -234,7 +238,7 @@ class EventEntity extends Entity {
 	 */
 	public function getEventTime() {
 		if( !$this->event_time || '' === trim($this->event_time)) {
-			$this->event_time = '20:00';
+			$this->event_time = '19:00';
 		}
 		return str_replace('.',':', $this->event_time);
 	}

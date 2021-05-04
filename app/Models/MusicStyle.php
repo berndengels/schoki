@@ -34,7 +34,7 @@ class MusicStyle extends Model
 	use Sortable;
 
 	protected $table = 'music_style';
-    protected $fillable = ['name','slug'];
+    protected $fillable = ['name'];
     public $timestamps = false;
 	public $sortable = [
 		'name',

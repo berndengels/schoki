@@ -90,9 +90,9 @@
     <div class="text col-12 m-0 p-2">
         {!! $event->getDescriptionSanitized() !!}
     </div>
-    @if ( $event->getLinks() && $event->getLinks()->count() )
+    @if ( $event->getLinksArray()->count() )
         <div class="links col-12 m-0 p-2">
-            @foreach($event->getLinks() as $link)
+            @foreach($event->getLinksArray() as $link)
                 <a href="{{ $link }}" target="_blank">{{ $link }}</a><br>
             @endforeach
         </div>
