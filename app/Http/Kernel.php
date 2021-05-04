@@ -3,8 +3,8 @@
 namespace App\Http;
 
 use App\Http\Middleware\Authenticate;
-//use App\Http\Middleware\CheckForMaintenanceMode;
-use MisterPhilip\MaintenanceMode\Http\Middleware\CheckForMaintenanceMode;
+use App\Http\Middleware\CheckForMaintenanceMode;
+//use MisterPhilip\MaintenanceMode\Http\Middleware\CheckForMaintenanceMode;
 use App\Http\Middleware\Cors;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\MyAddQueuedCookiesToResponse;

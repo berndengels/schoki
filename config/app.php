@@ -191,8 +191,8 @@ return [
 		Barryvdh\Debugbar\ServiceProvider::class,
 //        Kevinsimard\CookielessSession\Middleware\StartSession::class,
         App\Providers\CustomPasswordResetServiceProvider::class,
-        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
-        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
+//        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
+//        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
     ],
 
     /*
