@@ -41,7 +41,8 @@ class AppServiceProvider extends ServiceProvider
 		Carbon::setLocale($locale);
 		setlocale(LC_TIME, $locale, 'de_DE.utf8', 'de');
 
-		Paginator::defaultView('vendor.pagination.bootstrap-4');
+//		Paginator::defaultView('vendor.pagination.bootstrap-4');
+        Paginator::useBootstrap();
         Schema::defaultStringLength(191); //NEW: Increase StringLength
 
         Blade::component('components.alert', 'alert');
