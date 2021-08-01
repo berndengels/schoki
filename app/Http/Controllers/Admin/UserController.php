@@ -47,10 +47,9 @@ class UserController extends MainController
 
     public function edit( FormBuilder $formBuilder, $id = 0, $options = null ) {
         $user   = ($id > 0) ? User::findOrFail($id): null;
+        $user->password = null;
         $form   = $formBuilder->create(UserForm::class, ['model' => $user]);
 
-        $form->password->setValue('');
-        $form->password->setRawValue('');
 
         return view('admin.form.user', [
             'form'      => $form,
