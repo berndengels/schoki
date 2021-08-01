@@ -172,7 +172,12 @@ class MainController extends Controller
              */
             $entity = $model::find($id);
             if($entity) {
-                $entity->delete();
+                try {
+                    $entity->delete();
+                } catch(Exception $e) {
+                    echo $e->getMessage().'<br>';
+                    dd($e->getTrace());
+                }
                 if(isset($entity->images)) {
                     $this->removeImages($entity->images);
                 }

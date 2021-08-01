@@ -55,7 +55,7 @@ class MusicStyle extends Model
 
 	public function users()
 	{
-		return $this->belongsToMany(User::class);
+		return $this->belongsToMany(User::class, 'user_music_styles','user_id');
 	}
 
 	/**
