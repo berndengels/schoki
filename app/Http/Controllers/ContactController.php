@@ -29,12 +29,10 @@ class ContactController extends BaseController
 
     public function sendBands( Request $request )
     {
-        $this->validate(request(), [
-            'g-recaptcha-response' => 'required|captcha',
-        ],
-		[
-			'captcha.required' => 'Bitte das Captcha bedienen.'
-		]);
+        $this->validate(request(),
+            ['g-recaptcha-response' => 'required|captcha'],
+		    ['captcha.required' => 'Bitte das Captcha bedienen.']
+        );
 		$data			= $request->only(['music_style_id','email', 'name', 'message']);
 		$message		= Message::create($data);
 		$musicStyleId	= $data['music_style_id'];
@@ -71,9 +69,7 @@ class ContactController extends BaseController
     public function sendNewsletterSubscribe( Request $request )
     {
         $form = $this->form(NewsletterSubscribeForm::class);
-		$this->validate($request, [
-			'g-recaptcha-response' => 'required|captcha'
-		]);
+		$this->validate($request, ['g-recaptcha-response' => 'required|captcha']);
     }
 
 	public function removeAddressShow($token)

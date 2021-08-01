@@ -49,9 +49,9 @@ class UserController extends MainController
         $user   = ($id > 0) ? User::findOrFail($id): null;
         $form   = $formBuilder->create(UserForm::class, ['model' => $user]);
 
-        if($id > 0) {
+//        if($id > 0) {
             $form->password->setValue(null);
-        }
+//        }
         return view('admin.form.user', [
             'form'      => $form,
             'listLink'  => $this->listLink,
@@ -90,9 +90,8 @@ class UserController extends MainController
         $user->enabled          = isset($values['enabled']) ? 1 : 0;
         $user->is_super_admin   = ($this->isAdmin && isset($values['is_super_admin'])) ? 1 : null;
 
-        if( $values['password'] ) {
+        if( $values['password'] && '' !== $values['password'] ) {
             $user->password = Hash::make($values['password']);
-            die('password changed');
         }
 
         if(isset($values['music_style_id'])) {

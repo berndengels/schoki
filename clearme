@@ -4,5 +4,5 @@ php artisan config:clear
 php artisan route:clear
 php artisan view:clear
 composer clearcache
-composer dumpautoload
+#composer dumpautoload
 printf 'all DONE \360\237\230\216\n'
