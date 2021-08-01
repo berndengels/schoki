@@ -49,8 +49,10 @@ class UserController extends MainController
         $user   = ($id > 0) ? User::findOrFail($id): null;
         $form   = $formBuilder->create(UserForm::class, ['model' => $user]);
 
-        $form->password->setValue(null);
-        $form->password->setRawValue(null);
+//        $form->password->setValue(null);
+//        $form->password->setRawValue(null);
+        $form->getField('password')->setValue(null);
+        $form->getField('password')->setRawValue(null);
 
         return view('admin.form.user', [
             'form'      => $form,
