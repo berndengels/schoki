@@ -177,7 +177,7 @@ class EventEntity extends Entity {
 
 	public function getHtmlLinks()
 	{
-		if($this->links && $this->links->count()) {
+		if($this->links && $this->links instanceof Collection && $this->links->count()) {
 			return $this->links->map(function($item) {
 				return "<a href='$item' target='_blank'>$item</a>";
 			});
