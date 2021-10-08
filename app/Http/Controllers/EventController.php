@@ -191,14 +191,13 @@ class EventController extends BaseController
 		]);
 	}
 
+    /*
 	public function calendar($year, $month)
 	{
+        dd($year, $month);
 		$dates = [];
 		$result = ['error' => true];
 
-		/**
-		 * @var $event EventEntity
-		 */
 		foreach($this->actualEvents as $date => $event) {
 			list($y,$m,) = explode('-', $date);
 			if($year == $y && $month == $m) {
@@ -211,8 +210,30 @@ class EventController extends BaseController
 
 		return json_encode($result);
 	}
+*/
 
-	public function lazy($date)
+    public function calendar($year, $month)
+    {
+        $dates = [];
+        $result = ['error' => true];
+
+        /**
+         * @var $event EventEntity
+         */
+        foreach($this->actualEvents as $date => $event) {
+            list($y,$m,) = explode('-', $date);
+//            if($year == $y && $month == $m) {
+                $dates[] = $event->toCalendarData();
+//            }
+        }
+        if( count($dates) > 0 ) {
+            $result = $dates;
+        }
+
+        return json_encode($result);
+    }
+
+    public function lazy($date)
 	{
 		/**
 		 * @var $event EventEntity

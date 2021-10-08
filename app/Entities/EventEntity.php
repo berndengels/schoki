@@ -375,7 +375,7 @@ class EventEntity extends Entity {
 			'badge' 	=> true,
 			'title'		=> $this->title,
 			'body' 		=> $body,
-			'footer'	=> ($this->getHtmlLinks() && $this->getHtmlLinks()->count()) ? $this->getHtmlLinks()->join('<br>') : null,
+			'footer'	=> ($this->getHtmlLinks() && $this->getHtmlLinks()->count()) ? $this->getHtmlLinks()->join('<br>') : '',
 			'classname'	=> 'calendar-event',
 		];
 	}

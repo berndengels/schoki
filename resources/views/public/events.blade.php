@@ -134,26 +134,6 @@
                     modal: true,
                 },
                 legend: false, // object array, [{type: string, label: string, classname: string}]
-/*
-                action: function(e) {
-                    var $this = $(this),
-                        date = $this.data('date'),
-                        hasEvent = $this.data('hasEvent');
-                    if(hasEvent) {
-                        $.post("/events/info", {
-                            _token: $('[name="csrf-token"]').attr('content'),
-                            date: date
-                        })
-                        .done(function(response){
-                            console.info(response);
-                        })
-                        .fail(function(err){
-
-                        });
-                    }
-                    console.info($this.data());
-                },
-*/
                 action_nav: false // function
             });
         });

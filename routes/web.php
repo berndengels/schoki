@@ -189,7 +189,7 @@ Route::middleware(['public'])->group(function () use ($staticPages) {
     Route::post('/remove/address/hard/{token}', 'ContactController@removeAddressHard')->name('public.removeAddressHard');
     Route::get('/events', 'EventController@getActualMergedEvents')->name('public.events');
     Route::get('/events/show/{date}', 'EventController@show')->name('public.event.eventsShow');
-    Route::get('/events/calendar', 'EventController@calendar')->name('public.eventCalendar');
+    Route::get('/events/calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
 //Route::post('/events/lazy/{date}', 'EventController@lazy')->name('public.eventLazy');
     Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');
     Route::post('/events/lazyByTheme/{theme}/{date}', 'EventController@lazyByTheme')->name('public.eventLazyByTheme');
