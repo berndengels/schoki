@@ -36,7 +36,7 @@ class RouteTest extends DuskTestCase
                         ->waitFor('.mbs')
                         ->screenshot($screenName)
                     ;
-                    @chmod(parent::getScreenPath().'/'.$screenName . '.png');
+                    @chmod(parent::getScreenPath().'/'.$screenName . '.png', 0666);
                     parent::createJpeg($screenName);
                     sleep(1);
                 } catch(Exception $e) {
