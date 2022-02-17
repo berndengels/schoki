@@ -5,6 +5,7 @@
  */
 //window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
+require('@fortawesome/fontawesome-free')
 require('jquery-lazy');
 require('jquery-lazy/jquery.lazy.plugins.min');
 //import LazyLoad from "vanilla-lazyload";

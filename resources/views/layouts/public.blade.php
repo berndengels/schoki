@@ -14,6 +14,7 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"-->
     <link type="text/css" rel="stylesheet" href="{{ asset('css/red.css') }}" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="{{ asset('js/app.js') }}" type="text/javascript" charset="utf-8"></script>

@@ -1,6 +1,7 @@
 
 window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
+require('@fortawesome/fontawesome-free')
 require('bootstrap-datepicker');
 require('bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min');
 require('ekko-lightbox');

@@ -16,6 +16,8 @@
                             <a class="dropup-item" href="{{ $child->url }}">
                                 @if('' !== $child->icon)
                                 <img src="/img/icons/{{ $child->icon }}" title="{{ $child->icon }}" alt="{{ $child->icon }}">
+                                @elseif($child->fa_icon)
+                                    <i class="{{ $child->fa_icon }}"></i>
                                 @else
                                 {{ $child->name }}
                                 @endif
@@ -30,6 +32,8 @@
                                 @else
                                     <img src="/img/icons/{{ $item->icon }}" title="{{ $item->icon }}" alt="{{ $item->icon }}">
                                 @endif
+                            @elseif($item->fa_icon)
+                                <i class="{{ $item->fa_icon }}"></i>
                             @else
                                 {{ $item->name }}<span class="ml-2 sr-only">(current)</span>
                             @endif
