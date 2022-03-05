@@ -44,7 +44,8 @@ Route::post('/remove/address/hard/{token}', 'ContactController@removeAddressHard
 
 Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
 Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
-Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
+//Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
+Route::get('calendar', 'EventController@calendar')->name('public.eventCalendar');
 
 //Route::post('/events/lazy/{date}', 'EventController@lazy')->name('public.eventLazy');
 //Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');

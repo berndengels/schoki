@@ -127,8 +127,8 @@
 
             $("#calendar").zabuto_calendar({
                 language: 'de',
-                year: year,
-                month: month,
+//                year: year,
+//                month: month,
                 show_previous: false,
                 show_next: 6,
                 cell_border: false,
@@ -140,7 +140,8 @@
                     next: '<ion-icon name="arrow-dropright-circle"></ion-icon>'
                 },
                 ajax: {
-	                url: "/calendar/" + year + "/" + month,
+//	                url: "/calendar/" + year + "/" + month,
+	                url: "/calendar",
                     modal: true,
                 },
                 legend: false, // object array, [{type: string, label: string, classname: string}]

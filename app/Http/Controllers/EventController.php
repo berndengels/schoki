@@ -126,10 +126,8 @@ class EventController extends BaseController
 	public function getActualMergedEvents()
 	{
 		return view('public.events-lazy', [
-//			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
 			'data'	=> $this->actualEvents,
 			'today' => MyDate::getUntilValidDate(),
-//			'route'	=> '/events/lazy',
 		]);
 	}
 
@@ -212,7 +210,7 @@ class EventController extends BaseController
 	}
 */
 
-    public function calendar($year, $month)
+    public function calendar(Request $request)
     {
         $dates = [];
         $result = ['error' => true];

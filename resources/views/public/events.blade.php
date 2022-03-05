@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Events')
+@section('title', 'Eventsss')
 
 @section('extra-headers')
     <link rel="stylesheet" href="{{ asset('vendor/calendar/css/zabuto_calendar.min.css') }}">
@@ -16,7 +16,6 @@
 @section('content')
     <div class="eventContainer col-sm-11 col-md-9 mbs">
         @if( $data->count() )
-
             @foreach ($data as $event)
                 <div class="event col-12 lazy" >
                     <div class="eventContent col-12">
@@ -114,7 +113,6 @@
             var now = new Date();
             var year = now.getFullYear();
             var month = now.getMonth() + 1;
-
             $("#calendar").zabuto_calendar({
                 language: 'de',
                 year: year,
