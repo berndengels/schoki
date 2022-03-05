@@ -189,27 +189,6 @@ class EventController extends BaseController
 		]);
 	}
 
-    /*
-	public function calendar($year, $month)
-	{
-        dd($year, $month);
-		$dates = [];
-		$result = ['error' => true];
-
-		foreach($this->actualEvents as $date => $event) {
-			list($y,$m,) = explode('-', $date);
-			if($year == $y && $month == $m) {
-				$dates[] = $event->toCalendarData();
-			}
-		}
-		if( count($dates) > 0 ) {
-			$result = $dates;
-		}
-
-		return json_encode($result);
-	}
-*/
-
     public function calendar(Request $request)
     {
         $dates = [];
