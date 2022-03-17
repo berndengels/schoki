@@ -164,9 +164,9 @@ class NewsletterController extends Controller
 		}
 	}
 
-	public function preview( $formt, $events, $title, $header = '' )
+	public function preview( $format, $events, $title, $header = '' )
 	{
-		return view('mail.'.$formt.'.newsletter', [
+		return view('mail.'.$format.'.newsletter', [
 			'backLink'	=> true,
 			'title'		=> $title,
 			'header'	=> $header,

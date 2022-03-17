@@ -27,10 +27,14 @@ Schokoladen Berlin-Mitte, Ackerstrasse 169, 10115 Berlin, https://www.schokolade
 {!! $item->getDescriptionText() !!}
 @endif
 
-@if($item->getLinks()->count())
+@if($item->getLinks())
+@if(is_array($item->getLinks()) && $item->getLinks()->count())
 @foreach($item->getLinks() as $link)
 {{ $link }}
 @endforeach
+@elseif(is_string($item->getLinks()) && '' !== $item->getLinks())
+{!! $item->getLinks() !!}
+@endif
 @endif
 -------------------------------------
 
