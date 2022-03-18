@@ -9,26 +9,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Exception;
+use Carbon\Carbon;
 use App\Entities\Newsletter\CampaignEntity;
 use App\Entities\Newsletter\SettingsEntity;
 use App\Forms\NewsletterForm;
-use App\Models\Address;
 use App\Models\AddressCategory;
 use App\Models\Event;
 use App\Models\Newsletter;
-use Carbon\Carbon;
-use Exception;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use DrewM\MailChimp\MailChimp;
-use Illuminate\Database\Eloquent\Collection;
 use Newsletter as SpatieNewsletter;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 use App\Repositories\NewsletterRepository;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -69,7 +64,6 @@ class NewsletterController extends Controller
 					}
 				}
 			}
-
 			return $next($request);
 		});
 	}
@@ -134,6 +128,7 @@ class NewsletterController extends Controller
 		$fromDate	= Carbon::createFromFormat('Y-m-d', $from);
 		$untilDate	= Carbon::createFromFormat('Y-m-d', $until);
 		$events		= Event::eventsForNewsletter($fromDate, $untilDate);
+
 		$html		= $this->render('html', $events, $title, $header);
 		$text		= $this->render('text', $events, $title, $header);
 
@@ -145,22 +140,16 @@ class NewsletterController extends Controller
 		switch($request->submit) {
 			case 'preview':
 				return $this->preview('html', $events, $title, $header);
-				break;
 			case 'create':
 				return $this->create($settings, $tagID, $html, $text);
-				break;
 			case 'edit':
 				return $this->setContent($html, $text);
-				break;
 			case 'check':
 				return $this->check();
-				break;
 			case 'test':
 				return $this->test([$this->user->email]);
-				break;
 			case 'send':
 				return $this->send();
-				break;
 		}
 	}
 
@@ -184,10 +173,13 @@ class NewsletterController extends Controller
 				if($campaignID) {
 					$response['persist'] = $this->persist($campaignID, $tagID);
 				}
-				sleep(10);
+				sleep(5);
 				$response['updateCampaignContent'] = $this->setContent($html, $plaintext);
 			}
-			return view('admin.newsletter');
+            return view('admin.newsletter.response', [
+                'title'     => 'Newsletter',
+                'response'  => $response,
+            ]);
 		} catch (Exception $e) {
 			$message = $e->getMessage();
 			return view('components.error', compact('message'));

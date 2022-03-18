@@ -1,8 +1,10 @@
 @extends('layouts.admin')
 
 @section('content')
-    @include('components.newsletter-back')
-    <pre>{!! print_r(session()->all(),true) !!}</pre>
-    <pre>{!! print_r($response,true) !!}</pre>
-    @include('components.newsletter-back')
+    @include('components.newsletter-back-list')
+    @if(isset($response['persist']) && $response['persist'])
+        <div class="row">
+            <h3 class="m-5 text-primary">Newsletter erfolgreich angelegt</h3>
+        </div>
+    @endif
 @endsection

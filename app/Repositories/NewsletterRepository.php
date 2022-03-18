@@ -35,7 +35,7 @@ class NewsletterRepository {
 	/**
 	 * @var bool
 	 */
-	protected $useCache = FALSE;
+	protected $useCache = false;
 	/**
 	 * @var MailChimp
 	 */
@@ -94,7 +94,7 @@ class NewsletterRepository {
 	 * @param bool $force
 	 * @return array|bool|false|null
 	 */
-	public function addMember(Address $address, $force = FALSE) {
+	public function addMember(Address $address, $force = false) {
 		if (!$force && SpatieNewsletter::isSubscribed($address->email)) {
 			return NULL;
 		}
@@ -275,9 +275,9 @@ class NewsletterRepository {
 			],
 			'settings' => $settings->toObject(),
 			'tracking' => [
-				'opens' => TRUE,
-				'text_clicks' => FALSE,
-				'html_clicks' => FALSE,
+				'opens' => true,
+				'text_clicks' => false,
+				'html_clicks' => false,
 			],
 		];
 		$response = $this->api->post('campaigns', $params);

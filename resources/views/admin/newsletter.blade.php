@@ -3,7 +3,6 @@
  * @var $item CampaignEntity
  */
 ?>
-
 @extends('layouts.admin')
 
 @section('content')
@@ -23,11 +22,6 @@
 
             <th scope="col">Aktion</th>
         </tr>
-<?phpuse App\Entities\Newsletter\CampaignEntity;
-        /**
-     * @var $item CampaignEntity
-     */
-?>
     @foreach ($data as $item)
 <?php
      $sid = $item->getRecipients()->getSegmentOpts()->getSavedSegmentId();
