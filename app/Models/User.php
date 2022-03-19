@@ -14,8 +14,8 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Tymon\JWTAuth\Contracts\JWTSubject;
 use Kyslik\ColumnSortable\Sortable;
+use Laravel\Sanctum\HasApiTokens;
 
 /**
  * App\Models\User
@@ -70,10 +70,10 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|User whereUsername($value)
  * @mixin Eloquent
  */
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable
 {
 //    use Notifiable, HasRoles;
-    use Notifiable, Sortable;
+    use Notifiable, Sortable, HasApiTokens;
 	public $sortable = [
 		'username',
 		'email',
@@ -118,16 +118,6 @@ class User extends Authenticatable implements JWTSubject
 		$this->last_login = $now->format('Y-m-d H:i:s');
 		return $this;
 	}
-
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
-    }
-
-    public function getJWTCustomClaims()
-    {
-        return [];
-    }
 
 	/**
 	 * @return HasMany

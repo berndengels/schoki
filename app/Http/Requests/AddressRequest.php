@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AddressRequest extends FormRequest
@@ -16,6 +17,18 @@ class AddressRequest extends FormRequest
         return true;
     }
 
+    protected function failedValidation(Validator $validator)
+    {
+        dd($validator->errors());
+        parent::failedValidation($validator);
+    }
+
+
+    public function validationData($keys = null)
+    {
+        return array_merge($this->all($keys), ['remove' => !!$this->post('remove') ?? false]);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,10 +37,11 @@ class AddressRequest extends FormRequest
     public function rules()
     {
         return [
-            'id'            => '',
             'address_category_id'   => 'required',
-            'email'          => 'required|email',
-            'token'          => '',
+            'email'         => 'required|email',
+//            'captcha'       => 'required|captcha',
+            'token'         => '',
+            'remove'        => '',
         ];
     }
 
@@ -36,7 +50,8 @@ class AddressRequest extends FormRequest
         return [
             'address_category_id.required' => 'Bitte die Kategorie der Adresse eintragen!',
             'email.required' => 'Bitte eine Email Adresse eintragen!',
-            'email.eamil'    => 'Das ist keine korrekte Email-Adresse!.',
+            'email.email'    => 'Das ist keine korrekte Email-Adresse!.',
+//            'captcha.required'  => 'Bitte das Captcha Feld ausfüllen.',
         ];
     }
 }

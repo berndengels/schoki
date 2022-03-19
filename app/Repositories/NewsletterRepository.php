@@ -69,7 +69,7 @@ class NewsletterRepository {
 	 * NewsletterRepository constructor.
 	 * @param bool $useCache
 	 */
-	public function __construct($useCache = FALSE) {
+	public function __construct($useCache = false) {
 		$this->useCache = $useCache;
 		$this->api = SpatieNewsletter::getApi();
 		$this->campaigns = collect(collect($this->api->get('campaigns'))->get('campaigns'))
@@ -96,7 +96,10 @@ class NewsletterRepository {
 	 */
 	public function addMember(Address $address, $force = false) {
 		if (!$force && SpatieNewsletter::isSubscribed($address->email)) {
-			return NULL;
+            return [
+                'lastError' => 'isSubscribed',
+                'errors' => null,
+            ];
 		}
 
 		$mergeFields = [
@@ -108,7 +111,7 @@ class NewsletterRepository {
 		if (!SpatieNewsletter::lastActionSucceeded()) {
 			return [
 				'lastError' => SpatieNewsletter::getLastError(),
-				'errors' => isset($response['errors']) ? $response['errors'] : NULL,
+				'errors' => isset($response['errors']) ? $response['errors'] : null,
 			];
 		}
 
@@ -118,11 +121,24 @@ class NewsletterRepository {
 		if (!SpatieNewsletter::lastActionSucceeded()) {
 			return [
 				'lastError' => SpatieNewsletter::getLastError(),
-				'errors' => isset($response['errors']) ? $response['errors'] : NULL,
+				'errors' => isset($response['errors']) ? $response['errors'] : null,
 			];
 		}
+
 		return $response;
 	}
+
+    public function removeMember(Address $address)
+    {
+        $response = SpatieNewsletter::unsubscribe($address->email);
+        if (!SpatieNewsletter::lastActionSucceeded()) {
+            return [
+                'lastError' => SpatieNewsletter::getLastError(),
+                'errors' => isset($response['errors']) ? $response['errors'] : null,
+            ];
+        }
+        return $response;
+    }
 
 	/**
 	 * @param $name

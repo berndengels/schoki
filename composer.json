@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "laravel/events",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Web Event Manager",
     "keywords": [
         "framework",
         "laravel"
@@ -10,7 +10,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "anhskohbo/no-captcha": "^3.3",
-        "berndengels/laravel8-email-exceptions": "^1.0",
+        "berndengels/laravel-email-exceptions": "^1.0",
         "eluceo/ical": "^0.16.1",
         "eternicode/bootstrap-datepicker": "^1.9",
         "fideloper/proxy": "^4.4",
@@ -20,23 +20,25 @@
         "intervention/image": "^2.5",
         "ixudra/curl": "^6.21",
         "jenssegers/agent": "^2.6",
-        "kalnoy/nestedset": "^5.0",
+        "kalnoy/nestedset": "^6.0",
         "kris/laravel-form-builder": "^1.40",
         "kyslik/column-sortable": "^6.4",
         "laravel/cashier": "^12.5",
-        "laravel/framework": "^8.12",
+        "laravel/framework": "^8.67",
+        "laravel/sanctum": "^2.14",
         "laravel/telescope": "^4.3",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.1",
         "laravelium/feed": "^8.0",
         "lavary/laravel-menu": "^1.7",
+        "mews/captcha": "^3.2",
         "misterphilip/maintenance-mode": "^2.0",
+        "protonemedia/laravel-form-components": "^3.6",
         "spatie/db-dumper": "^2.18",
         "spatie/laravel-db-snapshots": "^1.7",
-        "spatie/laravel-newsletter": "^4.8",
+        "spatie/laravel-newsletter": "^4.11",
         "spatie/laravel-permission": "^3.17",
-        "symfony/process": "^5.1",
-        "tymon/jwt-auth": "^1.0"
+        "symfony/process": "^5.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

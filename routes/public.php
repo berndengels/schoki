@@ -1,10 +1,12 @@
 <?php
 
-use App\Helper\MyDate;
-use App\Models\Event;
+use App\Http\Controllers\ContactController;
 use App\Models\Theme;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CaptchaServiceController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,14 +63,17 @@ foreach($themes as $item) {
 }
 Route::get('/page/{slug}', 'PageController@get')->name('public.page');
 
-Route::prefix('contact')->group(function () {
-    Route::get('/formBands', 'ContactController@formBands')->name('public.bandsForm');
-    Route::post('/sendBands', 'ContactController@sendBands')->name('action.sendBands');
-//    Route::get('/formNewsletter', 'ContactController@formNewsletter')->name('public.newsletterForm');
-//	Route::post('/sendNewsletter', 'ContactController@sendNewsletter')->name('action.sendNewsletter');
-    Route::get('/formNewsletter', 'ContactController@formNewsletterSubscribe')->name('public.formNewsletterSubscribe');
-    Route::post('/sendNewsletter', 'ContactController@sendNewsletterSubscribe')->name('action.sendNewsletterSubscribe');
+Route::group([
+    'prefix'    => 'contact',
+    'middleware' => ['web'],
+], function () {
+    Route::get('/formBands', [ContactController::class, 'formBands'])->name('public.bandsForm');
+    Route::post('/sendBands', [ContactController::class, 'sendBands'])->name('action.sendBands');
+    Route::get('/formNewsletterSubscribe', [ContactController::class, 'formNewsletterSubscribe'])->name('public.formNewsletterSubscribe');
+    Route::post('/sendNewsletterSubscribe', [ContactController::class, 'sendNewsletterSubscribe'])->name('action.sendNewsletterSubscribe');
 });
+
+Route::get('reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha'])->name('reload.captcha');
 
 Route::get('/logout', function() {
     Auth::logout();
