@@ -103,7 +103,7 @@ class ContactController extends BaseController
         $validated['token'] = Hash::make($addressCategoryId.$email);
 
         $repo = new NewsletterRepository();
-        $address = Address::whereEmail($email)->whereAddressCategoryId($addressCategoryId)->first();
+        $address = Address::whereEmail($email)->first();
         $message = 'Unbekannter Fehler';
 
         if($remove) {
