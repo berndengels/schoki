@@ -98,7 +98,7 @@ class ContactController extends BaseController
     {
         $validated  = $request->validated();
         $email      = $validated['email'];
-        $remove     = (boolean) $request->post('remove');
+        $remove     = (boolean) $validated['remove'];
         $addressCategoryId = $validated['address_category_id'];
         $validated['token'] = Hash::make($addressCategoryId.$email);
 
