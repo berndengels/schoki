@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Forms\NewsletterSubscribeForm;
 use App\Http\Requests\AddressRequest;
+use App\Http\Requests\BandContactRequest;
 use App\Mail\NotifyBooker;
 use App\Models\Address;
 use App\Models\AddressCategory;
 use App\Models\Message;
+use App\Models\MusicStyle;
 use App\Models\User;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use App\Forms\NewsletterForm;
-use App\Forms\BandsForm;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
@@ -37,25 +35,21 @@ class ContactController extends BaseController
      * @param FormBuilder $formBuilder
      * @return Application|Factory|View
      */
-    public function formBands(FormBuilder $formBuilder ) {
-        $form   = $formBuilder->create(BandsForm::class);
-		return view('public.form.bands', compact('form'));
+    public function formBands() {
+        $musicStyles = collect(MusicStyle::all()->keyBy('id')->map->name)->prepend('Bitte wählen', null);
+		return view('public.form.bands', compact('musicStyles'));
     }
 
     /**
-     * @param Request $request
+     * @param BandContactRequest $request
      * @return Application|Factory|View
      * @throws ValidationException
      */
-    public function sendBands(Request $request )
+    public function sendBands(BandContactRequest $request )
     {
-        $this->validate(request(),
-            ['g-recaptcha-response' => 'required|captcha'],
-		    ['captcha.required' => 'Bitte das Captcha bedienen.']
-        );
-		$data			= $request->only(['music_style_id','email', 'name', 'message']);
-		$message		= Message::create($data);
-		$musicStyleId	= $data['music_style_id'];
+        $validated      = $request->validated();
+		$message		= Message::create($validated);
+		$musicStyleId   = $validated['music_style_id'];
 
 		if('prod' === env('APP_ENV')) {
 			$users = User::whereHas('musicStyles', function ($query) use ($musicStyleId) {

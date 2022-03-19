@@ -8,7 +8,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 
-abstract class FormRequest extends LaravelFormRequest
+abstract class ApiFormRequest extends LaravelFormRequest
 {
     /**
      * Get the validation rules that apply to the request.

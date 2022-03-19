@@ -20,7 +20,7 @@ class SpaContactController extends Controller
         return response()->json($data);
     }
 
-    public function send( BandContactRequest $request )
+    public function send(BandContactRequest $request )
     {
         $validated      = $request->validated();
         $data			= collect($validated)->only(['music_style_id','email', 'name', 'message'])->toArray();

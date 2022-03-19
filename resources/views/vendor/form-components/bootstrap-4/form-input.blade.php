@@ -33,8 +33,8 @@
                 </div>
             </div>
         @endisset
-
         @if($hasErrorAndShow($name))
+            {{ dd($hasErrorAndShow($name)) }}
             <x-form-errors :name="$name" />
         @endif
     </div>
