@@ -17,13 +17,6 @@ class AddressRequest extends FormRequest
         return true;
     }
 
-    protected function failedValidation(Validator $validator)
-    {
-        dd($validator->errors());
-        parent::failedValidation($validator);
-    }
-
-
     public function validationData($keys = null)
     {
         return array_merge($this->all($keys), ['remove' => !!$this->post('remove') ?? false]);
