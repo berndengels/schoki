@@ -25,9 +25,9 @@ class Routes
 			});
 		}
 
-		foreach($routes as $k => $r) {
+		foreach($routes as $r) {
 			if( !preg_match("/\{[^\}]+\}/", $r->uri) ) {
-				$uri = $r->uri;
+				$uri = '/' . ltrim($r->uri, '/');
 				self::$routes[$uri] = $uri;
 			}
 		}

@@ -55,7 +55,7 @@ Route::get('calendar', 'EventController@calendar')->name('public.eventCalendar')
 
 $categories = Category::where('is_published', 1)->get();
 foreach($categories as $item) {
-	Route::get('/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')->name('public.eventsByCategory.' . $item->slug);
+	Route::get('/events/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')->name('public.eventsByCategory.' . $item->slug);
 }
 $themes = Theme::where('is_published', 1)->get();
 foreach($themes as $item) {
