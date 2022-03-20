@@ -19,7 +19,7 @@ class Routes
 	{
 		$routes = collect(Route::getRoutes()->getRoutesByName());
 
-		if( $prefix ) {
+        if( $prefix ) {
 			$routes = $routes->reject(function ($value, $key) use ($prefix) {
 				return !preg_match("#$prefix#", $key);
 			});
@@ -43,6 +43,9 @@ class Routes
 
 	public static function getPublicRoutes()
 	{
-		return self::getPageRoutes()->merge(self::getRoutes('public'));
+		return self::getPageRoutes()
+            ->merge(self::getRoutes('public'))
+//            ->merge(self::getRoutes('contact'))
+            ;
 	}
 }

@@ -2,10 +2,14 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
 
 class BandContactRequest extends FormRequest
 {
+//    protected $redirectRoute = 'public.bandsForm';
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -14,6 +18,14 @@ class BandContactRequest extends FormRequest
     public function authorize()
     {
         return true;
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+//        dd($validator->errors());
+        throw (new ValidationException($validator))
+            ->errorBag($this->errorBag)
+            ->redirectTo('/contact/formBands');
     }
 
     /**

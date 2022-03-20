@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BandMessageController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterController;
 use App\Models\Theme;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
@@ -65,12 +67,17 @@ Route::get('/page/{slug}', 'PageController@get')->name('public.page');
 
 Route::group([
     'prefix'    => 'contact',
+    'as'        => 'public.',
     'middleware' => ['web'],
 ], function () {
+/*
     Route::get('/formBands', [ContactController::class, 'formBands'])->name('public.bandsForm');
     Route::post('/sendBands', [ContactController::class, 'sendBands'])->name('action.sendBands');
     Route::get('/formNewsletterSubscribe', [ContactController::class, 'formNewsletterSubscribe'])->name('public.formNewsletterSubscribe');
     Route::post('/sendNewsletterSubscribe', [ContactController::class, 'sendNewsletterSubscribe'])->name('action.sendNewsletterSubscribe');
+*/
+    Route::resource('message', BandMessageController::class);
+    Route::resource('newsletter', NewsletterController::class);
 });
 
 Route::get('reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha'])->name('reload.captcha');

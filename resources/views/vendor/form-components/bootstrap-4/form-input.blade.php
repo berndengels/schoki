@@ -33,6 +33,7 @@
                 </div>
             </div>
         @endisset
+        {!! dump($hasErrorAndShow($name)) !!}
         @if($hasErrorAndShow($name))
             {{ dd($hasErrorAndShow($name)) }}
             <x-form-errors :name="$name" />

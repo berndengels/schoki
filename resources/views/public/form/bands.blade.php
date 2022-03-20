@@ -10,14 +10,14 @@
     <div class="row w-100">
         <div class="col-sm-12 col-lg-6">
             <x-form
-                    method="POST"
-                    action="{{ route('action.sendBands') }}"
+                    method="post"
+                    action="{{ route('contact.message.store') }}"
                     class="w-100 mx-3"
             >
-                <x-form-select name="music_style_id" label="Musik Richtung" :options="$musicStyles" />
-                <x-form-input name="name" label="Name" placeholder="Name" />
+                <x-form-select name="music_style_id" label="Musik Richtung" :options="$musicStyles" required />
+                <x-form-input name="name" label="Name" placeholder="Name" required />
                 <x-form-input type="email" name="email" label="Email" placeholder="Email Adresse" />
-                <x-form-textarea rows="6" name="message" label="Deine Nachricht" placeholder="Deine Nachricht"></x-form-textarea>
+                <x-form-textarea rows="6" name="message" label="Deine Nachricht" placeholder="your message"></x-form-textarea>
                 <div class="form-group mt-4 mb-4">
                     <span class="block text-xl text-blue-900 mb-2">Captcha Text (zur Absicherung)</span>
                     <div class="captcha">

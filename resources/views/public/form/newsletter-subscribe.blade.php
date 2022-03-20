@@ -9,7 +9,7 @@
 @section('content')
     <x-form
             method="post"
-            action="{{ route('action.sendNewsletterSubscribe') }}"
+            action="{{ route('contact.newsletter.store') }}"
             class="w-full mx-3 md:w-1/2"
     >
         <x-form-select name="address_category_id" label="Adress-Kategorie" :options="$addressCategories" required />
