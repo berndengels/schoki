@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\SPA;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Generators\BandContactForm;
-use App\Http\Requests\BandContactRequest;
+use App\Http\Requests\BandMessageRequest;
 use App\Mail\NotifyBooker;
 use App\Models\Message;
 use App\Models\User;
@@ -20,7 +20,7 @@ class SpaContactController extends Controller
         return response()->json($data);
     }
 
-    public function send(BandContactRequest $request )
+    public function send(BandMessageRequest $request )
     {
         $validated      = $request->validated();
         $data			= collect($validated)->only(['music_style_id','email', 'name', 'message'])->toArray();

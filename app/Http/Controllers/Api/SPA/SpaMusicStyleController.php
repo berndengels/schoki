@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api\SPA;
 use App\Models\MusicStyle;
 use App\Http\Resources\MusicStyleResource;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\BandContactRequest;
+use App\Http\Requests\BandMessageRequest;
 use Carbon\Carbon;
 
 class SpaMusicStyleController extends Controller

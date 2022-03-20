@@ -9,11 +9,13 @@
 @section('content')
     <x-form
             method="post"
-            action="{{ route('contact.newsletter.store') }}"
+            action="{{ route('public.newsletter.store') }}"
             class="w-full mx-3 md:w-1/2"
     >
-        <x-form-select name="address_category_id" label="Adress-Kategorie" :options="$addressCategories" required />
-        <x-form-input type="email" name="email" label="Email" placeholder="Email Adresse" required />
+        <x-form-select id="address_category_id" name="address_category_id" label="Adress-Kategorie" :options="$addressCategories" />
+        <x-form-errors name="address_category_id" />
+        <x-form-input type="text" id="email" name="email" label="Email" placeholder="Email Adresse" />
+        <x-form-errors name="email" />
         <x-form-checkbox name="remove" label="Ich möchte den Newsletter abbestellen" />
 
         <!--div class="form-group mt-4 mb-4">

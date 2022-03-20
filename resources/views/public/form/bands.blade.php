@@ -11,7 +11,7 @@
         <div class="col-sm-12 col-lg-6">
             <x-form
                     method="post"
-                    action="{{ route('contact.message.store') }}"
+                    action="{{ route('public.message.store') }}"
                     class="w-100 mx-3"
             >
                 <x-form-select name="music_style_id" label="Musik Richtung" :options="$musicStyles" required />
@@ -25,7 +25,7 @@
                         <button type="button" class="btn btn-danger inline-block" class="reload" id="reload">&#x21bb;</button>
                     </div>
                 </div>
-                <x-form-input id="captcha" name="captcha" label="Hier den darüber angezeigten Text eintragen" placeholder="Captcha Text eintragen"/>
+                <x-form-input id="captcha" name="captcha" label="Hier den darüber angezeigten Text eintragen" placeholder="Hier Captcha Text eintragen"/>
                 <x-form-submit name="submit" class="btn btn-save h-10 mt-3 w-full md:w-1/2">
                     Senden
                 </x-form-submit>

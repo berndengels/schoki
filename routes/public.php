@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\BandMessageController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\NewsletterController;
 use App\Models\Theme;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BandMessageController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\CaptchaServiceController;
 
 /*
@@ -70,17 +69,11 @@ Route::group([
     'as'        => 'public.',
     'middleware' => ['web'],
 ], function () {
-/*
-    Route::get('/formBands', [ContactController::class, 'formBands'])->name('public.bandsForm');
-    Route::post('/sendBands', [ContactController::class, 'sendBands'])->name('action.sendBands');
-    Route::get('/formNewsletterSubscribe', [ContactController::class, 'formNewsletterSubscribe'])->name('public.formNewsletterSubscribe');
-    Route::post('/sendNewsletterSubscribe', [ContactController::class, 'sendNewsletterSubscribe'])->name('action.sendNewsletterSubscribe');
-*/
-    Route::resource('message', BandMessageController::class);
-    Route::resource('newsletter', NewsletterController::class);
+    Route::resource('message', 'BandMessageController');
+    Route::resource('newsletter', 'NewsletterController');
 });
 
-Route::get('reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha'])->name('reload.captcha');
+Route::get('reload-captcha', 'CaptchaServiceController@reloadCaptcha')->name('reload.captcha');
 
 Route::get('/logout', function() {
     Auth::logout();

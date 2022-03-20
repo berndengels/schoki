@@ -6,10 +6,8 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
 
-class BandContactRequest extends FormRequest
+class BandMessageRequest extends FormRequest
 {
-//    protected $redirectRoute = 'public.bandsForm';
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -22,10 +20,8 @@ class BandContactRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
-//        dd($validator->errors());
-        throw (new ValidationException($validator))
-            ->errorBag($this->errorBag)
-            ->redirectTo('/contact/formBands');
+        dd($validator->errors());
+        parent::failedValidation($validator);
     }
 
     /**
@@ -40,7 +36,7 @@ class BandContactRequest extends FormRequest
             'email'             => 'required|email',
             'message'           => 'required',
 //            'recaptcha'         => 'required',
-            'captcha'           => 'required|captcha',
+            'captcha'           => 'required|captcha'
         ];
     }
 
@@ -53,7 +49,7 @@ class BandContactRequest extends FormRequest
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
             'message.required'      => 'Bitte ein Nachricht eingeben!',
             'captcha.required'      => 'Bitte den Captcha-Text eingeben!',
-            'captcha.captcha'       => 'Bitte den Captcha-Text stimmt nicht!',
+            'captcha.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ];
     }
 }
