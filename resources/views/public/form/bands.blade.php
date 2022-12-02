@@ -16,8 +16,8 @@
             >
                 <x-form-select name="music_style_id" label="Musik Richtung" :options="$musicStyles" required />
                 <x-form-input name="name" label="Name" placeholder="Name" required />
-                <x-form-input type="email" name="email" label="Email" placeholder="Email Adresse" />
-                <x-form-textarea rows="6" name="message" label="Deine Nachricht" placeholder="your message"></x-form-textarea>
+                <x-form-input type="email" name="email" label="Email" placeholder="Email Adresse" required />
+                <x-form-textarea rows="6" name="message" label="Deine Nachricht" placeholder="your message" required></x-form-textarea>
                 <div class="form-group mt-4 mb-4">
                     <span class="block text-xl text-blue-900 mb-2">Captcha Text (zur Absicherung)</span>
                     <div class="captcha">

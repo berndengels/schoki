@@ -7,8 +7,6 @@ use App\Models\MusicStyle;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Contracts\Mail\Mailer;
 
 class NotifyBooker extends Mailable
 {

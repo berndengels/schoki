@@ -45,19 +45,6 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         Schema::defaultStringLength(191); //NEW: Increase StringLength
 
-        Blade::component('components.alert', 'alert');
-        Blade::component('inp.text', Text::class);
-        Blade::component('inp.email', Email::class);
-        Blade::component('inp.date', Date::class);
-        Blade::component('inp.time', Time::class);
-        Blade::component('inp.file', File::class);
-        Blade::component('inp.password', Password::class);
-        Blade::component('inp.checkbox', Checkbox::class);
-        Blade::component('inp.radio', Radio::class);
-        Blade::component('inp.submit', Submit::class);
-        Blade::component('inp.textarea', Textarea::class);
-        Blade::component('inp.select', Select::class);
-
         Blade::extend(function($value) {
             return preg_replace('/\{\?(.+)\?\}/', '<?php ${1} ?>', $value);
         });

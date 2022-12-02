@@ -36,8 +36,7 @@ class Message extends Model
 	use Sortable;
 
     protected $table = 'message';
-    protected $fillable = ['music_style_id','email','name','message'];
-    public $timestamps = true;
+    protected $guarded = ['id'];
 
 	const UPDATED_AT = null;
 
@@ -47,12 +46,12 @@ class Message extends Model
 		'email',
 		'created_at',
 	];
-
+/*
 	public function messageSubject()
 	{
 		return $this->belongsTo(MessageSubject::class);
 	}
-
+*/
 	public function musicStyle()
 	{
 		return $this->belongsTo(MusicStyle::class);

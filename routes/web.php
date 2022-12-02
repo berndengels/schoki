@@ -1,20 +1,10 @@
 <?php
-
+/*
 use App\Helper\MyDate;
 use App\Models\Event;
 use App\Models\Theme;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Auth::routes();
 Auth::routes(['register' => false]);
@@ -125,25 +115,7 @@ Route::prefix('admin')->group(function () {
 	Route::get('/terminal/{view?}', 'Admin\TerminalController@index')->name('admin.terminal.index');
 	Route::get('/terminal/endpoint', 'Admin\TerminalController@endpoint')->name('admin.terminal.endpoint');
 	Route::get('/terminal/media', 'Admin\TerminalController@media')->name('admin.terminal.media');
-/*
-	Route::get('/terminal/{view?}', [
-		'as' => 'index',
-		'uses' => 'Admin\TerminalController@index',
-	])->name('terminal.index');
 
-	Route::post('/terminal/endpoint', [
-		'as' => 'endpoint',
-		'uses' => 'Admin\TerminalController@endpoint',
-	])->name('terminal.endpoint');
-
-	Route::get('/terminal/media/{file}', [
-		'as' => 'media',
-		'uses' => 'Admin\TerminalController@media',
-	])
-		->where(['file' => '.+'])
-		->name('terminal.media')
-	;
-*/
 	Route::get('/cache/flush', 'Admin\CacheController@flush')->name('admin.service.cacheFlush');
 	Route::get('/cache/clear', 'Admin\CacheController@clear')->name('admin.service.cacheClear');
 	Route::get('/cache/forget/{key}', 'Admin\CacheController@forget')->name('admin.service.cacheForget');
@@ -214,36 +186,6 @@ Route::middleware(['public'])->group(function () use ($staticPages) {
     }
 });
 
-/*
-$categories = Category::whereHas('events', function($query)  {
-	$query
-		->whereDate('event_date','>=', MyDate::getUntilValidDate())
-		->where('is_published', 1)
-	;
-})
-	->where('is_published', 1)
-	->get()
-;
-*/
-
-/*
-$paginationLimit = config('event.eventsPaginationLimit');
-foreach (Category::where('is_published','=',1)->pluck('slug') as $slug) {
-	Route::get('/events/'.$slug, function() use ($slug, $paginationLimit) {
-//		$data = Event::mergedByCategorySlug( $slug, true )->paginate($paginationLimit);
-		$data = Event::mergedByCategorySlug( $slug, true );
-//		dd($data);
-		return view('public.events-lazy', ['data' => $data ]);
-	})->name('public.event'.ucfirst($slug));
-}
-foreach (Theme::where('is_published','=',1)->pluck('slug') as $slug) {
-	Route::get('/themes/'.$slug, function() use ($slug, $paginationLimit) {
-//		$data = Event::mergedByThemeSlug( $slug, true )->paginate($paginationLimit);
-		$data = Event::mergedByThemeSlug( $slug, true );
-		return view('public.events-lazy', ['data' => $data ]);
-	})->name('public.theme'.ucfirst($slug));
-}
-*/
 #Route::permanentRedirect('/', '/events');
 
 Route::get('/logout', function() {
@@ -253,3 +195,4 @@ Route::get('/logout', function() {
 Route::fallback(function () {
     return redirect()->route('public.events');
 });
+*/

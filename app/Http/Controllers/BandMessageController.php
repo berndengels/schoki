@@ -43,7 +43,7 @@ class BandMessageController extends Controller
         $message		= Message::create($validated);
         $musicStyleId   = $validated['music_style_id'];
 
-        if('prod' === env('APP_ENV')) {
+        if('prod' === config('app.env')) {
             $users = User::whereHas('musicStyles', function ($query) use ($musicStyleId) {
                 $query->where('music_style.id', $musicStyleId);
             })->pluck('email');
@@ -56,7 +56,6 @@ class BandMessageController extends Controller
                 })->pluck('email');
         */
         $notifyBooker = new NotifyBooker($message);
-
         try {
             Mail::to($users)->send($notifyBooker);
             $content = $notifyBooker->render();

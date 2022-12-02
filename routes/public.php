@@ -4,20 +4,6 @@ use App\Models\Theme;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BandMessageController;
-use App\Http\Controllers\NewsletterController;
-use App\Http\Controllers\CaptchaServiceController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::permanentRedirect('/intern', '/admin/events');
 Route::permanentRedirect('/admin', '/admin/events');
@@ -42,8 +28,6 @@ if($staticPages->count() > 0)  {
 
 Route::get('/feed', 'EventController@feed')->name('public.feed');
 Route::get('/ical', 'EventController@ical')->name('public.ical');
-Route::get('/remove/address/show/{token}', 'ContactController@removeAddressShow')->name('public.removeAddressShow');
-Route::post('/remove/address/hard/{token}', 'ContactController@removeAddressHard')->name('public.removeAddressHard');
 
 Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
 Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');

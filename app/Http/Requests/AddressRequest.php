@@ -36,14 +36,15 @@ class AddressRequest extends FormRequest
             'remove'        => '',
         ];
     }
-
+/*
     public function messages()
     {
         return [
             'address_category_id.required' => 'Bitte die Kategorie der Adresse eintragen!',
             'email.required' => 'Bitte eine Email Adresse eintragen!',
             'email.email'    => 'Das ist keine korrekte Email-Adresse!.',
-//            'captcha.required'  => 'Bitte das Captcha Feld ausfüllen.',
+            'captcha.required'  => 'Bitte das Captcha Feld ausfüllen.',
         ];
     }
+*/
 }
