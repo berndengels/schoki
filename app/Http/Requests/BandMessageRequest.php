@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\ValidationException;
 
 class BandMessageRequest extends FormRequest
 {
@@ -20,7 +19,6 @@ class BandMessageRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
-        dd($validator->errors());
         parent::failedValidation($validator);
     }
 
@@ -35,7 +33,6 @@ class BandMessageRequest extends FormRequest
             'name'              => 'required',
             'email'             => 'required|email',
             'message'           => 'required',
-//            'recaptcha'         => 'required',
             'captcha'           => 'required|captcha'
         ];
     }
