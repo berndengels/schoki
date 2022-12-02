@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
+use Debugbar;
 use Carbon\Carbon;
-
+use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Blade;
@@ -40,7 +41,11 @@ class AppServiceProvider extends ServiceProvider
 		Carbon::setUTF8(true);
 		Carbon::setLocale($locale);
 		setlocale(LC_TIME, $locale, 'de_DE.utf8', 'de');
-
+        if('prod' !== config('app.env')) {
+            Debugbar::enable();
+        } else {
+            Debugbar::disable();
+        }
 //		Paginator::defaultView('vendor.pagination.bootstrap-4');
         Paginator::useBootstrap();
         Schema::defaultStringLength(191); //NEW: Increase StringLength
@@ -78,6 +83,7 @@ class AppServiceProvider extends ServiceProvider
 
 		if ($this->app->environment() !== 'prod') {
             $this->app->register(IdeHelperServiceProvider::class);
+            $this->app->register(DebugbarServiceProvider::class);
 			$this->app->register(TelescopeServiceProvider::class);
             $this->app->register(\PrettyRoutes\ServiceProvider::class);
         }

@@ -45,7 +45,6 @@ class EventController extends MainController
 	{
 		parent::index();
         $data = EventRepository::getEventsSinceToday()
-			->sortable()
 			->paginate($this->paginationLimit)
 		;
         return view('admin.events', [

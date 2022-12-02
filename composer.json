@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.3|^8.0.1",
         "anhskohbo/no-captcha": "^3.3",
         "berndengels/laravel-email-exceptions": "^1.0",
         "eluceo/ical": "^0.16.1",
@@ -33,6 +33,7 @@
         "lavary/laravel-menu": "^1.7",
         "mews/captcha": "^3.2",
         "misterphilip/maintenance-mode": "^2.0",
+        "nesbot/carbon": "^2.63",
         "protonemedia/laravel-form-components": "^3.6",
         "spatie/db-dumper": "^2.18",
         "spatie/laravel-db-snapshots": "^1.7",

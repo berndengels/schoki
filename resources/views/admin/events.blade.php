@@ -21,10 +21,9 @@
             <th scope="col" colspan="2">#</th>
         </tr>
     @foreach ($data as $item)
-        {? $eventDate = new \DateTime($item->event_date); ?}
         <tr>
             <td>{{ $item->id }} </td>
-            <td>{!! $eventDate->format('d.m.Y') !!} </td>
+            <td>{!! $item->event_date->format('d.m.Y') !!} </td>
             <td class="col-sm-auto">{{ $item->title }}</td>
             <td class="text-center d-none d-sm-table-cell">@if($item->createdBy) {{ $item->createdBy->username }} @else <br> @endif </td>
             <td class="text-center d-none d-sm-table-cell">@if($item->updatedBy) {{ $item->updatedBy->username }} @else <br> @endif </td>

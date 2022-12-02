@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
+use Eloquent;
 use Carbon\Carbon;
 use App\Models\Image;
 use App\Helper\MyDate;
 use App\Models\Ext\HasUser;
-use Eloquent;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -79,12 +79,11 @@ use App\Repositories\EventPeriodicRepository;
  */
 class Event extends Model
 {
-	use Sortable, HasUser;
+	use HasUser, Sortable;
 
 	public $sortable = [
-		'category',
+        'event_date',
 		'title',
-		'event_date',
 	];
 
 	/**
@@ -106,18 +105,27 @@ class Event extends Model
         'is_periodic',
         'is_published',
     ];
-    protected $dates = ['created_at','updated_at'];
+    protected $dates = ['created_at','updated_at','event_date'];
+    protected $casts = [
+        'event_date'    => 'date:Y-m-d'
+    ];
 	protected $eventLink;
-	public $descriptionSanitized;
-	public $descriptionText;
+	public $descriptionSanitized = '';
+	public $descriptionText = '';
 	public $testData;
 
 	public static function boot() {
 		parent::boot();
 		Event::retrieved(function($entity) {
 			$wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
-			$entity->descriptionSanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), $entity->description);
-			$entity->descriptionText = strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $entity->description));
+            if($entity->description) {
+                $entity->descriptionSanitized = preg_replace(
+                    "/(<iframe[^>]+><\/iframe>)/i",
+                    str_replace('%%','$1', $wrapper),
+                    $entity->description
+                );
+                $entity->descriptionText = strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $entity->description));
+            }
 		});
 	}
 
