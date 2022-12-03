@@ -110,7 +110,7 @@ abstract class DuskTestCase extends TestCase
 			}
 			$file = 'failure-'.$this->getName().'-'.$key;
 			$browser->screenshot($file);
-			@chmod(self::$screenPath . '/' . $file);
+			@chmod(self::$screenPath . '/' . $file, 0666);
 		});
 	}
 

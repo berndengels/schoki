@@ -32,7 +32,7 @@ class StartPage extends Page
 		$browser
 			->waitFor('.mbs')
 			->resize(1024, 768)
-			->assertPathIs('/events')
+			->assertPathIs('/')
 			->assertSee('Events')
 			->screenshot($screenName)
 		;

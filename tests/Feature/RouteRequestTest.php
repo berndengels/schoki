@@ -8,16 +8,20 @@ use Symfony\Component\HttpFoundation\Response;
 use Tests\TestCase;
 use App\Models\User;
 use App\Libs\Routes as MyRoutes;
-use PHPUnit\Framework\TestResult;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Routing\Route as RoutingRoute;
 
 class RouteRequestTest extends TestCase
 {
 	private $_skipPublicRoutes = [
 		'/feed',
+        '/telescope',
+        '/calendar',
 		'/events/calendar',
         '/contact/formNewsletter',
-	];
+        '/contact/newsletter',
+        '/contact/message',
+        '/contact/newsletter/create',
+    ];
 
 	private $_adminRoutes = [
 		'eventList',
@@ -88,6 +92,9 @@ class RouteRequestTest extends TestCase
 		 * @var $route Route
 		 */
 		$this->actingAs($user, 'web');
+        /**
+         * @var $route RoutingRoute
+         */
 		foreach($routes as $route) {
 		    try {
                 echo "check response status (200) for admin route: {$route->uri},";
@@ -96,7 +103,7 @@ class RouteRequestTest extends TestCase
                 echo " status: $status\n";
                 $response->assertStatus(200);
             } catch(Exception $e) {
-                echo "ERROR for public admin: $route:\n";
+                echo "ERROR for public admin: ". $route->getName() ."\n";
                 echo $e->getMessage()."\n";
             }
 		}

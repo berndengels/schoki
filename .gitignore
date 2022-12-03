@@ -36,3 +36,4 @@ phpunit.dusk.xml
 /_ide_helper.php
 /perms
 /.valet-env.php
+/.env.testing

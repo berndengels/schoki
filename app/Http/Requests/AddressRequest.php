@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ReCaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AddressRequest extends FormRequest
@@ -31,9 +32,9 @@ class AddressRequest extends FormRequest
         return [
             'address_category_id'   => 'required',
             'email'         => 'required|email',
-//            'captcha'       => 'required|captcha',
             'token'         => '',
             'remove'        => '',
+            'g-recaptcha-response' => ['required', new ReCaptcha()]
         ];
     }
 /*
@@ -43,7 +44,7 @@ class AddressRequest extends FormRequest
             'address_category_id.required' => 'Bitte die Kategorie der Adresse eintragen!',
             'email.required' => 'Bitte eine Email Adresse eintragen!',
             'email.email'    => 'Das ist keine korrekte Email-Adresse!.',
-            'captcha.required'  => 'Bitte das Captcha Feld ausfüllen.',
+            'captcha.required'  => 'Bitte das Captcha Feld bedienen.',
         ];
     }
 */

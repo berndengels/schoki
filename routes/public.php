@@ -54,7 +54,7 @@ Route::group([
     'middleware' => ['web'],
 ], function () {
     Route::resource('message', 'BandMessageController')->only(['create','store']);
-    Route::resource('newsletter', 'NewsletterController');
+    Route::resource('newsletter', 'NewsletterController')->only(['create','store']);
 });
 
 Route::get('/logout', function() {
@@ -62,8 +62,7 @@ Route::get('/logout', function() {
     Session::invalidate();
     return redirect()->route('public.events');
 });
-/*
+
 Route::fallback(function () {
     return redirect()->route('public.events');
 });
-*/

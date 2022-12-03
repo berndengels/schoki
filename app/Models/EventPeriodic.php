@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
+use Eloquent;
 use App\Models\Image;
 use App\Models\Ext\HasUser;
-use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use App\Repositories\EventPeriodicRepository;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
 use Kyslik\ColumnSortable\Sortable;
 
 /**
@@ -35,16 +35,16 @@ use Kyslik\ColumnSortable\Sortable;
  * @property Carbon $created_at
  * @property Carbon|null $updated_at
  * @property int|null $is_published
- * @property-read \Illuminate\Database\Eloquent\Collection|Audios[] $audios
+ * @property-read Collection|Audios[] $audios
  * @property-read int|null $audios_count
  * @property-read Category $category
  * @property-read User $createdBy
  * @property-read mixed $event_dates
- * @property-read \Illuminate\Database\Eloquent\Collection|Images[] $images
+ * @property-read Collection|Images[] $images
  * @property-read int|null $images_count
  * @property-read Theme|null $theme
  * @property-read User|null $updatedBy
- * @property-read \Illuminate\Database\Eloquent\Collection|Videos[] $videos
+ * @property-read Collection|Videos[] $videos
  * @property-read int|null $videos_count
  * @method static Builder|EventPeriodic newModelQuery()
  * @method static Builder|EventPeriodic newQuery()
@@ -82,7 +82,7 @@ class EventPeriodic extends Model
      * @var array
      */
     public $sortable = [
-		'category',
+		'category_id',
 		'title',
 		'created_at',
 	];

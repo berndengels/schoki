@@ -35,11 +35,6 @@
                               default="{{ old('email') }}"/>
                 <x-form-textarea rows="6" name="msg" label="Deine Nachricht" placeholder="your message"
                                  default="{{ old('msg') }}"></x-form-textarea>
-                <div class="form-group my-2">
-                    <!--span class="d-block mb-2">Captcha zur Absicherung</span-->
-                    {{-- {!! NoCaptcha::display() !!} --}}
-
-                </div>
                 <x-form-submit
                         class="g-recaptcha btn btn-save float-left mt-3"
                         data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"
@@ -55,7 +50,6 @@
 @section('inline-scripts')
 <script>
     const fID = "#frmBandMessage";
-
 	function onSubmit() {
 		grecaptcha.ready(function() {
 			grecaptcha.execute("{{ env('NOCAPTCHA_SITEKEY') }}", {action: 'submit'}).then(function(token) {

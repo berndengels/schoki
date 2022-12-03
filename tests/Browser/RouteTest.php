@@ -3,6 +3,8 @@
 namespace Tests\Browser;
 
 use Exception;
+use Psy\Readline\Hoa\Console;
+use Psy\Readline\Hoa\ConsoleOutput;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use App\Libs\Routes as MyRoutes;
@@ -10,8 +12,15 @@ use App\Libs\Routes as MyRoutes;
 class RouteTest extends DuskTestCase
 {
 	private $_skipRoutes = [
-		'/feed',
-		'/events/calendar',
+        '/feed',
+        '/telescope',
+        '/calendar',
+        '/events/calendar',
+        '/contact/formNewsletter',
+        '/contact/newsletter',
+        '/contact/message',
+        '/contact/newsletter/create',
+        '/contact/message/create',
 	];
 
     /**
@@ -22,8 +31,13 @@ class RouteTest extends DuskTestCase
     public function testPublicRoutes()
     {
 		$routes = MyRoutes::getPublicRoutes()->reject(function ($value) {
-			return in_array($value, $this->_skipRoutes);
+            if (in_array($value, $this->_skipRoutes)) {
+                echo "reject route: $value\n";
+                return true;
+            }
+            return false;
 		});
+//        dump($routes);
 		$this->browse(function (Browser $browser) use ($routes) {
 			foreach($routes as $route) {
 				$screenName = str_replace('/','-', trim($route, '/'));

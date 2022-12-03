@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:http://schoki.test
+PRODID:https://schoki.test
 X-WR-CALNAME:Schokoladen Events
 X-WR-CALDESC:Schokoladen Berlin-Mitte Veranstaltungs-Plan https://www.schok
  oladen-mitte.de
@@ -10,8 +10,8 @@ TZID:Europe/Berlin
 X-LIC-LOCATION:Europe/Berlin
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5fbeaac37339e
-DTSTART;TZID=Europe/Berlin:20201201T190000
+UID:638bc291374a8
+DTSTART;TZID=Europe/Berlin:20221203T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -19,84 +19,35 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
+SUMMARY:live: KNARF RELLÖM ORGANISMUS (zusatzshow!) + after 22h: A NIGHT W
+ ITH MARYCHERRY & LEO LE FOU (60s 70s garage beat soul motown ...)
 CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac37500e
-DTSTART;TZID=Europe/Berlin:20201206T203000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
-CLASS:PUBLIC
-DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
- len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
- er und ist zum Kreischen fröhlich\, generations- und sozialübergreifend 
- und warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Mo
- nitor- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und 
- dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
- \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
- ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
-X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
- Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
-  Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
- , generations- und sozial&uuml\;bergreifend und warmherzig...!<br />Eine d
- er sch&ouml\;nsten B&uuml\;hnen Berlins &amp\; ein perfekter Monitor- und 
- Raumsound besorgen den Rest!<br />Singen macht halt gl&uuml\;cklich und da
- bei zuschauen auch!<br /><br />holt euch die K&auml\;pt'n Karaoke App auf'
- s Smartphone!<br />... wei sie wirklich toll ist!<br /><br /><a href=\"htt
- ps://play.google.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=
- de\" target=\"_blank\" rel=\"nofollow nofollow noopener\">https://play.goo
- gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
- br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
- ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
+DESCRIPTION:live: KNARF RELLÖM ORGANISMUS (zusatzshow! --> https://vvk.lin
+ k/2f0br80) + after 22h: A NIGHT WITH MARYCHERRY & LEO LE FOU (60s 70s gara
+ ge beat soul motown ...)\nlittle league shows prsnts:\nder KNARF RELLÖM 
+ ORGANISMUS live at Schokoladen! (facebook.com/events/525070059289799)\n»A
+ lien Knarf Rellöm feiert seinen Geburtstag und will all seine Freunde seh
+ en: Mittekill\, Bernadette La Hengst\, Ella Mae\, Pastor Leumund\, Tomate\
+ , David Park\, Todesstreifen Klaus\, Jens Friebe\, Diego Castro und und un
+ d ... Das wird Klasse!«
+X-ALT-DESC;FMTTYPE=text/html:<p>live: KNARF RELL&Ouml\;M ORGANISMUS (zusatz
+ show! --&gt\; <a href=\"https://vvk.link/2f0br80\">https://vvk.link/2f0br8
+ 0</a>) + after 22h: A NIGHT WITH MARYCHERRY &amp\; LEO LE FOU (60s 70s gar
+ age beat soul motown ...)<br /><br />little league shows prsnts:</p>\n<p>d
+ er&nbsp\;KNARF RELL&Ouml\;M ORGANISMUS live at Schokoladen! (<a href=\"htt
+ ps://www.facebook.com/events/525070059289799\">facebook.com/events/5250700
+ 59289799</a>)</p>\n<p>&raquo\;Alien Knarf Rell&ouml\;m feiert seinen Gebur
+ tstag und will all seine Freunde sehen: Mittekill\, Bernadette La Hengst\,
+  Ella Mae\, Pastor Leumund\, Tomate\, David Park\, Todesstreifen Klaus\, J
+ ens Friebe\, Diego Castro und und und ... Das wird Klasse!&laquo\;</p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac375977
-DTSTART;TZID=Europe/Berlin:20201208T190000
+UID:638bc291376f7
+DTSTART;TZID=Europe/Berlin:20221204T200000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -104,248 +55,49 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
+SUMMARY:Karaoke Night w/ KJ Der Käpt'n
 CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac375deb
-DTSTART;TZID=Europe/Berlin:20201215T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
-CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac376666
-DTSTART;TZID=Europe/Berlin:20201220T200000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Schokoladen OPEN STAGE
-CLASS:PUBLIC
-DESCRIPTION:starts between 8:30 and 9 pm. artists should arrive around 8 pm
- !\ncozy athmosphere\, perfect sound and support by our engineer\, delicate
-  tunes afterwords and delicious drinks!\nJust you\, perhaps a friend\, not
-  more than two instruments and two to four songs! no drums or bass amplifi
- er!\njust come over!\n#openstageberlin
-X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
- d arrive around 8 pm!<br /><br />cozy athmosphere\, perfect sound and supp
- ort by our engineer\, delicate tunes afterwords and delicious drinks!<br /
- ><br />Just you\, perhaps a friend\, not more than two instruments and two
-  to four songs! no drums or bass amplifier!<br />just come over!<br /><br 
- /><a class=\"_58cn\" href=\"https://www.facebook.com/hashtag/openstageberl
- in\" type=\"\" data-ft=\"{\">#openstageberlin</a></p>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac376d93
-DTSTART;TZID=Europe/Berlin:20201222T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
-CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac377629
-DTSTART;TZID=Europe/Berlin:20201229T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
-CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac377c1d
-DTSTART;TZID=Europe/Berlin:20210103T203000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
-CLASS:PUBLIC
-DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
- len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
- er und ist zum Kreischen fröhlich\, generations- und sozialübergreifend 
- und warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Mo
- nitor- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und 
- dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
- \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
- ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
-X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
- Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
-  Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
- , generations- und sozial&uuml\;bergreifend und warmherzig...!<br />Eine d
- er sch&ouml\;nsten B&uuml\;hnen Berlins &amp\; ein perfekter Monitor- und 
- Raumsound besorgen den Rest!<br />Singen macht halt gl&uuml\;cklich und da
- bei zuschauen auch!<br /><br />holt euch die K&auml\;pt'n Karaoke App auf'
- s Smartphone!<br />... wei sie wirklich toll ist!<br /><br /><a href=\"htt
- ps://play.google.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=
- de\" target=\"_blank\" rel=\"nofollow nofollow noopener\">https://play.goo
- gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
- br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
- ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
+DESCRIPTION:Der Käpt'n kommt mit einem fetten Angebot aus allen nationalen
+  und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakter 
+ und ist zum Kreischen fröhlich\, generations- und sozialübergreifend und
+  warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Monit
+ or- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und dab
+ ei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!\n.
+ .. wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/details.
+ ..\nOder klickt den Link für seine Songliste…\nhttp://derkaeptn.de/song
+ liste.html
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
+ et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau5
+ 5g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v b1v8xokw oo9gr5id\" dir=\"auto\">
+ Der K&auml\;pt'n kommt mit einem fetten Angebot aus allen nationalen und i
+ nternationalen K&uuml\;nstlern!<br />Der Abend hat schon lange Kultcharakt
+ er und ist zum Kreischen fr&ouml\;hlich\, generations- und sozial&uuml\;be
+ rgreifend und warmherzig...!<br />Eine der sch&ouml\;nsten B&uuml\;hnen Be
+ rlins &amp\; ein perfekter Monitor- und Raumsound besorgen den Rest!<br />
+ Singen macht halt gl&uuml\;cklich und dabei zuschauen auch!<br />holt euch
+  die K&auml\;pt'n Karaoke App auf's Smartphone!<br />... wei sie wirklich 
+ toll ist!<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d
+ 6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcuky
+ x3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4w
+ l py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" href=\"https://play.goo
+ gle.com/store/apps/details?fbclid=IwAR1x1PKMpuLwfecpsofguKD9hhC-UBzNPm57_B
+ bgklliy1HMDkTfm4ZWGn4\" target=\"_blank\" rel=\"nofollow noopener\">https:
+ //play.google.com/store/apps/details</a>...<br />Oder klickt den Link f&uu
+ ml\;r seine Songliste&hellip\;<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f 
+ esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cx
+ mmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuy
+ zwwr f1sip0of lzcic4wl py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" hr
+ ef=\"http://derkaeptn.de/songliste.html?fbclid=IwAR02MFOgT9l0coh45wnY30bnx
+ TkE9n94dR-8nVL9MYLepOrOlBKwsSMoQLI\" target=\"_blank\" rel=\"nofollow noop
+ ener\">http://derkaeptn.de/songliste.html</a></span></p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac3784a0
-DTSTART;TZID=Europe/Berlin:20210105T190000
+UID:638bc291377cc
+DTSTART;TZID=Europe/Berlin:20221205T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -353,118 +105,547 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
+SUMMARY:powerline\, puschen & little league shows prsnt: ROLF BLUMIG (psych
+  indie rock\, le) & NICHTSEATTLE (solo show! bln)
 CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac378c5f
-DTSTART;TZID=Europe/Berlin:20210112T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
-CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
-END:VEVENT
-BEGIN:VEVENT
-UID:5fbeaac379369
-DTSTART;TZID=Europe/Berlin:20210117T200000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Schokoladen OPEN STAGE
-CLASS:PUBLIC
-DESCRIPTION:starts between 8:30 and 9 pm. artists should arrive around 8 pm
- !\ncozy athmosphere\, perfect sound and support by our engineer\, delicate
-  tunes afterwords and delicious drinks!\nJust you\, perhaps a friend\, not
-  more than two instruments and two to four songs! no drums or bass amplifi
- er!\njust come over!\n#openstageberlin
-X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
- d arrive around 8 pm!<br /><br />cozy athmosphere\, perfect sound and supp
- ort by our engineer\, delicate tunes afterwords and delicious drinks!<br /
- ><br />Just you\, perhaps a friend\, not more than two instruments and two
-  to four songs! no drums or bass amplifier!<br />just come over!<br /><br 
- /><a class=\"_58cn\" href=\"https://www.facebook.com/hashtag/openstageberl
- in\" type=\"\" data-ft=\"{\">#openstageberlin</a></p>
+DESCRIPTION:\n\npowerline\, puschen & little league shows prsnt:\nROLF BLUM
+ IG & NICHTSEATTLE (solo!)\n\nROLF BLUMIG / psych exp indie rock ...\, le\,
+  staatsakt\nrolfblumig.de /// rolfblumig.bandcamp.com\n& NICHTSEATTLE / so
+ lo show! bln\, staatsakt\nlinktr.ee/nichtseattle /// nichtseattle.bandcamp
+ .com\n\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xtlvy1s\">\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xdj266r\">\n<p
+  id=\"isPasted\">powerline\, puschen &amp\; little league shows prsnt:<br 
+ />ROLF BLUMIG &amp\; NICHTSEATTLE (solo!)</p>\n<p><br />ROLF BLUMIG / psyc
+ h exp indie rock ...\, le\, staatsakt<br /><a href=\"https://www.rolfblumi
+ g.de\">rolfblumig.de</a> /// <a href=\"https://www.rolfblumig.bandcamp.com
+ \">rolfblumig.bandcamp.com</a></p>\n<p>&amp\; NICHTSEATTLE / solo show! bl
+ n\, staatsakt<br /><a href=\"https://www.linktr.ee/nichtseattle\">linktr.e
+ e/nichtseattle</a> /// <a href=\"https://www.nichtseattle.bandcamp.com\">n
+ ichtseattle.bandcamp.com</a></p>\n</div>\n</div>
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac3798cb
-DTSTART;TZID=Europe/Berlin:20210119T190000
+UID:638bc29137875
+DTSTART;TZID=Europe/Berlin:20221206T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION: \n\nAndreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, 
+ Uli Hannemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lie
+ der und Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lese
+ bühnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD un
+ d eingeladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten
+  und Songs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas 
+ „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Miras
+ ol und Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker
+  auch in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes M
+ ikro für Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte
+ \, dass der Beitrag selbstverfasst sein muss und nicht länger als 6 Minut
+ en dauert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und
+  bekommt ein Freigetränk.\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
+ </div>\n<div class=\"text col-12 m-0 p-2\">\n<p>Andreas &bdquo\;Spider&ldq
+ uo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mir
+ asol und Ivo Lotion pr&auml\;sentieren Geschichten\, Lieder und G&auml\;st
+ e.<br />LSD &ndash\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uu
+ ml\;hnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD u
+ nd eingeladene G&auml\;ste im Berliner Schokoladen ein Programm aus neuen 
+ Texten und Songs. Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliede
+ rn Andreas &bdquo\;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; He
+ rre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\
+ ;nstler sind als Autoren und Musiker auch in anderen Bereichen aktiv.<br /
+ ><br />LSD bietet jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\,
+  die spontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag sel
+ bstverfasst sein muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am 
+ Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekommt ein Freig
+ etr&auml\;nk.</p>\n</div>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137911
+DTSTART;TZID=Europe/Berlin:20221207T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LoFi lounge prsnts: Leopard [indie°bln] + Lutzilla [indie°bln]
+CLASS:PUBLIC
+DESCRIPTION:\n\n\n\n\n\nLeopard \n \nGegründet von den Sängern\, Gitarri
+ sten und Songschreibern Lars Paprotta und\nChristian Dangel\, komplettiert
+  von Achmed Zmero am Bass und Raul Neddermeyer am\nSchlagzeug\, ist LEOPAR
+ D pünktlich zum Beginn eines neuen Jahrzehnts angetreten\, um\nsich mit K
+ rallen aus eingängigen Gitarrenriffs\, einem sanften Fell aus Melodien un
+ d\nleuchtenden Augen voller ehrlicher Texte durch das von Ironie verseucht
+ e Dickicht\nder postmodernen Pop-Musik zu kämpfen. Das Ziel: Make Rock'n'
+ Roll a threat again!\nAnzuknüpfen an die Zeiten\, als Gitarrenmusik noch 
+ Bedrohung\, Versprechen und\nBefreiung war. Als alles möglich schien. Als
+  alles möglich war. Warum? Weil noch\nimmer alles möglich ist. Und auch 
+ immer sein wird.\nIm Juni 2020 haben LEOPARD ihre Debüt-EP MYSTERIUM ver
+ öffentlicht: Vier Songs\nzwischen Post-Punk\, Indie-Rock und Pop\, zwisch
+ en Liebe und Abfuck\, aufgenommen und\nproduziert in der Tonbrauerei Berli
+ n. \n\n\n\n\n\n
+X-ALT-DESC;FMTTYPE=text/html:<div dir=\"ltr\" align=\"left\">\n<div dir=\"l
+ tr\" align=\"left\">\n<div>\n<div dir=\"ltr\" align=\"left\">\n<div dir=\"
+ ltr\" align=\"left\">\n<div>\n<div dir=\"ltr\" align=\"left\"><span class=
+ \"v1774021717-17052022\"><span class=\"v1186284812-10102022\"><span class=
+ \"v1967554116-08112022\"><strong>Leopard</strong> </span></span></span></d
+ iv>\n<div dir=\"ltr\" align=\"left\">&nbsp\;</div>\n<div dir=\"ltr\" align
+ =\"left\"><span class=\"v1774021717-17052022\"><span class=\"v1186284812-1
+ 0102022\">Gegr&uuml\;ndet von den S&auml\;ngern\, Gitarristen und Songschr
+ eibern Lars Paprotta und<br />Christian Dangel\, komplettiert von Achmed Z
+ mero am Bass und Raul Neddermeyer am<br />Schlagzeug\, ist LEOPARD p&uuml\
+ ;nktlich zum Beginn eines neuen Jahrzehnts angetreten\, um<br />sich mit K
+ rallen aus eing&auml\;ngigen Gitarrenriffs\, einem sanften Fell aus Melodi
+ en und<br />leuchtenden Augen voller ehrlicher Texte durch das von Ironie 
+ verseuchte Dickicht<br />der postmodernen Pop-Musik zu k&auml\;mpfen. Das 
+ Ziel: Make Rock'n'Roll a threat again!<br />Anzukn&uuml\;pfen an die Zeite
+ n\, als Gitarrenmusik noch Bedrohung\, Versprechen und<br />Befreiung war.
+  Als alles m&ouml\;glich schien. Als alles m&ouml\;glich war. Warum? Weil 
+ noch<br />immer alles m&ouml\;glich ist. Und auch immer sein wird.<br />Im
+  Juni 2020 haben LEOPARD ihre Deb&uuml\;t-EP MYSTERIUM ver&ouml\;ffentlich
+ t: Vier Songs<br />zwischen Post-Punk\, Indie-Rock und Pop\, zwischen Lieb
+ e und Abfuck\, aufgenommen und<br />produziert in der Tonbrauerei Berlin. 
+ </span></span></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291379ab
+DTSTART;TZID=Europe/Berlin:20221208T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:M:Soundtrack & Puschen presents: Simon Joyner (US / BB*ISLAND) +  T
+ he Erich Weinert Studioband (BLN)
+CLASS:PUBLIC
+DESCRIPTION:M:Soundtrack & Puschen presents: Simon Joyner & the Erich Weine
+ rt Studioband\n\nTickets here : schokoladen.tickettoaster.de/produkte/5149
+ 9-tickets-simon-joyner-schokoladen-berlin-am-08-12-2022\nSimon Joyner is a
+ mong America’s best singer-songwriters\, so says Gillian Welch\, Conor O
+ berst\, Kevin Morby\, and others. “Singer-songwriter” is a frustrating
+ ly confining term\; to truly understand exactly just how confining\, look 
+ no further than the recorded works of Simon Joyner\, an artist whose work 
+ consistently transcends the narrow parameters of genre classifications and
+  record shop bin cards. Though his music has always honored\, reckoned wit
+ h—wrestled with—the tradition set forth by his songwriting forebears (
+ Cohen\, Van Zandt\, Ochs\, Dylan\, Reed to name a few)\, Joyner can always
+  be counted on to defy expectations\; as a lyricist\, melodicist\, and arr
+ anger\, Joyner likes to keep us on our toes. Simon Joyner is a singer-song
+ writer from Omaha\, Nebraska. He's been flying under the radar since 1991\
+ , releasing music on various independent labels including: Team Love\, Jag
+ jaguwar\, Sing Eunuchs!\, Catsup Plate\, One-Hour\, Shrimper\, Brinkman\, 
+ Secretly Canadian\, and Unread. He is also the co-founder of Grapefruit Re
+ cords and an occasional producer of other people's albums.
+X-ALT-DESC;FMTTYPE=text/html:<p><strong>M:Soundtrack &amp\; Puschen present
+ s: Simon Joyner &amp\; the Erich Weinert Studioband<br /></strong></p>\n<p
+ ><strong>Tickets here : <span class=\"x193iq5w xeuugli x13faqbe x1vvkbs xl
+ h3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgart
+ y x1943h6x x4zkp8e x676frb x1nxh6w3 x1sibtaa xo1l8bm xi81zsa x1yc453h\" di
+ r=\"auto\">schokoladen.tickettoaster.de/produkte/51499-tickets-simon-joyne
+ r-schokoladen-berlin-am-08-12-2022</span></strong></p>\n<p><strong>Simon J
+ oyner</strong> is among America&rsquo\;s best singer-songwriters\, so says
+  Gillian Welch\, Conor Oberst\, Kevin Morby\, and others. &ldquo\;Singer-s
+ ongwriter&rdquo\; is a frustratingly confining term\; to truly understand 
+ exactly just how confining\, look no further than the recorded works of Si
+ mon Joyner\, an artist whose work consistently transcends the narrow param
+ eters of genre classifications and record shop bin cards. Though his music
+  has always honored\, reckoned with&mdash\;wrestled with&mdash\;the tradit
+ ion set forth by his songwriting forebears (Cohen\, Van Zandt\, Ochs\, Dyl
+ an\, Reed to name a few)\, Joyner can always be counted on to defy expecta
+ tions\; as a lyricist\, melodicist\, and arranger\, Joyner likes to keep u
+ s on our toes. Simon Joyner is a singer-songwriter from Omaha\, Nebraska. 
+ He's been flying under the radar since 1991\, releasing music on various i
+ ndependent labels including: Team Love\, Jagjaguwar\, Sing Eunuchs!\, Cats
+ up Plate\, One-Hour\, Shrimper\, Brinkman\, Secretly Canadian\, and Unread
+ . He is also the co-founder of Grapefruit Records and an occasional produc
+ er of other people's albums.</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137a48
+DTSTART;TZID=Europe/Berlin:20221209T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Wood In Di Fire (Ska\, Jazz\, Reggae\, Rocksteady) & Tooth of a Lya
+ n (Dub Reggae Roots) & Everything Crash (DJ-Set)
+CLASS:PUBLIC
+DESCRIPTION:Mit Jamaican Jazz und handfesten Reggae-Grooves bringen  Wood 
+ In Di Fire bei ihren Live-Sessions die Dancehall zum Toben. Was  als Jam-
+ Projekt von Musikern aus verschiedenen Berliner Bands begann\, hat sich zu
+ r festen Formation entwickelt. Doch  der Session-Gedanke ist  immer noch
+  lebendig: Die Bandmitglieder und Gäste bringen die verschiedensten Einfl
+ üsse aus Reggae\, Jazz\, Ska\, Latin und Afro-Beat mit und sorgen damit i
+ mmer wieder für überraschende Kicks.\nSeit das Projekt im Jahre 2000 sta
+ rtete\, spielt Wood In Di Fire traditionell im Berliner „Schokoladen“.
+  Der bis heute monatlich stattfindende Reggae-Jam wurde schnell vom Geheim
+ tipp zum etablierten Termin der Berliner Reggae-Szene.\nDie Berliner Band 
+ Tooth of a Lyan\, spielt Jamaican-Reggae\, erdige und contemporary Dub/Reg
+ gae-Beats\, Shuffle-Skanks und Echo-Gewitter. Ihre Songs fragen uns: Was t
+ un mit dem Dasein als Staubkorn im All? Was tun mit den Glutnestern aus Ha
+ ss? Welche Schuhgröße hat Dein Carbon Footprint? Tooth of a Lyan nehmen 
+ Dich mit\, schwingen Dich ein und lassen Dich mit diesen Fragen nicht alle
+ in.\n
+X-ALT-DESC;FMTTYPE=text/html:<p>Mit Jamaican Jazz und handfesten Reggae-Gro
+ oves bringen &nbsp\;<a href=\"https://www.facebook.com/WoodInDiFire\">Wood
+  In Di Fire</a> bei ihren Live-Sessions die Dancehall zum Toben. Was &nbsp
+ \;als Jam-Projekt von Musikern aus verschiedenen Berliner Bands begann\, h
+ at sich zur festen Formation entwickelt. Doch &nbsp\;der Session-Gedanke i
+ st &nbsp\;immer noch lebendig: Die Bandmitglieder und G&auml\;ste bringen 
+ die verschiedensten Einfl&uuml\;sse aus Reggae\, Jazz\, Ska\, Latin und Af
+ ro-Beat mit und sorgen damit immer wieder f&uuml\;r &uuml\;berraschende Ki
+ cks.<br />Seit das Projekt im Jahre 2000 startete\, spielt <a href=\"https
+ ://www.facebook.com/events/694337762078045/?active_tab=about\">Wood In Di 
+ Fire</a> traditionell im Berliner &bdquo\;Schokoladen&ldquo\;. Der bis heu
+ te monatlich stattfindende Reggae-Jam wurde schnell vom Geheimtipp zum eta
+ blierten Termin der Berliner Reggae-Szene.</p>\n<p>Die Berliner Band <a hr
+ ef=\"https://toothofalyan.bandcamp.com/\">Tooth of a Lyan</a>\, spielt Jam
+ aican-Reggae\, erdige und contemporary Dub/Reggae-Beats\, Shuffle-Skanks u
+ nd Echo-Gewitter. Ihre Songs fragen uns: Was tun mit dem Dasein als Staubk
+ orn im All? Was tun mit den Glutnestern aus Hass? Welche Schuhgr&ouml\;&sz
+ lig\;e hat Dein Carbon Footprint? Tooth of a Lyan nehmen Dich mit\, schwin
+ gen Dich ein und lassen Dich mit diesen Fragen nicht allein.</p>\n<p><div 
+ class=\"row embed-responsive-wrapper text-center\"><div class=\"embed-resp
+ onsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" 
+ src=\"//www.youtube.com/embed/jiHkXPWSBhU?autoplay=0\" width=\"560\" heigh
+ t=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe><
+ /div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137af8
+DTSTART;TZID=Europe/Berlin:20221210T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:[sold out] duesenjaeger (Punk\, Osnabrück) + ARXX (Queer Alt-Rock-
+ Duo\, Brighton/UK) + Klotzs (Postpunk-Duo aus Siegen)
+CLASS:PUBLIC
+DESCRIPTION:duesenjaeger ...singen\, abgesehen von einer kurzen Schaffenspa
+ use zwischen 2008 und 2010\, seit 1999 die Lieder\, die wir hören wollen.
+  Deutschpunk oder auch Punkrock mit deutschen Texten. Hier geht von andäc
+ htig lauschen bis hin zu lauthals mitgröhlen alles\, da die vier Herren\,
+  ursprünglich aus Osnabrück\, das komplette Spannungsfeld zwischen schne
+ llen eingängigen bis wütenden Punkrocknummern und ruhigen\, düsteren So
+ ngs bedienen und hiermit gleichzeitig den gelungenen Spagat zwischen absol
+ uter Eingängigkeit und gefühlter Traurigkeit hinlegen. Kurz gesagt: emol
+ l. melancholisch\, eingängig\, treibend und wütend...\n\n\nARXX are a Al
+ t- Rock Gal Pal Duo. They have been making moves all over the UK and Europ
+ e\, including appearances at BBC Radio 1 Big Weekend\, Great Escape\, Iceb
+ reaker\,  and Left Of The Dial\, headlining House of Vans Next Era show\,
+  supporting Black Honey\, Liz Lawrence and Pillow Queens on their UK Headl
+ ine Tours.  Their latest single ' Couldn't Help Myself' was picked as BBC
+  Radio 1's Introducing track of the week\, resulting in multiple prime tim
+ e plays on Radio 1. Now\, having been making music together since 2017\, t
+ hey've received acclaim from the likes of BBC Radio 1's Jack Saunders\, So
+ phie K and Huw Stephens\, Radio 6's Steve Lamacq and John Kennedy on Radio
+  X who they did a live session for in 2021.   ARXX  landed their first T
+ V sync in 2021\, with their single DEEP being featured on Prime Time BBC O
+ ne for the Match of The Day coverage of the 2021 Euros. They've received 1
+ .8+ million streams and have been featured on editorial playlists such as 
+ New Music Friday\, Hot New Bands and The Rock List.  Their latest singles
+  have received acclaim from the likes of: NME\, Fred Perry Subculture and 
+ KEXP collaborating with Katie Tavini ( Arlo Parks) and Steven Ansell (Bloo
+ d Red Shoes).\nklotzs: Postpunk-Duo aus Siegen. Man hält sich bedeckt und
+  atmet leise. Musikalisch immer auf eigenen Pfaden unterwegs macht man sic
+ h auf den Weg die neue Platte „sucht\" in die Öffentlichkeit zu zerren.
+ \n
+X-ALT-DESC;FMTTYPE=text/html:<p><strong>duesenjaeger </strong>...singen\, a
+ bgesehen von einer kurzen Schaffenspause zwischen 2008 und 2010\, seit 199
+ 9 die Lieder\, die wir h&ouml\;ren wollen. Deutschpunk oder auch Punkrock 
+ mit deutschen Texten. Hier geht von and&auml\;chtig lauschen bis hin zu la
+ uthals mitgr&ouml\;hlen alles\, da die vier Herren\, urspr&uuml\;nglich au
+ s Osnabr&uuml\;ck\, das komplette Spannungsfeld zwischen schnellen eing&au
+ ml\;ngigen bis w&uuml\;tenden Punkrocknummern und ruhigen\, d&uuml\;steren
+  Songs bedienen und hiermit gleichzeitig den gelungenen Spagat zwischen ab
+ soluter Eing&auml\;ngigkeit und gef&uuml\;hlter Traurigkeit hinlegen. Kurz
+  gesagt: emoll. melancholisch\, eing&auml\;ngig\, treibend und w&uuml\;ten
+ d...<br /><span class=\"v1ztn2w49o v1n3t5jt4f v1k1z55t6l v1ne6e0wym v1pbev
+ jfx6\" dir=\"auto\"><strong><br /><div class=\"row embed-responsive-wrappe
+ r text-center\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p
+ -0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/ujGRf
+ _sMZtU?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allowfu
+ llscreen=\"allowfullscreen\"></iframe></div></div><br /><br />ARXX</strong
+ > are a Alt- Rock Gal Pal Duo. They have been making moves all over the UK
+  and Europe\, including appearances at BBC Radio 1 Big Weekend\, Great Esc
+ ape\, Icebreaker\, &nbsp\;and Left Of The Dial\, headlining House of Vans 
+ Next Era show\, supporting Black Honey\, Liz Lawrence and Pillow Queens on
+  their UK Headline Tours. &nbsp\;Their latest single ' Couldn't Help Mysel
+ f' was picked as BBC Radio 1's Introducing track of the week\, resulting i
+ n multiple prime time plays on Radio 1. Now\, having been making music tog
+ ether since 2017\, they've received acclaim from the likes of BBC Radio 1'
+ s Jack Saunders\, Sophie K and Huw Stephens\, Radio 6's Steve Lamacq and J
+ ohn Kennedy on Radio X who they did a live session for in 2021. &nbsp\; AR
+ XX &nbsp\;landed their first TV sync in 2021\, with their single DEEP bein
+ g featured on Prime Time BBC One for the Match of The Day coverage of the 
+ 2021 Euros. They've received 1.8+ million streams and have been featured o
+ n editorial playlists such as New Music Friday\, Hot New Bands and The Roc
+ k List. &nbsp\;Their latest singles have received acclaim from the likes o
+ f: NME\, Fred Perry Subculture and KEXP collaborating with Katie Tavini ( 
+ Arlo Parks) and Steven Ansell (Blood Red Shoes).<br /><br /></span><strong
+ >klotzs</strong>: Postpunk-Duo aus Siegen. Man h&auml\;lt sich bedeckt und
+  atmet leise. Musikalisch immer auf eigenen Pfaden unterwegs macht man sic
+ h auf den Weg die neue Platte &bdquo\;sucht\" in die &Ouml\;ffentlichkeit 
+ zu zerren.</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137b9c
+DTSTART;TZID=Europe/Berlin:20221211T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:* Schachcafé & Spiele- und Kneipenabend *
+CLASS:PUBLIC
+DESCRIPTION:* seven chessboards inc. chess clock on the in between * join t
+ he smoking heads * \n* exquisite drinks & delicate tunes @ the bar area *
+X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
+  in between * join the smoking heads * <br />* exquisite drinks &amp\; del
+ icate tunes @ the bar area *</p>
+CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
+ md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137c34
+DTSTART;TZID=Europe/Berlin:20221214T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Clara Pazzini + Keboo
+CLASS:PUBLIC
+DESCRIPTION:Clara Pazzini + Keboo\nEinlass: 19 Uhr\nBeginn: 20 Uhr\nTickets
+ : https://vvk.link/2davtlc\n \nDie multilinguale Künstlerin CLARA PAZZIN
+ I sieht sich selbst als Europäerin und bewegt sich schon ihr ganzes Leben
+  zwischen Hamburg und Paris\, Berlin und München. Sie fordert die Gleichb
+ erechtigung der Geschlechter\, die Anerkennung diskriminierender gesellsch
+ aftlicher Strukturen und den Ausbruch aus kategorisierenden und einengende
+ n Schubladen. \nCLARA PAZZINIs zeitgenössischer Mix aus Vocoder\, elektro
+ nischen Beats\, Klassik-Elementen\, Pop-\, Sprach- und Operngesang\, mehrs
+ prachigen Lyrics und eingängigen Popmelodien ist ein Abbild unserer moder
+ nen\, multikomplexen und diversen Welt. Schnell wird klar: Nach einem musi
+ kalischen Genre sucht man vergeblich. CLARA PAZZINI stellt sich gegen die 
+ Erwartung und unterwirft sich dabei keinem System. \nhttps://clarapazzini.
+ com/\nIn ihrem Song »Solero« singt Keboo mit warmer Stimme und lässiger
+  Attitüde von fehlgeschlagener Kommunikation\, vom Aneinandervorbeireden 
+ ohne sich zuzuhören – „das ewige Bla Bla Bla“ eben. Und wir sind mi
+ ttendrin in einer Szene\, die sich nachts um halb drei im Club genauso wie
+  nachmittags um halb drei in der Supermarktschlange abspielen könnte. Da 
+ ist immer ein Mensch\, der meint\, die Welt mit Monologen bereichern zu m
+ üssen. „Nimm doch noch ‘n Sip von deinem Ego […] Ich kipp mir ‘n 
+ Solero“ heißt es im Song. Gemeint ist hier übrigens nicht das Eis am S
+ tiel\, sondern der Cocktail\, der tatsächlich genauso schmeckt und offens
+ ichtlich ganz hilfreich dabei sein kann\, einen kühlen Kopf zu bewahren.\
+ nhttps://linktr.ee/Keboo
+X-ALT-DESC;FMTTYPE=text/html:<p>Clara Pazzini + Keboo</p>\n<p>Einlass: 19 U
+ hr<br />Beginn: 20 Uhr</p>\n<p>Tickets: <a href=\"https://vvk.link/2davtlc
+ \">https://vvk.link/2davtlc</a></p>\n<p>&nbsp\;</p>\n<p align=\"JUSTIFY\">
+ <span lang=\"de-DE\">Die multilinguale K&uuml\;nstlerin <strong>CLARA PAZZ
+ INI</strong> sieht sich selbst als Europ&auml\;erin und bewegt sich schon 
+ ihr ganzes Leben zwischen Hamburg und Paris\, Berlin und M&uuml\;nchen. Si
+ e fordert die Gleichberechtigung der Geschlechter\, die Anerkennung diskri
+ minierender gesellschaftlicher Strukturen und den Ausbruch aus kategorisie
+ renden und einengenden Schubladen. </span></p>\n<p align=\"JUSTIFY\"><span
+  lang=\"de-DE\"><strong>CLARA PAZZINI</strong>s zeitgen&ouml\;ssischer Mix
+  aus Vocoder\, elektronischen Beats\, Klassik-Elementen\, Pop-\, Sprach- u
+ nd Operngesang\, mehrsprachigen Lyrics und eing&auml\;ngigen Popmelodien i
+ st ein Abbild unserer modernen\, multikomplexen und diversen Welt. Schnell
+  wird klar: Nach einem musikalischen Genre sucht man vergeblich. CLARA PAZ
+ ZINI stellt sich gegen die Erwartung und unterwirft sich dabei keinem Syst
+ em. </span></p>\n<p align=\"JUSTIFY\"><span lang=\"de-DE\">https://clarapa
+ zzini.com/</span></p>\n<p align=\"JUSTIFY\"><span lang=\"de-DE\">In ihrem 
+ Song &raquo\;Solero&laquo\; singt <strong>Keboo</strong> mit warmer Stimme
+  und l&auml\;ssiger Attit&uuml\;de von fehlgeschlagener Kommunikation\, vo
+ m Aneinandervorbeireden ohne sich zuzuh&ouml\;ren &ndash\; &bdquo\;das ewi
+ ge Bla Bla Bla&ldquo\; eben. Und wir sind mittendrin in einer Szene\, die 
+ sich nachts um halb drei im Club genauso wie nachmittags um halb drei in d
+ er Supermarktschlange abspielen k&ouml\;nnte. Da ist immer ein Mensch\, de
+ r meint\, die Welt mit Monologen bereichern zu m&uuml\;ssen. &bdquo\;Nimm 
+ doch noch &lsquo\;n Sip von deinem Ego [&hellip\;] Ich kipp mir &lsquo\;n 
+ Solero&ldquo\; hei&szlig\;t es im Song. Gemeint ist hier &uuml\;brigens ni
+ cht das Eis am Stiel\, sondern der Cocktail\, der tats&auml\;chlich genaus
+ o schmeckt und offensichtlich ganz hilfreich dabei sein kann\, einen k&uum
+ l\;hlen Kopf zu bewahren.</span></p>\n<p align=\"JUSTIFY\"><span lang=\"de
+ -DE\">https://linktr.ee/Keboo</span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137cd0
+DTSTART;TZID=Europe/Berlin:20221216T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Cava (garage punk)  &  Jolle (garage rock)
+CLASS:PUBLIC
+DESCRIPTION:This is our way of dealing with life and death\, expectations t
+ hat will never be met and men with huge egos! CAVA and its songs wouldn't 
+ exist without all of our amazing friends\, who stay up with us all night t
+ o create and get wasted - so CHEERS to that!\nMit 'Wirtschaft\, Arbeit und
+  Tod sind sie auf ihrer  'Frohsinn und Schabernack ' Tour. Und bisher lä
+ uft phänomenal. Na da hoffentlich auch im Schokoladen!\n\n
+X-ALT-DESC;FMTTYPE=text/html:<p>This is our way of dealing with life and de
+ ath\, expectations that will never be met and men with huge egos! <a href=
+ \"https://cava.bandcamp.com/album/cava\">CAVA</a> and its songs wouldn't e
+ xist without all of our amazing friends\, who stay up with us all night to
+  create and get wasted - so CHEERS to that!</p>\n<p><span class=\"x193iq5w
+  xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkez
+ so x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1
+ l8bm xzsf02u x1yc453h\" dir=\"auto\">Mit 'Wirtschaft\, Arbeit und Tod sind
+  sie auf ihrer&nbsp\; 'Frohsinn und Schabernack ' Tour. Und </span><span c
+ lass=\"x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq
+  x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6pr
+ xxf xvq8zen xo1l8bm xzsf02u x1yc453h\" dir=\"auto\">bisher</span><span cla
+ ss=\"x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq x
+ 1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxx
+ f xvq8zen xo1l8bm xzsf02u x1yc453h\" dir=\"auto\"> l&auml\;uft ph&auml\;no
+ menal. Na da hoffentlich auch im Schokoladen!<br /></span></p>\n<p><span c
+ lass=\"x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq
+  x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6pr
+ xxf xvq8zen xo1l8bm xzsf02u x1yc453h\" dir=\"auto\"><div class=\"row embed
+ -responsive-wrapper text-center\"><div class=\"embed-responsive embed-resp
+ onsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtu
+ be.com/embed/wHrp7duwde4?autoplay=0\" width=\"560\" height=\"315\" framebo
+ rder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div></div><div c
+ lass=\"row embed-responsive-wrapper text-center\"><div class=\"embed-respo
+ nsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" s
+ rc=\"//www.youtube.com/embed/KxvEzdy7qmY?autoplay=0\" width=\"560\" height
+ =\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></
+ div></div></span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137d6c
+DTSTART;TZID=Europe/Berlin:20221217T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Sheef + ben rackeN (Punkrock/Bln/MD)
+CLASS:PUBLIC
+DESCRIPTION:Sheef sind punkig\, melodisch\, nachdenklisch.....\nben rackeN 
+ ist inhaltlich\, strategisch und musikalisch zwischen EA80 und Dackelblut 
+ .... und zelebrieren seit Jahren D.I.Y. par excellence\, fernab in der Elb
+ e-Börde-Heide....unbeachtet von weiten Teilen der Öffentlichkeit
+X-ALT-DESC;FMTTYPE=text/html:<p>Sheef sind punkig\, melodisch\, nachdenklis
+ ch.....</p>\n<p>ben rackeN ist inhaltlich\, strategisch und musikalisch zw
+ ischen EA80 und Dackelblut .... und zelebrieren seit Jahren D.I.Y. par exc
+ ellence\, fernab in der Elbe-B&ouml\;rde-Heide....unbeachtet von weiten Te
+ ilen der &Ouml\;ffentlichkeit</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137e01
+DTSTART;TZID=Europe/Berlin:20221219T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Marshall Ar.ts (Berlin) + ESKALIN (Bärlin)
+CLASS:PUBLIC
+DESCRIPTION:TICKETS gibt es hier.\nMarshall Ar.ts\, das sind wandelnde Pers
+ pektiven. \nDas ist eine Band aus Berlin\, die sich mit jedem Song neu erf
+ indet. Das ist die kompromisslose Fusion von High Gain Gitarren\, Drum and
+  Bass\, Breakbeats und symbolistischem Shouting/Rap. Marshall Ar.ts malt d
+ en Sonnenuntergang in einem Bayou mit einem Super Nintendo. Die Band schaf
+ ft permanent neue Bilder wie ein Kaleidoskop. Eine Minute lang durchdringe
+ n brutal hypnotische Wellen von Gitarren und Synthesizern deinen Kopf\; de
+ r nächste\, Funk-inspirierte Basslinien\, treibende Drums und Raps aus de
+ r Pallid Mask. Ein schwarzes Funkeln. Nintendoom.\n
+X-ALT-DESC;FMTTYPE=text/html:<p><strong><span lang=\"DE\">TICKETS gibt es <
+ a href=\"https://schokoladen.tickettoaster.de/produkte/52351-tickets-marsh
+ all-ar-ts-schokoladen-berlin-am-19-12-2022\" target=\"_blank\" rel=\"noope
+ ner\">hier.</a></span></strong></p>\n<p><strong><span lang=\"DE\">Marshall
+  Ar.ts\, </span></strong><span lang=\"DE\">das sind<strong> wandelnde Pers
+ pektiven</strong>. </span></p>\n<p><span lang=\"DE\">Das ist eine Band aus
+  Berlin\, die sich mit jedem Song neu erfindet. Das ist die kompromisslose
+  Fusion von High Gain Gitarren\, Drum and Bass\, Breakbeats und symbolisti
+ schem Shouting/Rap.</span> <strong><span lang=\"DE\">Marshall Ar.ts</span>
+ </strong><span lang=\"DE\"> malt den Sonnenuntergang in einem Bayou mit ei
+ nem Super Nintendo. Die Band schafft permanent neue Bilder wie ein Kaleido
+ skop.</span><span lang=\"DE\"> Eine Minute lang durchdringen brutal hypnot
+ ische Wellen von Gitarren und Synthesizern deinen Kopf\; der n&auml\;chste
+ \, Funk-inspirierte Basslinien\, treibende Drums und Raps aus der Pallid M
+ ask. Ein schwarzes Funkeln. <strong>Nintendoom.</strong></span></p>\n<p><s
+ pan lang=\"DE\"><strong><div class=\"row embed-responsive-wrapper text-cen
+ ter\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p-0\"><ifra
+ me class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/watch?v=3LB_7uL
+ k6D4?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allowfull
+ screen=\"allowfullscreen\"></iframe></div></div></strong></span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29137ea1
+DTSTART;TZID=Europe/Berlin:20221220T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -476,40 +657,39 @@ SUMMARY:LSD - Liebe Statt Drogen
 CLASS:PUBLIC
 DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
  nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
+ d Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lesebühne
+ n Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eing
+ eladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten und S
+ ongs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas „Spi
+ der“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und
+  Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker auch 
+ in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes Mikro f
+ ür Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte\, das
+ s der Beitrag selbstverfasst sein muss und nicht länger als 6 Minuten dau
+ ert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekom
+ mt ein Freigetränk.
 X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
  bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
+ on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br />LSD &ndas
+ h\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins.
+  Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&
+ auml\;ste im Berliner Schokoladen ein Programm aus neuen Texten und Songs.
+  Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo
+ \;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannema
+ nn\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als 
+ Autoren und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet
+  jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwa
+ s vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein 
+ muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro lie
+ st\, braucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac379e39
-DTSTART;TZID=Europe/Berlin:20210126T190000
+UID:638bc29137f46
+DTSTART;TZID=Europe/Berlin:20221221T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -517,44 +697,94 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
+SUMMARY:LoFi lounge prsnts: Dusty Houseplants [indie°bln] + Hund [indie°b
+ ln]
 CLASS:PUBLIC
-DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
- nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
- d Gäste.\n------------------------------------------------\nLSD – Liebe
-  Statt Drogen ist eine der bekanntesten Lesebühnen Berlins. Jeden Diensta
- gabend gestalten die 5 Mitglieder von LSD und eingeladene Gäste im Berlin
- er Schokoladen ein Programm aus neuen Texten und Songs. Gegründet 1996 be
- steht LSD heute aus den Mitgliedern Andreas „Spider“ Krenzke\, Tobias 
- „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 gena
- nnten Künstler sind als Autoren und Musiker auch in anderen Bereichen akt
- iv.\nLSD bietet jeden Dienstag ein Offenes Mikro für Menschen an\, die sp
- ontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverf
- asst sein muss und nicht länger als 6 Minuten dauert. Wer am Offenen Mikr
- o liest\, braucht keinen Eintritt zahlen und bekommt ein Freigetränk.
-X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
- bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
- on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br /><br />---
- ---------------------------------------------<br /><br />LSD &ndash\; Lieb
- e Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins. Jeden D
- ienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&auml\;st
- e im Berliner Schokoladen ein Programm aus neuen Texten und Songs. Gegr&uu
- ml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo\;Spider
- &ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva
-  Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als Autoren 
- und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet jeden D
- ienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwas vortra
- gen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein muss und
-  nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro liest\, bra
- ucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20201125T190435Z
+DESCRIPTION:\n\n\n\n\nhttps://youtu.be/PtOcLqkv38c\n \nhttp://hund.bandcam
+ p.com\n \n \n\n\n\n\n\nDusty Houseplants\n \nDusty Houseplants speciali
+ se in thoughtful and surprising lo-fi pop with lyrics about the strangely 
+ mundane and the mundanely strange.  \n In March 2022\, they released t
+ heir first set of songs titled \"Still Life EP\". \n\n \nLinks: \nBandc
+ amp: https://dustyhouseplants.bandcamp.com/\nYoutube: https://youtu.be/PtO
+ cLqkv38c\nInstagram: https://www.instagram.com/dusty.houseplants/\n \nHu
+ nd\n\nHund spielen Ausschnitte aus einem langjährigen Gespräch über Lie
+ der und Gedichte\, Hände und Pflanzen\, Politik und Gefühle und andere S
+ eltsamkeiten – mit Gitarre\, Flügelhorn und Stimmen. Schräge\, seltsam
+  schöne Lieder aus Berlin und von sonst wo.\n\nAlternative Songwriting/ A
+ rtfolk/ Freefolk/ Neues Lied\nFrieda Gawenda – Gesang und Flügelhorn\nF
+ elix Koch – Gitarre und Gesang\n\nhttp://www.hund.band\n \nhttp://hund
+ .bandcamp.com\n\n
+X-ALT-DESC;FMTTYPE=text/html:<div dir=\"ltr\" align=\"left\">\n<div>\n<div 
+ dir=\"ltr\" align=\"left\">\n<div dir=\"ltr\" align=\"left\">\n<div>\n<div
+  dir=\"ltr\" align=\"left\"><span class=\"v1774021717-17052022\"><span cla
+ ss=\"v1186284812-10102022\"><span class=\"v1314465919-04112022\"><span sty
+ le=\"font-family: Verdana\; font-size: small\;\"><a href=\"https://youtu.b
+ e/PtOcLqkv38c\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=
+ \"color: #000000\; font-family: Verdana\; font-size: small\;\">https://you
+ tu.be/PtOcLqkv38c</span></a></span></span></span></span></div>\n<div dir=\
+ "ltr\" align=\"left\">&nbsp\;</div>\n<div dir=\"ltr\" align=\"left\"><span
+  class=\"v1774021717-17052022\"><span class=\"v1186284812-10102022\"><span
+  class=\"v1314465919-04112022\"><span style=\"font-family: Arial\;\"><a ti
+ tle=\"blocked::http://hund.bandcamp.com/\" href=\"http://hund.bandcamp.com
+ \" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: #000
+ 000\; font-family: Verdana\; font-size: small\;\" title=\"blocked::http://
+ hund.bandcamp.com/\">http://hund.bandcamp.com</span></a></span></span></sp
+ an></span></div>\n<div dir=\"ltr\" align=\"left\">&nbsp\;</div>\n<div dir=
+ \"ltr\" align=\"left\">&nbsp\;</div>\n</div>\n</div>\n</div>\n</div>\n</di
+ v>\n<div dir=\"ltr\" align=\"left\"><span class=\"v1314465919-04112022\"><
+ span style=\"font-family: Verdana\; font-size: small\;\"><strong>Dusty Hou
+ seplants</strong></span></span></div>\n<div dir=\"ltr\" align=\"left\">&nb
+ sp\;</div>\n<div dir=\"ltr\" align=\"left\"><span style=\"font-family: Ver
+ dana\; font-size: small\;\">Dusty Houseplants specialise in thoughtful and
+  surprising lo-fi pop with lyrics about the strangely mundane and the mund
+ anely&nbsp\;strange.&nbsp\;</span><span style=\"font-family: Verdana\;\"><
+ span style=\"font-size: small\;\"><span class=\"v1314465919-04112022\">&nb
+ sp\;<br />&nbsp\;</span>In March 2022\, they released their first set of s
+ ongs titled \"Still Life EP\".&nbsp\;</span></span></div>\n<div dir=\"ltr\
+ ">\n<div><span style=\"font-family: Verdana\;\">&nbsp\;</span></div>\n<div
+ ><span style=\"font-family: Verdana\; font-size: small\;\">Links:&nbsp\;</
+ span></div>\n<div><span style=\"font-family: Verdana\; font-size: small\;\
+ ">Bandcamp: </span><a href=\"https://dustyhouseplants.bandcamp.com/\" targ
+ et=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: #000000\; f
+ ont-family: Verdana\; font-size: small\;\">https://dustyhouseplants.bandca
+ mp.com/</span></a></div>\n<div><span style=\"font-family: Verdana\; font-s
+ ize: small\;\">Youtube: </span><a href=\"https://youtu.be/PtOcLqkv38c\" ta
+ rget=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: #000000\;
+  font-family: Verdana\; font-size: small\;\">https://youtu.be/PtOcLqkv38c<
+ /span></a></div>\n<div><span style=\"font-family: Verdana\; font-size: sma
+ ll\;\">Instagram:&nbsp\;</span><a href=\"https://www.instagram.com/dusty.h
+ ouseplants/\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"
+ color: #000000\; font-family: Verdana\; font-size: small\;\">https://www.i
+ nstagram.com/dusty.houseplants/</span></a></div>\n<div>&nbsp\;</div>\n<div
+ ><span class=\"v1982562112-17072018\"><span style=\"font-family: Verdana\;
+  font-size: small\;\"><strong>Hund</strong></span></span></div>\n<div>\n<d
+ iv><span style=\"font-family: Verdana\; font-size: small\;\">Hund spielen 
+ Ausschnitte aus einem langj&auml\;hrigen Gespr&auml\;ch &uuml\;ber Lieder 
+ und Gedichte\, H&auml\;nde und Pflanzen\, Politik und Gef&uuml\;hle und an
+ dere Seltsamkeiten &ndash\; mit Gitarre\, Fl&uuml\;gelhorn und Stimmen. Sc
+ hr&auml\;ge\, seltsam sch&ouml\;ne Lieder aus Berlin und von sonst wo.</sp
+ an></div>\n<div>\n<p><span class=\"v1highlight\"><span style=\"font-family
+ : Verdana\; font-size: small\;\">Alternative Songwriting/ Artfolk/ Freefol
+ k/ Neues Lied</span></span></p>\n<p><span class=\"v1highlight\"><span styl
+ e=\"font-family: Verdana\; font-size: small\;\">Frieda Gawenda &ndash\; Ge
+ sang und Fl&uuml\;gelhorn<br />Felix Koch &ndash\;&nbsp\;Gitarre und Gesan
+ g</span></span></p>\n</div>\n<div><a title=\"blocked::http://www.hund.band
+ /\" href=\"http://www.hund.band\" target=\"_blank\" rel=\"noopener norefer
+ rer\"><span style=\"color: #000000\; font-family: Verdana\; font-size: sma
+ ll\;\" title=\"blocked::http://www.hund.band/\">http://www.hund.band</span
+ ></a></div>\n<div>&nbsp\;</div>\n<div><a title=\"blocked::http://hund.band
+ camp.com/\" href=\"blocked::http://hund.bandcamp.com/\" target=\"_blank\" 
+ rel=\"noopener noreferrer\"><span style=\"color: #000000\; font-family: Ve
+ rdana\; font-size: small\;\" title=\"blocked::http://hund.bandcamp.com/\">
+ http://hund.bandcamp.com</span></a></div>\n</div>\n</div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac37a4f7
-DTSTART;TZID=Europe/Berlin:20210207T203000
+UID:638bc291380a0
+DTSTART;TZID=Europe/Berlin:20221223T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -562,39 +792,21 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Karaoke Nacht mit Kj DER KÄPT’NNN
+SUMMARY:dj set: no tears for the creatures of the night prsnts: Dark Xmas w
+ / DJs alienslut & hunkydory
 CLASS:PUBLIC
-DESCRIPTION:KJ Der Käpt'n kommt mit einem fetten Angebot aus allen nationa
- len und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakt
- er und ist zum Kreischen fröhlich\, generations- und sozialübergreifend 
- und warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Mo
- nitor- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und 
- dabei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!
- \n... wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/detai
- ls?id=com.heiko.karaokeliste&hl=de\nOder klickt den Link für seine Songli
- ste…\nhttp://derkaeptn.de/songliste.html\n \nTest\, Test
-X-ALT-DESC;FMTTYPE=text/html:<p>KJ Der K&auml\;pt'n kommt mit einem fetten 
- Angebot aus allen nationalen und internationalen K&uuml\;nstlern!<br />Der
-  Abend hat schon lange Kultcharakter und ist zum Kreischen fr&ouml\;hlich\
- , generations- und sozial&uuml\;bergreifend und warmherzig...!<br />Eine d
- er sch&ouml\;nsten B&uuml\;hnen Berlins &amp\; ein perfekter Monitor- und 
- Raumsound besorgen den Rest!<br />Singen macht halt gl&uuml\;cklich und da
- bei zuschauen auch!<br /><br />holt euch die K&auml\;pt'n Karaoke App auf'
- s Smartphone!<br />... wei sie wirklich toll ist!<br /><br /><a href=\"htt
- ps://play.google.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=
- de\" target=\"_blank\" rel=\"nofollow nofollow noopener\">https://play.goo
- gle.com/store/apps/details?id=com.heiko.karaokeliste&amp\;hl=de</a><br /><
- br />Oder klickt den Link f&uuml\;r seine Songliste&hellip\;</p>\n<p><a hr
- ef=\"http://derkaeptn.de/songliste.html\">http://derkaeptn.de/songliste.ht
- ml</a></p>\n<p>&nbsp\;</p>\n<p>Test\, Test</p>
+DESCRIPTION:no tears for the creatures of the night prsnts: Dark Xmas w/ DJ
+ s alienslut & hunkydory\n
+X-ALT-DESC;FMTTYPE=text/html:<p>no tears for the creatures of the night prs
+ nts: Dark Xmas w/ DJs alienslut &amp\; hunkydory</p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fbeaac37ab5a
-DTSTART;TZID=Europe/Berlin:20210221T200000
+UID:638bc29138254
+DTSTART;TZID=Europe/Berlin:20221230T190000
 SEQUENCE:0
 TRANSP:OPAQUE
 LOCATION:Ackerstrasse 169\, 10115 Berlin
@@ -602,23 +814,771 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Schokoladen OPEN STAGE
+SUMMARY:JBC and the MAGIC RADIO TOUCH (Junpin' Ska\, Sweet Rocksteady & Hea
+ vy Reggae)
 CLASS:PUBLIC
-DESCRIPTION:starts between 8:30 and 9 pm. artists should arrive around 8 pm
- !\ncozy athmosphere\, perfect sound and support by our engineer\, delicate
-  tunes afterwords and delicious drinks!\nJust you\, perhaps a friend\, not
-  more than two instruments and two to four songs! no drums or bass amplifi
- er!\njust come over!\n#openstageberlin
-X-ALT-DESC;FMTTYPE=text/html:<p>starts between 8:30 and 9 pm. artists shoul
- d arrive around 8 pm!<br /><br />cozy athmosphere\, perfect sound and supp
- ort by our engineer\, delicate tunes afterwords and delicious drinks!<br /
- ><br />Just you\, perhaps a friend\, not more than two instruments and two
-  to four songs! no drums or bass amplifier!<br />just come over!<br /><br 
- /><a class=\"_58cn\" href=\"https://www.facebook.com/hashtag/openstageberl
- in\" type=\"\" data-ft=\"{\">#openstageberlin</a></p>
+DESCRIPTION:Schon seit 20 Jahren sind die Mitglieder von JBC RADIO und THE 
+ MAGIC TOUCH mit ihrer Liebe zum Oldschool-Sound der Karibik live unterwegs
+ . Ob mit jamaikanischen Legenden wie Doreen Shaffer (Sängerin der Skatali
+ tes)\, Roy Ellis\, Ken Boothe\, Susan Cadogan (sogar hier im Schokoladen 2
+ 011 zu sehen) oder mit ihrem eigenen Material begeistern sie Musikliebhabe
+ rInnen in Deutschland und ganz Europa. Heute am 30.12. im Schokoladen fusi
+ onieren beide Bands zu einer Besetzung und präsentieren neues The Magic T
+ ouch – Material und im JBC RADIO -Teil des Konzerts jamaikanische Rarit
+ äten und Klassiker des Ska\, Rocksteady und Early Reggae wobei das ganze 
+ durch Live-Dub-Mix verziert wird! Bei den Bläsern ist Berliner Ska-Origin
+ ator Waki an der Posaune zu Gast. Als Gründungsmitglied der Bands Yebo un
+ d Jazzbo prägt er die Szene bis heute.\nFeinstes Vinyl gibt´s zur Afters
+ how von der Dj Crew EVERYTHING CRASH und RIMSHOT SELECTA auf die Plattente
+ ller!\nWake the town\, tell the people and put on your dancin´ shoes!
+X-ALT-DESC;FMTTYPE=text/html:<p>Schon seit 20 Jahren sind die Mitglieder vo
+ n <a href=\"https://www.facebook.com/jbc.radio.berlin\">JBC RADIO</a> und 
+ <a href=\"https://www.facebook.com/magictouchband\">THE MAGIC TOUCH</a> mi
+ t ihrer Liebe zum Oldschool-Sound der Karibik live unterwegs. Ob mit jamai
+ kanischen Legenden wie Doreen Shaffer (S&auml\;ngerin der Skatalites)\, Ro
+ y Ellis\, Ken Boothe\, Susan Cadogan (sogar hier im <a href=\"https://yout
+ u.be/t6d9vRfKUe4\">Schokoladen</a> 2011 zu sehen) oder mit ihrem eigenen M
+ aterial begeistern sie MusikliebhaberInnen in Deutschland und ganz Europa.
+  Heute am 30.12. im Schokoladen fusionieren beide Bands zu einer Besetzung
+  und pr&auml\;sentieren neues <a href=\"http://themagictouchband.com/\">Th
+ e Magic Touch</a> &ndash\; Material und im JBC RADIO -Teil des Konzerts ja
+ maikanische Rarit&auml\;ten und Klassiker des Ska\, Rocksteady und Early R
+ eggae wobei das ganze durch Live-Dub-Mix verziert wird! Bei den Bl&auml\;s
+ ern ist Berliner Ska-Originator Waki an der Posaune zu Gast. Als Gr&uuml\;
+ ndungsmitglied der Bands Yebo und Jazzbo pr&auml\;gt er die Szene bis heut
+ e.</p>\n<p>Feinstes Vinyl gibt&acute\;s zur Aftershow von der Dj Crew EVER
+ YTHING CRASH und RIMSHOT SELECTA auf die Plattenteller!</p>\n<p>Wake the t
+ own\, tell the people and put on your dancin&acute\; shoes!</p>
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20201125T190435Z
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291383c4
+DTSTART;TZID=Europe/Berlin:20230101T200000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Karaoke Night w/ KJ Der Käpt'n
+CLASS:PUBLIC
+DESCRIPTION:Der Käpt'n kommt mit einem fetten Angebot aus allen nationalen
+  und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakter 
+ und ist zum Kreischen fröhlich\, generations- und sozialübergreifend und
+  warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Monit
+ or- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und dab
+ ei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!\n.
+ .. wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/details.
+ ..\nOder klickt den Link für seine Songliste…\nhttp://derkaeptn.de/song
+ liste.html
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
+ et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau5
+ 5g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v b1v8xokw oo9gr5id\" dir=\"auto\">
+ Der K&auml\;pt'n kommt mit einem fetten Angebot aus allen nationalen und i
+ nternationalen K&uuml\;nstlern!<br />Der Abend hat schon lange Kultcharakt
+ er und ist zum Kreischen fr&ouml\;hlich\, generations- und sozial&uuml\;be
+ rgreifend und warmherzig...!<br />Eine der sch&ouml\;nsten B&uuml\;hnen Be
+ rlins &amp\; ein perfekter Monitor- und Raumsound besorgen den Rest!<br />
+ Singen macht halt gl&uuml\;cklich und dabei zuschauen auch!<br />holt euch
+  die K&auml\;pt'n Karaoke App auf's Smartphone!<br />... wei sie wirklich 
+ toll ist!<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d
+ 6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcuky
+ x3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4w
+ l py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" href=\"https://play.goo
+ gle.com/store/apps/details?fbclid=IwAR1x1PKMpuLwfecpsofguKD9hhC-UBzNPm57_B
+ bgklliy1HMDkTfm4ZWGn4\" target=\"_blank\" rel=\"nofollow noopener\">https:
+ //play.google.com/store/apps/details</a>...<br />Oder klickt den Link f&uu
+ ml\;r seine Songliste&hellip\;<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f 
+ esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cx
+ mmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuy
+ zwwr f1sip0of lzcic4wl py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" hr
+ ef=\"http://derkaeptn.de/songliste.html?fbclid=IwAR02MFOgT9l0coh45wnY30bnx
+ TkE9n94dR-8nVL9MYLepOrOlBKwsSMoQLI\" target=\"_blank\" rel=\"nofollow noop
+ ener\">http://derkaeptn.de/songliste.html</a></span></p>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc2913854c
+DTSTART;TZID=Europe/Berlin:20230103T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION: \n\nAndreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, 
+ Uli Hannemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lie
+ der und Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lese
+ bühnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD un
+ d eingeladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten
+  und Songs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas 
+ „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Miras
+ ol und Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker
+  auch in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes M
+ ikro für Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte
+ \, dass der Beitrag selbstverfasst sein muss und nicht länger als 6 Minut
+ en dauert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und
+  bekommt ein Freigetränk.\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
+ </div>\n<div class=\"text col-12 m-0 p-2\">\n<p>Andreas &bdquo\;Spider&ldq
+ uo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mir
+ asol und Ivo Lotion pr&auml\;sentieren Geschichten\, Lieder und G&auml\;st
+ e.<br />LSD &ndash\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uu
+ ml\;hnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD u
+ nd eingeladene G&auml\;ste im Berliner Schokoladen ein Programm aus neuen 
+ Texten und Songs. Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliede
+ rn Andreas &bdquo\;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; He
+ rre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\
+ ;nstler sind als Autoren und Musiker auch in anderen Bereichen aktiv.<br /
+ ><br />LSD bietet jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\,
+  die spontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag sel
+ bstverfasst sein muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am 
+ Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekommt ein Freig
+ etr&auml\;nk.</p>\n</div>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291386b8
+DTSTART;TZID=Europe/Berlin:20230105T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:little league shows prsnts: MARY ANNE'S POLAR RIG (noise-pop/fuzzy 
+ indie rock\, swe) + tba.
+CLASS:PUBLIC
+DESCRIPTION:little league shows prsnts: MARY ANNE'S POLAR RIG (noise-pop/fu
+ zzy indie rock\, swe) + tba.\ntickets at the doors or in presale --> vvk.l
+ ink/2fabu6o\nMORE INFOS VERY SOON!\n
+X-ALT-DESC;FMTTYPE=text/html:<p>little league shows prsnts: MARY ANNE'S POL
+ AR RIG (noise-pop/fuzzy indie rock\, swe) + tba.<br /><br />tickets at the
+  doors or in presale --&gt\; <a href=\"https://vvk.link/2fabu6o\">vvk.link
+ /2fabu6o</a><br /><br />MORE INFOS VERY SOON!<br /><br /><div class=\"row 
+ embed-responsive-wrapper text-center\"><div class=\"embed-responsive embed
+ -responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.
+ youtube.com/embed/CWH-vvW1Cns?autoplay=0\" width=\"560\" height=\"315\" fr
+ ameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div></div><
+ /p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291388b2
+DTSTART;TZID=Europe/Berlin:20230108T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:* Schachcafé & Spiele- und Kneipenabend *
+CLASS:PUBLIC
+DESCRIPTION:* seven chessboards inc. chess clock on the in between * join t
+ he smoking heads * \n* exquisite drinks & delicate tunes @ the bar area *
+X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
+  in between * join the smoking heads * <br />* exquisite drinks &amp\; del
+ icate tunes @ the bar area *</p>
+CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
+ md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291389ef
+DTSTART;TZID=Europe/Berlin:20230114T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:SOKO LiNX + support
+CLASS:PUBLIC
+DESCRIPTION:Tickets im VVK gibt es hier.\n \nSOKO LINX ermittelt im Drei-M
+ inuten-Takt\nVerantwortlich: SiKO LONX\, NiXS KOOL\, OXON KiLS\nTatzeit: 1
+ 3.12.2019\; andauernd\nTatort: Connewitz\, 04277 Leipzig\n \nSeit geraume
+ r Zeit ermittelt die staatliche Exekutive bezüglich einer Bandenmusikalit
+ ät in den eigenen Reihen. Nachdem in einer internen Studie festgestellt w
+ erden konnte\, dass es innerhalb der Behörde keinen strukturellen Rassism
+ us gibt und neonazistische Gesinnungen bei den Beamt*innen keine Rolle spi
+ elen\, überprüft die Administration aufgrund verschiedener Hinweise aus 
+ der Bevölkerung die Dienststellen auf linksextremistische Strömungen hin
+ .Ersten Ermittlungsergebnissen zufolge gründete sich im Dezember 2019 in 
+ Leipzig Connewitz eine Band(e)\, die gitarrenlastige Musik unter die Bevö
+ lkerung bringt. Mit schnellem Beat\, elektronischer Umrahmung und mehrstim
+ migen Gesang köderten die Täter*innen ihr Publikum auch schon auf einige
+ n Livekonzerten. In allen Fällen entstand bisher ein Hörgenuss in derzei
+ t noch unbekanntem Ausmaß. Mit extremistischen Parolen wie „Tu nicht\, 
+ was Du auch lassen kannst“ oder aber „Intoleranz jeder Intoleranz“ u
+ mrahmt die Gruppe ihre vermeintlichen Straftaten. Eine politische Motivati
+ on in vielen Liedern kann zum gegenwärtigen Zeitpunkt nicht ausgeschlosse
+ n werden. Das erstes Album “AUF DIE FRESZE. FERTIG. LOS!” erschien nac
+ h ersten Ermittlungen am 29.07.2022 auf Vinyl bei Bakraufarfita Records. B
+ ereits in der Vergangenheit traten die Mitglieder*innen in unterschiedlich
+ en Musikkartellen in Erscheinung. Die aktuellen kriminellen Handlungen dau
+ ern gegenwärtig an.\nDie Täter*innen werden wie folgt beschrieben:Gitarr
+ e. Schlagzeug. Maske. Bass. \nDie Ermittlungsbehörden sind bei der Aufkl
+ ärung der Punktaten auf Mithilfe von Musikfans angewiesen. Zeug*innen\,di
+ e sachdienliche Hinweise zur Weiterverbreitung des musikalischen Potpourri
+ s in Form von Konzerten u. Ä. geben können\, werden gebeten\, sich bei d
+ er SOKO LiNX\, Bornaische Straße 1\, in 04277 Leipzig\, Tel. 0341-1312161
+  oder jeder anderen Rockstelle zu melden.\n \n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"_page_1gl8y_100 \" data-index=\"0
+ \">Tickets im VVK gibt es <a href=\"https://schokoladen.tickettoaster.de/p
+ rodukte/51951-tickets-soko-linx-schokoladen-berlin-am-14-01-2023\" target=
+ \"_blank\" rel=\"noopener\">hier</a>.</div>\n<div class=\"_page_1gl8y_100 
+ \" data-index=\"0\">&nbsp\;</div>\n<div id=\"pageContainer1\" class=\"_pag
+ e_1gl8y_100 \" data-index=\"0\">SOKO LINX ermittelt im Drei-Minuten-Takt</
+ div>\n<div class=\"_page_1gl8y_100 \" data-index=\"0\">Verantwortlich: SiK
+ O LONX\, NiXS KOOL\, OXON KiLS</div>\n<div class=\"_page_1gl8y_100 \" data
+ -index=\"0\">Tatzeit: 13.12.2019\; andauernd</div>\n<div class=\"_page_1gl
+ 8y_100 \" data-index=\"0\">Tatort: Connewitz\, 04277 Leipzig</div>\n<div c
+ lass=\"_page_1gl8y_100 \" data-index=\"0\">&nbsp\;</div>\n<div class=\"_pa
+ ge_1gl8y_100 \" data-index=\"0\">Seit geraumer Zeit ermittelt die staatlic
+ he Exekutive bez&uuml\;glich einer Bandenmusikalit&auml\;t in den eigenen 
+ Reihen. Nachdem in einer internen Studie festgestellt werden konnte\, dass
+  es innerhalb der Beh&ouml\;rde keinen strukturellen Rassismus gibt und ne
+ onazistische Gesinnungen bei den Beamt*innen keine Rolle spielen\, &uuml\;
+ berpr&uuml\;ft die Administration aufgrund verschiedener Hinweise aus der 
+ Bev&ouml\;lkerung die Dienststellen auf linksextremistische Str&ouml\;mung
+ en hin.Ersten Ermittlungsergebnissen zufolge gr&uuml\;ndete sich im Dezemb
+ er 2019 in Leipzig Connewitz eine Band(e)\, die gitarrenlastige Musik unte
+ r die Bev&ouml\;lkerung bringt. Mit schnellem Beat\, elektronischer Umrahm
+ ung und mehrstimmigen Gesang k&ouml\;derten die T&auml\;ter*innen ihr Publ
+ ikum auch schon auf einigen Livekonzerten. In allen F&auml\;llen entstand 
+ bisher ein H&ouml\;rgenuss in derzeit noch unbekanntem Ausma&szlig\;. Mit 
+ extremistischen Parolen wie &bdquo\;Tu nicht\, was Du auch lassen kannst&l
+ dquo\; oder aber &bdquo\;Intoleranz jeder Intoleranz&ldquo\; umrahmt die G
+ ruppe ihre vermeintlichen Straftaten. Eine politische Motivation in vielen
+  Liedern kann zum gegenw&auml\;rtigen Zeitpunkt nicht ausgeschlossen werde
+ n. Das erstes Album &ldquo\;AUF DIE FRESZE. FERTIG. LOS!&rdquo\; erschien 
+ nach ersten Ermittlungen am 29.07.2022 auf Vinyl bei Bakraufarfita Records
+ . Bereits in der Vergangenheit traten die Mitglieder*innen in unterschiedl
+ ichen Musikkartellen in Erscheinung. Die aktuellen kriminellen Handlungen 
+ dauern gegenw&auml\;rtig an.</div>\n<div class=\"_page_1gl8y_100 \" data-i
+ ndex=\"0\">Die T&auml\;ter*innen werden wie folgt beschrieben:<strong>Gita
+ rre. Schlagzeug. Maske. Bass. </strong></div>\n<div class=\"_page_1gl8y_10
+ 0 \" data-index=\"0\">Die Ermittlungsbeh&ouml\;rden sind bei der Aufkl&aum
+ l\;rung der Punktaten auf Mithilfe von Musikfans angewiesen. Zeug*innen\,d
+ ie sachdienliche Hinweise zur Weiterverbreitung des musikalischen Potpourr
+ is in Form von Konzerten u. &Auml\;. geben k&ouml\;nnen\, werden gebeten\,
+  sich bei der SOKO LiNX\, Bornaische Stra&szlig\;e 1\, in 04277 Leipzig\, 
+ Tel. 0341-1312161 oder jeder anderen Rockstelle zu melden.\n<div class=\"_
+ linksLayer_1gl8y_42\">&nbsp\;</div>\n</div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29138b52
+DTSTART;TZID=Europe/Berlin:20230117T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
+ nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
+ d Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lesebühne
+ n Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eing
+ eladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten und S
+ ongs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas „Spi
+ der“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und
+  Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker auch 
+ in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes Mikro f
+ ür Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte\, das
+ s der Beitrag selbstverfasst sein muss und nicht länger als 6 Minuten dau
+ ert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekom
+ mt ein Freigetränk.
+X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
+ bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
+ on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br />LSD &ndas
+ h\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins.
+  Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&
+ auml\;ste im Berliner Schokoladen ein Programm aus neuen Texten und Songs.
+  Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo
+ \;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannema
+ nn\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als 
+ Autoren und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet
+  jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwa
+ s vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein 
+ muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro lie
+ st\, braucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29138c97
+DTSTART;TZID=Europe/Berlin:20230125T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:little league shows & powerline prsnt: COOL SOUNDS (indie\, aus) + 
+ tba.
+CLASS:PUBLIC
+DESCRIPTION:little league shows & powerline prsnt: COOL SOUNDS (indie\, aus
+ ) + tba.\ntickets at the doors or in presale --> vvk.link/2fadzcg\nMORE IN
+ FOS VERY SOON!\n
+X-ALT-DESC;FMTTYPE=text/html:<p>little league shows &amp\; powerline prsnt:
+  COOL SOUNDS (indie\, aus) + tba.<br /><br />tickets at the doors or in pr
+ esale --&gt\; <a href=\"https://vvk.link/2fadzcg\">vvk.link/2fadzcg</a><br
+  /><br />MORE INFOS VERY SOON!<br /><br /><div class=\"row embed-responsiv
+ e-wrapper text-center\"><div class=\"embed-responsive embed-responsive-16b
+ y9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/emb
+ ed/i6LSA4fohJk?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\"
+  allowfullscreen=\"allowfullscreen\"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29138dd8
+DTSTART;TZID=Europe/Berlin:20230126T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Kate Bollinger
+CLASS:PUBLIC
+DESCRIPTION:Kate Bollinger\nEinlass: 19 Uhr\nBeginn: 20 Uhr\nTickets: https
+ ://vvk.link/2dx5fm8\n \nKate Bollinger’s songs tend to linger well beyo
+ nd their run times\, filling the negative space of ordinary days with char
+ ming melodies and smart phrasings. She writes them at home in Richmond\, V
+ irginia\, letting her subconscious lead\, an open-ended process she likens
+  to dreaming. From a chord progression appears a line\, maybe a syllable w
+ ill start to stick\, enough to pursue\, but she says sometimes the words d
+ on't feel like her own\, more like shapes that form in the mind’s sky. W
+ hile many are personal and deal with the emotions that surface with findin
+ gher place in the world\, she’d prefer they be whatever you’d like the
+ m to be\, to connect with listeners in their own way. \nBollinger’s musi
+ cal universe is relaxed\, tender\, and unassuming\; within lives a timeles
+ s sensibility\, a songwriter’s knack for noticing the little things and 
+ their counterpoints. Darkness and light\, pain and pleasure\, reality and 
+ escape. These all have space to be seen on her new EP\, Look at it in the 
+ Light\, her first project on Ghostly International\, arrived in Spring 202
+ 2Bollinger’s project is collaborative\; she shoots music videos with her
+  friends and colors each of her folk-pop songs with musicians in her commu
+ nity. An agile group of players with backgrounds in jazz\, they recorded h
+ er first EP\, I Don’t Wanna Lose\, as live takes in asingle day\, then s
+ lowed it down to build out her 2020 EP\, A word becomes a sound. Bollinger
+  sings quickly at times\; she jokes that can get her into trouble when it 
+ comes to playing live\, “some of these songs are going to be a mouthful.
+ ” She’s always been drawn to singers in that free-flowing style and go
+ t into the habit of writing quickly while watching her longtime collaborat
+ or John Trainum work with rappers in the studio.
+X-ALT-DESC;FMTTYPE=text/html:<p>Kate Bollinger</p>\n<p>Einlass: 19 Uhr<br /
+ >Beginn: 20 Uhr</p>\n<p>Tickets: <a href=\"https://vvk.link/2dx5fm8\">http
+ s://vvk.link/2dx5fm8</a></p>\n<p>&nbsp\;</p>\n<p><span class=\"x193iq5w xe
+ uugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7
+ i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=
+ \"auto\">Kate Bollinger&rsquo\;s songs tend to linger well beyond their ru
+ n times\, filling the negative space of ordinary days with charming melodi
+ es and smart phrasings. She writes them at home in Richmond\, Virginia\, l
+ etting her subconscious lead\, an open-ended process she likens to dreamin
+ g. From a chord progression appears a line\, maybe a syllable will start t
+ o stick\, enough to pursue\, but she says sometimes the words don't feel l
+ ike her own\, more like shapes that form in the mind&rsquo\;s sky. While m
+ any are personal and deal with the emotions that surface with findingher p
+ lace in the world\, she&rsquo\;d prefer they be whatever you&rsquo\;d like
+  them to be\, to connect with listeners in their own way. <br />Bollinger&
+ rsquo\;s musical universe is relaxed\, tender\, and unassuming\; within li
+ ves a timeless sensibility\, a songwriter&rsquo\;s knack for noticing the 
+ little things and their counterpoints. Darkness and light\, pain and pleas
+ ure\, reality and escape. These all have space to be seen on her new EP\, 
+ Look at it in the Light\, her first project on Ghostly International\, arr
+ ived in Spring 2022Bollinger&rsquo\;s project is collaborative\; she shoot
+ s music videos with her friends and colors each of her folk-pop songs with
+  musicians in her community. An agile group of players with backgrounds in
+  jazz\, they recorded her first EP\, I Don&rsquo\;t Wanna Lose\, as live t
+ akes in asingle day\, then slowed it down to build out her 2020 EP\, A wor
+ d becomes a sound. Bollinger sings quickly at times\; she jokes that can g
+ et her into trouble when it comes to playing live\, &ldquo\;some of these 
+ songs are going to be a mouthful.&rdquo\; She&rsquo\;s always been drawn t
+ o singers in that free-flowing style and got into the habit of writing qui
+ ckly while watching her longtime collaborator John Trainum work with rappe
+ rs in the studio.</span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29138efe
+DTSTART;TZID=Europe/Berlin:20230130T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Camilla Sparksss (electronic noise-pop\, Ontario) + tba
+CLASS:PUBLIC
+DESCRIPTION:Barbara Lehnhoff artistically known as Camilla Sparksss is a Sw
+ iss Canadian electro punk dance musician and visual artist. She was born a
+ t -30 degrees in Kenora\, Ontario\, a small town on the Great Lakes of Can
+ ada. Yes\, she had a pet bear as a child and yes her father flew a float p
+ lane.\nCamilla Sparksss is best known for her captivating live performance
+  that combines a unique technique of mixing dub plate (vinyls)\, synthesis
+ ers and cutting vocals. \"As an electronic musician coming from a punk bac
+ kground my biggest challenge was to create a physical live experience\, by
+  pressing my samples on dub plates I can play them as \"real\" instruments
+ \, the turntables become my guitars\".\nHer first album For You The Wild (
+ 2014) is an instinctive mixture of 80's dark wave experimental electronic 
+ music performed with a lo-fi dancer on stage\, had her on stage as opening
+  act for Jon Spencer Blues Explosion 2014 European Tour. In 2019 she relea
+ sed her second album entitled Brutal (On The Camper Records). A mixture of
+  experimental\, lo-fi electronic pop\, and melodic collages of a wide rang
+ e of genre styles\, performed with turntables\, fat synthesisers and cutti
+ ng vocals. Brutal was followed in 2020 with a full remix album entitled Br
+ utal Remix containing sixteen remixes by a variety of different artists su
+ ch as French beat maker Fakear\, electro clash artist Rebeka Warrior\, Ame
+ rican electronic wizard Mike Mare (Dälek) and many more.\nSince 2014 Cami
+ lla Sparksss has played over 400 live shows across Europe\, North Africa\,
+  Canada and the US in venues\, theatres and festivals such as Kilbi Festiv
+ al\, La Machine Du Moulin Rouge\, Holland Festival\, Eurosonic\, Centre Cu
+ lturel Suisse à Paris and many more. In 2016 she was nominated for the Sw
+ iss Music Prize with her post punk band Peter Kernel. She is also co-found
+ er of Swiss independent Label On The Camper Records.\nCamilla Sparksss is 
+ currently preparing her new \"audio visual\" album entitled Camilla Sparks
+ ss Lullabies. That combines animated picture disc vinyls\, that come to li
+ fe through a phenakistoscope / magic mirror and other worldly melodic bedt
+ ime stories for adults entirely composed with endless grooves\, mellotron 
+ and spoken words. The album is scheduled for release early 2023 for On The
+  Camper Records.\nAt the moment Camilla Sparksss is touring three differen
+ t live formats: an electronic pop performance of her first two albums For 
+ You The Wild (2014) and Brutal (2019) suitable for venues\, clubs and fest
+ ivals. An audio visual live performance of the upcoming Camilla Sparksss L
+ ullabies (2023) album that integrates animated vinyl visuals in the perfor
+ mance\, suitable for theatres\, cinemas and special events. And an improvi
+ sed set with dedicated sounds inherent to performance locations\, this is 
+ an onsite performance on demand for specific festivals and special events.
+X-ALT-DESC;FMTTYPE=text/html:<p align=\"justify\">Barbara Lehnhoff artistic
+ ally known as <strong>Camilla Sparksss</strong> is a Swiss Canadian electr
+ o punk dance musician and visual artist. She was born at -30 degrees in Ke
+ nora\, Ontario\, a small town on the Great Lakes of Canada. Yes\, she had 
+ a pet bear as a child and yes her father flew a float plane.</p>\n<p align
+ =\"justify\"><strong>Camilla Sparksss</strong> is best known for her capti
+ vating live performance that combines a unique technique of <strong>mixing
+  dub plate</strong> (vinyls)\, <strong>synthesisers</strong> and <strong>c
+ utting vocals</strong>. \"As an electronic musician coming from a punk bac
+ kground my biggest challenge was to create a physical live experience\, by
+  pressing my samples on dub plates I can play them as \"real\" instruments
+ \, the turntables become my guitars\".</p>\n<p align=\"justify\">Her first
+  album <em>For You The Wild</em> (2014) is an instinctive mixture of 80's 
+ dark wave experimental electronic music performed with a lo-fi dancer on s
+ tage\, had her on stage as opening act for <strong>Jon Spencer Blues Explo
+ sion</strong> 2014 European Tour. In 2019 she released her second album en
+ titled <em>Brutal</em> (On The Camper Records). A mixture of experimental\
+ , lo-fi electronic pop\, and melodic collages of a wide range of genre sty
+ les\, performed with turntables\, fat synthesisers and cutting vocals. <em
+ >Brutal</em> was followed in 2020 with a full remix album entitled <em>Bru
+ tal Remix</em> containing sixteen remixes by a variety of different artist
+ s such as French beat maker <strong>Fakear</strong>\, electro clash artist
+  <strong>Rebeka Warrior</strong>\, American electronic wizard <strong>Mike
+  Mare</strong> (<strong>D&auml\;lek</strong>) and many more.</p>\n<p align
+ =\"justify\">Since 2014 <strong>Camilla Sparksss</strong> has played over 
+ 400 live shows across Europe\, North Africa\, Canada and the US in venues\
+ , theatres and festivals such as <strong>Kilbi Festival</strong>\, <strong
+ >La Machine Du Moulin Rouge</strong>\, <strong>Holland Festival</strong>\,
+  <strong>Eurosonic</strong>\, <strong>Centre Culturel Suisse &agrave\; Par
+ is</strong> and many more. In 2016 she was nominated for the <strong>Swiss
+  Music Prize</strong> with her post punk band <strong>Peter Kernel</strong
+ >. She is also co-founder of Swiss independent Label On The Camper Records
+ .</p>\n<p align=\"justify\"><strong>Camilla Sparksss</strong> is currently
+  preparing her new \"audio visual\" album entitled <em>Camilla Sparksss Lu
+ llabies</em>. That combines animated picture disc vinyls\, that come to li
+ fe through a phenakistoscope / magic mirror and other worldly melodic bedt
+ ime stories for adults entirely composed with endless grooves\, mellotron 
+ and spoken words. The album is scheduled for release early 2023 for On The
+  Camper Records.</p>\n<p align=\"justify\">At the moment <strong>Camilla S
+ parksss</strong> is touring three different live formats: an electronic po
+ p performance of her first two albums <em>For You The Wild</em> (2014) and
+  <em>Brutal</em> (2019) suitable for venues\, clubs and festivals. An audi
+ o visual live performance of the upcoming <em>Camilla Sparksss Lullabies</
+ em> (2023) album that integrates animated vinyl visuals in the performance
+ \, suitable for theatres\, cinemas and special events. And an improvised s
+ et with dedicated sounds inherent to performance locations\, this is an on
+ site performance on demand for specific festivals and special events.</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc2913905c
+DTSTART;TZID=Europe/Berlin:20230131T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:little league shows & puschen prsnt: PEEL DREAM MAGAZINE (us\, toug
+ h love) + tba.
+CLASS:PUBLIC
+DESCRIPTION:little league shows & puschen prsnt: PEEL DREAM MAGAZINE (us\, 
+ tough love) + tba.\nMORE INFOS VERY SOON!\n
+X-ALT-DESC;FMTTYPE=text/html:<p>little league shows &amp\; puschen prsnt: P
+ EEL DREAM MAGAZINE (us\, tough love) + tba.<br /><br />MORE INFOS VERY SOO
+ N!<br /><br /><div class=\"row embed-responsive-wrapper text-center\"><div
+  class=\"embed-responsive embed-responsive-16by9 m-0 p-0\"><iframe class=\
+ "d-block mx-auto\" src=\"//www.youtube.com/embed/mlhaiSWlnss?autoplay=0\" 
+ width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfull
+ screen\"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29139193
+DTSTART;TZID=Europe/Berlin:20230205T200000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Karaoke Night w/ KJ Der Käpt'n
+CLASS:PUBLIC
+DESCRIPTION:Der Käpt'n kommt mit einem fetten Angebot aus allen nationalen
+  und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakter 
+ und ist zum Kreischen fröhlich\, generations- und sozialübergreifend und
+  warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Monit
+ or- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und dab
+ ei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!\n.
+ .. wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/details.
+ ..\nOder klickt den Link für seine Songliste…\nhttp://derkaeptn.de/song
+ liste.html
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
+ et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau5
+ 5g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v b1v8xokw oo9gr5id\" dir=\"auto\">
+ Der K&auml\;pt'n kommt mit einem fetten Angebot aus allen nationalen und i
+ nternationalen K&uuml\;nstlern!<br />Der Abend hat schon lange Kultcharakt
+ er und ist zum Kreischen fr&ouml\;hlich\, generations- und sozial&uuml\;be
+ rgreifend und warmherzig...!<br />Eine der sch&ouml\;nsten B&uuml\;hnen Be
+ rlins &amp\; ein perfekter Monitor- und Raumsound besorgen den Rest!<br />
+ Singen macht halt gl&uuml\;cklich und dabei zuschauen auch!<br />holt euch
+  die K&auml\;pt'n Karaoke App auf's Smartphone!<br />... wei sie wirklich 
+ toll ist!<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d
+ 6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcuky
+ x3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4w
+ l py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" href=\"https://play.goo
+ gle.com/store/apps/details?fbclid=IwAR1x1PKMpuLwfecpsofguKD9hhC-UBzNPm57_B
+ bgklliy1HMDkTfm4ZWGn4\" target=\"_blank\" rel=\"nofollow noopener\">https:
+ //play.google.com/store/apps/details</a>...<br />Oder klickt den Link f&uu
+ ml\;r seine Songliste&hellip\;<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f 
+ esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cx
+ mmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuy
+ zwwr f1sip0of lzcic4wl py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" hr
+ ef=\"http://derkaeptn.de/songliste.html?fbclid=IwAR02MFOgT9l0coh45wnY30bnx
+ TkE9n94dR-8nVL9MYLepOrOlBKwsSMoQLI\" target=\"_blank\" rel=\"nofollow noop
+ ener\">http://derkaeptn.de/songliste.html</a></span></p>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291392e3
+DTSTART;TZID=Europe/Berlin:20230207T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION: \n\nAndreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, 
+ Uli Hannemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lie
+ der und Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lese
+ bühnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD un
+ d eingeladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten
+  und Songs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas 
+ „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Miras
+ ol und Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker
+  auch in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes M
+ ikro für Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte
+ \, dass der Beitrag selbstverfasst sein muss und nicht länger als 6 Minut
+ en dauert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und
+  bekommt ein Freigetränk.\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
+ </div>\n<div class=\"text col-12 m-0 p-2\">\n<p>Andreas &bdquo\;Spider&ldq
+ uo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mir
+ asol und Ivo Lotion pr&auml\;sentieren Geschichten\, Lieder und G&auml\;st
+ e.<br />LSD &ndash\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uu
+ ml\;hnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD u
+ nd eingeladene G&auml\;ste im Berliner Schokoladen ein Programm aus neuen 
+ Texten und Songs. Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliede
+ rn Andreas &bdquo\;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; He
+ rre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\
+ ;nstler sind als Autoren und Musiker auch in anderen Bereichen aktiv.<br /
+ ><br />LSD bietet jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\,
+  die spontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag sel
+ bstverfasst sein muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am 
+ Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekommt ein Freig
+ etr&auml\;nk.</p>\n</div>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29139412
+DTSTART;TZID=Europe/Berlin:20230211T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Schrottgrenze - Release Party
+CLASS:PUBLIC
+DESCRIPTION:Schrottgrenze - Release Party\n \nEinlass: 19 Uhr\nBeginn: 20 
+ Uhr\n \n \n*** *** *** *** *** *** *** *** *** ***\n \nEmo-Deutschpunk 
+ in den Neunzigern\, Indierock-Experimente in den 2000ern und mittlerweile 
+ im queeren Power-Pop zu Hause: SCHROTTGRENZE bringen am 10.2.2023 auf Tape
+ te Records ihr zehntes Album »Das Universum ist nicht binär« heraus. Im
+  Schokoladen spielen sie einen Tag nach der Veröffentlichung ihr Release 
+ Konzert.\n \n*** *** *** *** *** *** *** *** *** ***\n \nEs gibt nur wen
+ ige Tickets\, es lohnt sich daher zeitig zu bestellen:\nhttps://vvk.link/2
+ dpl88g
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xtlvy1s\">Schrottgrenze - Release Party</div>\n<div class=\"x11i5rnm xat2
+ 4cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<div class=\"x11i5rnm xat24c
+ r x1mh8g0r x1vvkbs xtlvy1s\">Einlass: 19 Uhr</div>\n<div class=\"x11i5rnm 
+ xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Beginn: 20 Uhr</div>\n<div class=\"x11i
+ 5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<div class=\"x11i5r
+ nm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<div class=\"x11i5rnm
+  xat24cr x1mh8g0r x1vvkbs xtlvy1s\">*** *** *** *** *** *** *** *** *** **
+ *</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;<
+ /div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Emo-Deutsc
+ hpunk in den Neunzigern\, Indierock-Experimente in den 2000ern und mittler
+ weile im queeren Power-Pop zu Hause: SCHROTTGRENZE bringen am 10.2.2023 au
+ f Tapete Records ihr zehntes Album &raquo\;Das Universum ist nicht bin&aum
+ l\;r&laquo\; heraus. Im Schokoladen spielen sie einen Tag nach der Ver&oum
+ l\;ffentlichung ihr Release Konzert.</div>\n<div class=\"x11i5rnm xat24cr 
+ x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<div class=\"x11i5rnm xat24cr x1
+ mh8g0r x1vvkbs xtlvy1s\">*** *** *** *** *** *** *** *** *** ***</div>\n<d
+ iv class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<div
+  class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Es gibt nur wenige Ti
+ ckets\, es lohnt sich daher zeitig zu bestellen:<br /><a class=\"x1i10hfl 
+ xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx x
+ dj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 
+ x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" 
+ href=\"https://vvk.link/2dpl88g?fbclid=IwAR1B8MA4ccOKGzJPA1LtY87wKDFDDBiz_
+ JsYOlK7Q-BdoBDdvUabnYzx_5I\" target=\"_blank\" rel=\"nofollow noopener\">h
+ ttps://vvk.link/2dpl88g</a></div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc29139520
+DTSTART;TZID=Europe/Berlin:20230212T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:* Schachcafé & Spiele- und Kneipenabend *
+CLASS:PUBLIC
+DESCRIPTION:* seven chessboards inc. chess clock on the in between * join t
+ he smoking heads * \n* exquisite drinks & delicate tunes @ the bar area *
+X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
+  in between * join the smoking heads * <br />* exquisite drinks &amp\; del
+ icate tunes @ the bar area *</p>
+CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
+ md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
+END:VEVENT
+BEGIN:VEVENT
+UID:638bc291395cb
+DTSTART;TZID=Europe/Berlin:20230221T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION:Andreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Ha
+ nnemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lieder un
+ d Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lesebühne
+ n Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eing
+ eladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten und S
+ ongs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas „Spi
+ der“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Mirasol und
+  Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker auch 
+ in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes Mikro f
+ ür Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte\, das
+ s der Beitrag selbstverfasst sein muss und nicht länger als 6 Minuten dau
+ ert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekom
+ mt ein Freigetränk.
+X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
+ bias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mirasol und Ivo Loti
+ on pr&auml\;sentieren Geschichten\, Lieder und G&auml\;ste.<br />LSD &ndas
+ h\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uuml\;hnen Berlins.
+  Jeden Dienstagabend gestalten die 5 Mitglieder von LSD und eingeladene G&
+ auml\;ste im Berliner Schokoladen ein Programm aus neuen Texten und Songs.
+  Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliedern Andreas &bdquo
+ \;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannema
+ nn\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\;nstler sind als 
+ Autoren und Musiker auch in anderen Bereichen aktiv.<br /><br />LSD bietet
+  jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\, die spontan etwa
+ s vortragen wollen. Beachtet bitte\, dass der Beitrag selbstverfasst sein 
+ muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am Offenen Mikro lie
+ st\, braucht keinen Eintritt zahlen und bekommt ein Freigetr&auml\;nk.</p>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221203T214137Z
 END:VEVENT
 END:VCALENDAR
