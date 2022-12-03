@@ -10,13 +10,14 @@
 /vendor/
 /stuff/
 /.idea/
-.env
-.env.dusk
-.env.dev
-.env.schoki.prod
-.env.schoki.staging
-.env.schoki.dusk.prod
-.env.schoki.dusk.staging
+/.env
+/.env.dusk
+/.env.dev
+/.env.testing
+/.env.schoki.prod
+/.env.schoki.staging
+/.env.schoki.dusk.prod
+/.env.schoki.dusk.staging
 .DS_Store
 .phpunit.result.cache
 Homestead.json
@@ -36,4 +37,3 @@ phpunit.dusk.xml
 /_ide_helper.php
 /perms
 /.valet-env.php
-/.env.testing
