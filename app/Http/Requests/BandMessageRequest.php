@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ReCaptcha;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Request;
@@ -44,10 +45,11 @@ class BandMessageRequest extends FormRequest
             'name'              => 'required',
             'email'             => 'required|email',
             'message'           => 'required',
-            'captcha'           => 'required|captcha'
+//            'captcha'           => 'required|captcha',
+            'g-recaptcha-response' => ['required', new ReCaptcha()]
         ];
     }
-/*
+
     public function messages()
     {
         return [
@@ -56,9 +58,8 @@ class BandMessageRequest extends FormRequest
             'email.required'        => 'Bitte eine Email Adresse angeben!',
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
             'message.required'      => 'Bitte ein Nachricht eingeben!',
-            'captcha.required'      => 'Bitte den Captcha-Text eingeben!',
-            'captcha.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
+            'g-recaptcha-response.required'      => 'Bitte den Captcha-Text eingeben!',
+            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ];
     }
-*/
 }

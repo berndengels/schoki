@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Message;
 use App\Mail\NotifyBooker;
 use App\Models\MusicStyle;
+use App\Rules\ReCaptcha;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
@@ -38,15 +39,16 @@ class BandMessageController extends Controller
             'name'              => 'required',
             'email'             => 'required|email',
             'msg'           => 'required',
-            'g-recaptcha-response' => 'required|captcha'
+//            'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => ['required', new ReCaptcha()]
         ], [
             'music_style_id.required'   => 'Bitte eine Musik-Richtung angeben!',
             'name.required'         => 'Bitte einen Name angeben!',
             'email.required'        => 'Bitte eine Email Adresse angeben!',
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
             'msg.required'      => 'Bitte ein Nachricht eingeben!',
-            'g-recaptcha-response.required'      => 'Bitte den Captcha-Feld bedienen!',
-            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
+//            'g-recaptcha-response.required'      => 'Bitte den Captcha-Feld bedienen!',
+//            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ]);
 
         if($validator->fails()) {

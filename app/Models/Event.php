@@ -93,21 +93,13 @@ class Event extends Model
     /**
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'subtitle',
-        'category_id',
-        'theme_id',
-        'description',
-        'links',
-        'event_date',
-        'event_time',
-        'is_periodic',
-        'is_published',
-    ];
+    protected $guarded = ['id'];
+    protected $with = ['images','createdBy','updatedBy'];
     protected $dates = ['created_at','updated_at','event_date'];
     protected $casts = [
-        'event_date'    => 'date:Y-m-d'
+        'event_date'    => 'date:Y-m-d',
+        'is_periodic'   => 'bool',
+        'is_published'  => 'bool',
     ];
 	protected $eventLink;
 	public $descriptionSanitized = '';

@@ -327,12 +327,15 @@ html, body {
 
         form {
             .g-recaptcha {
-                float: right;
+                width: auto;
+                height: auto;
+                float: leftt;
                 clear: none;
                 _margin-top: -10px;
             }
             .captcha-error {
                 font-size: 1.5rem;
+                color: #f00;
             }
         }
 

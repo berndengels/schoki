@@ -91,21 +91,13 @@ class EventPeriodic extends Model
      * @var string
      */
     protected $table = 'event_periodic';
+    protected $with = ['images','createdBy','updatedBy'];
     /**
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'subtitle',
-        'category_id',
-        'theme_id',
-        'periodic_position',
-        'periodic_weekday',
-        'periodicDate',
-        'description',
-        'links',
-        'event_time',
-        'is_published',
+    protected $guarded = ['id'];
+    protected $casts = [
+        'is_published'  => 'bool',
     ];
 
     /**
