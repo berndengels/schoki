@@ -42,23 +42,20 @@ class AddressController extends MainController
 		$addressCategory = $request->get('addressCategory');
 		$search = $request->get('search');
 
-		$data = Address::when($search, function($query) use ($search) {
-			return $query
-				->where('email','LIKE', "%${search}%");
-		})->when($addressCategory, function($query) use ($addressCategory) {
-			return $query
-				->where('address_category_id', $addressCategory);
-		})
+		$data = Address::with('addressCategory')
+            ->when($search, function($query) use ($search) {
+                return $query->where('email','LIKE', "%${search}%");
+            })->when($addressCategory, function($query) use ($addressCategory) {
+                return $query->where('address_category_id', $addressCategory);
+            })
 			->sortable()
 			->paginate($this->paginationLimit)
 			->appends($request->except('page'))
 		;
 
-
 		return view('admin.addresses', [
 			'searchForm'			=> $searchForm,
 			'addressCategoryForm'	=> $addressCategoryForm,
-
 			'data'      => $data,
 			'addLink'   => $this->addLink,
 			'entity'    => $this->entity,

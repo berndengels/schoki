@@ -5,12 +5,12 @@
     @include('components.add')
     <br>
     {{ $data->links() }}
-    {!! form($addressCategoryForm) !!}
+    <div class="d-inline-block mt-2 float-right">{!! form($addressCategoryForm) !!}</div>
 
     <table class="table-responsive-sm">
         <tr class="table table-striped table-sm">
             <th scope="col">ID</th>
-            <th scope="col" class="col-sm-auto">@sortablelink('addressCategory.name','Type')</th>
+            <th scope="col" class="col-sm-auto">@sortablelink('address_category_id','Type')</th>
             <th scope="col" class="col-sm-auto">@sortablelink('email')</th>
             <th scope="col" class="d-none d-sm-table-cell">TagID</th>
             <th scope="col" class="d-none d-sm-table-cell">@sortablelink('created_at','Erstellt')</th>

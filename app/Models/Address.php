@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Eloquent;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Kyslik\ColumnSortable\Sortable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\Models\Address
@@ -38,10 +38,10 @@ class Address extends Model
 	use Sortable;
 
 	protected $table = 'address';
-    protected $fillable = ['address_category_id','email','token'];
+    protected $guarded = ['id'];
     public $timestamps = true;
 	public $sortable = [
-		'addressCategory',
+		'address_category_id',
 		'email',
 		'created_at',
 	];
