@@ -10,15 +10,24 @@ use Illuminate\View\Component;
 class EventView extends Component
 {
     /**
+     * @var EventEntity
+     */
+    public $item;
+    public $index;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
     public function __construct(
-        public EventEntity $item,
-        public int|string $index
+        EventEntity $item,
+        int|string $index
     )
-    {}
+    {
+        $this->item = $item;
+        $this->index = $index;
+    }
 
     /**
      * Get the view / contents that represent the component.
