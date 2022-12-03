@@ -22,7 +22,7 @@ class EventView extends Component
      */
     public function __construct(
         EventEntity $item,
-        int|string $index
+        string $index
     )
     {
         $this->item = $item;
