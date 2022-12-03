@@ -9,10 +9,8 @@
 
 namespace App\Models\Ext;
 
-use Auth;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Facades\Event;
 
 /**
  * Trait HasUser
@@ -24,8 +22,8 @@ trait HasUser
 		/**
 		 * @var $user User
 		 */
-		$user = auth()->user();
-		if($user) {
+		if(auth()->check()) {
+            $user = auth()->user();
 			static::creating(function($table) use ($user)  {
 				$table->created_by = $user->id;
 			});

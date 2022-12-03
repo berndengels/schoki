@@ -52,7 +52,7 @@
     </div>
 </div>
 <div class="background_right h-100">
-    <img class="h-100 img-responsive" src="{{ asset('img/power/the_dark_art.png') }}" width="66px" height="718px" alt="Darkside" title="Darlside">
+    <img class="h-100 img-responsive" src="/img/the_dark_art.png" width="66px" height="718px" alt="Darkside" title="Darlside">
 </div>
 @yield('inline-scripts')
 

@@ -12,7 +12,7 @@ return [
     'maxImageWidth'     => env('MAX_IMAGE_WIDTH', 533),
 	'maxImageFileSize'  => env('MAX_IMAGE_FILESIZE', 3), // MB
 	'paginationLimit' 	=> 10,
-	'eventsPaginationLimit'	=> 30,
+	'eventsPaginationLimit'	=> 10,
     'periodicPosition'  => [
         1           => 'jede Woche',
         2           => 'jeden zweiten',

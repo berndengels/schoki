@@ -15,7 +15,7 @@ return [
 
     'paths' => [
         resource_path('views'),
-		resource_path('platform/' . config('app.platform'). '/views'),
+//		resource_path('platform/' . config('app.platform'). '/views'),
     ],
 
     /*
@@ -33,5 +33,4 @@ return [
         'VIEW_COMPILED_PATH',
         realpath(storage_path('framework/views'))
     ),
-
 ];

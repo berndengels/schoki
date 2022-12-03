@@ -54,7 +54,5 @@ use Illuminate\Support\Carbon;
  */
 class Images extends Media
 {
-//	use HasUser;
-
     protected $table = 'images';
 }

@@ -14,7 +14,6 @@ class EventRepository {
 
 	public static function getEventsSinceDate(Carbon $date) {
 		$query = Event::whereDate('event_date','>=', $date)
-//            ->orderBy('event_date')
             ->sortable()
         ;
 		return $query;
@@ -27,9 +26,9 @@ class EventRepository {
 		$query = Event::whereDate('event_date','<=', $date);
 		$result = $query->when($search, function($query) use ($search) {
 			return $query
-				->where('title','LIKE', "%${search}%")
-				->orWhere('subtitle','LIKE', "%${search}%")
-				->orWhere('description','LIKE', "%${search}%")
+                ->whereRaw("MATCH(title) AGAINST('$search')")
+                ->orWhereRaw("MATCH(subtitle) AGAINST('$search')")
+                ->orWhereRaw("MATCH(description) AGAINST('$search')")
                 ->sortable();
 		});
 		return $result;

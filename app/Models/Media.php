@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\Ext\HasUser;
 use Eloquent;
+use App\Models\Ext\HasUser;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 

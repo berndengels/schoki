@@ -3,30 +3,23 @@
 @section('title', 'Event')
 
 @section('content')
-
     <div class="eventShow col-12 col-lg-8 mt-2 mbs">
-
         @if($event)
-
         <div class="eventHeader">
-
             <div class="">
                 <h3>{{ $event->getEventDate()->formatLocalized('%A') }} {{ $event->getEventDate()->formatLocalized('%d.%m.%Y') }} {{ $event->getEventTime() }} Uhr <span class="category">{{ $event->getCategory()->name }}</span></h3>
             </div>
-
             @if($event->getTheme())
             <div class="">
                 <span>Thema: {{ $event->getTheme()->name }}</span>
             </div>
             @endif
-
             <div class="title">
                 <div class="">
                     <h5>{{ $event->getTitle() }}</h5>
                 </div>
             </div>
         </div>
-
         <div class="">
             @if($event->getImages()->count() === 1)
                 {? $img = $event->getImages()->first() ?}
@@ -49,7 +42,6 @@
                             <li data-target="imgCarousel" data-slide-to="{{ $index }}" @if($index == 0) class="active" @endif></li>
                         @endforeach()
                     </ul>
-
                     <div class="carousel-inner text-center w-100 m-0 p-0">
                         @foreach($event->getImages() as $index => $img)
                             <div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
@@ -66,7 +58,6 @@
                             </div>
                         @endforeach()
                     </div>
-
                     <a class="carousel-control-prev" href="#imgCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Zurück</span>
@@ -102,4 +93,3 @@
     @endif
     </div>
 @endsection
-

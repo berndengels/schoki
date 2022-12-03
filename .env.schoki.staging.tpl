@@ -8,6 +8,7 @@ APP_URL=https://test.schokoladen-mitte.de
 LOG_CHANNEL=stack
 REDIRECT_HTTPS=true
 WEB_TERMINAL=false
+TELESCOPE_ENABLED=false
 
 DB_CONNECTION=mysql
 DB_HOST=db01.crpt.xyz

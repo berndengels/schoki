@@ -16,6 +16,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Kyslik\ColumnSortable\Sortable;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Sanctum\PersonalAccessToken;
 
 /**
  * App\Models\User
@@ -69,6 +70,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static Builder|User whereUpdatedAt($value)
  * @method static Builder|User whereUsername($value)
  * @mixin Eloquent
+ * @property-read Collection|PersonalAccessToken[] $tokens
+ * @property-read int|null $tokens_count
  */
 class User extends Authenticatable
 {

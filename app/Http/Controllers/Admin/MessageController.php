@@ -29,7 +29,7 @@ class MessageController extends MainController
 	{
 		$musicStyle = $request->get('musicStyle');
 		$model = static::$model;
-		$data = $model::sortable(['created_at' => 'desc'])
+		$data = $model::with('musicStyle')->sortable(['created_at' => 'desc'])
 			->when($musicStyle, function($query) use($musicStyle) {
 				return $query->where('music_style_id', $musicStyle);
 			})

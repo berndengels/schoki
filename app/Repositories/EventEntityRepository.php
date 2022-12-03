@@ -24,7 +24,7 @@ class EventEntityRepository {
 		$attributes = $event->getAttributes();
 		unset($attributes['event_date']);
 		$entity 	= new EventEntity($attributes);
-		$dateObj	= Carbon::createFromFormat('Y-m-d', $date, 'Europe/Berlin');
+        $dateObj	= new Carbon($date, 'Europe/Berlin');
 
 		$entity
 			->setEventDate($dateObj)
@@ -49,7 +49,7 @@ class EventEntityRepository {
 				$attributes = $item->getAttributes();
 				unset($attributes['event_date']);
 				$event 		= new EventEntity($attributes);
-				$dateObj	= Carbon::createFromFormat('Y-m-d', $date, 'Europe/Berlin');
+                $dateObj	= new Carbon($date, 'Europe/Berlin');
 
 				$event
 					->setEventDate($dateObj)

@@ -28,5 +28,9 @@
                 <input class="form-control" type="text" placeholder="Suchen">
             </form-->
         </div>
+
+        <div class="d-sm-none d-lg-block float-right my-auto mr-3">
+            <img src="{{ asset('img/power/address.png') }}" width="183" height="14" alt="Schokoladen, Ackerstraße 169, 10115 Berlin" title="Schokoladen, Ackerstraße 169, 10115 Berlin" />
+        </div>
     </nav>
 </div>

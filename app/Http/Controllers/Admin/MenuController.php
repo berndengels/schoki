@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Libs\Icons;
 use Exception;
+use Illuminate\Support\Facades\Cache;
 use Request;
 use Response;
 use Carbon\Carbon;
@@ -114,9 +115,14 @@ class MenuController extends Controller
 		switch($operation) {
 			case 'get_node':
 				if ( null === $id ) {
-					$data = Menu::defaultOrder()->where('parent_id', null)->with('descendants')->get();
+					$data = Menu::defaultOrder()
+                        ->where('parent_id', null)
+                        ->with(['menuItemType','descendants'])
+                        ->get();
 				} else {
-					$data = Menu::defaultOrder()->descendantsOf($id)->toTree();
+					$data = Menu::with('menuItemType')
+                        ->defaultOrder()
+                        ->descendantsOf($id)->toTree();
 				}
 				$result = [];
 				if( $data->count() > 0 ) {
@@ -130,7 +136,7 @@ class MenuController extends Controller
 				}
 				break;
 			case 'get_content':
-				$node = Menu::with('ancestors')->find($id);
+				$node = Menu::with(['menuItemType','ancestors'])->find($id);
 				if($node) {
 					/**
 					 * @var $nodeWithAncestors Collection
@@ -165,6 +171,7 @@ class MenuController extends Controller
                     'api_enabled'   => 0,
 				]);
 				$node->save();
+                $this->deleteCache();
 				$result = [
 					'id'	=> $node->id,
 					'text'	=> $node->name,
@@ -206,7 +213,8 @@ class MenuController extends Controller
 
 				if($moved) {
 					$node->save();
-				}
+                    $this->deleteCache();
+                }
 
 				$result = [
 					'id'		=> $node->id,
@@ -222,12 +230,14 @@ class MenuController extends Controller
 					'id' 		=> $id,
 					'delete'	=> Menu::find($id)->delete(),
 				];
-				break;
+                $this->deleteCache();
+                break;
 			case 'rename_node':
 				$node = Menu::find($id);
 				$node->name = $text;
 				$node->slug = Str::slug($text, '-');
 				$node->save();
+                $this->deleteCache();
 				$result = [
 					'id'	=> $node->id,
 					'text'	=> $node->name,
@@ -240,7 +250,8 @@ class MenuController extends Controller
 				break;
 			case 'fix':
 				$result = Menu::fixTree();
-				break;
+                $this->deleteCache();
+                break;
 		}
 		return response()->json($result);
 	}
@@ -260,6 +271,7 @@ class MenuController extends Controller
 			$node = Menu::find($data['id']);
 			$type = (int)$data['menuItemType'];
 			try {
+                $this->deleteCache();
 				// EXTERNAL LINK
 				$node->url					= isset($data['url']) ? $data['url'] : null;
 				$node->icon					= $data['icon'];
@@ -282,4 +294,9 @@ class MenuController extends Controller
 
 		return response()->json($response);
 	}
+
+    private function deleteCache() {
+        Cache::delete($this->cacheTopMenuKey);
+        Cache::delete($this->cacheBottomMenuKey);
+    }
 }

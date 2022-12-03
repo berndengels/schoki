@@ -126,7 +126,7 @@ class EventController extends BaseController
 	public function getActualMergedEvents()
 	{
 		return view('public.events-lazy', [
-			'data'	=> $this->actualEvents,
+			'data'	=> $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
 			'today' => MyDate::getUntilValidDate(),
 		]);
 	}

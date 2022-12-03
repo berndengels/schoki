@@ -24,6 +24,7 @@ Route::group([
 	'prefix' => null,
 ], function () {
 	Route::get('events/{date?}', 'ApiEventController@events');
+    Route::get('event/{id}', 'ApiEventController@event');
 });
 Route::group([
     'prefix'    => 'spa',
