@@ -19,6 +19,9 @@ class BandMessageRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
+        if($validator->fails()) {
+            dd($validator->errors());
+        }
         parent::failedValidation($validator);
     }
 
