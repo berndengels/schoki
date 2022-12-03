@@ -153,8 +153,8 @@ class EventController extends BaseController
         }
 
 		return view('public.events-lazy', [
-//			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
-			'data'	=> $this->actualEventsByCategory,
+			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
+//			'data'	=> $this->actualEventsByCategory,
 			'today' => MyDate::getUntilValidDate(),
 			'route'	=> '/events/lazyByCategory/'.$slug,
 		]);
@@ -182,8 +182,8 @@ class EventController extends BaseController
 
 //		return view('public.events-lazy', ['theme' => $slug, 'data' => $data ]);
 		return view('public.events-lazy', [
-//			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
-			'data'	=> $this->actualEventsByTheme,
+			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
+//			'data'	=> $this->actualEventsByTheme,
 			'today' => MyDate::getUntilValidDate(),
 			'route'	=> '/events/lazyByTheme/'.$slug,
 		]);
