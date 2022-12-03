@@ -27,7 +27,7 @@
             <td class="col-sm-auto">@if($item->musicStyle){{ $item->musicStyle->name }}@endif</td>
             <td class="d-none d-sm-table-cell">{{ $item->email }}</td>
             <td class="d-none d-sm-table-cell">{{ $item->name }}</td>
-            <td class="d-none d-sm-table-cell">{{ \Illuminate\Support\Str::limit($item->message, 30) }}</td>
+            <td class="d-none d-sm-table-cell">{{ \Illuminate\Support\Str::limit($item->msg, 30) }}</td>
             <td class="d-none d-sm-table-cell">{{ $item->created_at->format('d.m.Y H:i') }}</td>
             @include('admin.templates.action.show')
 

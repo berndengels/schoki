@@ -41,7 +41,7 @@ class NotifyBooker extends Mailable
 				'musicStyle'	=> $this->musicStyle,
 				'name'			=> $this->message->name,
 				'email'			=> $this->message->email,
-				'text'			=> $this->message->message,
+				'text'			=> $this->message->msg,
 				'created_at'	=> $this->message->created_at,
 			])
 			->subject('Band Anfrage von: ' . $this->message->name);

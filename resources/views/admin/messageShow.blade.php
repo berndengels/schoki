@@ -14,7 +14,7 @@
         </h6>
     @endif
     <div class="massage">
-        {!! nl2br($data->message) !!}
+        {!! nl2br($data->msg) !!}
     </div>
     @include('components.back')
 @endsection

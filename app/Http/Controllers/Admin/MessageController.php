@@ -14,7 +14,6 @@ use App\Models\Message;
 use Exception;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 
@@ -69,9 +68,9 @@ class MessageController extends MainController
             return redirect()->back()->withErrors($form->getErrors())->withInput();
         }
         $values = $request->post();
-        $entity->name       = $values['name'];
-        $entity->email      = $values['email'];
-        $entity->message    = $values['message'];
+        $entity->name   = $values['name'];
+        $entity->email  = $values['email'];
+        $entity->msg    = $values['msg'];
 
         try {
             $entity->saveOrFail();
