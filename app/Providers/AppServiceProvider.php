@@ -42,7 +42,7 @@ class AppServiceProvider extends ServiceProvider
 		Carbon::setLocale($locale);
 		setlocale(LC_TIME, $locale, 'de_DE.utf8', 'de');
         if('prod' !== config('app.env')) {
-//            Debugbar::enable();
+            //Debugbar::enable();
         } else {
             Debugbar::disable();
         }

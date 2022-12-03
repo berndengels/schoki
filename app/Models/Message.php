@@ -46,12 +46,7 @@ class Message extends Model
 		'email',
 		'created_at',
 	];
-/*
-	public function messageSubject()
-	{
-		return $this->belongsTo(MessageSubject::class);
-	}
-*/
+
 	public function musicStyle()
 	{
 		return $this->belongsTo(MusicStyle::class);

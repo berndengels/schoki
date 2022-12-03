@@ -1,14 +1,14 @@
 <?php
 
-//use App\View\Components\Form\FormInput;
-//use App\View\Components\Form\FormSelect;
+use App\View\Components\Form\FormInput;
+use App\View\Components\Form\FormSelect;
 use ProtoneMedia\LaravelFormComponents\Components;
 
 return [
     'prefix' => '',
     /** tailwind | tailwind-2 | tailwind-forms-simple | bootstrap-4 | bootstrap-5 */
     'framework' => 'bootstrap-4',
-    'use_eloquent_date_casting' => false,
+    'use_eloquent_date_casting' => true,
     /** bool | string */
     'default_wire' => false,
     'components' => [
@@ -29,10 +29,10 @@ return [
             'class' => Components\FormGroup::class,
         ],
         'form-input' => [
-            'view'  => 'form-components::{framework}.form-input',
-//            'view'  => 'vendor.form-components.{framework}.form-input',
-            'class' => Components\FormInput::class,
-//            'class' => FormInput::class,
+//            'view'  => 'form-components::{framework}.form-input',
+            'view'  => 'vendor.form-components.{framework}.form-input',
+//            'class' => Components\FormInput::class,
+            'class' => FormInput::class,
         ],
         'form-input-group' => [
             'view'  => 'form-components::{framework}.form-input-group',
@@ -55,10 +55,10 @@ return [
             'class' => Components\FormRange::class,
         ],
         'form-select' => [
-            'view'  => 'form-components::{framework}.form-select',
-//            'view'  => 'vendor.form-components.{framework}.form-select',
-            'class' => Components\FormSelect::class,
-//            'class' => FormSelect::class,
+//            'view'  => 'form-components::{framework}.form-select',
+            'view'  => 'vendor.form-components.{framework}.form-select',
+//            'class' => Components\FormSelect::class,
+            'class' => FormSelect::class,
         ],
         'form-submit' => [
             'view'  => 'form-components::{framework}.form-submit',

@@ -31,7 +31,6 @@
         "laravel/ui": "^3.1",
         "laravelium/feed": "^8.0",
         "lavary/laravel-menu": "^1.7",
-        "mews/captcha": "^3.2",
         "misterphilip/maintenance-mode": "^2.0",
         "nesbot/carbon": "^2.63",
         "protonemedia/laravel-form-components": "^3.6",

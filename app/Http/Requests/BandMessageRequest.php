@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Request;
 
 class BandMessageRequest extends FormRequest
 {
@@ -19,12 +20,17 @@ class BandMessageRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
+
+        if($validator->failed()) {
+//            dd($validator->errors());
+            return redirect()->back()->with('errors', $validator->errors());
+        }
 /*
-        if($validator->fails()) {
-            dd($validator->errors());
+        if ( captcha_check($this->request->captcha) === false ) {
+            return back()->with('invalid-captcha','incorrect captcha!');
         }
 */
-        parent::failedValidation($validator);
+        return parent::failedValidation($validator);
     }
 
     /**
@@ -41,7 +47,7 @@ class BandMessageRequest extends FormRequest
             'captcha'           => 'required|captcha'
         ];
     }
-
+/*
     public function messages()
     {
         return [
@@ -54,4 +60,5 @@ class BandMessageRequest extends FormRequest
             'captcha.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ];
     }
+*/
 }

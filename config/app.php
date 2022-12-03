@@ -194,7 +194,6 @@ return [
         App\Providers\CustomPasswordResetServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
-        Mews\Captcha\CaptchaServiceProvider::class,
     ],
 
     /*
@@ -253,7 +252,6 @@ return [
 		'Curl'			=> Ixudra\Curl\Facades\Curl::class,
 		'Debugbar'		=> Barryvdh\Debugbar\Facade::class,
 		'Newsletter' 	=> Spatie\Newsletter\NewsletterFacade::class,
-        'Captcha'       => Mews\Captcha\Facades\Captcha::class,
     ],
 
 ];

@@ -10,25 +10,19 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\BandMessageRequest;
+use Illuminate\Support\Facades\Validator;
 
 class BandMessageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-//    public function index() {}
-
     /**
      * Show the form for creating a new resource.
      *
      * @return Response
      */
-    public function create()
+    public function create($errors = null)
     {
         $musicStyles = collect(MusicStyle::all()->keyBy('id')->map->name)->prepend('Bitte wählen', null);
-        return view('public.form.bands', compact('musicStyles'));
+        return view('public.form.bands', compact('musicStyles', 'errors'));
     }
 
     /**
@@ -37,11 +31,30 @@ class BandMessageController extends Controller
      * @param BandMessageRequest $request
      * @return Response
      */
-    public function store(BandMessageRequest $request)
+    public function store(Request $request)
     {
-        $validated      = $request->validated();
-        $message		= Message::create($validated);
-        $musicStyleId   = $validated['music_style_id'];
+        $validator = Validator::make($request->all(), [
+            'music_style_id'    => 'required',
+            'name'              => 'required',
+            'email'             => 'required|email',
+            'msg'           => 'required',
+            'g-recaptcha-response' => 'required|captcha'
+        ], [
+            'music_style_id.required'   => 'Bitte eine Musik-Richtung angeben!',
+            'name.required'         => 'Bitte einen Name angeben!',
+            'email.required'        => 'Bitte eine Email Adresse angeben!',
+            'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
+            'msg.required'      => 'Bitte ein Nachricht eingeben!',
+            'g-recaptcha-response.required'      => 'Bitte den Captcha-Feld bedienen!',
+            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
+        ]);
+
+        if($validator->fails()) {
+            return $this->create($validator->errors()->getMessages());
+        }
+
+        $message		= Message::create($request->all());
+        $musicStyleId   = $request->post('music_style_id');
 
         if('prod' === config('app.env')) {
             $users = User::whereHas('musicStyles', function ($query) use ($musicStyleId) {
@@ -64,37 +77,4 @@ class BandMessageController extends Controller
         }
 
         return view('public.contact', compact('content'));    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param Message $message
-     * @return Response
-     */
-//    public function show(Message $message) {}
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Message $message
-     * @return Response
-     */
-//    public function edit(Message $message) {}
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param Message $message
-     * @return Response
-     */
-//    public function update(Request $request, Message $message) {}
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Message $message
-     * @return Response
-     */
-//    public function destroy(Message $message) {}
 }

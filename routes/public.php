@@ -53,11 +53,9 @@ Route::group([
     'as'        => 'public.',
     'middleware' => ['web'],
 ], function () {
-    Route::resource('message', 'BandMessageController');
+    Route::resource('message', 'BandMessageController')->only(['create','store']);
     Route::resource('newsletter', 'NewsletterController');
 });
-
-Route::get('reload-captcha', 'CaptchaServiceController@reloadCaptcha')->name('reload.captcha');
 
 Route::get('/logout', function() {
     Auth::logout();
