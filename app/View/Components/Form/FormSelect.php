@@ -22,9 +22,9 @@ class FormSelect extends BaseFormSelect
         bool $manyRelation = false,
         bool $floating = false,
         string $placeholder = '',
-        public $inline = null,
-        public $class = null,
-        public $help = null
+        $inline = null,
+        $class = null,
+        $help = null
     )
     {
         parent::__construct(

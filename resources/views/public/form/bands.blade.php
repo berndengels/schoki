@@ -18,7 +18,7 @@
                     action="{{ route('public.message.store') }}"
                     class="w-100 mx-3"
             >
-                @if ($errors)
+                @if($errors)
                     <div class="row alert alert-danger w-100">
                         <ul>
                             @foreach ($errors as $name => $error)

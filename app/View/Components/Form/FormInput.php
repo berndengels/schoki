@@ -25,9 +25,9 @@ class FormInput extends BaseFormInput
                $language = null,
         bool $showErrors = true,
         bool $floating = false,
-        public $inline = null,
-        public $class = null,
-        public $help = null
+        $inline = null,
+        $class = null,
+        $help = null
     )
     {
         parent::__construct(
