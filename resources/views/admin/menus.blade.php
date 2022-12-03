@@ -18,7 +18,7 @@
 
         <div id="tree" class="col-12 col-sm-4 col-xl-2 mh-100"></div>
         <div id="data" class="col-12 col-sm-8 p-0 col-xl-10 mh-100 xs-clearfix sidenav">
-            <h5 class="info mt-2 mt-sm-0 ml-sm-2"></h5>
+            <h5 class="mt-2 mt-sm-0 ml-sm-2"></h5>
             {!! form($form) !!}
         </div>
     </div>
