@@ -7,6 +7,7 @@
  * @copyright Webwerk Berlin GmbH
  */
 return [
+    'useCache'   => env('USE_CACHE', false),
     'defaultEventTime'  => env('DEFAULT_EVENT_TIME', '19:00'),
     'maxImageHeight'    => env('MAX_IMAGE_HEIGHT', 300),
     'maxImageWidth'     => env('MAX_IMAGE_WIDTH', 533),

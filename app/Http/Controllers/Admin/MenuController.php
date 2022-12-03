@@ -117,10 +117,10 @@ class MenuController extends Controller
 				if ( null === $id ) {
 					$data = Menu::defaultOrder()
                         ->where('parent_id', null)
-                        ->with(['menuItemType','descendants'])
+                        ->with(['menuItemType','descendants','children'])
                         ->get();
 				} else {
-					$data = Menu::with('menuItemType')
+					$data = Menu::with('menuItemType','descendants','children')
                         ->defaultOrder()
                         ->descendantsOf($id)->toTree();
 				}
@@ -136,7 +136,7 @@ class MenuController extends Controller
 				}
 				break;
 			case 'get_content':
-				$node = Menu::with(['menuItemType','ancestors'])->find($id);
+				$node = Menu::with(['menuItemType','ancestors','children'])->find($id);
 				if($node) {
 					/**
 					 * @var $nodeWithAncestors Collection
@@ -171,7 +171,6 @@ class MenuController extends Controller
                     'api_enabled'   => 0,
 				]);
 				$node->save();
-                $this->deleteCache();
 				$result = [
 					'id'	=> $node->id,
 					'text'	=> $node->name,
@@ -181,7 +180,7 @@ class MenuController extends Controller
 				];
 				break;
 			case 'move_node':
-				$node = Menu::find($id);
+				$node = Menu::with('menuItemType')->find($id);
 				$node->lvl = $lvl;
 				$moved = false;
 				$msg = '';
@@ -213,7 +212,6 @@ class MenuController extends Controller
 
 				if($moved) {
 					$node->save();
-                    $this->deleteCache();
                 }
 
 				$result = [
@@ -228,12 +226,11 @@ class MenuController extends Controller
 			case 'delete_node':
 				$result = [
 					'id' 		=> $id,
-					'delete'	=> Menu::find($id)->delete(),
+					'delete'	=> Menu::with(['menuItemType','descendants','children'])->delete(),
 				];
-                $this->deleteCache();
                 break;
 			case 'rename_node':
-				$node = Menu::find($id);
+				$node = Menu::with(['menuItemType','descendants','children'])->find($id);
 				$node->name = $text;
 				$node->slug = Str::slug($text, '-');
 				$node->save();
@@ -250,7 +247,6 @@ class MenuController extends Controller
 				break;
 			case 'fix':
 				$result = Menu::fixTree();
-                $this->deleteCache();
                 break;
 		}
 		return response()->json($result);
@@ -294,9 +290,4 @@ class MenuController extends Controller
 
 		return response()->json($response);
 	}
-
-    private function deleteCache() {
-        Cache::delete($this->cacheTopMenuKey);
-        Cache::delete($this->cacheBottomMenuKey);
-    }
 }

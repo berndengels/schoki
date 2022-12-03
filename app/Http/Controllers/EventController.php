@@ -41,13 +41,12 @@ class EventController extends BaseController
 
 	public function __construct()
 	{
-	    if(app()->environment('dev')) {
+	    if(!config('event.useCache')) {
             $this->actualEvents = Event::allActualMerged();
         } else {
-            if (!Cache::has($this->cacheEventKey)) {
-                Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
-            }
-            $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
+            $this->actualEvents = Cache::remember($this->cacheEventKey, 3600, function() {
+                return Event::allActualMerged();
+            });
         }
 	}
 

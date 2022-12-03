@@ -2,13 +2,20 @@
 
 namespace App\Repositories;
 
-use Illuminate\Support\Facades\DB;
+use Exception;
+use Illuminate\Support\Facades\Cache;
 use PDO;
+use App\Models\Menu;
+use Illuminate\Support\Facades\DB;
 
 class Tree
 {
-	protected $db = null;
-	protected $options = null;
+    protected $cacheKeyNode = 'tree.node';
+    protected $cacheKeyPath = 'tree.path';
+    protected $cacheKeyChildren = 'tree.children';
+    protected $ttl;
+	protected $db;
+	protected $options;
 	protected $default = array(
 		'structure_table'	=> 'menu',		// the structure table (containing the id, left, right, level, parent_id and position fields)
 		'data_table'		=> 'menu',		// table for additional fields (apart from structure ones, can be the same as structure_table)
@@ -30,10 +37,13 @@ class Tree
 	public function __construct(array $options = array()) {
 		$this->db = DB::connection()->getPdo();
 		$this->options = array_merge($this->default, $options);
+        $this->ttl = config('cache.ttl');
 	}
 
 	public function get_node($id, $options = array()) {
-		$node = $this->db->query("
+
+        $node = Cache::remember($this->cacheKeyNode, $this->ttl, function () use ($id) {
+            $sql = "
 			SELECT
 				s.".implode(", s.", $this->options['structure']).",
 				d.".implode(", d.", $this->options['data'])."
@@ -42,8 +52,10 @@ class Tree
 				".$this->options['data_table']." d
 			WHERE
 				s.".$this->options['structure']['id']." = d.".$this->options['data2structure']." AND
-				s.".$this->options['structure']['id']." = ".(int)$id
-		)->fetch(PDO::FETCH_ASSOC);
+				s.".$this->options['structure']['id']." = ".(int)$id;
+
+            return $this->db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        });
 
 		if(!$node) {
 			throw new Exception('Node does not exist');
@@ -61,10 +73,10 @@ class Tree
 	}
 
 	public function get_children($id, $recursive = false) {
-		$sql = false;
-		if($recursive) {
-			$node = $this->get_node($id);
-			$sql = "
+        return Cache::remember($this->cacheKeyChildren, $this->ttl, function () use ($id, $recursive ) {
+            if($recursive) {
+                $node = $this->get_node($id);
+                $sql = "
 				SELECT
 					s.".implode(", s.", $this->options['structure']).",
 					d.".implode(", d.", $this->options['data'])."
@@ -78,9 +90,9 @@ class Tree
 				ORDER BY
 					s.".$this->options['structure']['left']."
 			";
-		}
-		else {
-			$sql = "
+            }
+            else {
+                $sql = "
 				SELECT
 					s.".implode(", s.", $this->options['structure']).",
 					d.".implode(", d.", $this->options['data'])."
@@ -93,16 +105,18 @@ class Tree
 				ORDER BY
 					s.".$this->options['structure']['position']."
 			";
-		}
-		return $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+            }
+            return $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        });
 	}
 
 	public function get_path($id) {
 		$node = $this->get_node($id);
+
 		$sql = null;
 		if($node) {
-			$sql = "
-				SELECT
+            return Cache::remember($this->cacheKeyPath, $this->ttl, function () use ($id) {
+                $sql = "SELECT
 					s.".implode(", s.", $this->options['structure']).",
 					d.".implode(", d.", $this->options['data'])."
 				FROM
@@ -113,14 +127,18 @@ class Tree
 					s.".$this->options['structure']['left']." < ".(int)$node[$this->options['structure']['left']]." AND
 					s.".$this->options['structure']['right']." > ".(int)$node[$this->options['structure']['right']]."
 				ORDER BY
-					s.".$this->options['structure']['left']."
-			";
+					s.".$this->options['structure']['left'];
+
+                $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+            });
 		}
-		return $sql ? $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC) : false;
+		return false;
 	}
 
 	public function make($parent, $position = 0, $data = array()) {
-		$parent = (int)$parent;
+        $this->deleteCache();
+
+        $parent = (int)$parent;
 		if($parent == 0) { throw new Exception('Parent is 0'); }
 		$parent = $this->get_node($parent, array('with_children'=> true));
 
@@ -225,7 +243,8 @@ class Tree
 	}
 
 	public function move($id, $parent, $position = 0) {
-		$id			= (int)$id;
+        $this->deleteCache();
+        $id			= (int)$id;
 		$parent		= (int)$parent;
 		if($parent == 0 || $id == 0 || $id == 1) {
 			throw new Exception('Cannot move inside 0, or move root node');
@@ -357,14 +376,15 @@ class Tree
 				$this->db->exec($v);
 			} catch(Exception $e) {
 				$this->reconstruct();
-				throw new Exception('Error moving');
+				throw new Exception('Error moving: ' . $e->getMessage());
 			}
 		}
 		return true;
 	}
 
 	public function copy($id, $parent, $position = 0) {
-		$id			= (int)$id;
+        $this->deleteCache();
+        $id			= (int)$id;
 		$parent		= (int)$parent;
 		if($parent == 0 || $id == 0 || $id == 1) {
 			throw new Exception('Could not copy inside parent 0, or copy root nodes');
@@ -372,11 +392,12 @@ class Tree
 
 		$parent		= $this->get_node($parent, array('with_children'=> true, 'with_path' => true));
 		$id			= $this->get_node($id, array('with_children'=> true, 'deep_children' => true, 'with_path' => true));
-		$old_nodes	= $this->db->query("
+        $sql = "
 			SELECT * FROM ".$this->options['structure_table']."
 			WHERE ".$this->options['structure']['left']." > ".$id[$this->options['structure']['left']]." AND ".$this->options['structure']['right']." < ".$id[$this->options['structure']['right']]."
 			ORDER BY ".$this->options['structure']['left']."
-		")->fetchAll(PDO::FETCH_ASSOC);
+		";
+		$old_nodes	= $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 		if(!$parent['children']) {
 			$position = 0;
 		}
@@ -550,7 +571,8 @@ class Tree
 	}
 
 	public function remove($id) {
-		$id = (int)$id;
+        $this->deleteCache();
+        $id = (int)$id;
 		if(!$id || $id === 1) { throw new Exception('Could not create inside roots'); }
 		$data = $this->get_node($id, array('with_children' => true, 'deep_children' => true));
 		$lft = (int)$data[$this->options['structure']['left']];
@@ -607,7 +629,9 @@ class Tree
 	}
 
 	public function rename($id, $data) {
-		if(!$this->db->query('SELECT 1 AS res FROM '.$this->options['structure_table'].' WHERE '.$this->options['structure']['id'].' = '.(int)$id)->fetchColumn() ) {
+        $this->deleteCache();
+
+        if(!$this->db->query('SELECT 1 AS res FROM '.$this->options['structure_table'].' WHERE '.$this->options['structure']['id'].' = '.(int)$id)->fetchColumn() ) {
 			throw new Exception('Could not rename non-existing node');
 		}
 		$tmp = array();
@@ -636,7 +660,9 @@ class Tree
 	}
 
 	public function analyze($get_errors = false) {
-		$report = array();
+        $this->deleteCache();
+
+        $report = array();
 		if((int)$this->db->query("SELECT COUNT(".$this->options['structure']['id'].") AS res FROM ".$this->options['structure_table']." WHERE ".$this->options['structure']["parent_id"]." = 0")->fetchColumn() !== 1) {
 			$report[] = "No or more than one root node.";
 		}
@@ -677,21 +703,19 @@ class Tree
 		) {
 			$report[] = "Right indexes not unique.";
 		}
-		if(
-			(int)$this->db->query("
-				SELECT
+        $sql = "SELECT
 					s1.".$this->options['structure']['id']." AS res
 				FROM ".$this->options['structure_table']." s1, ".$this->options['structure_table']." s2
 				WHERE
 					s1.".$this->options['structure']['id']." != s2.".$this->options['structure']['id']." AND
 					s1.".$this->options['structure']['left']." = s2.".$this->options['structure']['right']."
-				LIMIT 1")->fetchColumn()
+				LIMIT 1";
+		if(
+			(int) $this->db->query($sql)->fetchColumn()
 		) {
 			$report[] = "Nested set - matching left and right indexes.";
 		}
-		if(
-			(int)$this->db->query("
-				SELECT
+        $sql1 = "SELECT
 					".$this->options['structure']['id']." AS res
 				FROM ".$this->options['structure_table']." s
 				WHERE
@@ -701,21 +725,22 @@ class Tree
 						FROM ".$this->options['structure_table']."
 						WHERE ".$this->options['structure']['parent_id']." = s.".$this->options['structure']['parent_id']."
 					)
-				LIMIT 1") ||
-			(int)$this->db->query("
-				SELECT
+				LIMIT 1";
+        $sql2 = "SELECT
 					s1.".$this->options['structure']['id']." AS res
 				FROM ".$this->options['structure_table']." s1, ".$this->options['structure_table']." s2
 				WHERE
 					s1.".$this->options['structure']['id']." != s2.".$this->options['structure']['id']." AND
 					s1.".$this->options['structure']['parent_id']." = s2.".$this->options['structure']['parent_id']." AND
 					s1.".$this->options['structure']['position']." = s2.".$this->options['structure']['position']."
-				LIMIT 1")->fetchColumn()
+				LIMIT 1";
+		if(
+			(int) $this->db->query($sql1) ||
+			(int) $this->db->query($sql2)->fetchColumn()
 		) {
 			$report[] = "Positions not correct.";
 		}
-		if((int)$this->db->query("
-			SELECT
+        $sql = "SELECT
 				COUNT(".$this->options['structure']['id'].") FROM ".$this->options['structure_table']." s
 			WHERE
 				(
@@ -733,31 +758,30 @@ class Tree
 					FROM ".$this->options['structure_table']."
 					WHERE
 						".$this->options['structure']["parent_id"]." = s.".$this->options['structure']['id']."
-				)")->fetchColumn()
+				)";
+		if((int)$this->db->query($sql)->fetchColumn()
 		) {
 			$report[] = "Adjacency and nested set do not match.";
 		}
-		if(
-			$this->options['data_table'] &&
-			(int)$this->db->query("
-				SELECT
+        $sql = "SELECT
 					COUNT(".$this->options['structure']['id'].") AS res
 				FROM ".$this->options['structure_table']." s
 				WHERE
-					(SELECT COUNT(".$this->options['data2structure'].") FROM ".$this->options['data_table']." WHERE ".$this->options['data2structure']." = s.".$this->options['structure']['id'].") = 0
-			")->fetchColumn()
+					(SELECT COUNT(".$this->options['data2structure'].") FROM ".$this->options['data_table']." WHERE ".$this->options['data2structure']." = s.".$this->options['structure']['id'].") = 0";
+		if(
+			$this->options['data_table'] &&
+			(int)$this->db->query($sql)->fetchColumn()
 		) {
 			$report[] = "Missing records in data table.";
 		}
-		if(
-			$this->options['data_table'] &&
-			(int)$this->db->query("
-				SELECT
+        $sql = "SELECT
 					COUNT(".$this->options['data2structure'].") AS res
 				FROM ".$this->options['data_table']." s
 				WHERE
-					(SELECT COUNT(".$this->options['structure']['id'].") FROM ".$this->options['structure_table']." WHERE ".$this->options['structure']['id']." = s.".$this->options['data2structure'].") = 0
-			")->fetchColumn()
+					(SELECT COUNT(".$this->options['structure']['id'].") FROM ".$this->options['structure_table']." WHERE ".$this->options['structure']['id']." = s.".$this->options['data2structure'].") = 0";
+		if(
+			$this->options['data_table'] &&
+			(int)$this->db->query($sql)->fetchColumn()
 		) {
 			$report[] = "Dangling records in data table.";
 		}
@@ -765,7 +789,9 @@ class Tree
 	}
 
 	public function reconstruct($analyze = true) {
-		if($analyze && $this->analyze()) { return true; }
+        $this->deleteCache();
+
+        if($analyze && $this->analyze()) { return true; }
 
 		if(!$this->db->exec("" .
 			"CREATE TEMPORARY TABLE temp_tree (" .
@@ -820,17 +846,17 @@ class Tree
 		}
 
 		while ($counter <= $maxcounter) {
-			if(!$this->db->query("" .
-				"SELECT " .
-					"temp_tree.".$this->options['structure']['id']." AS tempmin, " .
-					"temp_tree.".$this->options['structure']["parent_id"]." AS pid, " .
-					"temp_tree.".$this->options['structure']["position"]." AS lid " .
-				"FROM temp_stack, temp_tree " .
-				"WHERE " .
-					"temp_stack.".$this->options['structure']['id']." = temp_tree.".$this->options['structure']["parent_id"]." AND " .
-					"temp_stack.stack_top = ".$currenttop." " .
-				"ORDER BY temp_tree.".$this->options['structure']["position"]." ASC LIMIT 1"
-			)->fetchAll()) { return false; }
+            $sql = "SELECT " .
+                "temp_tree.".$this->options['structure']['id']." AS tempmin, " .
+                "temp_tree.".$this->options['structure']["parent_id"]." AS pid, " .
+                "temp_tree.".$this->options['structure']["position"]." AS lid " .
+                "FROM temp_stack, temp_tree " .
+                "WHERE " .
+                "temp_stack.".$this->options['structure']['id']." = temp_tree.".$this->options['structure']["parent_id"]." AND " .
+                "temp_stack.stack_top = ".$currenttop." " .
+                "ORDER BY temp_tree.".$this->options['structure']["position"]." ASC LIMIT 1";
+
+			if(!$this->db->query($sql)->fetchAll()) { return false; }
 
 			if($this->db->nextr()) {
 				$tmp = $this->db->f("tempmin");
@@ -906,7 +932,8 @@ class Tree
 			}
 		}
 		// fix positions
-		$nodes = $this->db->query("SELECT ".$this->options['structure']['id'].", ".$this->options['structure']['parent_id']." FROM ".$this->options['structure_table']." ORDER BY ".$this->options['structure']['parent_id'].", ".$this->options['structure']['position'])->fetchAll();
+        $sql = "SELECT ".$this->options['structure']['id'].", ".$this->options['structure']['parent_id']." FROM ".$this->options['structure_table']." ORDER BY ".$this->options['structure']['parent_id'].", ".$this->options['structure']['position'];
+		$nodes = $this->db->query($sql)->fetchAll();
 		$last_parent = false;
 		$last_position = false;
 		foreach($nodes as $node) {
@@ -938,6 +965,7 @@ class Tree
 	}
 
 	public function res($data = array()) {
+        $this->deleteCache();
 		if(!$this->db->exec("TRUNCATE TABLE ".$this->options['structure_table'])) { return false; }
 		if(!$this->db->exec("TRUNCATE TABLE ".$this->options['data_table'])) { return false; }
 		$sql = "INSERT INTO ".$this->options['structure_table']." (".implode(",", $this->options['structure']).") VALUES (?".str_repeat(',?', count($this->options['structure']) - 1).")";
@@ -966,7 +994,7 @@ class Tree
 					$par[] = null;
 			}
 		}
-		if(!$this->db->exec($sql, $par)) { return false; }
+		if(!$this->db->exec($sql)) { return false; }
 		$id = $this->db->lastInsertId();
 		foreach($this->options['structure'] as $k => $v) {
 			if(!isset($data[$k])) { $data[$k] = null; }
@@ -975,8 +1003,7 @@ class Tree
 	}
 
 	public function dump() {
-		$nodes = $this->db->query("
-			SELECT
+        $sql = "SELECT
 				s.".implode(", s.", $this->options['structure']).",
 				d.".implode(", d.", $this->options['data'])."
 			FROM
@@ -984,8 +1011,8 @@ class Tree
 				".$this->options['data_table']." d
 			WHERE
 				s.".$this->options['structure']['id']." = d.".$this->options['data2structure']."
-			ORDER BY ".$this->options['structure']['left']
-		)->fetchAll(PDO::FETCH_ASSOC);
+			ORDER BY ".$this->options['structure']['left'];
+		$nodes = $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 		echo "\n\n";
 		foreach($nodes as $node) {
 			echo str_repeat(" ",(int)$node[$this->options['structure']["level"]] * 2);
@@ -994,4 +1021,11 @@ class Tree
 		echo str_repeat("-",40);
 		echo "\n\n";
 	}
+
+    private function deleteCache() {
+        Cache::delete($this->cacheKeyPath);
+        Cache::delete($this->cacheKeyChildren);
+        Cache::delete($this->cacheKeyNode);
+    }
+
 }
