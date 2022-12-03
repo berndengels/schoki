@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0.1",
-        "anhskohbo/no-captcha": "^3.3",
         "berndengels/laravel-email-exceptions": "^1.0",
         "eluceo/ical": "^0.16.1",
         "eternicode/bootstrap-datepicker": "^1.9",

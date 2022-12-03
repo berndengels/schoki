@@ -173,7 +173,6 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
 //        Orchestra\Imagine\ImagineServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
-        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -244,7 +243,6 @@ return [
 
         // extras
         'FormBuilder'   => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
-        'NoCaptcha'     => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'Agent'         => Jenssegers\Agent\Facades\Agent::class,
         'BBCode'        => Genert\BBCode\Facades\BBCode::class,
         'Imagine'       => Orchestra\Imagine\Facade::class,
