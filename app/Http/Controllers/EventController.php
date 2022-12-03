@@ -137,7 +137,7 @@ class EventController extends BaseController
 		$slug       = array_pop($routeArr);
 		$cacheKey   = $this->cacheEventCategoryKey . ucfirst( Str::camel($slug));
 
-        if(!Cache::has($cacheKey)) {
+        $this->actualEventsByCategory = Cache::remember($cacheKey, config('cache.ttl'), function () use ($slug) {
             $repo 		= new EventPeriodicRepository();
             $repoEntity	= new EventEntityRepository();
 
@@ -145,16 +145,11 @@ class EventController extends BaseController
             $datedEvents	= Event::byCategorySlug($slug)->get()->keyBy('event_date');
 
             $mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
-//		$data = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.eventsPaginationLimit'));
-            $this->actualEventsByCategory = $periodicEvents->merge($mappedEvents)->sortKeys();
-            Cache::put($cacheKey, $this->actualEventsByCategory, config('cache.ttl'));
-        } else {
-            $this->actualEventsByCategory = Cache::get($cacheKey, collect([]));
-        }
+            return $periodicEvents->merge($mappedEvents)->sortKeys();
+        });
 
 		return view('public.events-lazy', [
-			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
-//			'data'	=> $this->actualEventsByCategory,
+			'data' => $this->actualEventsByCategory->paginate(config('event.eventsPaginationLimit')),
 			'today' => MyDate::getUntilValidDate(),
 			'route'	=> '/events/lazyByCategory/'.$slug,
 		]);
@@ -166,24 +161,18 @@ class EventController extends BaseController
 		$slug       = array_pop($routeArr);
         $cacheKey   = $this->cacheEventThemeKey . ucfirst( Str::camel($slug));
 
-        if(!Cache::has($cacheKey)) {
+        $this->actualEventsByTheme = Cache::remember($cacheKey, config('cache.ttl'), function () use($slug) {
             $repo 		= new EventPeriodicRepository();
             $repoEntity	= new EventEntityRepository();
 
             $periodicEvents	= $repo->getAllPeriodicDatesByTheme($slug);
             $datedEvents	= Event::byThemeSlug($slug)->get()->keyBy('event_date');
             $mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
-//		$data = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.eventsPaginationLimit'));
-            $this->actualEventsByTheme = $periodicEvents->merge($mappedEvents)->sortKeys();
-            Cache::put($cacheKey, $this->actualEventsByTheme, config('cache.ttl'));
-        } else {
-            $this->actualEventsByTheme = Cache::get($cacheKey, collect([]));
-        }
+            return $periodicEvents->merge($mappedEvents)->sortKeys();
+        });
 
-//		return view('public.events-lazy', ['theme' => $slug, 'data' => $data ]);
 		return view('public.events-lazy', [
-			'data' => $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
-//			'data'	=> $this->actualEventsByTheme,
+			'data' => $this->actualEventsByTheme->paginate(config('event.eventsPaginationLimit')),
 			'today' => MyDate::getUntilValidDate(),
 			'route'	=> '/events/lazyByTheme/'.$slug,
 		]);
