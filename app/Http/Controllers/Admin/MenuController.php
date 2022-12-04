@@ -234,7 +234,6 @@ class MenuController extends Controller
 				$node->name = $text;
 				$node->slug = Str::slug($text, '-');
 				$node->save();
-                $this->deleteCache();
 				$result = [
 					'id'	=> $node->id,
 					'text'	=> $node->name,
@@ -267,7 +266,6 @@ class MenuController extends Controller
 			$node = Menu::find($data['id']);
 			$type = (int)$data['menuItemType'];
 			try {
-                $this->deleteCache();
 				// EXTERNAL LINK
 				$node->url					= isset($data['url']) ? $data['url'] : null;
 				$node->icon					= $data['icon'];
