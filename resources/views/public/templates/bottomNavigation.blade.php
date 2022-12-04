@@ -17,7 +17,7 @@
                                 @if('' !== $child->icon)
                                 <img src="/img/icons/{{ $child->icon }}" title="{{ $child->icon }}" alt="{{ $child->icon }}">
                                 @elseif($child->fa_icon)
-                                    <i class="{{ $child->fa_icon }}"></i>
+                                    <i class="{{ $child->fa_icon }}" title="{{ $child->name }}"></i>
                                 @else
                                 {{ $child->name }}
                                 @endif
@@ -28,12 +28,12 @@
                         <a class="nav-link p-0 mt-2 mr-3" href="{{ $item->url }}" aria-haspopup="false">
                             @if($item->icon)
                                 @if(false === strrpos($item->icon,'.'))
-                                    <ion-icon name="{{ $item->icon }}" title="{{ $item->icon }}"></ion-icon>
+                                    <ion-icon name="{{ $item->icon }}" title="{{ $item->name }}"></ion-icon>
                                 @else
-                                    <img src="/img/icons/{{ $item->icon }}" title="{{ $item->icon }}" alt="{{ $item->icon }}">
+                                    <img src="/img/icons/{{ $item->icon }}" title="{{ $item->name }}" alt="{{ $item->name }}">
                                 @endif
                             @elseif($item->fa_icon)
-                                <i class="{{ $item->fa_icon }}"></i>
+                                <i class="{{ $item->fa_icon }}" title="{{ $item->name }}"></i>
                             @else
                                 {{ $item->name }}<span class="ml-2 sr-only">(current)</span>
                             @endif

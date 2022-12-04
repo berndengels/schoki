@@ -546,11 +546,13 @@ nav.navbar {
     &.navbar-dark {
         .nav-item {
             .nav-link {
-                line-height: 1.5rem;
                 vertical-align: middle;
                 color: $sFontColor;
                 ion-icon {
                     font-size: 1.5rem;
+                }
+                i {
+                    margin-right: 0.5rem;
                 }
             }
         }
