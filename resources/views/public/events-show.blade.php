@@ -4,7 +4,9 @@
 
 @section('content')
     <div class="eventShow col-12 col-lg-8 mt-2 mbs">
-        @if($event)
+        @if($expired)
+            <h4>Die Veranstaltung ist bereits gelaufen.</h4>
+        @elseif($event)
         <div class="eventHeader">
             <div class="">
                 <h3>{{ $event->getEventDate()->formatLocalized('%A') }} {{ $event->getEventDate()->formatLocalized('%d.%m.%Y') }} {{ $event->getEventTime() }} Uhr <span class="category">{{ $event->getCategory()->name }}</span></h3>
@@ -20,10 +22,10 @@
                 </div>
             </div>
         </div>
-        <div class="">
+        <div>
             @if($event->getImages()->count() === 1)
                 {? $img = $event->getImages()->first() ?}
-                <div class="text-center w-100 m-0 p-0 imageWrapper">
+                <div class="text-center w-100 m-0 p-0 imageWrapper mt-3">
                     <img src="/media/images/{{ $img->internal_filename }}"
                          class="w-auto m-auto"
                          title="{{ $img->title }}"
@@ -32,7 +34,7 @@
                 </div>
             @elseif ($event->getImages()->count() > 1 )
                 <div id="imgCarousel"
-                     class="carousel slide text-center"
+                     class="carousel slide text-center mt-3"
                      data-ride="carousel"
                      data-interval="4000"
                 >
@@ -78,16 +80,14 @@
                 {!! $event->getDescriptionSanitized() !!}
             </div>
 
-            @if ( $event->getLinks() && $event->getLinks()->count() )
+            @if ( $event->getLinks() )
                 <div class="">
-                    @foreach($event->getLinks() as $link)
+                    @foreach($event->getLinksArray() as $link)
                         <a href="{{ $link }}" target="_blank">{{ $link }}</a><br>
                     @endforeach
                 </div>
             @endif
         </div>
-    @elseif($expired)
-         <h4>Das Datum dieses Events ist bereits abgelaufen.</h4>
     @else
          <h4>Kein Daten gefunden.</h4>
     @endif

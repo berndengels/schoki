@@ -60,7 +60,7 @@ class EventController extends BaseController
 		$expired = Carbon::today() > $dateObj;
 		return view('public.events-show', [
 			'expired'	=> $expired,
-			'event' 	=> $event,
+			'event' 	=> $expired ? null : $event,
 		]);
 	}
 
