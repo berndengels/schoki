@@ -193,5 +193,4 @@
 
         $myDate.on('input',handleReservedDates);
     </script>
-    <!--script src="{{ asset('js/cropper.js') }}" type="javascript"></script-->
 @endsection
