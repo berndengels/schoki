@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        URL::forceScheme('https');
 		$locale = config('app.locale');
 		Carbon::setUTF8(true);
 		Carbon::setLocale($locale);
@@ -62,10 +63,6 @@ class AppServiceProvider extends ServiceProvider
 						$this->forPage($page, $perPage), $this->count(), $perPage, $page, $options))
 						->withPath('');
 				});
-		}
-
-		if(env('REDIRECT_HTTPS')) {
-			URL::forceScheme('https');
 		}
     }
 
