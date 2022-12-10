@@ -12,7 +12,6 @@
     <meta name="description" content="Schokoladen-Mitte Berlin" />
     <meta name="keywords" content="Schokoladen,Berlin,Musik,Musik Cafe,Kneipe,Kultur,Szene,Subkultur,Konzerte,Livemusik,live music,Veranstaltungs-Kneipe,Veranstaltungen,Lesung,alternativ" />
     <meta http-equiv="imagetoolbar" content="no" />
-    @googlefonts()
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}" />
     <script src="{{ mix('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
