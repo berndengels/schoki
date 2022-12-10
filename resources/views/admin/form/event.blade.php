@@ -43,7 +43,7 @@
         var tinymceOptions = {
             selector: '#tinymce',
             body_class: 'myTiny',
-            content_css: 'http://eventscore.loc/css/tiny.css?' + new Date().getTime(),
+            content_css: '/css/tiny.css?' + new Date().getTime(),
 //            content_style: "body {background-color:#a00; color:#fff; font-weight:200;} a {color:#fee934}",
             plugins: 'preview code advlist autolink link paste lists charmap preview media help',
             toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link autolink media code preview help',
