@@ -109,19 +109,6 @@ class EventController extends BaseController
 		return $this->actualEvents->get($date);
 	}
 
-/*
-	public function getEvents()
-	{
-		$data = Event::with(['category','theme'])->paginate(config('event.eventsPaginationLimit'));
-		return view('public.events', ['data' => $data ]);
-	}
-
-	public function getActualEvents()
-	{
-		$data = Event::allActual()->paginate(config('event.eventsPaginationLimit'));
-		return view('public.events', ['data' => $data ]);
-	}
-*/
 	public function getActualMergedEvents()
 	{
 		return view('public.events-lazy', [
