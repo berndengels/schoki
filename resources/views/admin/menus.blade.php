@@ -2,9 +2,9 @@
 @extends('layouts.admin')
 
 @section('extra-headers')
-    <script type="text/javascript" src="{{ asset('vendor/jstree/js/jstree.min.js') }}" charset="UTF-8"></script>
-    <script type="text/javascript" src="{{ asset('js/admin.js') }}" charset="UTF-8"></script>
-    <link type="text/css" rel="stylesheet" href="{{ asset('vendor/jstree/css/default/style.min.css') }}" />
+    <script type="text/javascript" src="{{ mix('vendor/jstree/js/jstree.min.js') }}" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ mix('js/admin.js') }}" charset="UTF-8"></script>
+    <link type="text/css" rel="stylesheet" href="{{ mix('vendor/jstree/css/default/style.min.css') }}" />
 @endsection
 
 @section('content')
