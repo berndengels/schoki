@@ -14,8 +14,8 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/dark.css') }}" />
-    <script src="{{ asset('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}" />
+    <script src="{{ mix('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     @yield('extra-headers')
 </head>
