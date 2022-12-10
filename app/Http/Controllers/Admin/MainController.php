@@ -90,8 +90,8 @@ class MainController extends Controller
         if( $modelClass ) {
             $this->entity   = lcfirst(class_basename($modelClass));
             $this->entityPlural = Str::plural($this->entity);
-            $this->addLink  = url()->route('admin.'.$this->entity.'New');
-            $this->listLink = url()->route('admin.'.$this->entity.'List');
+            $this->addLink  = route('admin.'.$this->entity.'New');
+            $this->listLink = route('admin.'.$this->entity.'List');
             $this->title    = ucfirst($this->entity);
         }
 	}
