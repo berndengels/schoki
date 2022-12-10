@@ -3,8 +3,8 @@
 @section('title', 'Location')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ asset('vendor/leaflet/leaflet.css') }}">
-    <script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('vendor/leaflet/leaflet.css') }}">
+    <script src="{{ mix('vendor/leaflet/leaflet.js') }}"></script>
 @endsection
 
 @section('sidebar-left')

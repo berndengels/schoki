@@ -3,8 +3,8 @@
 @section('title', 'Events')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ asset('vendor/calendar/css/zabuto_calendar.min.css') }}">
-    <script src="{{ asset('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
+    <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
 @endsection
 
 @section('header-content')
