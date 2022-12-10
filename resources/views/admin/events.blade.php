@@ -22,7 +22,7 @@
         </tr>
     @foreach ($data as $item)
         <tr>
-            <td>{{ $item->id }} </td>
+            <td>{{ $item->id }}</td>
             <td>{!! $item->event_date->format('d.m.Y') !!} </td>
             <td class="col-sm-auto">{{ $item->title }}</td>
             <td class="text-center d-none d-sm-table-cell">@if($item->createdBy) {{ $item->createdBy->username }} @else <br> @endif </td>

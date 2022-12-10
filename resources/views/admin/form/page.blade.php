@@ -2,13 +2,13 @@
 @extends('layouts.admin')
 
 @section('extra-headers')
-    <script type="text/javascript" src="{{ asset('vendor/dropzone/js/dropzone.min.js') }}" charset="UTF-8"></script>
-    <script type="text/javascript" src="{{ asset('vendor/tinymce/tinymce.min.js') }}" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ mix('vendor/dropzone/js/dropzone.min.js') }}" charset="UTF-8"></script>
+    <script type="text/javascript" src="{{ mix('vendor/tinymce/tinymce.min.js') }}" charset="UTF-8"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
-    <script type="text/javascript" src="{{ asset('js/admin.js') }}" charset="UTF-8"></script>
-    <link type="text/css" rel="stylesheet" href="{{ asset('vendor/dropzone/css/dropzone.min.css') }}" />
+    <script type="text/javascript" src="{{ mix('js/admin.js') }}" charset="UTF-8"></script>
+    <link type="text/css" rel="stylesheet" href="{{ mix('vendor/dropzone/css/dropzone.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
 @endsection
