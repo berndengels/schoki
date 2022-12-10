@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3|^8.0.1",
         "berndengels/laravel-email-exceptions": "^1.0",
+        "biscolab/laravel-recaptcha": "^5.4",
         "eluceo/ical": "^0.16.1",
         "eternicode/bootstrap-datepicker": "^1.9",
         "fideloper/proxy": "^4.4",

@@ -8,16 +8,6 @@ use Illuminate\Support\Facades\Http;
 class ReCaptcha implements Rule
 {
     /**
-     * Create a new rule instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Determine if the validation rule passes.
      *
      * @param  string  $attribute
@@ -27,15 +17,17 @@ class ReCaptcha implements Rule
     public function passes($attribute, $value)
     {
         $response = Http::post('https://www.google.com/recaptcha/api/siteverify',[
-            'secret' => env('NOCAPTCHA_SECRET'),
-            'response' => $value
+            'secret'    => env('NOCAPTCHA_SECRET'),
+            'response'  => $value
         ]);
         if($response) {
-            return $response->json();
+//            $token = request('token');
+            // @todo: handle missing-input-secret
+            $json = $response->json();
+            return $json['success'] ?? false;
         }
-        return null;
+        return false;
     }
-
     /**
      * Get the validation error message.
      *
@@ -43,6 +35,10 @@ class ReCaptcha implements Rule
      */
     public function message()
     {
-        return 'The google recaptcha is required.';
+//        return 'The google recaptcha is required.';
+        return [
+            'g-recaptcha-response.required' => 'Captcha wird benötigt!',
+            'g-recaptcha-response.missing-input-secret' => 'Captcha Secret fehlt!',
+        ];
     }
 }

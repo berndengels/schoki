@@ -6,8 +6,10 @@
 //window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
 require('@fortawesome/fontawesome-free')
-require('jquery-lazy');
-require('jquery-lazy/jquery.lazy.plugins.min');
+//require('jquery-lazy');
+//require('jquery-lazy/jquery.lazy.plugins.min');
+//require('recaptcha-v3');
+
 //import LazyLoad from "vanilla-lazyload";
 //window.Vue = require('vue');
 

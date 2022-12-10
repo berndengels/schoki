@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Traits\Models\Sanitize;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 use Kyslik\ColumnSortable\Sortable;
 use Illuminate\Database\Eloquent\Model;
@@ -33,7 +35,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Message extends Model
 {
-	use Sortable;
+	use Sortable, Sanitize;
 
     protected $table = 'message';
     protected $guarded = ['id'];
@@ -46,6 +48,11 @@ class Message extends Model
 		'email',
 		'created_at',
 	];
+
+    public function setMsgAttribute($value)
+    {
+        $this->attributes['msg'] = $this->sanitize($value);
+    }
 
 	public function musicStyle()
 	{

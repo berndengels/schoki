@@ -5,6 +5,7 @@ use App\Models\Message;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -52,11 +53,19 @@ class MusicStyle extends Model
 			$model->slug = Str::slug(str_replace('.','_',$model->name), '-', 'de');
 		});
 	}
-
+/*
 	public function users()
 	{
 		return $this->belongsToMany(User::class, 'user_music_styles','user_id');
 	}
+*/
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            User::class,
+            'user_music_styles'
+        );
+    }
 
 	/**
      * @return HasMany

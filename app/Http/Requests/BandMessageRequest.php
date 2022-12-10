@@ -44,7 +44,7 @@ class BandMessageRequest extends FormRequest
             'music_style_id'    => 'required',
             'name'              => 'required',
             'email'             => 'required|email',
-            'message'           => 'required',
+            'msg'               => 'required',
 //            'captcha'           => 'required|captcha',
             'g-recaptcha-response' => ['required', new ReCaptcha()]
         ];
@@ -57,7 +57,7 @@ class BandMessageRequest extends FormRequest
             'name.required'         => 'Bitte einen Name angeben!',
             'email.required'        => 'Bitte eine Email Adresse angeben!',
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
-            'message.required'      => 'Bitte ein Nachricht eingeben!',
+            'msg.required'          => 'Bitte ein Nachricht eingeben!',
             'g-recaptcha-response.required'      => 'Bitte den Captcha-Text eingeben!',
             'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ];

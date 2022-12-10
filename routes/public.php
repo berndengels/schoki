@@ -62,7 +62,9 @@ Route::get('/logout', function() {
     Session::invalidate();
     return redirect()->route('public.events');
 });
-
+if(app()->environment('local')) {
+    Route::get('myi', fn() => phpinfo());
+}
 Route::fallback(function () {
     return redirect()->route('public.events');
 });

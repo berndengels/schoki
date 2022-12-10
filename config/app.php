@@ -193,6 +193,7 @@ return [
         App\Providers\CustomPasswordResetServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
+        Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
     ],
 
     /*
@@ -250,6 +251,7 @@ return [
 		'Curl'			=> Ixudra\Curl\Facades\Curl::class,
 		'Debugbar'		=> Barryvdh\Debugbar\Facade::class,
 		'Newsletter' 	=> Spatie\Newsletter\NewsletterFacade::class,
+        'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
     ],
 
 ];

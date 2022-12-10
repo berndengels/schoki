@@ -77,6 +77,7 @@ class User extends Authenticatable
 {
 //    use Notifiable, HasRoles;
     use Notifiable, Sortable, HasApiTokens;
+    protected $table = 'my_user';
 	public $sortable = [
 		'username',
 		'email',
@@ -87,7 +88,6 @@ class User extends Authenticatable
     /**
      * @var string
      */
-    protected $table = 'my_user';
 	protected $primaryKey = 'id';
 	public $incrementing = true;
     /**
@@ -112,7 +112,10 @@ class User extends Authenticatable
 
 	public function musicStyles()
 	{
-		return $this->belongsToMany(MusicStyle::class, 'user_music_styles', 'user_id', 'music_style_id');
+		return $this->belongsToMany(
+            MusicStyle::class,
+            'user_music_styles'
+        );
 	}
 
 	public function setLastLogin()

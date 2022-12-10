@@ -38,8 +38,9 @@ class BandMessageController extends Controller
             'music_style_id'    => 'required',
             'name'              => 'required',
             'email'             => 'required|email',
-            'msg'           => 'required',
-            'g-recaptcha-response' => ['required', new ReCaptcha()]
+            'msg'               => 'required',
+//            'g-recaptcha-response' => ['required', new ReCaptcha()]
+            'g-recaptcha-response' => 'recaptcha',
         ], [
             'music_style_id.required'   => 'Bitte eine Musik-Richtung angeben!',
             'name.required'         => 'Bitte einen Name angeben!',
