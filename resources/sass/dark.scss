@@ -1,6 +1,6 @@
 // Fonts/Icons
 // see media queries: https://include-media.com/
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
@@ -11,6 +11,7 @@
 @import 'mixins';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//@import 'bootstrap';
 @import '~include-media/dist/_include-media';
 
 html, body {

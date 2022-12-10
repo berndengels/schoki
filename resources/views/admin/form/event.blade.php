@@ -38,7 +38,7 @@
     @include('components.back')
 
     <script>
-        // //www.youtube.com/v/7hbNKFCO-7E?autoplay=0&rel=0&hd=1
+        // https://youtu.be/EcfCjO7KIyQ
         var reservedDates = [{!! $dates !!}];
         var tinymceOptions = {
             selector: '#tinymce',

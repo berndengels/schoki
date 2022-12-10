@@ -36,6 +36,7 @@
         "protonemedia/laravel-form-components": "^3.6",
         "spatie/db-dumper": "^2.18",
         "spatie/laravel-db-snapshots": "^1.7",
+        "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-newsletter": "^4.11",
         "spatie/laravel-permission": "^3.17",
         "symfony/process": "^5.1"

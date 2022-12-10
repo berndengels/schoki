@@ -212,7 +212,8 @@ class Event extends Model
 		$mapped	= $repoEntity->mapToEventEntityCollection($datedEvents);
 		$merged	= $periodicEvents->merge($mapped)->sortKeys();
 
-		return $merged;
+		return $merged->paginate(config('event.eventsPaginationLimit'));
+//        return $merged;
 	}
 
 	public static function eventsForNewsletter(Carbon $from, Carbon $until)

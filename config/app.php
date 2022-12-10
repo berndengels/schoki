@@ -1,5 +1,7 @@
 <?php
 
+use Spatie\GoogleFonts\GoogleFontsServiceProvider;
+
 return [
 
     /*
@@ -194,6 +196,7 @@ return [
 //        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
+        GoogleFontsServiceProvider::class,
     ],
 
     /*
