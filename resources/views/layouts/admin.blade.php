@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="de">
 <head>
     <title>Schokoladen Intern</title>
     <meta charset="utf-8">
