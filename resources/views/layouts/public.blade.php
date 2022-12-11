@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index, follow" />
     <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="3600" />
+    <meta http-equiv="cache-control" content="max-age=3600">
     <meta name="description" content="Schokoladen-Mitte Berlin" />
     <meta name="keywords" content="Schokoladen,Berlin,Musik,Musik Cafe,Kneipe,Kultur,Szene,Subkultur,Konzerte,Livemusik,live music,Veranstaltungs-Kneipe,Veranstaltungen,Lesung,alternativ" />
     <meta http-equiv="imagetoolbar" content="no" />
     <link rel="preload" as="image" href="{{ asset('img/power/batcow_bg_transp.png') }}">
     <link rel="preload" as="image" href="{{ asset('img/power/the_dark_art.png') }}">
+    <link rel="preload" as="font">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}" />
     <script src="{{ mix('js/app.js') }}" type="text/javascript" charset="utf-8"></script>

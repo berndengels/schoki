@@ -1,8 +1,8 @@
 <div id="top-navigation">
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-black">
         <a class="navbar-brand" href="/events">
-            <img src="{{ asset('img/batcow_yellow.png') }}">
-            <img src="{{ asset('img/schokoladen_schrift_yellow.png') }}"></a>
+            <img src="{{ asset('img/batcow_yellow.png') }}" width="79" height="50" alt="Schokoladen">
+            <img src="{{ asset('img/schokoladen_schrift_yellow.png') }}" width="323" height="48" alt="Schokoladen"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

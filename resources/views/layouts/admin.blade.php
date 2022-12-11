@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="preload" as="font">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script src="{{ mix('js/app-admin.js') }}" type="text/javascript" charset="utf-8"></script>
