@@ -8,12 +8,11 @@
  */
 namespace App\Http\Controllers\Admin;
 
-use Cache;
 use Exception;
-use App\Entities\EventEntity;
 use App\Forms\EventTemplateSelectForm;
 use App\Forms\SearchForm;
 use App\Http\Requests\EventRequest;
+use Illuminate\Support\Facades\Cache;
 use App\Models\EventPeriodic;
 use App\Models\EventTemplate;
 use Illuminate\Contracts\Support\Renderable;
@@ -24,7 +23,6 @@ use App\Forms\EventForm;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
@@ -138,7 +136,7 @@ class EventController extends MainController
                 $saved = Event::create($request->validated());
                 $id = $saved->id;
             }
-            Cache::flush();
+            Cache::forget($this->cacheEventKey);
         } catch(Exception $e) {
             return back()->with('error','Fehler: '.$e->getMessage());
         }
@@ -204,6 +202,7 @@ class EventController extends MainController
             $entity = $model::find($id);
             if($entity) {
                 $entity->delete();
+                Cache::forget($this->cacheEventKey);
                 if(0 == $entity->is_periodic && isset($entity->images)) {
                     $this->removeImages($entity->images);
                 }

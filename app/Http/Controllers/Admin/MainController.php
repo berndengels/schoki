@@ -8,23 +8,22 @@
  */
 namespace App\Http\Controllers\Admin;
 
-//use Lavary\Menu\Menu;
+use Exception;
+use Carbon\Carbon;
 use App\Helper\MyDate;
 use App\Models\Event;
-use Carbon\Carbon;
-use App\Models\Audios;
+use App\Models\User;
 use App\Models\Video;
 use App\Models\Images;
-use Exception;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -123,7 +122,6 @@ class MainController extends Controller
 		 * @var $model Model
 		 */
         $model = static::$model;
-//		$search = request()->post('search');
         if($model) {
 			$data = $model::sortable( static::$orderBy ? [static::$orderBy, static::$orderDirection ] : null )
 				->paginate( $this->paginationLimit )
@@ -174,6 +172,7 @@ class MainController extends Controller
             if($entity) {
                 try {
                     $entity->delete();
+                    Cache::forget($this->cacheEventKey);
                 } catch(Exception $e) {
                     echo $e->getMessage().'<br>';
                     dd($e->getTrace());
