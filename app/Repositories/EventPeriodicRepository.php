@@ -2,18 +2,12 @@
 
 namespace App\Repositories;
 
-use Carbon\Carbon;
-use App\Models\Event;
 use App\Libs\EventDateTime;
-use App\Entities\EventEntity;
 use App\Models\EventPeriodic;
-use App\Repositories\EventEntityRepository;
-use Illuminate\Support\Facades\Cache;
 
-class EventPeriodicRepository {
+class EventPeriodicRepository extends MainEventRepository {
 
     protected $eventDateTime = null;
-	private $cacheTTL = 3600 * 2; // 3 hours
 
     public function __construct()
     {
@@ -55,16 +49,6 @@ class EventPeriodicRepository {
 		return null;
 	}
 
-	public function getPeriodicEventByDateAndTheme( $dateString, $themeSlug )
-	{
-		foreach($this->getAllPeriodicDatesByTheme($themeSlug) as $date => $entity) {
-			if($date === $dateString) {
-				return $entity;
-			}
-		}
-		return null;
-	}
-
 	public function getAllPeriodicDatesByCategory( $slug )
 	{
 		$entities = EventPeriodic::with(['category','theme'])
@@ -97,7 +81,7 @@ class EventPeriodicRepository {
 	{
 		$data = [];
 		if( $entities->count() ) {
-			foreach ($entities as $index => $entity) {
+			foreach ($entities as $entity) {
 			    $dates = $this->getPeriodicDates($entity, $formated, $isPublic);
 			    if($dates && count($dates) > 0) {
                     foreach ($dates as $date) {
@@ -113,16 +97,5 @@ class EventPeriodicRepository {
 		} else {
 			return collect([]);
 		}
-	}
-
-	public function getMergedEntitiesCached( $entities )
-	{
-		$events = Cache::get('mergedEntities', function () use ($entities) {
-			$events = $this->getMergedEntities($entities, true, true);
-			Cache::store('memcached')->put('mergedEntities', $events, $this->cacheTTL);
-			return $events;
-		});
-
-		return $events;
 	}
 }

@@ -27,16 +27,24 @@ class EventEntityRepository {
         $dateObj	= new Carbon($date, 'Europe/Berlin');
 
 		$entity
-			->setEventDate($dateObj)
+//            ->setEventDate($dateObj)
+			->setEventDate($date)
 			->setDomId('e' . $dateObj->format('Ymd'))
 			->setDescriptionSanitized($event->descriptionSanitized)
+            ->setDescriptionWithoutVideo($event->descriptionWithoutVideo)
 			->setImages($event->images)
 			->setIsPeriodic($event instanceof EventPeriodic ? 1 : 0)
 			->setCategory($event->category ? $event->category : null)
 			->setTheme($event->theme ? $event->theme : null)
-			->setCreatedBy($event->createdBy)
-			->setUpdatedBy($event->updatedBy ? $event->updatedBy : $event->createdBy)
+//			->setCreatedBy($event->createdBy)
+//			->setUpdatedBy($event->updatedBy ? $event->updatedBy : $event->createdBy)
 		;
+        if(auth()->check()) {
+            $entity
+                ->setCreatedBy($event->createdBy)
+                ->setUpdatedBy($event->updatedBy ? $event->updatedBy : $event->createdBy)
+            ;
+        }
 
 		return $entity;
 	}
@@ -44,6 +52,8 @@ class EventEntityRepository {
 	public function mapToEventEntityCollection( $data )
 	{
 		$events = [];
+        $isAuth = auth()->check();
+
 		if( count($data) > 0 ) {
 			foreach($data as $date => $item) {
 				$attributes = $item->getAttributes();
@@ -52,16 +62,24 @@ class EventEntityRepository {
                 $dateObj	= new Carbon($date, 'Europe/Berlin');
 
 				$event
-					->setEventDate($dateObj)
+//					->setEventDate($dateObj)
+                    ->setEventDate($date)
 					->setDomId('e' . $dateObj->format('Ymd'))
-					->setDescriptionSanitized($item->descriptionSanitized)
+                    ->setDescriptionSanitized($item->descriptionSanitized)
+                    ->setDescriptionWithoutVideo($item->descriptionWithoutVideo)
 					->setImages($item->images)
 					->setIsPeriodic($item instanceof EventPeriodic ? 1 : 0)
 					->setCategory($item->category ? $item->category : null)
 					->setTheme($item->theme ? $item->theme : null)
-					->setCreatedBy($item->createdBy)
-					->setUpdatedBy($item->updatedBy ? $item->updatedBy : $item->createdBy)
+//					->setCreatedBy($item->createdBy)
+//					->setUpdatedBy($item->updatedBy ? $item->updatedBy : $item->createdBy)
 				;
+                if($isAuth) {
+                    $event
+                        ->setCreatedBy($item->createdBy)
+                        ->setUpdatedBy($item->updatedBy ? $item->updatedBy : $item->createdBy)
+                    ;
+                }
 
 				$events[$date] = $event;
 			}

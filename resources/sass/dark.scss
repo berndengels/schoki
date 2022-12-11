@@ -325,6 +325,7 @@ html, body {
                         }
                         .text {
                             color: $sFontColor;
+                            font-size: 100%;
                             @include media("<tablet") {
                                 font-size: 80%;
                             }

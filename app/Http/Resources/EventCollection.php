@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Entities\EventEntity;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
@@ -15,7 +16,9 @@ class EventCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-//        return parent::toArray($request);
+        /**
+         * @var $this EventEntity
+         */
         return [
             'id'            => $this->id,
             'title'         => $this->title,

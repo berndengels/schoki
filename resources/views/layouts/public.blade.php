@@ -55,6 +55,5 @@
 @if(config('piwik.url'))
     @include('public.analytic.piwik')
 @endif
-
 </body>
 </html>

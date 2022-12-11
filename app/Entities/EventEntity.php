@@ -27,34 +27,35 @@ class EventEntity extends Entity {
 	 * @var Collection
 	 */
 	private $id;
-	private $domId = null;
+	private $domId;
 	private $title;
-	private $subtitle = null;
-	private $description = null;
-	private $descriptionSanitized = null;
-	private $descriptionText = null;
+	private $subtitle;
+	private $description;
+	private $descriptionSanitized;
+	private $descriptionText;
+    private $descriptionWithoutVideo;
 	/**
 	 * @var null|Collection
 	 */
-	private $links = null;
+	private $links;
 	private $is_periodic = 0;
 	/**
 	 * @var Carbon
 	 */
 	private $event_date;
-	private $event_time = null;
+	private $event_time;
 	/**
 	 * @var null|Category
 	 */
-	private $category = null;
+	private $category;
 	/**
 	 * @var null|Theme
 	 */
-	private $theme = null;
+	private $theme;
 	/**
 	 * @var null|Collection
 	 */
-	private $images = null;
+	private $images;
 	/**
 	 * @var Carbon
 	 */
@@ -111,6 +112,42 @@ class EventEntity extends Entity {
 		$this->descriptionSanitized = $descriptionSanitized;
 		return $this;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getDescriptionWithoutVideo()
+    {
+        return $this->descriptionWithoutVideo;
+    }
+
+    /**
+     * @param mixed $descriptionWithoutVideo
+     * @return EventEntity
+     */
+    public function setDescriptionWithoutVideo($descriptionWithoutVideo): EventEntity
+    {
+        $this->descriptionWithoutVideo = $descriptionWithoutVideo;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEventLink()
+    {
+        return $this->eventLink;
+    }
+
+    /**
+     * @param mixed $eventLink
+     * @return EventEntity
+     */
+    public function setEventLink($eventLink): EventEntity
+    {
+        $this->eventLink = $eventLink;
+        return $this;
+    }
 
 	/**
 	 * @return mixed
@@ -221,14 +258,15 @@ class EventEntity extends Entity {
 	 * @return mixed
 	 */
 	public function getEventDateTime() {
-		$str = $this->event_date->format('Y-m-d') .' '. $this->getEventTime();
+//		$str = $this->event_date->format('Y-m-d') .' '. $this->getEventTime();
+        $str = Carbon::make($this->event_date)->format('Y-m-d') .' '. $this->getEventTime();
 		return Carbon::createFromFormat('Y-m-d H:i', $str);
 	}
 
 	/**
 	 * @param mixed $event_date
 	 */
-	public function setEventDate( Carbon $event_date ) {
+	public function setEventDate( $event_date ) {
 		$this->event_date = $event_date;
 		return $this;
 	}
@@ -366,12 +404,13 @@ class EventEntity extends Entity {
 
 	public function toCalendarData(){
 
-		$body = $this->description;
+		$body = $this->descriptionWithoutVideo;
 		if ($this->subtitle && '' !== $this->subtitle) {
 			$body = "<div class='subtitle'>{$this->subtitle}</div>$body";
 		}
 		return [
-			'date'		=> $this->event_date->format('Y-m-d'),
+//			'date'		=> $this->event_date->format('Y-m-d'),
+            'date'		=> Carbon::make($this->event_date)->format('Y-m-d'),
 			'badge' 	=> true,
 			'title'		=> $this->title,
 			'body' 		=> $body,

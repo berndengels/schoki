@@ -1,13 +1,17 @@
-{? $domID = $item->getDomId() ?}
+@php
+    use Carbon\Carbon;
+    $domID = $item->getDomId();
+    $eventDate = new Carbon($item->getEventDate());
+@endphp
 <div class="collapseToggle mbs">
     <div class="eventHeader col-12">
         <div class="subHeader m-0 p-0">
-            <span class="ml-2">{{ __($item->getEventDate()->formatLocalized('%A')) }}</span>
-            <span class="ml-1">{{ $item->getEventDate()->formatLocalized('%d.%m.') }}</span>
+            <span class="ml-2">{{ __($eventDate->format('l')) }}</span>
+            <span class="ml-1">{{ $eventDate->format('d.m.') }}</span>
             <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
 
-        @if($item->getCategory())
-            <!--i class="ion-{{ $item->getCategory()->icon }} category d-inline-block d-md-none" title="{{ $item->getCategory()->name }}"></i-->
+            @if($item->getCategory())
+                <!--i class="ion-{{ $item->getCategory()->icon }} category d-inline-block d-md-none" title="{{ $item->getCategory()->name }}"></i-->
                 <span class="category mr-1">{{ $item->getCategory()->name }}</span>
             @endif
         </div>
@@ -28,11 +32,11 @@
                 data-target="#{{ $domID }}"
                 role="button"
                 aria-expanded="false"
-                aria-controls="{{ $domID }}">open</button>
+                aria-controls="{{ $domID }}">toggle</button>
     </div>
 </div>
 
-<div id="{{ $domID }}" class="eventBody collapse col-12 mt-0 pt-0">
+<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="eventBody collapse col-12 mt-0 pt-0">
     @if($item->getImages()->count() === 1)
         {? $img = $item->getImages()->first() ?}
         <div class="col-12 text-center w-100 m-0 p-0 imageWrapper">
@@ -90,7 +94,7 @@
         </div>
     @endif
 
-    <div class="text col-12 m-0 p-2">
+    <div class="description text col-12 m-0 p-2">
         {!! $item->getDescriptionSanitized() !!}
     </div>
     @if ( $item->getLinksArray()->count() )

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Entities\EventEntity;
 use App\Entities\ImageEntity;
 use App\Models\Images;
 use Illuminate\Http\Request;
@@ -18,9 +19,12 @@ class EventResource extends JsonResource
      */
     public function toArray($request)
     {
+        /**
+         * @var $this EventEntity
+         */
 		$category 	= $this->getCategory();
 		$theme		= $this->getTheme();
-		$links		= $this->getLinks();
+		$links		= $this->getLinks() ? preg_split("/[\n\r]+/", $this->getLinks()) : null;
 		$images		= $this->getImages();
 		$imageEntities	= [];
 
@@ -41,14 +45,15 @@ class EventResource extends JsonResource
 		}
         return [
 			'id'            => $this->getId(),
-			'date'    		=> (string) $this->getEventDate()->format('Y-m-d 00:00:00'),
+			'date'    		=> (string) $this->getEventDate(),
 			'time'    		=> (string) $this->getEventTime(),
 			'title'         => $this->getTitle(),
 			'subtitle'      => $this->getSubtitle(),
 			'description'   => $this->getDescriptionText(),
             'category'      => $category ? $category->name : null,
             'theme'      	=> $theme ? $theme->name : null,
-			'links'         => ($links && $links->count()) ? implode("\n", $links->toArray()): null,
+//			'links'         => ($links && $links->count()) ? implode("\n", $links->toArray()): null,
+            'links'         => $links,
 			'images'        => $imageEntities,
 		];
     }

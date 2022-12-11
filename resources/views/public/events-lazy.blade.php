@@ -17,9 +17,8 @@
             <div class="row ml-0 p-0">{{ $data->links() }}</div>
             @foreach ($data as $event)
                 <div class="event col-12 lazy">
-                    <div id="eventContent" class="eventContent container col-12 mb-2">
-                    {{-- @include('public.templates.event') --}}
-                    <x-event-view :item="$event" :index="$loop->index" />
+                    <div class="eventContent container col-12 mb-2">
+                        <x-event-view :item="$event" :index="$loop->index" />
                     </div>
                 </div>
             @endforeach
@@ -47,17 +46,18 @@
             history = [],
             firstLoad = true;
 
-		function getEvent(el) {
-            console.info('getEvent', el)
+		function logDescription(){
+			$(".collapse", ".eventContainer").each((k,el) => {
+				console.info(el.id, $(el).find(".description").is(":visible"));
+            });
         }
-/*
-        $(".lazy").lazy({
-            scrollDirection: 'vertical',
-            effect: 'fadeIn',
-            visibleOnly: true,
-            treshold: 100,
-        });
-*/
+		function removeAllDescription() {
+			$(".collapse .description", ".eventContainer").find().each(() => $(this).html(""));
+        }
+		function loadDescription(domId, date) {
+			removeAllDescription();
+			$("#" + domId + " .description", ".eventContent").load("/api/eventDescriptionByDate/" + date);
+        }
         $([document.documentElement, document.body]).animate({
             scrollTop: 0
         }, 0);
@@ -66,14 +66,16 @@
                 $(".collapse").unbind('show.bs.collapse');
             })
             .ajaxStop(function() {
-                if(firstLoad) {
+	            if(firstLoad) {
 	                const $first = $('.collapse:first', '.eventContainer'),
-	                $btn = $first.prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
+	                    $btn = $first.prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
+
 	                history.push($btn);
 
                     $first.collapse('show');
 
 	                $first.on('shown.bs.collapse', function() {
+	                    loadDescription($first.attr('id'), $first.data("event-date"));
 		                var $carousel = $('.carousel', this);
 		                if($carousel.length) {
 			                $carousel.carousel("cycle");
@@ -87,9 +89,9 @@
 
                     history.push($btn)
 	                if($btn.hasClass('on')) {
-		                $btn.removeClass('on').addClass('off').html('open');
+		                $btn.removeClass('on').addClass('off');
                     } else {
-		                $btn.removeClass('off').addClass('on').html('close');
+		                $btn.removeClass('off').addClass('on');
                     }
 					if(history.length > 1) {
 						let $last = $(history.shift()),
@@ -100,21 +102,20 @@
                                 .closest('.event')
                                 .find('.show');
 
-						console.info($other)
 						$other.collapse('hide');
-
-						$last.removeClass('on').addClass('off').html('open')
+						$last.removeClass('on').addClass('off')
                     }
                 });
 
                 $('.collapse', '.eventContainer')
                     .on('shown.bs.collapse', function() {
-                        const my = this,
+                        const my = this, $my = $(my),
                             $header = $(my).prev('.collapseToggle'),
                             top = parseInt($header.offset().top - 70, 10),
                             $carousel = $('.carousel', my);
 
 	                    $header.find('.btn-toggle').removeClass('off').addClass('on');
+	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
 	                    $([document.documentElement, document.body]).animate({
                             scrollTop: top
@@ -125,22 +126,23 @@
                         }
                     })
                     .on('show.bs.collapse', function() {
-                        const my = this,
+                        const my = this, $my = $(my),
                             $other = $(my).closest('.event').siblings().find('.show');
 	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
+	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
                         $other.collapse('hide');
                     })
 	                .on('hide.bs.collapse', function() {
-		                const id = this.id,
-			                my = this,
+		                const my = this,
 			                $carousel = $('.carousel', my);
 
 	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off');
-
+		                removeAllDescription();
 		                if($carousel.length) {
 			                $carousel.carousel("dispose");
 		                }
+		                console.clear()
 	                })
                 ;
         });
@@ -163,6 +165,5 @@
             legend: false, // object array, [{type: string, label: string, classname: string}]
         });
     });
-
 </script>
 @endsection

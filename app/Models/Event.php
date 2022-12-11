@@ -47,7 +47,6 @@ use App\Repositories\EventPeriodicRepository;
  * @property-read Collection|Videos[] $videos
  * @property-read int|null $videos_count
  * @method static Builder|Event allActual()
- * @method static Builder|Event allActualMerged()
  * @method static Builder|Event byCategorySlug($slug, $sinceToday = true)
  * @method static Builder|Event byThemeSlug($slug, $sinceToday = true)
  * @method static Builder|Event mergedByCategorySlug($slug, $sinceToday = true)
@@ -95,31 +94,23 @@ class Event extends Model
      */
     protected $guarded = ['id'];
     protected $with = ['images','createdBy','updatedBy'];
-    protected $dates = ['created_at','updated_at','event_date'];
+    protected $appends = [
+        'descriptionSanitized',
+        'descriptionText',
+        'descriptionWithoutVideo',
+        'eventLink',
+    ];
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'event_date',
+    ];
     protected $casts = [
         'event_date'    => 'date:Y-m-d',
         'is_periodic'   => 'bool',
         'is_published'  => 'bool',
     ];
-	protected $eventLink;
-	public $descriptionSanitized = '';
-	public $descriptionText = '';
-	public $testData;
-
-	public static function boot() {
-		parent::boot();
-		Event::retrieved(function($entity) {
-			$wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
-            if($entity->description) {
-                $entity->descriptionSanitized = preg_replace(
-                    "/(<iframe[^>]+><\/iframe>)/i",
-                    str_replace('%%','$1', $wrapper),
-                    $entity->description
-                );
-                $entity->descriptionText = strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $entity->description));
-            }
-		});
-	}
+    protected $dateFormat = 'Y-m-d';
 
 	/**
      * @return BelongsTo
@@ -174,10 +165,39 @@ class Event extends Model
 
 	public function getEventLinkAttribute()
 	{
-		return route('events.show', $this);
+		return route('public.event.eventsShow', $this);
 	}
 
-	/**
+    public function getDescriptionSanitizedAttribute()
+    {
+        if($this->description) {
+            $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
+            return preg_replace(
+                "/(<iframe[^>]+><\/iframe>)/i",
+                str_replace('%%','$1', $wrapper),
+                $this->description
+            );
+        }
+        return null;
+    }
+
+    public function getDescriptionTextAttribute()
+    {
+        if($this->description) {
+            return strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $this->description));
+        }
+    }
+
+    public function getDescriptionWithoutVideoAttribute()
+    {
+        return preg_replace(
+            "/<iframe[^>]+>(.*)<\/iframe>/i",
+            '',
+            $this->description
+        );
+    }
+
+    /**
 	 * @param string $value
 	 * @return array
 	 */
@@ -191,24 +211,23 @@ class Event extends Model
 
 	public function scopeAllActual(Builder $query)
 	{
-		$result = $query
+		return $query
 			->with(['category','theme'])
 			->where('is_published', 1)
 			->whereDate('event_date','>=', MyDate::getUntilValidDate())
 			->orderBy('event_date')
 		;
-
-		return $result;
 	}
 
-	public function scopeAllActualMerged()
+	public static function allActualMerged()
 	{
 		$repo			= new EventPeriodicRepository();
 		$repoEntity		= new EventEntityRepository();
 
 		$periodicEvents	= $repo->getAllPeriodicDates(true, true);
-		$datedEvents	= self::allActual()->get()->keyBy('event_date');
-
+		$datedEvents	= self::allActual()
+            ->get()
+            ->keyBy(fn($item) => $item['event_date']->format('Y-m-d'));
 		$mapped	= $repoEntity->mapToEventEntityCollection($datedEvents);
 		$merged	= $periodicEvents->merge($mapped)->sortKeys();
 
@@ -217,51 +236,29 @@ class Event extends Model
 
 	public static function eventsForNewsletter(Carbon $from, Carbon $until)
 	{
-		$filtered = self::allActualMerged()->filter(function ($event) use ($from, $until) {
+		return self::allActualMerged()->filter(function ($event) use ($from, $until) {
 			return ($event->getEventDate()->between($from, $until));
 		});
-		return $filtered;
 	}
 
-	/*
-		public function scopeAllActualByDateKey(Builder $query, $slug = null)
-		{
-			$result = $query
-				->where('event_date','>=', MyDate::getUntilValidDate())
-				->when($slug, function($query) use ($slug) {
-					return $query->where('slug', $slug);
-				});
-
-			return $result;
-		}
-	*/
 	public function scopeByCategorySlug(Builder $query, $slug, $sinceToday = true)
 	{
-		$result = $query
+		return $query
 			->with(['category','theme'])
 			->where('is_published', 1)
-			->when($sinceToday, function($query) {
-				return $query->whereDate('event_date','>=', MyDate::getUntilValidDate());
-			})
-			->whereHas('category', function($query) use ($slug) {
-				$query->where('slug', $slug);
-			});
-		return $result;
+			->when($sinceToday, fn($query) => $query->whereDate('event_date','>=', MyDate::getUntilValidDate()))
+			->whereHas('category', fn($query) => $query->where('slug', $slug));
 	}
 
 	public function scopeByThemeSlug(Builder $query, $slug, $sinceToday = true)
 	{
-		$result = $query
+		return $query
 			->with(['category','theme'])
 			->where('is_published', 1)
-			->when($sinceToday, function($query) {
-				return $query->whereDate('event_date','>=', MyDate::getUntilValidDate());
-			})
+			->when($sinceToday, fn($query) => $query->whereDate('event_date','>=', MyDate::getUntilValidDate()))
 			->whereHas('theme', function($query) use ($slug) {
 				$query->where('slug', $slug);
 			});
-
-		return $result;
 	}
 
 	public function scopeMergedByCategorySlug(Builder $query, $slug, $sinceToday = true)
@@ -270,10 +267,11 @@ class Event extends Model
 		$repoEntity	= new EventEntityRepository();
 
 		$periodicEvents	= $repo->getAllPeriodicDatesByCategory($slug);
-		$datedEvents = $this->scopeByCategorySlug($query, $slug, $sinceToday)->get()->keyBy('event_date');
+		$datedEvents = $this->scopeByCategorySlug($query, $slug, $sinceToday)
+            ->get()
+            ->keyBy(fn($item) => $item['event_date']->format('Y-m-d'));
 
 		$mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
-//		$merged = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.paginationLimit'));
 		$merged = $periodicEvents->merge($mappedEvents)->sortKeys();
 
 		return $merged;
@@ -282,7 +280,7 @@ class Event extends Model
 	public function scopeMergedByDate(Builder $query, $date )
 	{
 		$repo 	= new EventPeriodicRepository();
-		$event	= self::whereDate('event_date', $date)->first();
+		$event	= $query->whereDate('event_date', $date)->first();
 
 		if( $event ) {
 			return $event;
@@ -300,7 +298,7 @@ class Event extends Model
 		$repo 		= new EventPeriodicRepository();
 		$repoEntity	= new EventEntityRepository();
 
-		$event = self::whereDate('event_date', $date)
+		$event = $query->whereDate('event_date', $date)
 			->where('is_published', 1)
 			->whereHas('category', function($query) use ($slug) {
 				$query->where('slug', $slug);
@@ -325,7 +323,7 @@ class Event extends Model
 		$repo 		= new EventPeriodicRepository();
 		$repoEntity	= new EventEntityRepository();
 
-		$event = self::whereDate('event_date', $date)
+		$event = $query->whereDate('event_date', $date)
 			->where('is_published', 1)
 			->whereHas('theme', function($query) use ($slug) {
 				$query->where('slug', $slug);
@@ -354,7 +352,6 @@ class Event extends Model
 		$datedEvents = $this->scopeByThemeSlug($query, $slug, $sinceToday)->get()->keyBy('event_date');
 
 		$mappedEvents = $repoEntity->mapToEventEntityCollection($datedEvents);
-//		$merged = $periodicEvents->merge($mappedEvents)->sortKeys()->paginate(config('event.paginationLimit'));
 		$merged = $periodicEvents->merge($mappedEvents)->sortKeys();
 
 		return $merged;

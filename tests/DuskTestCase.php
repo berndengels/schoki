@@ -38,7 +38,7 @@ abstract class DuskTestCase extends TestCase
 	{
 		parent::setUp();
 		self::$screenPath	= app()->basePath() . '/tests/Browser/screenshots';
-		$this->adminUser	= User::where('username','bengels')->first();
+		$this->adminUser	= User::whereUsername('bengels')->first();
 		$this->user			= User::where('username','schoki')->first();
 	}
 

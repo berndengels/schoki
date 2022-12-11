@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\EventDescriptionResource;
 use App\Models\Event;
 use App\Entities\EventEntity;
 use App\Http\Controllers\Controller;
@@ -19,10 +20,13 @@ class ApiEventController extends Controller
 
     public function __construct()
     {
-        if (!Cache::has($this->cacheEventKey)) {
-            Cache::put($this->cacheEventKey, Event::allActualMerged(), config('cache.ttl'));
+        if(!config('event.useCache')) {
+            $this->actualEvents = Event::allActualMerged();
+        } else {
+            $this->actualEvents = Cache::remember($this->cacheEventKey, 3600, function() {
+                return Event::allActualMerged();
+            });
         }
-        $this->actualEvents = Cache::get($this->cacheEventKey, collect([]));
     }
 
     /**
@@ -55,6 +59,21 @@ class ApiEventController extends Controller
         if($event) {
             $resource = new EventResource($event);
             return response()->json($resource);
+        }
+
+        return response()->json(['error'=> 'no data']);
+    }
+
+    public function eventDescriptionByDate(string $date)
+    {
+        EventDescriptionResource::withoutWrapping();
+        /**
+         * @var $event EventEntity
+         */
+        $event = $this->actualEvents->first(fn (EventEntity $e) => $e->getEventDate() === $date);
+
+        if($event) {
+            return response()->make($event->getDescriptionSanitized());
         }
 
         return response()->json(['error'=> 'no data']);

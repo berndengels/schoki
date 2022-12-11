@@ -48,9 +48,22 @@ class EventController extends BaseController
                 return Event::allActualMerged();
             });
         }
+        $this->actualEvents = $this->actualEvents->map(function(EventEntity $item) {
+            $item->setDescription(null);
+            $item->setDescriptionSanitized(null);
+            return $item;
+        });
 	}
 
-	public function show($date)
+    public function getActualMergedEvents()
+    {
+        return view('public.events-lazy', [
+            'data'	=> $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
+            'today' => MyDate::getUntilValidDate(),
+        ]);
+    }
+
+    public function show($date)
 	{
 		/**
 		 * @var $event EventEntity
@@ -109,14 +122,6 @@ class EventController extends BaseController
 		return $this->actualEvents->get($date);
 	}
 
-	public function getActualMergedEvents()
-	{
-		return view('public.events-lazy', [
-			'data'	=> $this->actualEvents->paginate(config('event.eventsPaginationLimit')),
-			'today' => MyDate::getUntilValidDate(),
-		]);
-	}
-
 	public function getActualMergedEventsByCategory()
 	{
 		$routeArr   = explode('.', Route::currentRouteName()) ;
@@ -167,22 +172,17 @@ class EventController extends BaseController
     public function calendar(Request $request)
     {
         $dates = [];
-        $result = ['error' => true];
 
         /**
          * @var $event EventEntity
          */
         foreach($this->actualEvents as $date => $event) {
-            list($y,$m,) = explode('-', $date);
+//            [$y,$m] = explode('-', $date);
 //            if($year == $y && $month == $m) {
                 $dates[] = $event->toCalendarData();
 //            }
         }
-        if( count($dates) > 0 ) {
-            $result = $dates;
-        }
-
-        return json_encode($result);
+        return json_encode($dates);
     }
 
     public function lazy($date)

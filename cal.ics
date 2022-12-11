@@ -10,426 +10,7 @@ TZID:Europe/Berlin
 X-LIC-LOCATION:Europe/Berlin
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:638bc291374a8
-DTSTART;TZID=Europe/Berlin:20221203T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:live: KNARF RELLÖM ORGANISMUS (zusatzshow!) + after 22h: A NIGHT W
- ITH MARYCHERRY & LEO LE FOU (60s 70s garage beat soul motown ...)
-CLASS:PUBLIC
-DESCRIPTION:live: KNARF RELLÖM ORGANISMUS (zusatzshow! --> https://vvk.lin
- k/2f0br80) + after 22h: A NIGHT WITH MARYCHERRY & LEO LE FOU (60s 70s gara
- ge beat soul motown ...)\nlittle league shows prsnts:\nder KNARF RELLÖM 
- ORGANISMUS live at Schokoladen! (facebook.com/events/525070059289799)\n»A
- lien Knarf Rellöm feiert seinen Geburtstag und will all seine Freunde seh
- en: Mittekill\, Bernadette La Hengst\, Ella Mae\, Pastor Leumund\, Tomate\
- , David Park\, Todesstreifen Klaus\, Jens Friebe\, Diego Castro und und un
- d ... Das wird Klasse!«
-X-ALT-DESC;FMTTYPE=text/html:<p>live: KNARF RELL&Ouml\;M ORGANISMUS (zusatz
- show! --&gt\; <a href=\"https://vvk.link/2f0br80\">https://vvk.link/2f0br8
- 0</a>) + after 22h: A NIGHT WITH MARYCHERRY &amp\; LEO LE FOU (60s 70s gar
- age beat soul motown ...)<br /><br />little league shows prsnts:</p>\n<p>d
- er&nbsp\;KNARF RELL&Ouml\;M ORGANISMUS live at Schokoladen! (<a href=\"htt
- ps://www.facebook.com/events/525070059289799\">facebook.com/events/5250700
- 59289799</a>)</p>\n<p>&raquo\;Alien Knarf Rell&ouml\;m feiert seinen Gebur
- tstag und will all seine Freunde sehen: Mittekill\, Bernadette La Hengst\,
-  Ella Mae\, Pastor Leumund\, Tomate\, David Park\, Todesstreifen Klaus\, J
- ens Friebe\, Diego Castro und und und ... Das wird Klasse!&laquo\;</p>
-CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
- -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
- ":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc291376f7
-DTSTART;TZID=Europe/Berlin:20221204T200000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Karaoke Night w/ KJ Der Käpt'n
-CLASS:PUBLIC
-DESCRIPTION:Der Käpt'n kommt mit einem fetten Angebot aus allen nationalen
-  und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakter 
- und ist zum Kreischen fröhlich\, generations- und sozialübergreifend und
-  warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Monit
- or- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und dab
- ei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!\n.
- .. wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/details.
- ..\nOder klickt den Link für seine Songliste…\nhttp://derkaeptn.de/song
- liste.html
-X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
- et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau5
- 5g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v b1v8xokw oo9gr5id\" dir=\"auto\">
- Der K&auml\;pt'n kommt mit einem fetten Angebot aus allen nationalen und i
- nternationalen K&uuml\;nstlern!<br />Der Abend hat schon lange Kultcharakt
- er und ist zum Kreischen fr&ouml\;hlich\, generations- und sozial&uuml\;be
- rgreifend und warmherzig...!<br />Eine der sch&ouml\;nsten B&uuml\;hnen Be
- rlins &amp\; ein perfekter Monitor- und Raumsound besorgen den Rest!<br />
- Singen macht halt gl&uuml\;cklich und dabei zuschauen auch!<br />holt euch
-  die K&auml\;pt'n Karaoke App auf's Smartphone!<br />... wei sie wirklich 
- toll ist!<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d
- 6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcuky
- x3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4w
- l py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" href=\"https://play.goo
- gle.com/store/apps/details?fbclid=IwAR1x1PKMpuLwfecpsofguKD9hhC-UBzNPm57_B
- bgklliy1HMDkTfm4ZWGn4\" target=\"_blank\" rel=\"nofollow noopener\">https:
- //play.google.com/store/apps/details</a>...<br />Oder klickt den Link f&uu
- ml\;r seine Songliste&hellip\;<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f 
- esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cx
- mmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuy
- zwwr f1sip0of lzcic4wl py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" hr
- ef=\"http://derkaeptn.de/songliste.html?fbclid=IwAR02MFOgT9l0coh45wnY30bnx
- TkE9n94dR-8nVL9MYLepOrOlBKwsSMoQLI\" target=\"_blank\" rel=\"nofollow noop
- ener\">http://derkaeptn.de/songliste.html</a></span></p>
-CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
- -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
- ":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc291377cc
-DTSTART;TZID=Europe/Berlin:20221205T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:powerline\, puschen & little league shows prsnt: ROLF BLUMIG (psych
-  indie rock\, le) & NICHTSEATTLE (solo show! bln)
-CLASS:PUBLIC
-DESCRIPTION:\n\npowerline\, puschen & little league shows prsnt:\nROLF BLUM
- IG & NICHTSEATTLE (solo!)\n\nROLF BLUMIG / psych exp indie rock ...\, le\,
-  staatsakt\nrolfblumig.de /// rolfblumig.bandcamp.com\n& NICHTSEATTLE / so
- lo show! bln\, staatsakt\nlinktr.ee/nichtseattle /// nichtseattle.bandcamp
- .com\n\n
-X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
-  xtlvy1s\">\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xdj266r\">\n<p
-  id=\"isPasted\">powerline\, puschen &amp\; little league shows prsnt:<br 
- />ROLF BLUMIG &amp\; NICHTSEATTLE (solo!)</p>\n<p><br />ROLF BLUMIG / psyc
- h exp indie rock ...\, le\, staatsakt<br /><a href=\"https://www.rolfblumi
- g.de\">rolfblumig.de</a> /// <a href=\"https://www.rolfblumig.bandcamp.com
- \">rolfblumig.bandcamp.com</a></p>\n<p>&amp\; NICHTSEATTLE / solo show! bl
- n\, staatsakt<br /><a href=\"https://www.linktr.ee/nichtseattle\">linktr.e
- e/nichtseattle</a> /// <a href=\"https://www.nichtseattle.bandcamp.com\">n
- ichtseattle.bandcamp.com</a></p>\n</div>\n</div>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc29137875
-DTSTART;TZID=Europe/Berlin:20221206T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LSD - Liebe Statt Drogen
-CLASS:PUBLIC
-DESCRIPTION: \n\nAndreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, 
- Uli Hannemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lie
- der und Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lese
- bühnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD un
- d eingeladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten
-  und Songs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas 
- „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Miras
- ol und Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker
-  auch in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes M
- ikro für Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte
- \, dass der Beitrag selbstverfasst sein muss und nicht länger als 6 Minut
- en dauert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und
-  bekommt ein Freigetränk.\n
-X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
- </div>\n<div class=\"text col-12 m-0 p-2\">\n<p>Andreas &bdquo\;Spider&ldq
- uo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mir
- asol und Ivo Lotion pr&auml\;sentieren Geschichten\, Lieder und G&auml\;st
- e.<br />LSD &ndash\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uu
- ml\;hnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD u
- nd eingeladene G&auml\;ste im Berliner Schokoladen ein Programm aus neuen 
- Texten und Songs. Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliede
- rn Andreas &bdquo\;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; He
- rre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\
- ;nstler sind als Autoren und Musiker auch in anderen Bereichen aktiv.<br /
- ><br />LSD bietet jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\,
-  die spontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag sel
- bstverfasst sein muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am 
- Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekommt ein Freig
- etr&auml\;nk.</p>\n</div>
-CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
- md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
- \":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc29137911
-DTSTART;TZID=Europe/Berlin:20221207T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:LoFi lounge prsnts: Leopard [indie°bln] + Lutzilla [indie°bln]
-CLASS:PUBLIC
-DESCRIPTION:\n\n\n\n\n\nLeopard \n \nGegründet von den Sängern\, Gitarri
- sten und Songschreibern Lars Paprotta und\nChristian Dangel\, komplettiert
-  von Achmed Zmero am Bass und Raul Neddermeyer am\nSchlagzeug\, ist LEOPAR
- D pünktlich zum Beginn eines neuen Jahrzehnts angetreten\, um\nsich mit K
- rallen aus eingängigen Gitarrenriffs\, einem sanften Fell aus Melodien un
- d\nleuchtenden Augen voller ehrlicher Texte durch das von Ironie verseucht
- e Dickicht\nder postmodernen Pop-Musik zu kämpfen. Das Ziel: Make Rock'n'
- Roll a threat again!\nAnzuknüpfen an die Zeiten\, als Gitarrenmusik noch 
- Bedrohung\, Versprechen und\nBefreiung war. Als alles möglich schien. Als
-  alles möglich war. Warum? Weil noch\nimmer alles möglich ist. Und auch 
- immer sein wird.\nIm Juni 2020 haben LEOPARD ihre Debüt-EP MYSTERIUM ver
- öffentlicht: Vier Songs\nzwischen Post-Punk\, Indie-Rock und Pop\, zwisch
- en Liebe und Abfuck\, aufgenommen und\nproduziert in der Tonbrauerei Berli
- n. \n\n\n\n\n\n
-X-ALT-DESC;FMTTYPE=text/html:<div dir=\"ltr\" align=\"left\">\n<div dir=\"l
- tr\" align=\"left\">\n<div>\n<div dir=\"ltr\" align=\"left\">\n<div dir=\"
- ltr\" align=\"left\">\n<div>\n<div dir=\"ltr\" align=\"left\"><span class=
- \"v1774021717-17052022\"><span class=\"v1186284812-10102022\"><span class=
- \"v1967554116-08112022\"><strong>Leopard</strong> </span></span></span></d
- iv>\n<div dir=\"ltr\" align=\"left\">&nbsp\;</div>\n<div dir=\"ltr\" align
- =\"left\"><span class=\"v1774021717-17052022\"><span class=\"v1186284812-1
- 0102022\">Gegr&uuml\;ndet von den S&auml\;ngern\, Gitarristen und Songschr
- eibern Lars Paprotta und<br />Christian Dangel\, komplettiert von Achmed Z
- mero am Bass und Raul Neddermeyer am<br />Schlagzeug\, ist LEOPARD p&uuml\
- ;nktlich zum Beginn eines neuen Jahrzehnts angetreten\, um<br />sich mit K
- rallen aus eing&auml\;ngigen Gitarrenriffs\, einem sanften Fell aus Melodi
- en und<br />leuchtenden Augen voller ehrlicher Texte durch das von Ironie 
- verseuchte Dickicht<br />der postmodernen Pop-Musik zu k&auml\;mpfen. Das 
- Ziel: Make Rock'n'Roll a threat again!<br />Anzukn&uuml\;pfen an die Zeite
- n\, als Gitarrenmusik noch Bedrohung\, Versprechen und<br />Befreiung war.
-  Als alles m&ouml\;glich schien. Als alles m&ouml\;glich war. Warum? Weil 
- noch<br />immer alles m&ouml\;glich ist. Und auch immer sein wird.<br />Im
-  Juni 2020 haben LEOPARD ihre Deb&uuml\;t-EP MYSTERIUM ver&ouml\;ffentlich
- t: Vier Songs<br />zwischen Post-Punk\, Indie-Rock und Pop\, zwischen Lieb
- e und Abfuck\, aufgenommen und<br />produziert in der Tonbrauerei Berlin. 
- </span></span></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc291379ab
-DTSTART;TZID=Europe/Berlin:20221208T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:M:Soundtrack & Puschen presents: Simon Joyner (US / BB*ISLAND) +  T
- he Erich Weinert Studioband (BLN)
-CLASS:PUBLIC
-DESCRIPTION:M:Soundtrack & Puschen presents: Simon Joyner & the Erich Weine
- rt Studioband\n\nTickets here : schokoladen.tickettoaster.de/produkte/5149
- 9-tickets-simon-joyner-schokoladen-berlin-am-08-12-2022\nSimon Joyner is a
- mong America’s best singer-songwriters\, so says Gillian Welch\, Conor O
- berst\, Kevin Morby\, and others. “Singer-songwriter” is a frustrating
- ly confining term\; to truly understand exactly just how confining\, look 
- no further than the recorded works of Simon Joyner\, an artist whose work 
- consistently transcends the narrow parameters of genre classifications and
-  record shop bin cards. Though his music has always honored\, reckoned wit
- h—wrestled with—the tradition set forth by his songwriting forebears (
- Cohen\, Van Zandt\, Ochs\, Dylan\, Reed to name a few)\, Joyner can always
-  be counted on to defy expectations\; as a lyricist\, melodicist\, and arr
- anger\, Joyner likes to keep us on our toes. Simon Joyner is a singer-song
- writer from Omaha\, Nebraska. He's been flying under the radar since 1991\
- , releasing music on various independent labels including: Team Love\, Jag
- jaguwar\, Sing Eunuchs!\, Catsup Plate\, One-Hour\, Shrimper\, Brinkman\, 
- Secretly Canadian\, and Unread. He is also the co-founder of Grapefruit Re
- cords and an occasional producer of other people's albums.
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>M:Soundtrack &amp\; Puschen present
- s: Simon Joyner &amp\; the Erich Weinert Studioband<br /></strong></p>\n<p
- ><strong>Tickets here : <span class=\"x193iq5w xeuugli x13faqbe x1vvkbs xl
- h3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgart
- y x1943h6x x4zkp8e x676frb x1nxh6w3 x1sibtaa xo1l8bm xi81zsa x1yc453h\" di
- r=\"auto\">schokoladen.tickettoaster.de/produkte/51499-tickets-simon-joyne
- r-schokoladen-berlin-am-08-12-2022</span></strong></p>\n<p><strong>Simon J
- oyner</strong> is among America&rsquo\;s best singer-songwriters\, so says
-  Gillian Welch\, Conor Oberst\, Kevin Morby\, and others. &ldquo\;Singer-s
- ongwriter&rdquo\; is a frustratingly confining term\; to truly understand 
- exactly just how confining\, look no further than the recorded works of Si
- mon Joyner\, an artist whose work consistently transcends the narrow param
- eters of genre classifications and record shop bin cards. Though his music
-  has always honored\, reckoned with&mdash\;wrestled with&mdash\;the tradit
- ion set forth by his songwriting forebears (Cohen\, Van Zandt\, Ochs\, Dyl
- an\, Reed to name a few)\, Joyner can always be counted on to defy expecta
- tions\; as a lyricist\, melodicist\, and arranger\, Joyner likes to keep u
- s on our toes. Simon Joyner is a singer-songwriter from Omaha\, Nebraska. 
- He's been flying under the radar since 1991\, releasing music on various i
- ndependent labels including: Team Love\, Jagjaguwar\, Sing Eunuchs!\, Cats
- up Plate\, One-Hour\, Shrimper\, Brinkman\, Secretly Canadian\, and Unread
- . He is also the co-founder of Grapefruit Records and an occasional produc
- er of other people's albums.</p>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc29137a48
-DTSTART;TZID=Europe/Berlin:20221209T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:Wood In Di Fire (Ska\, Jazz\, Reggae\, Rocksteady) & Tooth of a Lya
- n (Dub Reggae Roots) & Everything Crash (DJ-Set)
-CLASS:PUBLIC
-DESCRIPTION:Mit Jamaican Jazz und handfesten Reggae-Grooves bringen  Wood 
- In Di Fire bei ihren Live-Sessions die Dancehall zum Toben. Was  als Jam-
- Projekt von Musikern aus verschiedenen Berliner Bands begann\, hat sich zu
- r festen Formation entwickelt. Doch  der Session-Gedanke ist  immer noch
-  lebendig: Die Bandmitglieder und Gäste bringen die verschiedensten Einfl
- üsse aus Reggae\, Jazz\, Ska\, Latin und Afro-Beat mit und sorgen damit i
- mmer wieder für überraschende Kicks.\nSeit das Projekt im Jahre 2000 sta
- rtete\, spielt Wood In Di Fire traditionell im Berliner „Schokoladen“.
-  Der bis heute monatlich stattfindende Reggae-Jam wurde schnell vom Geheim
- tipp zum etablierten Termin der Berliner Reggae-Szene.\nDie Berliner Band 
- Tooth of a Lyan\, spielt Jamaican-Reggae\, erdige und contemporary Dub/Reg
- gae-Beats\, Shuffle-Skanks und Echo-Gewitter. Ihre Songs fragen uns: Was t
- un mit dem Dasein als Staubkorn im All? Was tun mit den Glutnestern aus Ha
- ss? Welche Schuhgröße hat Dein Carbon Footprint? Tooth of a Lyan nehmen 
- Dich mit\, schwingen Dich ein und lassen Dich mit diesen Fragen nicht alle
- in.\n
-X-ALT-DESC;FMTTYPE=text/html:<p>Mit Jamaican Jazz und handfesten Reggae-Gro
- oves bringen &nbsp\;<a href=\"https://www.facebook.com/WoodInDiFire\">Wood
-  In Di Fire</a> bei ihren Live-Sessions die Dancehall zum Toben. Was &nbsp
- \;als Jam-Projekt von Musikern aus verschiedenen Berliner Bands begann\, h
- at sich zur festen Formation entwickelt. Doch &nbsp\;der Session-Gedanke i
- st &nbsp\;immer noch lebendig: Die Bandmitglieder und G&auml\;ste bringen 
- die verschiedensten Einfl&uuml\;sse aus Reggae\, Jazz\, Ska\, Latin und Af
- ro-Beat mit und sorgen damit immer wieder f&uuml\;r &uuml\;berraschende Ki
- cks.<br />Seit das Projekt im Jahre 2000 startete\, spielt <a href=\"https
- ://www.facebook.com/events/694337762078045/?active_tab=about\">Wood In Di 
- Fire</a> traditionell im Berliner &bdquo\;Schokoladen&ldquo\;. Der bis heu
- te monatlich stattfindende Reggae-Jam wurde schnell vom Geheimtipp zum eta
- blierten Termin der Berliner Reggae-Szene.</p>\n<p>Die Berliner Band <a hr
- ef=\"https://toothofalyan.bandcamp.com/\">Tooth of a Lyan</a>\, spielt Jam
- aican-Reggae\, erdige und contemporary Dub/Reggae-Beats\, Shuffle-Skanks u
- nd Echo-Gewitter. Ihre Songs fragen uns: Was tun mit dem Dasein als Staubk
- orn im All? Was tun mit den Glutnestern aus Hass? Welche Schuhgr&ouml\;&sz
- lig\;e hat Dein Carbon Footprint? Tooth of a Lyan nehmen Dich mit\, schwin
- gen Dich ein und lassen Dich mit diesen Fragen nicht allein.</p>\n<p><div 
- class=\"row embed-responsive-wrapper text-center\"><div class=\"embed-resp
- onsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" 
- src=\"//www.youtube.com/embed/jiHkXPWSBhU?autoplay=0\" width=\"560\" heigh
- t=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe><
- /div></div></p>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc29137af8
-DTSTART;TZID=Europe/Berlin:20221210T190000
-SEQUENCE:0
-TRANSP:OPAQUE
-LOCATION:Ackerstrasse 169\, 10115 Berlin
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
- rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
- 397245
-GEO:52.529745;13.397245
-SUMMARY:[sold out] duesenjaeger (Punk\, Osnabrück) + ARXX (Queer Alt-Rock-
- Duo\, Brighton/UK) + Klotzs (Postpunk-Duo aus Siegen)
-CLASS:PUBLIC
-DESCRIPTION:duesenjaeger ...singen\, abgesehen von einer kurzen Schaffenspa
- use zwischen 2008 und 2010\, seit 1999 die Lieder\, die wir hören wollen.
-  Deutschpunk oder auch Punkrock mit deutschen Texten. Hier geht von andäc
- htig lauschen bis hin zu lauthals mitgröhlen alles\, da die vier Herren\,
-  ursprünglich aus Osnabrück\, das komplette Spannungsfeld zwischen schne
- llen eingängigen bis wütenden Punkrocknummern und ruhigen\, düsteren So
- ngs bedienen und hiermit gleichzeitig den gelungenen Spagat zwischen absol
- uter Eingängigkeit und gefühlter Traurigkeit hinlegen. Kurz gesagt: emol
- l. melancholisch\, eingängig\, treibend und wütend...\n\n\nARXX are a Al
- t- Rock Gal Pal Duo. They have been making moves all over the UK and Europ
- e\, including appearances at BBC Radio 1 Big Weekend\, Great Escape\, Iceb
- reaker\,  and Left Of The Dial\, headlining House of Vans Next Era show\,
-  supporting Black Honey\, Liz Lawrence and Pillow Queens on their UK Headl
- ine Tours.  Their latest single ' Couldn't Help Myself' was picked as BBC
-  Radio 1's Introducing track of the week\, resulting in multiple prime tim
- e plays on Radio 1. Now\, having been making music together since 2017\, t
- hey've received acclaim from the likes of BBC Radio 1's Jack Saunders\, So
- phie K and Huw Stephens\, Radio 6's Steve Lamacq and John Kennedy on Radio
-  X who they did a live session for in 2021.   ARXX  landed their first T
- V sync in 2021\, with their single DEEP being featured on Prime Time BBC O
- ne for the Match of The Day coverage of the 2021 Euros. They've received 1
- .8+ million streams and have been featured on editorial playlists such as 
- New Music Friday\, Hot New Bands and The Rock List.  Their latest singles
-  have received acclaim from the likes of: NME\, Fred Perry Subculture and 
- KEXP collaborating with Katie Tavini ( Arlo Parks) and Steven Ansell (Bloo
- d Red Shoes).\nklotzs: Postpunk-Duo aus Siegen. Man hält sich bedeckt und
-  atmet leise. Musikalisch immer auf eigenen Pfaden unterwegs macht man sic
- h auf den Weg die neue Platte „sucht\" in die Öffentlichkeit zu zerren.
- \n
-X-ALT-DESC;FMTTYPE=text/html:<p><strong>duesenjaeger </strong>...singen\, a
- bgesehen von einer kurzen Schaffenspause zwischen 2008 und 2010\, seit 199
- 9 die Lieder\, die wir h&ouml\;ren wollen. Deutschpunk oder auch Punkrock 
- mit deutschen Texten. Hier geht von and&auml\;chtig lauschen bis hin zu la
- uthals mitgr&ouml\;hlen alles\, da die vier Herren\, urspr&uuml\;nglich au
- s Osnabr&uuml\;ck\, das komplette Spannungsfeld zwischen schnellen eing&au
- ml\;ngigen bis w&uuml\;tenden Punkrocknummern und ruhigen\, d&uuml\;steren
-  Songs bedienen und hiermit gleichzeitig den gelungenen Spagat zwischen ab
- soluter Eing&auml\;ngigkeit und gef&uuml\;hlter Traurigkeit hinlegen. Kurz
-  gesagt: emoll. melancholisch\, eing&auml\;ngig\, treibend und w&uuml\;ten
- d...<br /><span class=\"v1ztn2w49o v1n3t5jt4f v1k1z55t6l v1ne6e0wym v1pbev
- jfx6\" dir=\"auto\"><strong><br /><div class=\"row embed-responsive-wrappe
- r text-center\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p
- -0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/ujGRf
- _sMZtU?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allowfu
- llscreen=\"allowfullscreen\"></iframe></div></div><br /><br />ARXX</strong
- > are a Alt- Rock Gal Pal Duo. They have been making moves all over the UK
-  and Europe\, including appearances at BBC Radio 1 Big Weekend\, Great Esc
- ape\, Icebreaker\, &nbsp\;and Left Of The Dial\, headlining House of Vans 
- Next Era show\, supporting Black Honey\, Liz Lawrence and Pillow Queens on
-  their UK Headline Tours. &nbsp\;Their latest single ' Couldn't Help Mysel
- f' was picked as BBC Radio 1's Introducing track of the week\, resulting i
- n multiple prime time plays on Radio 1. Now\, having been making music tog
- ether since 2017\, they've received acclaim from the likes of BBC Radio 1'
- s Jack Saunders\, Sophie K and Huw Stephens\, Radio 6's Steve Lamacq and J
- ohn Kennedy on Radio X who they did a live session for in 2021. &nbsp\; AR
- XX &nbsp\;landed their first TV sync in 2021\, with their single DEEP bein
- g featured on Prime Time BBC One for the Match of The Day coverage of the 
- 2021 Euros. They've received 1.8+ million streams and have been featured o
- n editorial playlists such as New Music Friday\, Hot New Bands and The Roc
- k List. &nbsp\;Their latest singles have received acclaim from the likes o
- f: NME\, Fred Perry Subculture and KEXP collaborating with Katie Tavini ( 
- Arlo Parks) and Steven Ansell (Blood Red Shoes).<br /><br /></span><strong
- >klotzs</strong>: Postpunk-Duo aus Siegen. Man h&auml\;lt sich bedeckt und
-  atmet leise. Musikalisch immer auf eigenen Pfaden unterwegs macht man sic
- h auf den Weg die neue Platte &bdquo\;sucht\" in die &Ouml\;ffentlichkeit 
- zu zerren.</p>
-CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
- -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
- blished\":1}
-DTSTAMP:20221203T214137Z
-END:VEVENT
-BEGIN:VEVENT
-UID:638bc29137b9c
+UID:6396200d0a718
 DTSTART;TZID=Europe/Berlin:20221211T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -448,10 +29,33 @@ X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
 CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
  md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137c34
+UID:6396200d0a929
+DTSTART;TZID=Europe/Berlin:20221213T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:KNEIPENABEND / BARNIGHT
+CLASS:PUBLIC
+DESCRIPTION:KNEIPENABEND / BARNIGHT. no concert/djs tonight\, the bar is go
+ nna be open for you though. cozy athmosphere\, cheap beer & good drinks\, 
+ exquisite music\, table football...
+X-ALT-DESC;FMTTYPE=text/html:<p>KNEIPENABEND / BARNIGHT. no concert/djs ton
+ ight\, the bar is gonna be open for you though. cozy athmosphere\, cheap b
+ eer &amp\; good drinks\, exquisite music\, table football...</p>
+CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
+ md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0a9a4
 DTSTART;TZID=Europe/Berlin:20221214T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -518,10 +122,79 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Clara Pazzini + Keboo</p>\n<p>Einlass: 19 U
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137cd0
+UID:6396200d0aa23
+DTSTART;TZID=Europe/Berlin:20221215T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:barnight + psychberg dj sets w/ gat@as espacialas\, darks second & 
+ eye the kat!
+CLASS:PUBLIC
+DESCRIPTION:\nPsychberg Affairs is very happy and looking forward to it´s 
+ last party of this long and great year. A year which was full of amazing m
+ emories and the best of all... meeting so many warm hearted people alike.\
+ n\nWith this\, we wish to thank every single person that has followed us a
+ nd attended to our parties\, events and our first festival. We are so grat
+ eful for every canid hug and each conversation where we all shared our lov
+ e for music\, our scene\, ourselves... the bonding ... feelings. Things th
+ at matter in the end.\n\nHope to see you all at least for a drink\, a laug
+ h\, a memory !\n\nSee you at one of our homes\, Schokoladen.\n\n< Gat@s Es
+ paciales >\nassorted psych on vinyl\nmixcloud.com/gatas_espaciales/\n\n< D
+ ark´s Second >\nPost punk / Synth Punk / Psychedelic / Garage\nmixcloud.c
+ om/Darks_Second/\n\n< Eye the Kat >\nPsych / Post Punk / Kat Music / Rock 
+ n F**king Roll\n\n 
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xtlvy1s\">\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xdj266r\">Psyc
+ hberg Affairs is very happy and looking forward to it&acute\;s last party 
+ of this long and great year. A year which was full of amazing memories and
+  the best of all... meeting so many warm hearted people alike.<br /><br />
+ </div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">With this
+ \, we wish to thank every single person that has followed us and attended 
+ to our parties\, events and our first festival. We are so grateful for eve
+ ry canid hug and each conversation where we all shared our love for music\
+ , our scene\, ourselves... the bonding ... feelings. Things that matter in
+  the end.<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkb
+ s xtlvy1s\">Hope to see you all at least for a drink\, a laugh\, a memory 
+ !<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1
+ s\">See you at one of our homes\, Schokoladen.<br /><br /></div>\n<div cla
+ ss=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&lt\; Gat@s Espaciales &g
+ t\;<br />assorted psych on vinyl<br /><a class=\"x1i10hfl xjbqb8w x6umtig 
+ x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm 
+ xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq
+  x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" href=\"https://w
+ ww.mixcloud.com/gatas_espaciales/?fbclid=IwAR2Prt3aQH8f3S8wOW6h2tNlCvCfROC
+ efCxXDSi5TmVDftEXASCCqMFwC6s\" target=\"_blank\" rel=\"noopener\">mixcloud
+ .com/gatas_espaciales/</a></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x
+ 1vvkbs xtlvy1s\"><br />&lt\; Dark&acute\;s Second &gt\;<br />Post punk / S
+ ynth Punk / Psychedelic / Garage<br /><a class=\"x1i10hfl xjbqb8w x6umtig 
+ x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm 
+ xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq
+  x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" href=\"https://l
+ .facebook.com/l.php?u=https%3A%2F%2Fwww.mixcloud.com%2FDarks_Second%2F%3Ff
+ bclid%3DIwAR2JTh9ETPbZ3WlhTSHzA-ZUUdI5DFddQQm4StVNVg5T1aDEMFGCcIke5CA&amp\
+ ;h=AT369U3f-PyQAL-sWA-Kvh7rOp0Le9mOoODwBPi_2tq_Bgcof80OrcfSyr1Q1vTNbBNYBDi
+ ibMS2OieckLUb37CePW0E1O_glLr08CPUt7CFnNvMm64dx0xL4FtMXMWlVUgONW8vyfK2AOi8-
+ 0NgcPwXCA&amp\;__tn__=q&amp\;c[0]=AT0Jht4l4OO_XsSs5SiQZsT4jjXAkhbkNPhpmldB
+ PgWpIoLUZNwOUC1sQSsgWRS9OBTY12jVYWo0ElNerLSmMe0txvUplvwclK_O_eK5UCkQeHMvvc
+ vmT6TkOj8yjAQ0cwtAltcpVRigd9qodR7SiDqum4CH\" target=\"_blank\" rel=\"noope
+ ner\">mixcloud.com/Darks_Second/</a></div>\n<div class=\"x11i5rnm xat24cr 
+ x1mh8g0r x1vvkbs xtlvy1s\"><br />&lt\; Eye the Kat &gt\;<br />Psych / Post
+  Punk / Kat Music / Rock n F**king Roll</div>\n</div>\n<div class=\"x11i5r
+ nm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0aa9e
 DTSTART;TZID=Europe/Berlin:20221216T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -569,10 +242,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>This is our way of dealing with life and de
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137d6c
+UID:6396200d0ab0e
 DTSTART;TZID=Europe/Berlin:20221217T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -595,10 +268,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Sheef sind punkig\, melodisch\, nachdenklis
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137e01
+UID:6396200d0ab75
 DTSTART;TZID=Europe/Berlin:20221219T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -607,7 +280,7 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:Marshall Ar.ts (Berlin) + ESKALIN (Bärlin)
+SUMMARY:LICHTHASS 3000 mit Marshall Ar.ts (Berlin) + ESKALIN (Bärlin)
 CLASS:PUBLIC
 DESCRIPTION:TICKETS gibt es hier.\nMarshall Ar.ts\, das sind wandelnde Pers
  pektiven. \nDas ist eine Band aus Berlin\, die sich mit jedem Song neu erf
@@ -617,7 +290,15 @@ DESCRIPTION:TICKETS gibt es hier.\nMarshall Ar.ts\, das sind wandelnde Pers
  ft permanent neue Bilder wie ein Kaleidoskop. Eine Minute lang durchdringe
  n brutal hypnotische Wellen von Gitarren und Synthesizern deinen Kopf\; de
  r nächste\, Funk-inspirierte Basslinien\, treibende Drums und Raps aus de
- r Pallid Mask. Ein schwarzes Funkeln. Nintendoom.\n
+ r Pallid Mask. Ein schwarzes Funkeln. Nintendoom.\n\nPommes und Lotte sind
+  der/die Producer:in\, Sänger:in\, Musiker:in\, Synthesizer-Liebhaber:in 
+ und Quatschköpfe von ESKALIN. Das Berliner Duo macht ravige Beats mit de
+ utschen Texten — Vom ersten Buchstaben der Lyrics bis hin zur finalen Pr
+ oduktion eines Songs machen die beiden alles selbst.\n\n\nIhr Genre bezeic
+ hnen sie als RAVEPOP. Inspiriert ist der individuelle ESKALIN-Sound von 
+ Trance\, Pop\, Punk\, Hiphop und Rave. ESKALIN stehen für selbstgemachte 
+ Musik\, fluide Grenzen und das Neudenken von musikalischen Konstrukten.\n\
+ n
 X-ALT-DESC;FMTTYPE=text/html:<p><strong><span lang=\"DE\">TICKETS gibt es <
  a href=\"https://schokoladen.tickettoaster.de/produkte/52351-tickets-marsh
  all-ar-ts-schokoladen-berlin-am-19-12-2022\" target=\"_blank\" rel=\"noope
@@ -632,19 +313,28 @@ X-ALT-DESC;FMTTYPE=text/html:<p><strong><span lang=\"DE\">TICKETS gibt es <
  skop.</span><span lang=\"DE\"> Eine Minute lang durchdringen brutal hypnot
  ische Wellen von Gitarren und Synthesizern deinen Kopf\; der n&auml\;chste
  \, Funk-inspirierte Basslinien\, treibende Drums und Raps aus der Pallid M
- ask. Ein schwarzes Funkeln. <strong>Nintendoom.</strong></span></p>\n<p><s
- pan lang=\"DE\"><strong><div class=\"row embed-responsive-wrapper text-cen
- ter\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p-0\"><ifra
- me class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/watch?v=3LB_7uL
- k6D4?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allowfull
- screen=\"allowfullscreen\"></iframe></div></div></strong></span></p>
+ ask. Ein schwarzes Funkeln. <strong>Nintendoom.</strong></span></p>\n<div>
+ \n<div>Pommes und Lotte sind der/die Producer:in\, S&auml\;nger:in\, Musik
+ er:in\, Synthesizer-Liebhaber:in und Quatschk&ouml\;pfe von&nbsp\;<strong>
+ ESKALIN</strong>. Das Berliner Duo macht ravige Beats mit deutschen Texten
+  &mdash\; Vom ersten Buchstaben der Lyrics bis hin zur finalen Produktion 
+ eines Songs machen die beiden alles selbst.</div>\n</div>\n<div>\n<div>Ihr
+  Genre bezeichnen sie als&nbsp\;<strong>RAVEPOP</strong>. Inspiriert ist d
+ er individuelle&nbsp\;<strong>ESKALIN</strong>-Sound von Trance\, Pop\, Pu
+ nk\, Hiphop und Rave. ESKALIN stehen f&uuml\;r selbstgemachte Musik\, flui
+ de Grenzen und das Neudenken von musikalischen Konstrukten.</div>\n</div>\
+ n<p><span lang=\"DE\"><strong><div class=\"row embed-responsive-wrapper te
+ xt-center\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p-0\"
+ ><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/watch?v=3
+ LB_7uLk6D4?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" all
+ owfullscreen=\"allowfullscreen\"></iframe></div></div></strong></span></p>
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137ea1
+UID:6396200d0abed
 DTSTART;TZID=Europe/Berlin:20221220T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -685,10 +375,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29137f46
+UID:6396200d0ac56
 DTSTART;TZID=Europe/Berlin:20221221T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -780,10 +470,99 @@ X-ALT-DESC;FMTTYPE=text/html:<div dir=\"ltr\" align=\"left\">\n<div>\n<div
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291380a0
+UID:6396200d0acd0
+DTSTART;TZID=Europe/Berlin:20221222T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:sharewood booking xmas special w/ LOVE'N'JOY (psych\, ukr) & G.P.A.
+ D. (wave/kraut\, dd) live!
+CLASS:PUBLIC
+DESCRIPTION:Sharewood Christmas Party\nDoors: 19.00\nShows: 20.00 (!)\nAfte
+ rshow: 22.00\n\nSharewood Booking presents: Love'n'Joy & G.P.A.D. live at 
+ Schokoladen\n\nAftershow with Heller Than Hell & Samantha Klaus (RnR\, Sou
+ l\, RnB\, Funk\, World)\n\nLove'n'Joy\nPsychedelic/Indie/Pop\n\nAfter a ro
+ ugh\, tough and turbulent year with a Russian invasion into Ukraine and mo
+ re than 65 shows all over Europe to raise money for fellow musicians fight
+ ing on the frontline\, the part-time Berliners are back at Schokoladen whe
+ re they celebrated the release of their second LP \"Half Home\" and end a 
+ year to forget on what hopefully will be a high note in a cozy environment
+ .\n\nhttps://youtu.be/bgKywjoZFpM\nhttps://lovenjoy.bandcamp.com/\n\nSuppo
+ rt by G.P.A.D. (GelbesPepAusDüsseldorf)\nWave/Kraut/Disco\n\nhttps://yout
+ u.be/hMI1rlj87xQ\nhttps://gpad.bandcamp.com/releases
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xdj266r\">Sharewood Christmas Party<br /><br />Doors: 19.00</div>\n<div c
+ lass=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Shows: 20.00 (!)<br />A
+ ftershow: 22.00<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r 
+ x1vvkbs xtlvy1s\">Sharewood Booking presents: Love'n'Joy &amp\; G.P.A.D. l
+ ive at Schokoladen<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g
+ 0r x1vvkbs xtlvy1s\">Aftershow with Heller Than Hell &amp\; Samantha Klaus
+  (RnR\, Soul\, RnB\, Funk\, World)<br /><br /></div>\n<div class=\"x11i5rn
+ m xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Love'n'Joy<br />Psychedelic/Indie/Pop
+ <br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s
+ \">After a rough\, tough and turbulent year with a Russian invasion into U
+ kraine and more than 65 shows all over Europe to raise money for fellow mu
+ sicians fighting on the frontline\, the part-time Berliners are back at Sc
+ hokoladen where they celebrated the release of their second LP \"Half Home
+ \" and end a year to forget on what hopefully will be a high note in a coz
+ y environment.</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy
+ 1s\"><br /><a class=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9
+ f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4
+ uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\
+ " tabindex=\"0\" role=\"link\" href=\"https://youtu.be/bgKywjoZFpM?fbclid=
+ IwAR0sjSYA9086aRXc4-a5ZqMGj4Xe9QvC_7qyqqPymUhnw_0VkEfDC6BQj8s\" target=\"_
+ blank\" rel=\"nofollow noopener\">https://youtu.be/bgKywjoZFpM</a><br /><a
+  class=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk
+  xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69
+  xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"
+ 0\" role=\"link\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Flove
+ njoy.bandcamp.com%2F%3Ffbclid%3DIwAR12fFX_AgeVIFYoA-Lhjs-uxq8sv-TY-LSzMrKF
+ G6BD4QyMrsYB9SIZvgQ&amp\;h=AT2uhpM2e7zJwAXflS4evc2rH6CEh3_7NUUuQVsB0XQTVOv
+ xHLZrOyp3yrDMn8COfgVlhpDKoUppOlNO-RdKAQT7ILW1jshLuhHLJE1ELnpN4DP5b67LKhakV
+ AW-pLVRLZgPKRcXmKRjew6RpWQup31sEw&amp\;__tn__=q&amp\;c[0]=AT3cJnqzz9fv-aOh
+ HJthu8_FzN3TpI1dcIIVL_-MvtKW1sSG2NR2JEjcPPSNKyQmL9tNpXeDX4WmqV1ifCuSzCWnhO
+ A8lglmYzyzrmoXTxtvXP620uw0mNpC32UtZusVmk120y6WvqZjo8hi00NJy8Z52fnE\" targe
+ t=\"_blank\" rel=\"nofollow noopener\">https://lovenjoy.bandcamp.com/</a><
+ /div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\"><br />Supp
+ ort by G.P.A.D. (GelbesPepAusD&uuml\;sseldorf)<br />Wave/Kraut/Disco</div>
+ \n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\"><br /><a class=
+ \"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk
+ 2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6s
+ d x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" rol
+ e=\"link\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2F
+ hMI1rlj87xQ%3Ffbclid%3DIwAR12fFX_AgeVIFYoA-Lhjs-uxq8sv-TY-LSzMrKFG6BD4QyMr
+ sYB9SIZvgQ&amp\;h=AT2t17W2JNPgPnaBGqVy3MZ-BmP9Eo6RhlXNX876QTOOfCKDCOAJpHJ9
+ ExLaEWj3TGgtUC4Nn5OcgItiqU43IvFt1Qzdb8V5LaT3LhIIUoOHYPBloFG9zB75tDxXvjV9te
+ _iXOTiPaId0ogFIysdTDQ31A&amp\;__tn__=q&amp\;c[0]=AT3cJnqzz9fv-aOhHJthu8_Fz
+ N3TpI1dcIIVL_-MvtKW1sSG2NR2JEjcPPSNKyQmL9tNpXeDX4WmqV1ifCuSzCWnhOA8lglmYzy
+ zrmoXTxtvXP620uw0mNpC32UtZusVmk120y6WvqZjo8hi00NJy8Z52fnE\" target=\"_blan
+ k\" rel=\"nofollow noopener\">https://youtu.be/hMI1rlj87xQ</a><br /><a cla
+ ss=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0
+ psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkh
+ d6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" 
+ role=\"link\" href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fgpad.ban
+ dcamp.com%2Freleases%3Ffbclid%3DIwAR3Aphcpv4qZYMN_ZQjvWImaI_XzvZU50stSdQcE
+ 4zLBH5GD_fI5XQusdWM&amp\;h=AT1Sl2xoQsw0PG6uSefs6BdHhvMe91C1G8Wzi8e6EHNYLck
+ -DGnUcg7FBz5cDpbKhLEXGjWzHMqcYF_RdNmq74AxMkOXuc4WqgAPFeprDUfb3O18GjklfhBuB
+ 34EjCu1NAzMVAcEj5sIcNPol4W98XPItw&amp\;__tn__=q&amp\;c[0]=AT3cJnqzz9fv-aOh
+ HJthu8_FzN3TpI1dcIIVL_-MvtKW1sSG2NR2JEjcPPSNKyQmL9tNpXeDX4WmqV1ifCuSzCWnhO
+ A8lglmYzyzrmoXTxtvXP620uw0mNpC32UtZusVmk120y6WvqZjo8hi00NJy8Z52fnE\" targe
+ t=\"_blank\" rel=\"nofollow noopener\">https://gpad.bandcamp.com/releases<
+ /a></div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0ad4e
 DTSTART;TZID=Europe/Berlin:20221223T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -795,17 +574,71 @@ GEO:52.529745;13.397245
 SUMMARY:dj set: no tears for the creatures of the night prsnts: Dark Xmas w
  / DJs alienslut & hunkydory
 CLASS:PUBLIC
-DESCRIPTION:no tears for the creatures of the night prsnts: Dark Xmas w/ DJ
- s alienslut & hunkydory\n
-X-ALT-DESC;FMTTYPE=text/html:<p>no tears for the creatures of the night prs
- nts: Dark Xmas w/ DJs alienslut &amp\; hunkydory</p>
+DESCRIPTION:Dark Christmas\nPost punk\, new Wave\, synth\, 80s\, italo disc
+ o.\nVinyls only.\nNo requests no regrets.
+X-ALT-DESC;FMTTYPE=text/html:<p>Dark Christmas<br />Post punk\, new Wave\, 
+ synth\, 80s\, italo disco.<br />Vinyls only.<br />No requests no regrets.<
+ /p>
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29138254
+UID:6396200d0adb3
+DTSTART;TZID=Europe/Berlin:20221225T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:TeBe XMAS concert & party\, the return. more infos very soon!
+CLASS:PUBLIC
+DESCRIPTION:TeBe XMAS concert & party\, the return. more infos very soon!
+X-ALT-DESC;FMTTYPE=text/html:<p>TeBe XMAS concert &amp\; party\, the return
+ . more infos very soon!</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0ae15
+DTSTART;TZID=Europe/Berlin:20221228T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:What Difference Does It Make! In Between Days Special
+CLASS:PUBLIC
+DESCRIPTION:Der Zwischenzustand zwischen Aufbruch und Zusammenbruch veredel
+ t von guter Musik.\n\nDJs:\nFuture Sailor \n(northern soul\, girl groups\,
+  C86 and rock'n'roll)\n\nMonophonic \n(60s & french)\n\nJim Avignon \n(pop
+ )\n\nfragil/stabil\n(post punk\, wave\, noise rock\, synth\, DIY punk\, in
+ die rock\, shoegaze)\n 
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xdj266r\">Der Zwischenzustand zwischen Aufbruch und Zusammenbruch veredel
+ t von guter Musik.<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g
+ 0r x1vvkbs xtlvy1s\">DJs:</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1
+ vvkbs xtlvy1s\">Future Sailor <br />(northern soul\, girl groups\, C86 and
+  rock'n'roll)</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1
+ s\"><br />Monophonic <br />(60s &amp\; french)</div>\n<div class=\"x11i5rn
+ m xat24cr x1mh8g0r x1vvkbs xtlvy1s\"><br />Jim Avignon <br />(pop)</div>\n
+ <div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\"><br />fragil/stab
+ il<br />(post punk\, wave\, noise rock\, synth\, DIY punk\, indie rock\, s
+ hoegaze)</div>\n<p>&nbsp\;</p>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0ae7c
 DTSTART;TZID=Europe/Berlin:20221230T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -852,10 +685,43 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Schon seit 20 Jahren sind die Mitglieder vo
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291383c4
+UID:6396200d0aee3
+DTSTART;TZID=Europe/Berlin:20221231T210000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:NYE w/ tear pop to shreds djs (mutant-disco post-punk funk indie gr
+ ooves...)
+CLASS:PUBLIC
+DESCRIPTION:tear pop to shreds\nw/ djs\ncool cat tommy t (uralt / egon x / 
+ tanning bats / big eater)\n& tear rob to shreds (little league shows / tan
+ ning bats / big eater)\n- world wide mutant-disco post-punk funk indie gro
+ oves -\n- tpts: this was supposed to be the summer of boogie playlist/mixt
+ ape -\n- tpts: quarantine boogie playlist/mixtape -
+X-ALT-DESC;FMTTYPE=text/html:<p>tear pop to shreds<br /><br />w/ djs<br /><
+ br /><a href=\"https://www.facebook.com/tearpoptoshreds\">cool cat tommy t
+ </a> (uralt / egon x / tanning bats / big eater)<br />&amp\; <a href=\"htt
+ ps://www.instagram.com/tear_rob_to_shreds/\">tear rob to shreds</a> (littl
+ e league shows / tanning bats / big eater)<br /><br />- world wide mutant-
+ disco post-punk funk indie grooves -<br /><br />- <a href=\"https://open.s
+ potify.com/playlist/09UXpsg4TPQMAM2gZx2EcE?si=c4ec65d261694a36\">tpts: thi
+ s was supposed to be the summer of boogie playlist/mixtape</a> -<br />- <a
+  href=\"https://open.spotify.com/playlist/72JyOzotGXrS7ijl4AAtvi?si=51ccb9
+ c80b5444e9\">tpts: quarantine boogie playlist/mixtape</a> -</p>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0af48
 DTSTART;TZID=Europe/Berlin:20230101T200000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -902,10 +768,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc2913854c
+UID:6396200d0afb6
 DTSTART;TZID=Europe/Berlin:20230103T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -948,10 +814,33 @@ X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291386b8
+UID:6396200d0b01e
+DTSTART;TZID=Europe/Berlin:20230104T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LoFi lounge prsnts: Kat Koan And The Lost Souls
+CLASS:PUBLIC
+DESCRIPTION:I purrr and growl\, mainly.\nI'm excited to say I now have a ba
+ nd - The Lost Souls. Love them\nhttps://katkoan.bandcamp.com/\n 
+X-ALT-DESC;FMTTYPE=text/html:<p>I purrr and growl\, mainly.<br />I'm excite
+ d to say I now have a band - The Lost Souls. Love them</p>\n<p><a href=\"h
+ ttps://katkoan.bandcamp.com/\">https://katkoan.bandcamp.com/</a></p>\n<p>&
+ nbsp\;</p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b086
 DTSTART;TZID=Europe/Berlin:20230105T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -978,10 +867,108 @@ X-ALT-DESC;FMTTYPE=text/html:<p>little league shows prsnts: MARY ANNE'S POL
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291388b2
+UID:6396200d0b0ea
+DTSTART;TZID=Europe/Berlin:20230106T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:The NOT AMUSED (Mod-Punk) & The MELMACS (PowerPop)
+CLASS:PUBLIC
+DESCRIPTION:The Not Amused sind eine laute Mischung aus Punk\, Powerpop und
+  Mod-Revival jenseits des gängigen Punkrock-Mainstreams. Gegründet hat s
+ ich die Band 2005 in Kreuzberg um im Stil obskurer Spät 70er UK-Bands\, w
+ ie den First Steps\, Sleepers oder der Incredible Kidda Band\, die Musiksz
+ ene zu bereichern. Unzählige Auftritte in Europa (mit legendären Touren 
+ auch in Frankreich\, Spanien\, Italien und der Schweiz) begleitet von etli
+ chen Tonträgern auf ihrem eigenen Label Queen Mum Records und zuletzt auf
+  Wanda Records\, folgten. Im Anzug und Parka stehen die Punx auf der Bühn
+ e und lassen manchmal unfreiwillig Gin Tonic-Runden springen.\nThe Melmacs
+  spielen feinsten PowerPop-Punk mit ZackZack-Gitarren\, ZippZipp-Keyboard\
+ , PowPow-Drums und Kawumm-Bass bis das Fett brennt: Ein gar mächtiges Pot
+ pourri\, das euch supersüß\, superfies und supersonnig in den Rücken 
+ fällt und blitzartig euren Schmalz aus den Ohren zutscht. Bitte Sturzhelm
+  und Hausschuhe nicht vergessen und herzlich willkommen auf dem Planeten M
+ elmac! \n\n
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"x193iq5w xeuugli x13faqbe x1v
+ vkbs xlh3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i 
+ x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"
+ auto\"><a href=\"https://www.facebook.com/TheNotAmused\">The Not Amused</a
+ > sind eine laute Mischung aus Punk\, Powerpop und Mod-Revival jenseits de
+ s g&auml\;ngigen Punkrock-Mainstreams. Gegr&uuml\;ndet hat sich die Band 2
+ 005 in Kreuzberg um im Stil obskurer Sp&auml\;t 70er UK-Bands\, wie den Fi
+ rst Steps\, Sleepers oder der Incredible Kidda Band\, die Musikszene zu be
+ reichern. Unz&auml\;hlige Auftritte in Europa (mit legend&auml\;ren Touren
+  auch in Frankreich\, Spanien\, Italien und der Schweiz) begleitet von etl
+ ichen Tontr&auml\;gern auf ihrem eigenen Label Queen Mum Records und zulet
+ zt auf Wanda Records\, folgten. Im Anzug und Parka stehen die Punx auf der
+  B&uuml\;hne und lassen manchmal unfreiwillig Gin Tonic-Runden springen.</
+ span></p>\n<p><span class=\"x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvma
+ hel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x
+  xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"auto\"><a href=\"
+ https://www.facebook.com/TheMelmacs\">The Melmacs</a> spielen feinsten Pow
+ erPop-Punk mit ZackZack-Gitarren\, ZippZipp-Keyboard\, PowPow-Drums und Ka
+ wumm-Bass bis das Fett brennt: Ein gar m&auml\;chtiges Potpourri\, das euc
+ h supersü&szlig\;\, superfies und supersonnig in den Rücken f&auml\;ll
+ t und blitzartig euren Schmalz aus den Ohren zutscht. Bitte Sturzhelm und 
+ Hausschuhe nicht vergessen und herzlich willkommen auf dem Planeten Melmac
+ ! </span></p>\n<p><span class=\"x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 
+ xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x194
+ 3h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"auto\"><div c
+ lass=\"row embed-responsive-wrapper text-center\"><div class=\"embed-respo
+ nsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" s
+ rc=\"//www.youtube.com/embed/y-cvzxzMn7Y?autoplay=0\" width=\"560\" height
+ =\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></
+ div></div></span></p>\n<p><span class=\"x193iq5w xeuugli x13faqbe x1vvkbs 
+ xlh3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fga
+ rty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"auto\
+ "><div class=\"row embed-responsive-wrapper text-center\"><div class=\"emb
+ ed-responsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-
+ auto\" src=\"//www.youtube.com/embed/PR4YbV6iPFM?autoplay=0\" width=\"560\
+ " height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></i
+ frame></div></div></span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b156
+DTSTART;TZID=Europe/Berlin:20230107T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Rats Run Riot (Garage-Surf-Punk\, Bln) + Lucie & The Sluts (Post-PM
+ S-Punk\, Bln)
+CLASS:PUBLIC
+DESCRIPTION:punk is just fun\, liberation from trying to be who you are not
+ . it should be for everyone of every gender\, form & class\, so:\nlet the 
+ rats run riot in your brain and in your street\, write & play some songs w
+ ith your friends to make this world a much less painful place! 
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"peekaboo-text\">punk is just 
+ fun\, liberation</span><span class=\"bcTruncateMore\"><span class=\"peekab
+ oo-text\"> from trying to be who you are not. it should be for everyone of
+  every gender\, form &amp\; class\, so:<br /><br />let the <strong>rats ru
+ n riot</strong> in your brain and in your street\, write &amp\; play some 
+ songs with your friends to make this world a much less painful place!</spa
+ n> </span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b1ba
 DTSTART;TZID=Europe/Berlin:20230108T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1000,10 +987,118 @@ X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
 CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
  md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291389ef
+UID:6396200d0b21c
+DTSTART;TZID=Europe/Berlin:20230112T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Äffchen & Craigs (Hip Hop/Electronica Pop\, Wien)
+CLASS:PUBLIC
+DESCRIPTION:Es ballert\, groovt und kribbelt schön.\nÄFFCHEN & CRAIGS ver
+ einen Wucht und Witz zu einer bunt leuchtenden Sofettunion. Stephan Roiss 
+ rappt und singt im österreichischen Dialekt auf den elektronisch gepimpte
+ n Drumbeats von Christoph Hehn. Der eine war für den Deutschen Buchpreis 
+ nominiert\, der andere hat für seine Arbeit bei Conchita Wurst einen Plat
+ in Award erhalten. Ö1 verortet das Duo irgendwo im Dreieck von Attwenger\
+ , Texta und König Leopold. Und Huckey (R.I.P.) nannte ÄFFCHEN & CRAIGS 
+ „die ärgste Versuchung zwischen Punch und Schmäh seit es freie Radikal
+ e gibt\".\n \nStephan \"Äffchen\" Roiss: Text & Stimme\nChristoph \"Craig
+ s\" Hehn: Komposition\, elektronische Beats & Schlagzeug\n\n
+X-ALT-DESC;FMTTYPE=text/html:<p>Es ballert\, groovt und kribbelt sch&ouml\;
+ n.</p>\n<p>&Auml\;FFCHEN &amp\; CRAIGS vereinen Wucht und Witz zu einer bu
+ nt leuchtenden Sofettunion.<span style=\"font-family: Liberation Mono\, mo
+ nospace\;\"><span style=\"font-size: medium\;\"> Stephan Roiss rappt und s
+ ingt im </span></span><span style=\"font-family: Liberation      Mono\, mo
+ nospace\;\"><span style=\"font-size: medium\;\">&ouml\;sterreichischen </s
+ pan></span><span style=\"font-family: Liberation Mono\, monospace\;\"><spa
+ n style=\"font-size: medium\;\">Dialekt</span></span><span style=\"font-fa
+ mily: Liberation Mono\, monospace\;\"><span style=\"font-size: medium\;\">
+  auf den elektronisch gepimpten Drumbeats von Christoph Hehn. Der eine war
+  f&uuml\;r den Deutschen Buchpreis nominiert\, der andere</span></span><sp
+ an style=\"font-family: Liberation Mono\, monospace\;\"><span style=\"font
+ -size: medium\;\"> hat f&uuml\;r seine Arbeit bei </span></span><span styl
+ e=\"font-family: Liberation Mono\, monospace\;\"><span style=\"font-size: 
+ medium\;\"><em>Conchita Wurst </em></span></span><span style=\"font-family
+ : Liberation Mono\,      monospace\;\"><span style=\"font-size: medium\;\"
+ >einen Platin Award erhalten. &Ouml\;1 verortet das Duo irgendwo im Dreiec
+ k von </span></span><span style=\"font-family: Liberation Mono\, monospace
+ \;\"><span style=\"font-size: medium\;\"><em>Attwenger\, Texta</em></span>
+ </span><span style=\"font-family: Liberation Mono\, monospace\;\"><span st
+ yle=\"font-size: medium\;\"> und </span></span><span style=\"font-family: 
+ Liberation Mono\, monospace\;\"><span style=\"font-size: medium\;\"><em>K&
+ ouml\;nig Leopold</em></span></span><span style=\"font-family: Liberation 
+ Mono\,      monospace\;\"><span style=\"font-size: medium\;\">. Und Huckey
+  (R.I.P.) nannte &Auml\;FFCHEN &amp\; CRAIGS &bdquo\;die &auml\;rgste Vers
+ uchung zwischen Punch und Schm&auml\;h seit es freie Radikale gibt\".<br /
+ ></span></span><span style=\"font-family: Liberation Mono\, monospace\;\">
+ <span style=\"font-size: medium\;\"> </span></span><span style=\"font-fami
+ ly: Liberation Mono\, monospace\;\"><span style=\"font-size: medium\;\"><b
+ r />Stephan \"&Auml\;ffchen\" Roiss: Text &amp\; Stimme<br />Christoph \"C
+ raigs\" Hehn: Komposition\, elektronische Beats &amp\; Schlagzeug<br /><br
+  /><div class=\"row embed-responsive-wrapper text-center\"><div class=\"em
+ bed-responsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx
+ -auto\" src=\"//www.youtube.com/embed/3Orl3QPbxpk?autoplay=0\" width=\"560
+ \" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></
+ iframe></div></div><br /><br /></span></span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b28a
+DTSTART;TZID=Europe/Berlin:20230113T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Wood In Di Fire (Ska\, Jazz\, Reggae\, Rocksteady) & Everything Cra
+ sh (DJ-Set)
+CLASS:PUBLIC
+DESCRIPTION:Mit Jamaican Jazz und handfesten Reggae-Grooves bringen  Wood 
+ In Di Fire bei ihren Live-Sessions die Dancehall zum Toben. Was  als Jam-
+ Projekt von Musikern aus verschiedenen Berliner Bands begann\, hat sich zu
+ r festen Formation entwickelt. Doch  der Session-Gedanke ist  immer noch
+  lebendig: Die Bandmitglieder und Gäste bringen die verschiedensten Einfl
+ üsse aus Reggae\, Jazz\, Ska\, Latin und Afro-Beat mit und sorgen damit i
+ mmer wieder für überraschende Kicks.\nSeit das Projekt im Jahre 2000 sta
+ rtete\, spielt Wood In Di Fire traditionell im Berliner „Schokoladen“.
+  Der bis heute monatlich stattfindende Reggae-Jam wurde schnell vom Geheim
+ tipp zum etablierten Termin der Berliner Reggae-Szene.\n
+X-ALT-DESC;FMTTYPE=text/html:<p>Mit Jamaican Jazz und handfesten Reggae-Gro
+ oves bringen &nbsp\;<a href=\"https://www.facebook.com/WoodInDiFire\">Wood
+  In Di Fire</a> bei ihren Live-Sessions die Dancehall zum Toben. Was &nbsp
+ \;als Jam-Projekt von Musikern aus verschiedenen Berliner Bands begann\, h
+ at sich zur festen Formation entwickelt. Doch &nbsp\;der Session-Gedanke i
+ st &nbsp\;immer noch lebendig: Die Bandmitglieder und G&auml\;ste bringen 
+ die verschiedensten Einfl&uuml\;sse aus Reggae\, Jazz\, Ska\, Latin und Af
+ ro-Beat mit und sorgen damit immer wieder f&uuml\;r &uuml\;berraschende Ki
+ cks.<br />Seit das Projekt im Jahre 2000 startete\, spielt <a href=\"https
+ ://www.facebook.com/events/694337762078045/?active_tab=about\">Wood In Di 
+ Fire</a> traditionell im Berliner &bdquo\;Schokoladen&ldquo\;. Der bis heu
+ te monatlich stattfindende Reggae-Jam wurde schnell vom Geheimtipp zum eta
+ blierten Termin der Berliner Reggae-Szene.</p>\n<p><div class=\"row embed-
+ responsive-wrapper text-center\"><div class=\"embed-responsive embed-respo
+ nsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtub
+ e.com/embed/jiHkXPWSBhU?autoplay=0\" width=\"560\" height=\"315\" framebor
+ der=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b2f1
 DTSTART;TZID=Europe/Berlin:20230114T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1012,7 +1107,7 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
  rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
  397245
 GEO:52.529745;13.397245
-SUMMARY:SOKO LiNX + support
+SUMMARY:SOKO LiNX + Deaf Kennedys
 CLASS:PUBLIC
 DESCRIPTION:Tickets im VVK gibt es hier.\n \nSOKO LINX ermittelt im Drei-M
  inuten-Takt\nVerantwortlich: SiKO LONX\, NiXS KOOL\, OXON KiLS\nTatzeit: 1
@@ -1042,7 +1137,8 @@ DESCRIPTION:Tickets im VVK gibt es hier.\n \nSOKO LINX ermittelt im Drei-M
  e sachdienliche Hinweise zur Weiterverbreitung des musikalischen Potpourri
  s in Form von Konzerten u. Ä. geben können\, werden gebeten\, sich bei d
  er SOKO LiNX\, Bornaische Straße 1\, in 04277 Leipzig\, Tel. 0341-1312161
-  oder jeder anderen Rockstelle zu melden.\n \n
+  oder jeder anderen Rockstelle zu melden.\n \n\nDEAF KENNEDYS Punkcover v
+ on A bis J und K bis Z.\n \n
 X-ALT-DESC;FMTTYPE=text/html:<div class=\"_page_1gl8y_100 \" data-index=\"0
  \">Tickets im VVK gibt es <a href=\"https://schokoladen.tickettoaster.de/p
  rodukte/51951-tickets-soko-linx-schokoladen-berlin-am-14-01-2023\" target=
@@ -1084,14 +1180,22 @@ X-ALT-DESC;FMTTYPE=text/html:<div class=\"_page_1gl8y_100 \" data-index=\"0
  is in Form von Konzerten u. &Auml\;. geben k&ouml\;nnen\, werden gebeten\,
   sich bei der SOKO LiNX\, Bornaische Stra&szlig\;e 1\, in 04277 Leipzig\, 
  Tel. 0341-1312161 oder jeder anderen Rockstelle zu melden.\n<div class=\"_
- linksLayer_1gl8y_42\">&nbsp\;</div>\n</div>
+ linksLayer_1gl8y_42\">&nbsp\;</div>\n</div>\n<div class=\"_page_1gl8y_100 
+ \" data-index=\"0\"><strong>DEAF KENNEDYS</strong> Punkcover von A bis J u
+ nd K bis Z.</div>\n<div class=\"_page_1gl8y_100 \" data-index=\"0\">&nbsp\
+ ;</div>\n<div class=\"_page_1gl8y_100 \" data-index=\"0\"><div class=\"row
+  embed-responsive-wrapper text-center\"><div class=\"embed-responsive embe
+ d-responsive-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www
+ .youtube.com/embed/9Z3SgnO_evQ?autoplay=0\" width=\"560\" height=\"315\" f
+ rameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div></div>
+ </div>
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29138b52
+UID:6396200d0b362
 DTSTART;TZID=Europe/Berlin:20230117T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1132,10 +1236,171 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29138c97
+UID:6396200d0b3c8
+DTSTART;TZID=Europe/Berlin:20230119T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Gaffa Ghandi (Progged out Heavy Stoner Metal\, B/DD) + Tourette Boy
+ s (Fuzzed out Psychedelic Garage\, DD/B/L)
+CLASS:PUBLIC
+DESCRIPTION:Tickets: https://vvk.link/2fuov2o\nGaffa Ghandi - Exile On Main
+ stream Records\nNach Jahren des frivolen und qualvollen Herumwerkeln\, Exp
+ erimentieren\, Wiederverwerfen\, Neuzusammensetzen und Verzweifeln geschah
+  2020 doch das schier nicht mehr für möglich gehaltene:\nGaffa Ghandi\, 
+ die verqueren Riffadelics mit Dadaproganspruch aus der Ostdeutschen Schnit
+ tstellenverbindung Dresden-Berlin haben 2020 in ihrer nun 10 jährigen Ban
+ dgeschichte ihre erste vollwertige LP\nbei niemand geringerem als Exile On
+  Mainstream Records herausgebracht.\nEin Lebensträumchen ging damit in Er
+ füllung! Auf dem auf den klangvollen und wegweisenden Namen „Artificial
+  Disgust“ hörenden gepressten Polyvinylchlorid sind 4 Tracks eingeritzt
+ \, welche die ganze Schaffensbreite des Powerquartetts in (fast-)aktuellst
+ er Form abbildet.\nUnd dies mit dem ihnen eigenen künstlerisch-künstlich
+  und widerwärtig-anziehendem Charme.\nTourette Boys - Still pure undergro
+ und!\nAus der oszillierenden Einöde der zentralsorbischen Steppe\, späte
+ r weitergezogen nach Dresden und Berlin\, offenbaren die Tourette Boys ein
+ e staubige\, erdverbundene Ehrlichkeit\, die die Freiheit der Landstraße 
+ zelebriert\, atmet und das Schicksal der Einzelgänger in hitzeflimmernde 
+ Bilder zu verwandeln mag.\nMusikalisch tief und bluesig treibt die mit ein
+ em großartigen Frontprediger gesegnete Band der Hang und die Suche nach d
+ em Psychedelisch-Mythischen an. 2019 erschien ihre letzte LP \"Zorn\".\n
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"x193iq5w xeuugli x13faqbe x1v
+ vkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6
+ x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"auto\"><em>Ticke
+ ts:</em> <a class=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f6
+ 19 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4ua
+ p5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" 
+ tabindex=\"0\" role=\"link\" href=\"https://vvk.link/2fuov2o?fbclid=IwAR29
+ J9HUUPOSukAd5rOppGF245RwZWzYLJhZknMzmOyYoZEACPPoqCnWh8A\" target=\"_blank\
+ " rel=\"nofollow noopener\">https://vvk.link/2fuov2o</a><br /><br /><stron
+ g>Gaffa Ghandi</strong> - Exile On Mainstream Records<br /></span><span cl
+ ass=\"x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso
+  x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8
+ bm xzsf02u\" dir=\"auto\">Nach Jahren des frivolen und qualvollen Herumwer
+ keln\, Experimentieren\, Wiederverwerfen\, Neuzusammensetzen und Verzweife
+ ln geschah 2020 doch das schier nicht mehr f&uuml\;r m&ouml\;glich gehalte
+ ne:<br />Gaffa Ghandi\, die verqueren Riffadelics mit Dadaproganspruch aus
+  der Ostdeutschen Schnittstellenverbindung Dresden-Berlin haben 2020 in ih
+ rer nun 10 j&auml\;hrigen Bandgeschichte ihre erste vollwertige LP<br />be
+ i niemand geringerem als Exile On Mainstream Records herausgebracht.<br />
+ Ein Lebenstr&auml\;umchen ging damit in Erf&uuml\;llung! Auf dem auf den k
+ langvollen und wegweisenden Namen &bdquo\;Artificial Disgust&ldquo\; h&oum
+ l\;renden gepressten Polyvinylchlorid sind 4 Tracks eingeritzt\, welche di
+ e ganze Schaffensbreite des Powerquartetts in (fast-)aktuellster Form abbi
+ ldet.<br />Und dies mit dem ihnen eigenen k&uuml\;nstlerisch-k&uuml\;nstli
+ ch und widerw&auml\;rtig-anziehendem Charme.</span><br /><br /><span class
+ =\"x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1
+ gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm 
+ xzsf02u\" dir=\"auto\"><strong>Tourette Boys</strong> - Still pure undergr
+ ound!</span><br /><span class=\"x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09
+  x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x
+ 7a5m x6prxxf xvq8zen xo1l8bm xzsf02u\" dir=\"auto\">Aus der oszillierenden
+  Ein&ouml\;de der zentralsorbischen Steppe\, sp&auml\;ter weitergezogen na
+ ch Dresden und Berlin\, offenbaren die Tourette Boys eine staubige\, erdve
+ rbundene Ehrlichkeit\, die die Freiheit der Landstra&szlig\;e zelebriert\,
+  atmet und das Schicksal der Einzelg&auml\;nger in hitzeflimmernde Bilder 
+ zu verwandeln mag.<br />Musikalisch tief und bluesig treibt die mit einem 
+ gro&szlig\;artigen Frontprediger gesegnete Band der Hang und die Suche nac
+ h dem Psychedelisch-Mythischen an. 2019 erschien ihre letzte LP \"Zorn\".<
+ br /></span></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b439
+DTSTART;TZID=Europe/Berlin:20230120T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Isoscope (Postpunk\, Mathrock\, Wave)  & The Pighounds (Rock\, Blue
+ s\, Punk)
+CLASS:PUBLIC
+DESCRIPTION:Noisolution schreibt über das erste Album:\nFrisch\, neu\, jun
+ g\, wild\, spannend. Postpunk meets Wave meets Mathrock meets Indie sogar 
+ ne Schippe Metal ist dabei! “Ten Pieces” ist ein wahnsinnig aufregende
+ s Album\, das uns gerade großen Spaß bereitet und im Frühling dann endl
+ ich erscheinen kann!\nWenn man weiß\, wie schwer die letzten zwei Jahre f
+ ür Bands im allgemeinen waren\, kann man sich vorstellen\, wie frustriere
+ nd das für eine neue gegründete Band sein muss. Endlich am Start\, endli
+ ch bereit zu spielen und dann kommt das große Nichts und man muss warten.
+  Also weiter Songs schreiben und Aufnahmen machen. Und in dem Moment\, wo 
+ ISOSCOPE ihr Album digital veröffentlichen wollten\, kamen wir ins Spiel\
+ , um noch einmal alles abzubremsen. Alles wurde nochmal besprochen\, bearb
+ eitet\, gemastert\, neues Artwork und nun… Es hat sich gelohnt.\n--\nSch
+ on lange sind Duos im Alternative Rock keine Besonderheit mehr\, aber die 
+ nummerische Gemeinsamkeit mit den White Stripes\, Black Keys oder Pictureb
+ ooks dieser Welt kann man hier getrost vernachlässigen. THE PIGHOUNDS fü
+ hlen sich eher an wie vier Schlagzeuger und acht Gitarristen. Sie sind meh
+ r Punk und Grunge als Blues und Rock. Musikalisch erfinden THE PIGHOUNDS n
+ ichts neu\, aber machen alles gut und besser. Musik\, die voller Leidensch
+ aft und Überzeugung steckt\, die packend\, mitreißend und eingängig ist
+ . Musik\, die zum Bewegen anstiftet\, zum Headbangen\, zum Mitsingen\, zum
+  Tanzen. Und nichts klingt „Retro“\, auch wenn die beiden in MusikGesc
+ hichte gut aufgepasst haben und die Bausteine bekannt sind. Zeitgemäß un
+ d frisch wird alles aufpoliert\, umgebaut und neu zusammengesteckt. Hier w
+ irkt nichts gekünstelt und der Moment wird festgehalten\, aus dem Bauch h
+ eraus\, voller Energie und Wut. Musik mit der richtigen Einstellung und Au
+ sstrahlung und eine Doppelpackung Charme\, die alles so glitzern lässt.\n
+ \n
+X-ALT-DESC;FMTTYPE=text/html:<p>Noisolution schreibt &uuml\;ber das erste A
+ lbum:</p>\n<p>Frisch\, neu\, jung\, wild\, spannend. Postpunk meets Wave m
+ eets Mathrock meets Indie sogar ne Schippe Metal ist dabei! <em>&ldquo\;Te
+ n Pieces&rdquo\;</em> ist ein wahnsinnig aufregendes Album\, das uns gerad
+ e gro&szlig\;en Spa&szlig\; bereitet und im Fr&uuml\;hling dann endlich er
+ scheinen kann!</p>\n<p>Wenn man wei&szlig\;\, wie schwer die letzten zwei 
+ Jahre f&uuml\;r Bands im allgemeinen waren\, kann man sich vorstellen\, wi
+ e frustrierend das f&uuml\;r eine neue gegr&uuml\;ndete Band sein muss. En
+ dlich am Start\, endlich bereit zu spielen und dann kommt das gro&szlig\;e
+  Nichts und man muss warten. Also weiter Songs schreiben und Aufnahmen mac
+ hen. Und in dem Moment\, wo <a href=\"https://www.facebook.com/profile.php
+ ?id=100073943152505\">ISOSCOPE</a> ihr Album digital ver&ouml\;ffentlichen
+  wollten\, kamen wir ins Spiel\, um noch einmal alles abzubremsen. Alles w
+ urde nochmal besprochen\, bearbeitet\, gemastert\, neues Artwork und nun&h
+ ellip\; Es hat sich gelohnt.</p>\n<p>--</p>\n<p>Schon lange sind Duos im A
+ lternative Rock keine Besonderheit mehr\, aber die nummerische Gemeinsamke
+ it mit den White Stripes\, Black Keys oder Picturebooks dieser Welt kann m
+ an hier getrost vernachl&auml\;ssigen. THE <a href=\"https://www.facebook.
+ com/ThePighounds/\">PIGHOUNDS</a> f&uuml\;hlen sich eher an wie vier Schla
+ gzeuger und acht Gitarristen. Sie sind mehr Punk und Grunge als Blues und 
+ Rock. Musikalisch erfinden THE PIGHOUNDS nichts neu\, aber machen alles gu
+ t und besser. Musik\, die voller Leidenschaft und &Uuml\;berzeugung steckt
+ \, die packend\, mitrei&szlig\;end und eing&auml\;ngig ist. Musik\, die zu
+ m Bewegen anstiftet\, zum Headbangen\, zum Mitsingen\, zum Tanzen. Und nic
+ hts klingt &bdquo\;Retro&ldquo\;\, auch wenn die beiden in MusikGeschichte
+  gut aufgepasst haben und die Bausteine bekannt sind. Zeitgem&auml\;&szlig
+ \; und frisch wird alles aufpoliert\, umgebaut und neu zusammengesteckt. H
+ ier wirkt nichts gek&uuml\;nstelt und der Moment wird festgehalten\, aus d
+ em Bauch heraus\, voller Energie und Wut. Musik mit der richtigen Einstell
+ ung und Ausstrahlung und eine Doppelpackung Charme\, die alles so glitzern
+  l&auml\;sst.</p>\n<p><div class=\"row embed-responsive-wrapper text-cente
+ r\"><div class=\"embed-responsive embed-responsive-16by9 m-0 p-0\"><iframe
+  class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/O4o_4fxmeKc?autop
+ lay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"a
+ llowfullscreen\"></iframe></div></div></p>\n<p><div class=\"row embed-resp
+ onsive-wrapper text-center\"><div class=\"embed-responsive embed-responsiv
+ e-16by9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.co
+ m/embed/B03bOhc22m8?autoplay=0\" width=\"560\" height=\"315\" frameborder=
+ \"0\" allowfullscreen=\"allowfullscreen\"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b4be
 DTSTART;TZID=Europe/Berlin:20230125T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1147,24 +1412,92 @@ GEO:52.529745;13.397245
 SUMMARY:little league shows & powerline prsnt: COOL SOUNDS (indie\, aus) + 
  tba.
 CLASS:PUBLIC
-DESCRIPTION:little league shows & powerline prsnt: COOL SOUNDS (indie\, aus
- ) + tba.\ntickets at the doors or in presale --> vvk.link/2fadzcg\nMORE IN
- FOS VERY SOON!\n
-X-ALT-DESC;FMTTYPE=text/html:<p>little league shows &amp\; powerline prsnt:
-  COOL SOUNDS (indie\, aus) + tba.<br /><br />tickets at the doors or in pr
- esale --&gt\; <a href=\"https://vvk.link/2fadzcg\">vvk.link/2fadzcg</a><br
-  /><br />MORE INFOS VERY SOON!<br /><br /><div class=\"row embed-responsiv
- e-wrapper text-center\"><div class=\"embed-responsive embed-responsive-16b
- y9 m-0 p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/emb
- ed/i6LSA4fohJk?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\"
-  allowfullscreen=\"allowfullscreen\"></iframe></div></div></p>
+DESCRIPTION:little league shows & powerline prsnt:\n\nCOOL SOUNDS / indie /
+  melbourne\, australia\ncoolsounds1.bandcamp.com /// instagram.com/thereal
+ coolsounds\n\n+ tba.\n\nat Schokoladen. doors 19 uhr\, concert starts 20 u
+ hr. tickets at the doors and in pre-sale --> https://vvk.link/2fadzcg\n\n-
+ --\nCool Sounds is the key project for Australian pop polymath Dainis Lace
+ y\, with a live band that sees up to six musicians crowded onstage. Across
+  four albums to date\, Cool Sounds move deftly through indie-rock\, 80s po
+ p\, cheerful funk and alt-country\, with a lightness of touch that disguis
+ es Lacey’s thoughtful\, perceptive songwriting.\n\nNew album Like That c
+ omes out in October 2022 and its three singles have already been covered 
+ by The Evening Standard (UK)\, The Guardian (UK)\, Radio France\, Frankie 
+ Magazine and NME Australia\, with airplay on BBC 6 Music\, Triple J\, Doub
+ le J and across community radio.\n\nCool Sounds toured Europe in 2015 and 
+ 2019 and return in early 2023. They have shared stages with Twin Peaks (U
+ S)\, Spiral Stairs (US)\, plus Australian indie royalty like Good Morning\
+ , Snowy Band and Mod Con. Their 2019 album Cactus Country was nominated fo
+ r an AIR Award\, and previous releases have been featured in Line Of Best 
+ Fit (UK)\, Raven Sings the Blues (US) and elsewhere.\n\n“Funk-striped in
+ die pop\, balancing comfort and cool”\nRaven Sings the Blues\n\n“Brigh
+ t and catchy\, the hooks are plentiful...giving off summery holiday vibes
+ ”\nThe Guardian\n\n“Incredibly polished indie pop”\nNME Australia\n-
+ --\nGefördert von: Der Beauftragten der Bundesregierung für Kultur und M
+ edien („BKM“) und der Initiative Musik.\n---\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xdj266r\">little league shows &amp\; powerline prsnt:<br /><br /></div>\n
+ <div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">COOL SOUNDS / ind
+ ie / melbourne\, australia<br /><a class=\"x1i10hfl xjbqb8w x6umtig x1b1mb
+ wd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24c
+ r x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a
+ 7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" href=\"http://coolsoun
+ ds1.bandcamp.com/?fbclid=IwAR3T53Z8qYarU_vpDl_0WOzXFZRKqXKYHhO2j0__ZIeZu-j
+ 8RwXsQFS5w9k\" target=\"_blank\" rel=\"nofollow noopener\">coolsounds1.ban
+ dcamp.com</a> /// <a class=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav
+ 7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xex
+ x8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8zv x1
+ fey0fg\" tabindex=\"0\" role=\"link\" href=\"https://instagram.com/thereal
+ coolsounds?fbclid=IwAR18D1wOZ2dby_uVmQ6WrxPBlOCuPt3dkU3wyvV2w2q4I-1PfXT6af
+ 1kgZ0\" target=\"_blank\" rel=\"nofollow noopener\">instagram.com/therealc
+ oolsounds</a><br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1
+ vvkbs xtlvy1s\">+ tba.<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1
+ mh8g0r x1vvkbs xtlvy1s\">at Schokoladen. doors 19 uhr\, concert starts 20 
+ uhr. tickets at the doors and in pre-sale --&gt\; <a class=\"x1i10hfl xjbq
+ b8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj26
+ 6r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl
+ 2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" href
+ =\"https://vvk.link/2fadzcg?fbclid=IwAR1vHDfKqnjN203cwyY0sffqNxBM9I9iYEF7q
+ pQv8LNlqBvGNOoIuI-_naM\" target=\"_blank\" rel=\"nofollow noopener\">https
+ ://vvk.link/2fadzcg</a></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vv
+ kbs xtlvy1s\"><br />---<br />Cool Sounds is the key project for Australian
+  pop polymath Dainis Lacey\, with a live band that sees up to six musician
+ s crowded onstage. Across four albums to date\, Cool Sounds move deftly th
+ rough indie-rock\, 80s pop\, cheerful funk and alt-country\, with a lightn
+ ess of touch that disguises Lacey&rsquo\;s thoughtful\, perceptive songwri
+ ting.<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xt
+ lvy1s\">New album Like That comes out in October 2022 and its three single
+ s have&nbsp\;already been covered by The Evening Standard (UK)\, The Guard
+ ian (UK)\, Radio France\, Frankie Magazine and NME Australia\, with airpla
+ y on BBC 6 Music\, Triple J\, Double J and across community radio.<br /><b
+ r /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Cool 
+ Sounds toured Europe in 2015 and 2019 and return in early 2023. They&nbsp\
+ ;have shared stages with Twin Peaks (US)\, Spiral Stairs (US)\, plus Austr
+ alian indie royalty like Good Morning\, Snowy Band and Mod Con. Their 2019
+  album Cactus Country was nominated for an AIR Award\, and previous releas
+ es have been featured in Line Of Best Fit (UK)\, Raven Sings the Blues (US
+ ) and elsewhere.<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r
+  x1vvkbs xtlvy1s\">&ldquo\;Funk-striped indie pop\, balancing comfort and 
+ cool&rdquo\;<br />Raven Sings the Blues<br /><br /></div>\n<div class=\"x1
+ 1i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&ldquo\;Bright and catchy\, the 
+ hooks are plentiful...giving off summery holiday vibes&rdquo\;<br />The Gu
+ ardian<br /><br /></div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs x
+ tlvy1s\">&ldquo\;Incredibly polished indie pop&rdquo\;<br />NME Australia<
+ /div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">---<br />G
+ ef&ouml\;rdert von: Der Beauftragten der Bundesregierung f&uuml\;r Kultur 
+ und Medien (&bdquo\;BKM&ldquo\;) und der Initiative Musik.</div>\n<p>---<b
+ r /><br /><div class=\"row embed-responsive-wrapper text-center\"><div cla
+ ss=\"embed-responsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-b
+ lock mx-auto\" src=\"//www.youtube.com/embed/i6LSA4fohJk?autoplay=0\" widt
+ h=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscre
+ en\"></iframe></div></div></p>
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29138dd8
+UID:6396200d0b53b
 DTSTART;TZID=Europe/Berlin:20230126T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1235,10 +1568,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Kate Bollinger</p>\n<p>Einlass: 19 Uhr<br /
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29138efe
+UID:6396200d0b5a7
 DTSTART;TZID=Europe/Berlin:20230130T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1338,10 +1671,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p align=\"justify\">Barbara Lehnhoff artistic
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc2913905c
+UID:6396200d0b617
 DTSTART;TZID=Europe/Berlin:20230131T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1365,10 +1698,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>little league shows &amp\; puschen prsnt: P
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29139193
+UID:6396200d0b67b
 DTSTART;TZID=Europe/Berlin:20230205T200000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1415,10 +1748,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
 CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
  -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
  ":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291392e3
+UID:6396200d0b6e8
 DTSTART;TZID=Europe/Berlin:20230207T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1461,10 +1794,10 @@ X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29139412
+UID:6396200d0b750
 DTSTART;TZID=Europe/Berlin:20230211T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1513,10 +1846,10 @@ X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
 CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
  -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
  blished\":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc29139520
+UID:6396200d0b7ba
 DTSTART;TZID=Europe/Berlin:20230212T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1535,10 +1868,10 @@ X-ALT-DESC;FMTTYPE=text/html:<p>* seven chessboards inc. chess clock on the
 CATEGORIES:{\"id\":8\,\"name\":\"Kneipe\"\,\"slug\":\"kneipe\"\,\"icon\":\"
  md-beer\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
 END:VEVENT
 BEGIN:VEVENT
-UID:638bc291395cb
+UID:6396200d0b81d
 DTSTART;TZID=Europe/Berlin:20230221T190000
 SEQUENCE:0
 TRANSP:OPAQUE
@@ -1579,6 +1912,268 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Andreas &bdquo\;Spider&ldquo\; Krenzke\, To
 CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
  md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
  \":1}
-DTSTAMP:20221203T214137Z
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b882
+DTSTART;TZID=Europe/Berlin:20230222T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:P.O. Box (Ska-Punk from Nancy) + support
+CLASS:PUBLIC
+DESCRIPTION:We could simply list the countries they toured\, from Canada to
+  Japan\, from Turkey to Russia and\nthroughout Europe. Or recall the more 
+ than 800 shows they played.\nOr list all the bands they share the stage wi
+ th\, such as Anti-Flag\, Mad Caddies\, Streetlight\nManifesto\, No Use For
+  A Name\, Lagwagon\, Against Me!\, A Whilhem Scream\, The Aquabats or RX\n
+ Bandits among others.\nOr mention the festivals they played\, such as Dour
+ \, Wasted\, Groezrock\, Open Flair\, Tells Bells\, Jera\nOn Air\, Mighty S
+ ounds Festival or PunkRockHolidays.\nWe could also mention their friendshi
+ p with Big D & the Kids Table\, The Flatliners or the Slackers\,\nfeatured
+  on their records.\nAll this would tell a bit of the P.O.Box story.\nBut t
+ his only say little about who P.O.BOX is in the end...\nP.O.BOX is out of 
+ fashion. By dint of detours through the steep roads of rock\, P.O.BOX make
+ s its\nown way. Their live performances are often pretexts for creating te
+ mporary zones of autonomy\nwith the audience\, and their albums are regula
+ rly born from a desire and need to bear witness to a situation that needs 
+ to be deciphered.\n“Learning to read between the lines and moving forwar
+ d\, together.”\n
+X-ALT-DESC;FMTTYPE=text/html:<p>We could simply list the countries they tou
+ red\, from Canada to Japan\, from Turkey to Russia and<br />throughout Eur
+ ope. Or recall the more than 800 shows they played.<br />Or list all the b
+ ands they share the stage with\, such as Anti-Flag\, Mad Caddies\, Streetl
+ ight<br />Manifesto\, No Use For A Name\, Lagwagon\, Against Me!\, A Whilh
+ em Scream\, The Aquabats or RX<br />Bandits among others.<br />Or mention 
+ the festivals they played\, such as Dour\, Wasted\, Groezrock\, Open Flair
+ \, Tells Bells\, Jera<br />On Air\, Mighty Sounds Festival or PunkRockHoli
+ days.<br />We could also mention their friendship with Big D &amp\; the Ki
+ ds Table\, The Flatliners or the Slackers\,<br />featured on their records
+ .<br />All this would tell a bit of the <strong>P.O.Box</strong> story.<br
+  />But this only say little about who <strong>P.O.BOX</strong> is in the e
+ nd...<br /><strong>P.O.BOX</strong> is out of fashion. By dint of detours 
+ through the steep roads of rock\, <strong>P.O.BOX</strong> makes its<br />
+ own way. Their live performances are often pretexts for creating temporary
+  zones of autonomy<br />with the audience\, and their albums are regularly
+  born from a desire and need to bear witness to a situation that needs to 
+ be deciphered.<br />&ldquo\;Learning to read between the lines and moving 
+ forward\, together.&rdquo\;</p>\n<p><div class=\"row embed-responsive-wrap
+ per text-center\"><div class=\"embed-responsive embed-responsive-16by9 m-0
+  p-0\"><iframe class=\"d-block mx-auto\" src=\"//www.youtube.com/embed/coC
+ znGX4yoM?autoplay=0\" width=\"560\" height=\"315\" frameborder=\"0\" allow
+ fullscreen=\"allowfullscreen\"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b8eb
+DTSTART;TZID=Europe/Berlin:20230305T200000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Karaoke Night w/ KJ Der Käpt'n
+CLASS:PUBLIC
+DESCRIPTION:Der Käpt'n kommt mit einem fetten Angebot aus allen nationalen
+  und internationalen Künstlern!\nDer Abend hat schon lange Kultcharakter 
+ und ist zum Kreischen fröhlich\, generations- und sozialübergreifend und
+  warmherzig...!\nEine der schönsten Bühnen Berlins & ein perfekter Monit
+ or- und Raumsound besorgen den Rest!\nSingen macht halt glücklich und dab
+ ei zuschauen auch!\nholt euch die Käpt'n Karaoke App auf's Smartphone!\n.
+ .. wei sie wirklich toll ist!\nhttps://play.google.com/store/apps/details.
+ ..\nOder klickt den Link für seine Songliste…\nhttp://derkaeptn.de/song
+ liste.html
+X-ALT-DESC;FMTTYPE=text/html:<p><span class=\"d2edcug0 hpfvmrgz qv66sw1b c1
+ et5uql lr9zc1uh a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau5
+ 5g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v b1v8xokw oo9gr5id\" dir=\"auto\">
+ Der K&auml\;pt'n kommt mit einem fetten Angebot aus allen nationalen und i
+ nternationalen K&uuml\;nstlern!<br />Der Abend hat schon lange Kultcharakt
+ er und ist zum Kreischen fr&ouml\;hlich\, generations- und sozial&uuml\;be
+ rgreifend und warmherzig...!<br />Eine der sch&ouml\;nsten B&uuml\;hnen Be
+ rlins &amp\; ein perfekter Monitor- und Raumsound besorgen den Rest!<br />
+ Singen macht halt gl&uuml\;cklich und dabei zuschauen auch!<br />holt euch
+  die K&auml\;pt'n Karaoke App auf's Smartphone!<br />... wei sie wirklich 
+ toll ist!<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d
+ 6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcuky
+ x3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4w
+ l py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" href=\"https://play.goo
+ gle.com/store/apps/details?fbclid=IwAR1x1PKMpuLwfecpsofguKD9hhC-UBzNPm57_B
+ bgklliy1HMDkTfm4ZWGn4\" target=\"_blank\" rel=\"nofollow noopener\">https:
+ //play.google.com/store/apps/details</a>...<br />Oder klickt den Link f&uu
+ ml\;r seine Songliste&hellip\;<br /><a class=\"oajrlxb2 g5ia77u1 qu0x051f 
+ esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cx
+ mmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuy
+ zwwr f1sip0of lzcic4wl py34i1dx gpro0wi8\" tabindex=\"0\" role=\"link\" hr
+ ef=\"http://derkaeptn.de/songliste.html?fbclid=IwAR02MFOgT9l0coh45wnY30bnx
+ TkE9n94dR-8nVL9MYLepOrOlBKwsSMoQLI\" target=\"_blank\" rel=\"nofollow noop
+ ener\">http://derkaeptn.de/songliste.html</a></span></p>
+CATEGORIES:{\"id\":6\,\"name\":\"Party\"\,\"slug\":\"party\"\,\"icon\":\"md
+ -happy\"\,\"default_time\":\"21.00\"\,\"default_price\":0\,\"is_published\
+ ":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b956
+DTSTART;TZID=Europe/Berlin:20230307T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:LSD - Liebe Statt Drogen
+CLASS:PUBLIC
+DESCRIPTION: \n\nAndreas „Spider“ Krenzke\, Tobias „Tube“ Herre\, 
+ Uli Hannemann\, Eva Mirasol und Ivo Lotion präsentieren Geschichten\, Lie
+ der und Gäste.\nLSD – Liebe Statt Drogen ist eine der bekanntesten Lese
+ bühnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD un
+ d eingeladene Gäste im Berliner Schokoladen ein Programm aus neuen Texten
+  und Songs. Gegründet 1996 besteht LSD heute aus den Mitgliedern Andreas 
+ „Spider“ Krenzke\, Tobias „Tube“ Herre\, Uli Hannemann\, Eva Miras
+ ol und Ivo Lotion. Alle 5 genannten Künstler sind als Autoren und Musiker
+  auch in anderen Bereichen aktiv.\nLSD bietet jeden Dienstag ein Offenes M
+ ikro für Menschen an\, die spontan etwas vortragen wollen. Beachtet bitte
+ \, dass der Beitrag selbstverfasst sein muss und nicht länger als 6 Minut
+ en dauert. Wer am Offenen Mikro liest\, braucht keinen Eintritt zahlen und
+  bekommt ein Freigetränk.\n
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"subtitle col-12 m-0 p-2\">&nbsp\;
+ </div>\n<div class=\"text col-12 m-0 p-2\">\n<p>Andreas &bdquo\;Spider&ldq
+ uo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; Herre\, Uli Hannemann\, Eva Mir
+ asol und Ivo Lotion pr&auml\;sentieren Geschichten\, Lieder und G&auml\;st
+ e.<br />LSD &ndash\; Liebe Statt Drogen ist eine der bekanntesten Leseb&uu
+ ml\;hnen Berlins. Jeden Dienstagabend gestalten die 5 Mitglieder von LSD u
+ nd eingeladene G&auml\;ste im Berliner Schokoladen ein Programm aus neuen 
+ Texten und Songs. Gegr&uuml\;ndet 1996 besteht LSD heute aus den Mitgliede
+ rn Andreas &bdquo\;Spider&ldquo\; Krenzke\, Tobias &bdquo\;Tube&ldquo\; He
+ rre\, Uli Hannemann\, Eva Mirasol und Ivo Lotion. Alle 5 genannten K&uuml\
+ ;nstler sind als Autoren und Musiker auch in anderen Bereichen aktiv.<br /
+ ><br />LSD bietet jeden Dienstag ein Offenes Mikro f&uuml\;r Menschen an\,
+  die spontan etwas vortragen wollen. Beachtet bitte\, dass der Beitrag sel
+ bstverfasst sein muss und nicht l&auml\;nger als 6 Minuten dauert. Wer am 
+ Offenen Mikro liest\, braucht keinen Eintritt zahlen und bekommt ein Freig
+ etr&auml\;nk.</p>\n</div>
+CATEGORIES:{\"id\":3\,\"name\":\"Lesung\"\,\"slug\":\"lesung\"\,\"icon\":\"
+ md-book\"\,\"default_time\":\"20.30\"\,\"default_price\":0\,\"is_published
+ \":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0b9bd
+DTSTART;TZID=Europe/Berlin:20230311T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Shitney Beers & Band + Tigeryouth
+CLASS:PUBLIC
+DESCRIPTION:more infos soon...\ntickets: https://vvk.link/2fvaaog\n
+X-ALT-DESC;FMTTYPE=text/html:<p>more infos soon...<br /><br /><em>tickets</
+ em>: <a href=\"https://vvk.link/2fvaaog\">https://vvk.link/2fvaaog</a><br 
+ /><br /><div class=\"row embed-responsive-wrapper text-center\"><div class
+ =\"embed-responsive embed-responsive-16by9 m-0 p-0\"><iframe class=\"d-blo
+ ck mx-auto\" src=\"//www.youtube.com/embed/ULj3WqUHb8I?autoplay=0\" width=
+ \"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen
+ \"></iframe></div></div></p>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6396200d0ba22
+DTSTART;TZID=Europe/Berlin:20230318T190000
+SEQUENCE:0
+TRANSP:OPAQUE
+LOCATION:Ackerstrasse 169\, 10115 Berlin
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ackerstrasse 169, 10115 Be
+ rlin";X-APPLE-RADIUS=49;X-TITLE=Schokoladen Berlin-Mitte:geo:52.529745,13.
+ 397245
+GEO:52.529745;13.397245
+SUMMARY:Pogendroblem - AWINHSMK-Tour
+CLASS:PUBLIC
+DESCRIPTION:Pogendroblem\nAlles was ich noch hab sind meine Kompetenzen - T
+ our\n \nTickets: https://www.tixforgigs.com/Event/45667\nEinlass: 19:00 \
+ nBeginn: 20:00\n \n„Eure Liebe bringt mich nochmal um!“ – pogendrob
+ lem kommen mit ihrem neuen Album auf Tour.\nIn \"Alles was ich noch hab si
+ nd meine Kompetenzen\" geht es politische Kämpfe\, Coping\, Friendship un
+ d Punk zwischen Entfremdung und Solidarität\, zwischen Generation Y und Z
+ \, lost im Real Life und im Internet zwischen Queerparties\, Plenum und Su
+ permarkt. \npogendroblem klingen nach 80s-Punk mit Garage-Einflüssen und 
+ poppiger Niedlichkeit. Inhaltlich changiert alles zwischen Angepisstheit\,
+  utopischem Begehren und kühler Hoffnungslosigkeit.\nPrivat sind sie manc
+ hmal etwas sassy aber voll nett – außer ihr seid Nazis oder Macker.\nVe
+ rballert mit uns das Potential\, von dem immer alle reden\, durch wildes T
+ anzen\, zu lange wach bleiben\, schlechte Ernährung und sonstigen Rausch\
+ , damit alles schneller wieder vorbei ist als Nicolas Cage Rollen zusagt /
+ / eure Miete steigt // die Polarkappen schmelzen (you get it)\, bis dass L
+ ohnarbeit und Kleinfamilie rufen. Wir können aber gern auch einfach chill
+ en und uns unterhalten oder so.\nDer Vorverkauf läuft ab sofort auf tixfo
+ rgigs.com.
+X-ALT-DESC;FMTTYPE=text/html:<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs
+  xdj266r\"><strong>Pogendroblem</strong><br />Alles was ich noch hab sind 
+ meine Kompetenzen - Tour</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1v
+ vkbs xtlvy1s\">&nbsp\;</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvk
+ bs xtlvy1s\">Tickets: <a class=\"x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y
+  xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r
+  xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xt0b8z
+ v x1fey0fg\" tabindex=\"0\" role=\"link\" href=\"https://l.facebook.com/l.
+ php?u=https%3A%2F%2Fwww.tixforgigs.com%2FEvent%2F45667%3Ffbclid%3DIwAR1M_x
+ RW0CJOA6SQkvkISo2Hx5luDxJ5U691Gkav1h_wCayMuCmYEmbrbYc&amp\;h=AT0mQiyqapXZB
+ yEonUJ7BQU6wzdofVk9SrSd-m0Kg4fyGnLgb1SWQaQsMzEottsEPU-75CEkXuTCGEd9DuvLVcX
+ UYKm6L3BSwp91LJQkxK4kinkcqvC0TXsdrchDE5g67Q&amp\;__tn__=q&amp\;c[0]=AT01Bn
+ L6Drk8WZByQpfrOUnZS3-s-RvsPLvf74O0TGekfjxwKEiP6ttG5o7vwPhQLByuAvfKa_cM31LD
+ KCZmrEnqZEpdHqkiFCZ8GQ-n2ZgFIazDvN6m_pqCM5yVgpc7fhTF7mJb-nWhFUkueIsmtz9tTc
+ T4CVXD-YkU-W3xGGvKFvgnf8KI\" target=\"_blank\" rel=\"nofollow noopener\">h
+ ttps://www.tixforgigs.com/Event/45667</a></div>\n<div class=\"x11i5rnm xat
+ 24cr x1mh8g0r x1vvkbs xtlvy1s\">Einlass: 19:00 <br />Beginn: 20:00</div>\n
+ <div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&nbsp\;</div>\n<d
+ iv class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">&bdquo\;Eure Liebe 
+ bringt mich nochmal um!&ldquo\; &ndash\; pogendroblem kommen mit ihrem neu
+ en Album auf Tour.</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs x
+ tlvy1s\">In \"Alles was ich noch hab sind meine Kompetenzen\" geht es poli
+ tische K&auml\;mpfe\, Coping\, Friendship und Punk zwischen Entfremdung un
+ d Solidarit&auml\;t\, zwischen Generation Y und Z\, lost im Real Life und 
+ im Internet zwischen Queerparties\, Plenum und Supermarkt. <br />pogendrob
+ lem klingen nach 80s-Punk mit Garage-Einfl&uuml\;ssen und poppiger Niedlic
+ hkeit. Inhaltlich changiert alles zwischen Angepisstheit\, utopischem Bege
+ hren und k&uuml\;hler Hoffnungslosigkeit.</div>\n<div class=\"x11i5rnm xat
+ 24cr x1mh8g0r x1vvkbs xtlvy1s\">Privat sind sie manchmal etwas sassy aber 
+ voll nett &ndash\; au&szlig\;er ihr seid Nazis oder Macker.</div>\n<div cl
+ ass=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s\">Verballert mit uns das P
+ otential\, von dem immer alle reden\, durch wildes Tanzen\, zu lange wach 
+ bleiben\, schlechte Ern&auml\;hrung und sonstigen Rausch\, damit alles sch
+ neller wieder vorbei ist als Nicolas Cage Rollen zusagt // eure Miete stei
+ gt // die Polarkappen schmelzen (you get it)\, bis dass Lohnarbeit und Kle
+ infamilie rufen. Wir k&ouml\;nnen aber gern auch einfach chillen und uns u
+ nterhalten oder so.</div>\n<div class=\"x11i5rnm xat24cr x1mh8g0r x1vvkbs 
+ xtlvy1s\">Der Vorverkauf l&auml\;uft ab sofort auf <a class=\"x1i10hfl xjb
+ qb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj2
+ 66r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1h
+ l2dhg xggy1nq x1a2a7pz xt0b8zv x1fey0fg\" tabindex=\"0\" role=\"link\" hre
+ f=\"https://l.facebook.com/l.php?u=http%3A%2F%2Ftixforgigs.com%2F%3Ffbclid
+ %3DIwAR3w34lW4uYV91D_dmyndIPfWszK6mSjcE6mgJv3zROnlmXaETBMWhJPzKE&amp\;h=AT
+ 1EtBGdDXsxiRQNGzW-SBSG_8PcKSfIB6pxsLc7Z-_Lon4ci8ihaLHcglf5kjgAa97FMMEK05wG
+ 86bcyJEdIAVaPlZSTGp-SppfKXkrjtLynRoo-_m-P6VLSPz9mbsTFA&amp\;__tn__=q&amp\;
+ c[0]=AT01BnL6Drk8WZByQpfrOUnZS3-s-RvsPLvf74O0TGekfjxwKEiP6ttG5o7vwPhQLByuA
+ vfKa_cM31LDKCZmrEnqZEpdHqkiFCZ8GQ-n2ZgFIazDvN6m_pqCM5yVgpc7fhTF7mJb-nWhFUk
+ ueIsmtz9tTcT4CVXD-YkU-W3xGGvKFvgnf8KI\" target=\"_blank\" rel=\"nofollow n
+ oopener\">tixforgigs.com.</a></div>
+CATEGORIES:{\"id\":1\,\"name\":\"Musik\"\,\"slug\":\"musik\"\,\"icon\":\"md
+ -musical-notes\"\,\"default_time\":\"19.00\"\,\"default_price\":0\,\"is_pu
+ blished\":1}
+DTSTAMP:20221211T182309Z
 END:VEVENT
 END:VCALENDAR

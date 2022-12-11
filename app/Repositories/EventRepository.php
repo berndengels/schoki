@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use App\Models\Event;
 use Illuminate\Database\Eloquent\Builder;
 
-class EventRepository {
+class EventRepository  extends MainEventRepository {
 
     public static function getEventsSinceToday() {
         return self::getEventsSinceDate(Carbon::today());
