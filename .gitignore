@@ -25,6 +25,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 composer.lock
+/composer.phar
 yarn.lock
 package-lock.json
 phpunit.dusk.xml
@@ -37,3 +38,4 @@ phpunit.dusk.xml
 /_ide_helper.php
 /perms
 /.valet-env.php
+/public_html/fonts/
