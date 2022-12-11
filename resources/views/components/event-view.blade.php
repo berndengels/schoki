@@ -2,7 +2,7 @@
 <div class="collapseToggle mbs">
     <div class="eventHeader col-12">
         <div class="subHeader m-0 p-0">
-            <span class="ml-2">{{ $item->getEventDate()->formatLocalized('%A') }}</span>
+            <span class="ml-2">{{ __($item->getEventDate()->formatLocalized('%A')) }}</span>
             <span class="ml-1">{{ $item->getEventDate()->formatLocalized('%d.%m.') }}</span>
             <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
 
