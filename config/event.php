@@ -33,4 +33,13 @@ return [
         'saturday'      => 'Samstag',
         'sunday'        => 'Sonntag',
     ],
+    'position'   => [
+        'lat'   => (float) env('LOCATION_LAT', null),
+        'lng'   => (float) env('LOCATION_LNG', null),
+    ],
+    'ical'  => [
+        'name'  => env('ICAL_NAME', null),
+        'description'  => env('ICAL_DESCRIPTION', null),
+        'location'  => env('ICAL_LOCATION', null),
+    ]
 ];

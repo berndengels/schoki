@@ -207,22 +207,31 @@ class EventController extends BaseController
 	}
 */
 	public function ical() {
-		$iCal = new iCal(config('app.url'));
+        $tz             = config('app.timezone');
+        $appName        = config('app.name');
+        $icName         = config('event.ical.name');
+        $icLocation     = config('event.ical.location');
+        $icDescription  = config('event.ical.description');
+        $icLat          = config('event.position.lat');
+        $icLng          = config('event.position.lng');
+        $iGeo           = new Geo($icLat, $icLng);
+		$iCal           = new iCal(config('app.url'));
 		$iCal
-			->setName(env('ICAL_NAME'))
-			->setDescription(env('ICAL_DESCRIPTION'))
-			->setTimezone('Europe/Berlin')
+			->setName($icName)
+			->setDescription($icDescription)
+			->setTimezone($tz)
 //			->setMethod('PUBLISH')
 		;
 		/**
 		 * @var $evt EventEntity
 		 */
+
 		foreach($this->actualEvents as $evt) {
 			$iCalEvent	= new iCalEvent();
 			$iCalEvent
 				->setUseTimezone(true)
-				->setTimezoneString(config('app.timezone'))
-				->setLocation(env('ICAL_LOCATION'), env('APP_NAME'), new Geo(env('LOCATION_LAT'), env('LOCATION_LNG')))
+				->setTimezoneString($tz)
+				->setLocation($icLocation, $appName, $iGeo)
 				->setCategories([$evt->getCategory()])
 				->setDtStart($evt->getEventDateTime())
 				->setSummary($evt->getTitle())
