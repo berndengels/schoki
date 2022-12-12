@@ -10,8 +10,8 @@ return [
     'useCache'   => env('USE_CACHE', false),
     'defaultEventTime'  => env('DEFAULT_EVENT_TIME', '19:00'),
     'maxImageHeight'    => env('MAX_IMAGE_HEIGHT', 300),
-    'maxImageWidth'     => env('MAX_IMAGE_WIDTH', 533),
-	'maxImageFileSize'  => env('MAX_IMAGE_FILESIZE', 3), // MB
+    'maxImageWidth'     => env('MAX_IMAGE_WIDTH', 600),
+	'maxImageFileSize'  => env('MAX_IMAGE_FILESIZE', 60000), // B
 	'paginationLimit' 	=> 10,
 	'eventsPaginationLimit'	=> 10,
     'periodicPosition'  => [

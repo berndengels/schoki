@@ -30,6 +30,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Kris\LaravelFormBuilder\FormBuilder;
+use Intervention\Image\ImageManager;
 
 class MainController extends Controller
 {
@@ -266,6 +267,13 @@ class MainController extends Controller
                 }
             }
         }
+    }
+
+    protected function optimizeImage($imageFile)
+    {
+        $path = config('filesystems.images');
+        $fileName = "$path/$imageFile";
+
     }
 
     protected function removeImages(Collection $images)

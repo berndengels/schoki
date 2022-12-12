@@ -305,7 +305,7 @@ class ServiceController extends Controller
 
         foreach(scandir($path) as $item) {
             if(preg_match('/\.jp[e]?g$|\.png$|\.gif$/', $item)) {
-				list($w,$h) = getimagesize($path.'/'.$item);
+				[$w,$h] = getimagesize($path.'/'.$item);
 				$extension = substr($item, strrpos($item,'.') + 1);
 
 				if($w > $maxWidth || $h > $maxHeight) {

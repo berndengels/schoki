@@ -51,6 +51,7 @@
             width: 800,
             height: 600,
             paste_as_text: false,
+	        paste_block_drop: true,
             images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
         };
 

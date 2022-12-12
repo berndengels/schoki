@@ -94,7 +94,7 @@ class EventController extends BaseController
 			$feed->logo = config('app.url') . '/img/batcow_yellow.png';
 			$feed->link = url('public.events');
 //			$feed->setDateFormat('carbon'); // 'datetime', 'timestamp' or 'carbon'
-			$feed->pubdate = $events->first()->getCreatedAt()->toRfc822String();
+			$feed->pubdate = $events->first()->getCreatedAt() ? $events->first()->getCreatedAt()->toRfc822String() : Carbon::today()->toRfc822String();
 			$feed->lang = 'de';
 			$feed->setShortening(true); // true or false
 			$feed->setTextLimit(255); // maximum length of description text

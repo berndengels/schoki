@@ -408,9 +408,9 @@ class EventEntity extends Entity {
 		if ($this->subtitle && '' !== $this->subtitle) {
 			$body = "<div class='subtitle'>{$this->subtitle}</div>$body";
 		}
+        $eventDate = Carbon::make($this->event_date);
 		return [
-//			'date'		=> $this->event_date->format('Y-m-d'),
-            'date'		=> Carbon::make($this->event_date)->format('Y-m-d'),
+            'date'		=> $eventDate->format('Y-m-d'),
 			'badge' 	=> true,
 			'title'		=> $this->title,
 			'body' 		=> $body,
@@ -425,6 +425,7 @@ class EventEntity extends Entity {
 		$description = preg_replace('/[\n\r]+/', "\n", $description);
 		$description = preg_replace('/[ ]+/', " ", $description);
 		$title = $this->event_date.' '.$this->event_time.' ('.$this->category->name.'): '.$this->title;
+        $eventDate = Carbon::make($this->event_date);
 
 		return [
 			'title'			=> $title,
@@ -432,8 +433,8 @@ class EventEntity extends Entity {
 			'category'		=> $this->category->name,
 			'description'	=> $this->subtitle,
 			'content'		=> $description,
-			'link'			=> route('public.event.eventsShow', ['date' => $this->event_date->format('Y-m-d')]),
-			'pubdate'		=> $this->event_date->toRfc822String(),
+			'link'			=> route('public.event.eventsShow', ['date' => $eventDate->format('Y-m-d')]),
+			'pubdate'		=> $eventDate->toRfc822String(),
 		];
 	}
 
@@ -441,6 +442,7 @@ class EventEntity extends Entity {
      * @return array
      */
     public function toArray() {
+        $eventDate = Carbon::make($this->event_date);
         return [
             'id'			=> $this->id,
             'title'			=> $this->title,
@@ -449,7 +451,7 @@ class EventEntity extends Entity {
             'theme_id'	    => $this->theme->id,
             'description'	=> $this->description,
             'links'			=> $this->links,
-            'event_date'	=> $this->event_date->format('Y-m-d'),
+            'event_date'	=> $eventDate->format('Y-m-d'),
             'event_time'	=> $this->event_time,
             'images'	    => $this->getImages(),
         ];

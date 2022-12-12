@@ -26,7 +26,7 @@
 
 @if(env('BOOTSTRAP_DEBUG'))
     @include('debug.bootstrap.display')
-@endif;
+@endif
 
 <div class="container col-12">
     <div class="header">
