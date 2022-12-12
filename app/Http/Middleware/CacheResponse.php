@@ -17,11 +17,8 @@ class CacheResponse
          */
 //        $response = parent::handle($request, $next);
         $response = $next($request);
+        $response->headers->set('cache-control', 'must-revalidate,public,max-age=3600');
         if($this->shouldCache($request, $response)) {
-            $response->setCache([
-                'max_age'   => 3600,
-                'public'    => true,
-            ]);
         }
         return $response;
     }
@@ -31,7 +28,7 @@ class CacheResponse
         // In this example, we don't ever want to cache pages if the
         // URL contains a query string. So we first check for it,
         // then defer back up to the parent's default checks.
-        if ($request->getQueryString()) {
+        if ($request->getQueryString() && !app()->environment('prod')) {
             return false;
         }
 
