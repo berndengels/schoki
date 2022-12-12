@@ -18,9 +18,10 @@ class CacheResponse
 //        $response = parent::handle($request, $next);
         $response = $next($request);
         if($this->shouldCache($request, $response)) {
-            $response
-                ->setMaxAge(3600)
-                ->setPublic();
+            $response->setCache([
+                'max_age'   => 3600,
+                'public'    => true,
+            ]);
         }
         return $response;
     }
