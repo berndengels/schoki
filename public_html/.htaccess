@@ -8,15 +8,15 @@ SetEnvIfNoCase Request_URI "\.(?:gif|jpe?g|png)$" no-gzip
 
     RewriteEngine On
 
-	RewriteCond %{REQUEST_URI} ^/?$
-	RewriteCond %{DOCUMENT_ROOT}/page-cache/pc__index__pc.html -f
-	RewriteRule .? page-cache/pc__index__pc.html [L]
-	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.html -f
-	RewriteRule . page-cache%{REQUEST_URI}.html [L]
-	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.json -f
-	RewriteRule . page-cache%{REQUEST_URI}.json [L]
-	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.xml -f
-	RewriteRule . page-cache%{REQUEST_URI}.xml [L]
+#	RewriteCond %{REQUEST_URI} ^/?$
+#	RewriteCond %{DOCUMENT_ROOT}/page-cache/pc__index__pc.html -f
+#	RewriteRule .? page-cache/pc__index__pc.html [L]
+#	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.html -f
+#	RewriteRule . page-cache%{REQUEST_URI}.html [L]
+#	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.json -f
+#	RewriteRule . page-cache%{REQUEST_URI}.json [L]
+#	RewriteCond %{DOCUMENT_ROOT}/page-cache%{REQUEST_URI}.xml -f
+#	RewriteRule . page-cache%{REQUEST_URI}.xml [L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
