@@ -15,10 +15,11 @@ class CacheResponse extends BaseCacheResponse
          * @var $response Response
          */
         $response = parent::handle($request, $next);
+/*
         $response
             ->setMaxAge(3600)
             ->setPublic();
-
+*/
         return $response;
     }
 
