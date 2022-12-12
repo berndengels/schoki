@@ -16,7 +16,6 @@ class CacheResponse extends BaseCacheResponse
          */
         $response = parent::handle($request, $next);
         $response
-            ->setImmutable(true)
             ->setMaxAge(3600)
             ->setPublic();
 
