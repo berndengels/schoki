@@ -28,7 +28,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
-use Silber\PageCache\Middleware\CacheResponse;
+use App\Http\Middleware\CacheResponse;
 
 class Kernel extends HttpKernel
 {
@@ -58,6 +58,7 @@ class Kernel extends HttpKernel
         'public' => [
             RemoveSession::class,
 //            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            CacheResponse::class,
         ],
         'web' => [
             EncryptCookies::class,
