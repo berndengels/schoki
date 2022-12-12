@@ -31,6 +31,7 @@
         "laravel/ui": "^3.1",
         "laravelium/feed": "^8.0",
         "lavary/laravel-menu": "^1.7",
+        "michaloravec/laravel-paginateroute": "^1.0",
         "misterphilip/maintenance-mode": "^2.0",
         "nesbot/carbon": "^2.63",
         "protonemedia/laravel-form-components": "^3.6",

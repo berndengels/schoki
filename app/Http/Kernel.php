@@ -58,7 +58,7 @@ class Kernel extends HttpKernel
         'public' => [
             RemoveSession::class,
 //            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-//            CacheResponse::class,
+            CacheResponse::class,
         ],
         'web' => [
             EncryptCookies::class,
@@ -70,7 +70,7 @@ class Kernel extends HttpKernel
             VerifyCsrfToken::class,
             SubstituteBindings::class,
             // customs
-//            CacheResponse::class,
+            CacheResponse::class,
         ],
 /*
         'web-public' => [

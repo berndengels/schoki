@@ -36,10 +36,10 @@
                             @endif
                         @endif
 
-                        @if($agent)
+                        @isset($agent)
                             <tr>
                                 <td><strong>UserAgent:</strong></td>
-                                <td>{!! $agend->getUserAgent() !!}</td>
+                                <td>{!! $agent->getUserAgent() !!}</td>
                             </tr>
                             @if($agent->isRobot())
                                 <tr>
@@ -47,13 +47,13 @@
                                     <td>{!! $agent->robot() !!}</td>
                                 </tr>
                             @endif
-                        @endif
-                        @if($user)
+                        @endisset
+                        @isset($user)
                             <tr>
                                 <td><strong>User:</strong></td>
                                 <td><strong>{{ $user->name ?? ($user->username ?? null) }} <a href="mailto:{{ $user->email }}" target="_blank">{{ $user->email }}</a></strong></td>
                             </tr>
-                        @endif
+                        @endisset
                             <tr>
                                 <td><strong>Exception Class:</strong></td>
                                 <td>{{ get_class($exception) }}</td>

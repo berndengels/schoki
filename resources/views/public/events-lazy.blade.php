@@ -14,7 +14,9 @@
     <div class="eventContainer col-sm-11 col-md-6 mt-1 ml-lg-4">
         <h3 class="events-header d-block">Veranstaltungen</h3>
         @if( $data->count() )
-            <div class="row ml-0 p-0">{{ $data->links() }}</div>
+            <div class="row ml-0 p-0">
+                {{ $data->links() }}
+            </div>
             @foreach ($data as $event)
                 <div class="event col-12 lazy">
                     <div class="eventContent container col-12 mb-2">

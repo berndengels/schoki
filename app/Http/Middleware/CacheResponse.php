@@ -7,19 +7,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Silber\PageCache\Middleware\CacheResponse as BaseCacheResponse;
 
-class CacheResponse extends BaseCacheResponse
+//class CacheResponse extends BaseCacheResponse
+class CacheResponse
 {
     public function handle(Request $request, Closure $next)
     {
         /**
          * @var $response Response
          */
-        $response = parent::handle($request, $next);
-/*
-        $response
-            ->setMaxAge(3600)
-            ->setPublic();
-*/
+//        $response = parent::handle($request, $next);
+        $response = $next($request);
+        if($this->shouldCache($request, $response)) {
+            $response
+                ->setMaxAge(3600)
+                ->setPublic();
+        }
         return $response;
     }
 
@@ -32,6 +34,6 @@ class CacheResponse extends BaseCacheResponse
             return false;
         }
 
-        return parent::shouldCache($request, $response);
+//        return parent::shouldCache($request, $response);
     }
 }
