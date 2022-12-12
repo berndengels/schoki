@@ -198,6 +198,7 @@ return [
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
         ImageServiceProviderLaravelRecent::class,
+        Silber\PageCache\LaravelServiceProvider::class,
     ],
 
     /*

@@ -34,6 +34,7 @@
         "misterphilip/maintenance-mode": "^2.0",
         "nesbot/carbon": "^2.63",
         "protonemedia/laravel-form-components": "^3.6",
+        "silber/page-cache": "^1.0",
         "spatie/db-dumper": "^2.18",
         "spatie/laravel-db-snapshots": "^1.7",
         "spatie/laravel-newsletter": "^4.11",

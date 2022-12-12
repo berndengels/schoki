@@ -28,6 +28,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use Silber\PageCache\Middleware\CacheResponse;
 
 class Kernel extends HttpKernel
 {
@@ -68,6 +69,7 @@ class Kernel extends HttpKernel
             VerifyCsrfToken::class,
             SubstituteBindings::class,
             // customs
+            CacheResponse::class,
         ],
 /*
         'web-public' => [
@@ -116,6 +118,7 @@ class Kernel extends HttpKernel
         'verified' => EnsureEmailIsVerified::class,
         'cors' => Cors::class,
         'store.success' => StoreSuccess::class,
+        'page-cache' => CacheResponse::class,
     ];
 
     /**
