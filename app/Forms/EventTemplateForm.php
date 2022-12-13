@@ -55,7 +55,7 @@ class EventTemplateForm extends MainForm
 //                'rules' => 'max:100'
             ])
             ->add('description', Field::TEXTAREA, [
-//                'attr'  => ['id' => 'tinymce'],
+                'attr'  => ['id' => 'tinymce'],
             ])
             ->add('links', Field::TEXTAREA, [
                 'value' => function ($val = null) {

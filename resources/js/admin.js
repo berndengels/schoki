@@ -67,6 +67,8 @@ var initEditor = function (options) {
             quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 h4 blockquote',
             quickbars_insert_toolbar: false,
             quickbars_image_toolbar: false,
+            default_link_target: '_blank',
+            link_default_protocol: 'https',
             paste_as_text: options.paste_as_text,
             paste_block_drop: options.paste_block_drop,
             media_url_resolver: function (data, resolve/*, reject*/) {

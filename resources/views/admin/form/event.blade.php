@@ -41,8 +41,8 @@
         var reservedDates = [{!! $dates !!}];
         var tinymceOptions = {
             selector: '#tinymce',
-	        plugins: ['preview','code','advlist','autolink','link','paste','media','quickbars','help'],
-            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link autolink media quickbars preview help',
+	        plugins: ['preview','code','advlist','link','autolink','paste','media','quickbars','help'],
+            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
             image_advtab: true,
             width: 800,
             height: 600,
@@ -50,7 +50,6 @@
 	        paste_block_drop: true,
             images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
         };
-
         initEditor(tinymceOptions);
         var datepickerOptions = {
             weekStart: 1,
