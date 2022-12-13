@@ -22,16 +22,18 @@ $pathStaticPages = collect(config('view.paths'))->map(function($path) use (&$sta
 });
 if($staticPages->count() > 0)  {
     $staticPages->each(function($slug){
-        Route::get("/static/$slug", 'StaticPageController@get')->name("public.static.$slug");
+        Route::middleware('web')->get("/static/$slug", 'StaticPageController@get')->name("public.static.$slug");
     });
 }
 
-Route::get('/feed', 'EventController@feed')->name('public.feed');
-Route::get('/ical', 'EventController@ical')->name('public.ical');
-Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
-Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
-//Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
-Route::get('calendar', 'EventController@calendar')->name('public.eventCalendar');
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/feed', 'EventController@feed')->name('public.feed');
+    Route::get('/ical', 'EventController@ical')->name('public.ical');
+    Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
+    Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
+    //Route::get('calendar/{year}/{month}', 'EventController@calendar')->name('public.eventCalendar');
+    Route::get('calendar', 'EventController@calendar')->name('public.eventCalendar');
+});
 
 //Route::post('/events/lazy/{date}', 'EventController@lazy')->name('public.eventLazy');
 //Route::post('/events/lazyByCategory/{category}/{date}', 'EventController@lazyByCategory')->name('public.eventLazyByCategory');
@@ -39,17 +41,18 @@ Route::get('calendar', 'EventController@calendar')->name('public.eventCalendar')
 
 $categories = Category::where('is_published', 1)->get();
 foreach($categories as $item) {
-	Route::get('/events/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')->name('public.eventsByCategory.' . $item->slug);
+	Route::middleware('web')->get('/events/category/'.$item->slug, 'EventController@getActualMergedEventsByCategory')->name('public.eventsByCategory.' . $item->slug);
 }
 $themes = Theme::where('is_published', 1)->get();
 foreach($themes as $item) {
-	Route::get('/theme/'.$item->slug, 'EventController@getActualMergedEventsByTheme')->name('public.eventsByTheme.'. $item->slug);
+	Route::middleware('web')->get('/theme/'.$item->slug, 'EventController@getActualMergedEventsByTheme')->name('public.eventsByTheme.'. $item->slug);
 }
 Route::get('/page/{slug}', 'PageController@get')->name('public.page');
 
 Route::group([
-    'prefix'    => 'contact',
-    'as'        => 'public.',
+    'prefix'     => 'contact',
+    'as'         => 'public.',
+    'middleware' => 'web'
 ], function () {
     Route::resource('message', 'BandMessageController')->only(['create','store']);
     Route::resource('newsletter', 'NewsletterController')->only(['create','store']);
@@ -61,7 +64,7 @@ Route::get('/logout', function() {
     return redirect()->route('public.events');
 });
 if(app()->environment('local')) {
-    Route::get('myi', fn() => phpinfo());
+    Route::middleware('web')->get('myi', fn() => phpinfo());
 }
 Route::fallback(function () {
     return redirect()->route('public.events');
