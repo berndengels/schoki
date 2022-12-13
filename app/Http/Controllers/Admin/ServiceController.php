@@ -248,7 +248,8 @@ class ServiceController extends Controller
     public function sanitizeImageDB()
     {
 		$path	= config('filesystems.images');
-        $images = Images::where('width',0)->orWhere('height')->orWhere('extension', null)->get();
+//        $images = Images::where('width',0)->orWhere('height')->orWhere('extension', null)->get();
+        $images = Images::all();
 		$count	= $images->count();
 
 		if($count > 0) {
@@ -268,7 +269,7 @@ class ServiceController extends Controller
 				if(file_exists($file)) {
 					$extension = substr($fileName, strrpos($fileName, '.') + 1);
 					$size = filesize($file);
-					list($width, $height) = getimagesize($file);
+					[$width, $height] = getimagesize($file);
 
 					$img->extension	= $extension;
 					$img->filesize	= $size;
