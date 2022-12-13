@@ -1,5 +1,5 @@
 @php
-    use Carbon\Carbon;
+    use App\Models\Images;use Carbon\Carbon;
     $domID = $item->getDomId();
     $eventDate = new Carbon($item->getEventDate());
 @endphp
@@ -12,7 +12,13 @@
 
             @if($item->getCategory())
                 <!--i class="ion-{{ $item->getCategory()->icon }} category d-inline-block d-md-none" title="{{ $item->getCategory()->name }}"></i-->
-                <span class="category mr-1">{{ $item->getCategory()->name }}</span>
+                <span class="category mr-1">
+                    @if($item->getCategory()->icon)
+                        <ion-icon name="{{ $item->getCategory()->icon }}"
+                                  title="{{ $item->getCategory()->name }}"></ion-icon>
+                    @endif
+                    {{ $item->getCategory()->name }}
+                </span>
             @endif
         </div>
 
@@ -32,18 +38,26 @@
                 data-target="#{{ $domID }}"
                 role="button"
                 aria-expanded="false"
-                aria-controls="{{ $domID }}">toggle</button>
+                aria-controls="{{ $domID }}">toggle
+        </button>
     </div>
 </div>
 
 <div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="eventBody collapse col-12 mt-0 pt-0">
     @if($item->getImages()->count() === 1)
-        {? $img = $item->getImages()->first() ?}
+        @php
+            /**
+            * @var $img Images
+            */
+            $img = $item->getImages()->first()
+        @endphp
         <div class="col-12 text-center w-100 m-0 p-0 imageWrapper">
             <img src="/media/images/{{ $img->internal_filename }}"
                  class="w-auto m-auto"
-                 title="{{ $img->title }}"
-                 alt="{{ $img->title }}"
+                 width="{{ $img->displayWidth }}"
+                 height="{{ $img->displayHeight }}"
+                 title="{{ $img->title ?? 'Event Bild' }}"
+                 alt="{{ $img->title ?? 'Event Bild' }}"
             >
         </div>
     @elseif ($item->getImages()->count() > 1 )
@@ -65,8 +79,10 @@
                     <div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
                         <img src="/media/images/{{ $img->internal_filename }}"
                              class="w-auto m-auto"
-                             title="{{ $img->title }}"
-                             alt="{{ $img->title }}"
+                             width="{{ $img->displayWidth }}"
+                             height="{{ $img->displayHeight }}"
+                             title="{{ $img->title ?? 'Event Bild' }}"
+                             alt="{{ $img->title ?? 'Event Bild' }}"
                         >
                         @if('' != $img->title)
                             <div class="carousel-caption">

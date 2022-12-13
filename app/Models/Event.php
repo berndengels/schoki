@@ -75,6 +75,9 @@ use App\Repositories\EventPeriodicRepository;
  * @method static Builder|Event whereUpdatedAt($value)
  * @method static Builder|Event whereUpdatedBy($value)
  * @mixin Eloquent
+ * @property-read mixed $description_sanitized
+ * @property-read mixed $description_text
+ * @property-read mixed $description_without_video
  */
 class Event extends Model
 {

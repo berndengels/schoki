@@ -14,7 +14,6 @@ class EventView extends Component
      */
     public $item;
     public $index;
-
     /**
      * Create a new component instance.
      *
@@ -22,7 +21,7 @@ class EventView extends Component
      */
     public function __construct(
         EventEntity $item,
-        string $index
+        string $index,
     )
     {
         $this->item = $item;
@@ -36,8 +35,6 @@ class EventView extends Component
      */
     public function render()
     {
-        return view('components.event-view', [
-//            'item'  => $this->item,
-        ]);
+        return view('components.event-view');
     }
 }

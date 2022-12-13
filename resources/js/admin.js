@@ -31,33 +31,10 @@ var initEditor = function (options) {
                 plugins: 'preview code autolink link paste media image preview imagetools help',
                 toolbar: 'undo redo | bold italic | link autolink paste image code help',
             },
-            /*
-            images_upload_handler: function (blobInfo, success, failure) {
-            var formData = new FormData();
-            formData.append('image', blobInfo.blob(), blobInfo.filename());
-            formData.append('_token', $('[name="_token"]').val());
-
-            $.post({
-                url: '/admin/file/upload',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(response) {
-                    console.info('success');
-                    console.info(response);
-                    success(response.location);
-                },
-                error: function(xhr,err) {
-                    console.error('Upload error');
-                    console.error(err);
-                },
-            });
-            },
-            */
             font_css: [
-                '//fonts.googleapis.com/css?family=Nunito:200,600',
+                '//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap',
             ],
-//            content_css: '/css/dark.css',
+            content_css: '/css/tiny.css',
             body_class: 'eventContent',
             formats: {
                 alignleft: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'left' },
@@ -87,6 +64,9 @@ var initEditor = function (options) {
             media_dimensions: false,
             paste_data_images: false,
             image_advtab: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 h4 blockquote',
+            quickbars_insert_toolbar: false,
+            quickbars_image_toolbar: false,
             paste_as_text: options.paste_as_text,
             paste_block_drop: options.paste_block_drop,
             media_url_resolver: function (data, resolve/*, reject*/) {
@@ -133,12 +113,6 @@ var initEditor = function (options) {
             filemanager_title: "Responsive Filemanager",
         }
     );
-    /*
-    $(options.selector).closest('form').submit(function(e){
-        console.log('submit');
-        return true;
-    });
-    */
 };
 
 var initDatepicker = function (options, datesDisabled) {

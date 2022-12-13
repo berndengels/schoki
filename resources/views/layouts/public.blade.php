@@ -15,10 +15,8 @@
     <link rel="preload" as="image" href="{{ asset('img/power/batcow_bg_transp.png') }}">
     <link rel="preload" as="image" href="{{ asset('img/power/the_dark_art.png') }}">
     <link rel="preload" as="font">
-    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}" />
     <script src="{{ mix('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
-    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     @yield('extra-headers')
 </head>
 <body>

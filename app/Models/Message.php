@@ -32,6 +32,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Message whereMusicStyleId($value)
  * @method static Builder|Message whereName($value)
  * @mixin Eloquent
+ * @property string $msg
+ * @method static Builder|Message whereMsg($value)
  */
 class Message extends Model
 {

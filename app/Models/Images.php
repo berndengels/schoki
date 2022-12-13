@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Eloquent;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 
 /**
  * App\Models\Images
@@ -51,8 +51,45 @@ use Illuminate\Support\Carbon;
  * @mixin Eloquent
  * @property-read Event|null $event
  * @property-read Page|null $page
+ * @property-read mixed $display_height
+ * @property-read mixed $display_width
  */
 class Images extends Media
 {
+    /**
+     * @var string
+     */
     protected $table = 'images';
+    /**
+     * @var string[]
+     */
+    protected $guarded = ['id'];
+    /**
+     * @var string[]
+     */
+    protected $casts = [
+        'width'     => 'integer',
+        'height'    => 'integer',
+        'filesize'  => 'integer',
+    ];
+    /**
+     * @var string[]
+     */
+    protected $appends = ['displayWidth', 'displayHeight'];
+
+    /**
+     * @return int
+     */
+    public function getDisplayWidthAttribute()
+    {
+        return round(config('event.maxImageHeight') * $this->width / $this->height);
+    }
+
+    /**
+     * @return int
+     */
+    public function getDisplayHeightAttribute()
+    {
+        return config('event.maxImageHeight');
+    }
 }

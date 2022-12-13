@@ -38,16 +38,17 @@
         }
     }
 }
-#tinymce {
-    font-family: $font-family-sans-serif;
-    font-weight: 200;
-    color: #fff !important;
-    background-color: #000;
-
-    a {
-        color: $sYellow;
-    }
-    a:hover {
-        color: #ff0;
+body#tinymce {
+    &.eventContent {
+        font-family: $font-family-sans-serif;
+        color: $sFontColor;
+        font-weight: 200;
+        background-color: $body-bg-dark;
+        a {
+            color: $sYellow;
+        }
+        a:hover {
+            color: #ff0;
+        }
     }
 }

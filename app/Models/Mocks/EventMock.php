@@ -75,6 +75,9 @@ use Illuminate\Support\Carbon;
  * @method static Builder|EventMock whereUpdatedAt($value)
  * @method static Builder|EventMock whereUpdatedBy($value)
  * @mixin Eloquent
+ * @property-read mixed $description_sanitized
+ * @property-read mixed $description_text
+ * @property-read mixed $description_without_video
  */
 class EventMock extends Event
 {
