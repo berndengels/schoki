@@ -1,5 +1,5 @@
 @php
-    use App\Models\Images;use Carbon\Carbon;
+    use App\Models\Images, Carbon\Carbon;
     $domID = $item->getDomId();
     $eventDate = new Carbon($item->getEventDate());
 @endphp
@@ -51,9 +51,9 @@
             */
             $img = $item->getImages()->first()
         @endphp
-        <div class="col-12 text-center w-100 m-0 p-0 imageWrapper">
+        <div class="col-12 text-center m-0 p-0 imageWrapper">
             <img src="/media/images/{{ $img->internal_filename }}"
-                 class="w-auto m-auto"
+                 class="mx-auto"
                  width="{{ $img->displayWidth }}"
                  height="{{ $img->displayHeight }}"
                  title="{{ $img->title ?? 'Event Bild' }}"
@@ -74,11 +74,11 @@
                 @endforeach()
             </ul>
 
-            <div class="carousel-inner text-center col-12 w-100 m-0 p-0">
+            <div class="carousel-inner text-center col-12 m-0 p-0">
                 @foreach($item->getImages() as $index => $img)
                     <div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
                         <img src="/media/images/{{ $img->internal_filename }}"
-                             class="w-auto m-auto"
+                             class="mx-auto"
                              width="{{ $img->displayWidth }}"
                              height="{{ $img->displayHeight }}"
                              title="{{ $img->title ?? 'Event Bild' }}"
