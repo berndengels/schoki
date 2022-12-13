@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Auth::routes(['register' => false]);
@@ -125,4 +126,5 @@ Route::prefix('admin')->group(function () {
 		Route::post('store', 'Admin\MenuController@store')->name('admin.menuStore');
 		Route::get('icons', 'Admin\MenuController@icons')->name('admin.menuIcons');
 	});
+    Route::middleware('auth')->get('phpinfo', fn() => phpinfo());
 });
