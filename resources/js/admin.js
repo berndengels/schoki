@@ -54,9 +54,11 @@ var initEditor = function (options) {
             });
             },
             */
-            content_css: [
+            font_css: [
                 '//fonts.googleapis.com/css?family=Nunito:200,600',
             ],
+            content_css: '/css/app.css',
+            body_class: 'eventContent',
             formats: {
                 alignleft: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'left' },
                 aligncenter: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'center' },
@@ -102,22 +104,18 @@ var initEditor = function (options) {
                 }
             },
             init_instance_callback: function (editor) {
-                editor.on(
-                    'ExecCommand', function (e) {
+                editor.on('ExecCommand', e => {
                         console.info(e.command, e.value)
                         switch(e.command) {
-                        case 'mceMedia':
-                            tinymce.fire(
-                                'media-dialog-open', {
+                            case 'mceMedia':
+                                tinymce.fire('media-dialog-open', {
                                     'editor': tinymce.EditorManager.activeEditor
-                                }
-                            );
-                            break;
+                                });
+                                break;
                         }
                     }
                 )
-                .on(
-                    'BeforeSetContent', function (e) {
+                .on('BeforeSetContent', e => {
                         console.info('BeforeSetContent', e.type);
                         e.content = $.trim(e.content);
 //                        e.content = e.content.replace(/<[^>]+>/ig,'');
@@ -125,8 +123,7 @@ var initEditor = function (options) {
                         return e.content;
                     }
                 )
-                .on(
-                    'GetContent', function (e) {
+                .on('GetContent', function (e) {
                         console.info('GetContent',e.type)
                     }
                 );

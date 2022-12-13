@@ -35,7 +35,6 @@ phpunit.dusk.xml
 /.jshintrc
 /.phpstorm.meta.php
 /.phpunit.result.cache
-/webpack.mix.js
 /_ide_helper.php
 /perms
 /.valet-env.php

@@ -18,7 +18,7 @@
                 {{ $data->links() }}
             </div>
             @foreach ($data as $event)
-                <div class="event col-12 lazy">
+                <div class="event col-12">
                     <div class="eventContent container col-12 mb-2">
                         <x-event-view :item="$event" :index="$loop->index" />
                     </div>
