@@ -55,7 +55,7 @@ var initEditor = function (options) {
             },
             */
             content_css: [
-            '//fonts.googleapis.com/css?family=Nunito:200,600',
+                '//fonts.googleapis.com/css?family=Nunito:200,600',
             ],
             formats: {
                 alignleft: { selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'left' },
@@ -86,6 +86,7 @@ var initEditor = function (options) {
             paste_data_images: false,
             image_advtab: true,
             paste_as_text: options.paste_as_text,
+            paste_block_drop: options.paste_block_drop,
             media_url_resolver: function (data, resolve/*, reject*/) {
                 // <iframe src="//www.youtube.com/embed/vUU2HCaXtbQ" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                 // https://youtu.be/XQUDsRafP0Q
@@ -103,7 +104,7 @@ var initEditor = function (options) {
             init_instance_callback: function (editor) {
                 editor.on(
                     'ExecCommand', function (e) {
-                        console.log(e.command +": "+e.value);
+                        console.info(e.command, e.value)
                         switch(e.command) {
                         case 'mceMedia':
                             tinymce.fire(
@@ -117,15 +118,16 @@ var initEditor = function (options) {
                 )
                 .on(
                     'BeforeSetContent', function (e) {
-                        console.log(e.type);
+                        console.info('BeforeSetContent', e.type);
                         e.content = $.trim(e.content);
-                        e.content = e.content.replace(/<[\/]?pre>/ig,'');
-                        e.content = e.content.replace(/(<[^\>]+)(style="[^"]+")/ig,'$1');
+//                        e.content = e.content.replace(/<[^>]+>/ig,'');
+//                        e.content = e.content.replace(/(<[^\>]+)(style="[^"]+")/ig,'$1');
+                        return e.content;
                     }
                 )
                 .on(
                     'GetContent', function (e) {
-                        console.log(e.type);
+                        console.info('GetContent',e.type)
                     }
                 );
             },
@@ -178,7 +180,7 @@ function addNewImage(response, type)
         function () {
             var target = $(this).data('target');
             removeFile(target, 'Image');
-            console.log(target);
+            console.info(target);
         }
     );
 }
@@ -211,7 +213,7 @@ function addNewImage(response)
         function () {
             var target = $(this).data('target');
             removeFile(target, 'Image');
-            console.log(target);
+            console.info(target);
         }
     );
 }
@@ -244,7 +246,7 @@ function addNewAudio(response)
         function () {
             var target = $(this).data('target');
             removeFile(target, 'Audio');
-            console.log(target);
+            console.info(target);
         }
     );
 }
