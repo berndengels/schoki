@@ -9,6 +9,10 @@
     <meta name="robots" content="index, follow" />
     <meta http-equiv="expires" content="3600" />
     <meta http-equiv="cache-control" content="max-age=3600">
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
     <meta name="description" content="Schokoladen-Mitte Berlin" />
     <meta name="keywords" content="Schokoladen,Berlin,Musik,Musik Cafe,Kneipe,Kultur,Szene,Subkultur,Konzerte,Livemusik,live music,Veranstaltungs-Kneipe,Veranstaltungen,Lesung,alternativ" />
     <meta http-equiv="imagetoolbar" content="no" />

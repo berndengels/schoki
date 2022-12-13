@@ -8,7 +8,10 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <link rel="preload" as="font">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script src="{{ mix('js/app-admin.js') }}" type="text/javascript" charset="utf-8"></script>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,600" />
