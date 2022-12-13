@@ -159,8 +159,8 @@
             show_days: true,
             weekstartson: 1,
             nav_icon: {
-                prev: '<ion-icon name="arrow-dropleft-circle"></ion-icon>',
-                next: '<ion-icon name="arrow-dropright-circle"></ion-icon>'
+	            prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
+	            next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
             },
             ajax: {
                 url: "/calendar",

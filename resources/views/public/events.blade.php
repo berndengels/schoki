@@ -108,55 +108,53 @@
 @endsection
 
 @section('inline-scripts')
-    <script>
-        $(function($) {
-            var now = new Date();
-            var year = now.getFullYear();
-            var month = now.getMonth() + 1;
-            $("#calendar").zabuto_calendar({
-                language: 'de',
-                year: year,
-                month: month,
-                show_previous: false,
-                show_next: 6,
-                cell_border: true,
-                today: true,
-                show_days: true,
-                weekstartson: 1,
-                nav_icon: {
-                    prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
-                    next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
-                },
-                ajax: {
-                    url: "/calendar/" + year + "/" + month,
-                    modal: true,
-                },
-                legend: false, // object array, [{type: string, label: string, classname: string}]
-                action_nav: false // function
-            });
+<script>
+    $(function($) {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        $("#calendar").zabuto_calendar({
+            language: 'de',
+            year: year,
+            month: month,
+            show_previous: false,
+            show_next: 6,
+            cell_border: true,
+            today: true,
+            show_days: true,
+            weekstartson: 1,
+            nav_icon: {
+                prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
+                next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
+            },
+            ajax: {
+                url: "/calendar/" + year + "/" + month,
+                modal: true,
+            },
+            legend: false, // object array, [{type: string, label: string, classname: string}]
+            action_nav: false // function
         });
+    });
 
-        $(".collapse").on('shown.bs.collapse', function(){
-            $this = $(this);
-            $this.find('.carousel').carousel('cycle');
-            //$this.parent('.event').removeClass('col-md-4').addClass('col-md-6');
-        });$(".collapse").on('show.bs.collapse', function(){
-            $this = $(this);
-            $('.collapse').each(function(){
-                if($this != $(this)) {
-                    $(this).collapse('hide');
-                }
-            });
+    $(".collapse").on('shown.bs.collapse', function(){
+        $this = $(this);
+        $this.find('.carousel').carousel('cycle');
+        //$this.parent('.event').removeClass('col-md-4').addClass('col-md-6');
+    });$(".collapse").on('show.bs.collapse', function(){
+        $this = $(this);
+        $('.collapse').each(function(){
+            if($this != $(this)) {
+                $(this).collapse('hide');
+            }
+        });
 //        $this.parent('.event').siblings().find('.collapse').collapse('hide');
-        });
-        $(".collapse").on('hide.bs.collapse', function(){
-            $this = $(this);
-            //$this.parent('.event').removeClass('col-md-6').addClass('col-md-4');
-        });
-        $(".collapse").on('hidden.bs.collapse', function(){
-        });
-
-    </script>
-
+    });
+    $(".collapse").on('hide.bs.collapse', function(){
+        $this = $(this);
+        //$this.parent('.event').removeClass('col-md-6').addClass('col-md-4');
+    });
+    $(".collapse").on('hidden.bs.collapse', function(){
+    });
+</script>
 @endsection
 
