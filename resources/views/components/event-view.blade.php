@@ -11,7 +11,6 @@
             <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
 
             @if($item->getCategory())
-                <!--i class="ion-{{ $item->getCategory()->icon }} category d-inline-block d-md-none" title="{{ $item->getCategory()->name }}"></i-->
                 <span class="category mr-1">
                     @if($item->getCategory()->icon)
                         <ion-icon name="{{ $item->getCategory()->icon }}"

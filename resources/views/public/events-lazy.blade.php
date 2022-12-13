@@ -5,9 +5,6 @@
 @section('extra-headers')
     <link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
     <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
-@endsection
-
-@section('extra-headers')
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 @endsection
