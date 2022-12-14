@@ -1,8 +1,7 @@
 <?php
 
-use Intervention\Image\ImageServiceProviderLaravelRecent;
-use MichalOravec\PaginateRoute\PaginateRoute;
 use Spatie\GoogleFonts\GoogleFontsServiceProvider;
+use Intervention\Image\ImageServiceProviderLaravelRecent;
 
 return [
 
@@ -199,7 +198,6 @@ return [
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
         ImageServiceProviderLaravelRecent::class,
-        Silber\PageCache\LaravelServiceProvider::class,
     ],
 
     /*
@@ -258,7 +256,6 @@ return [
 		'Debugbar'		=> Barryvdh\Debugbar\Facade::class,
 		'Newsletter' 	=> Spatie\Newsletter\NewsletterFacade::class,
         'ReCaptcha'     => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
-        'PaginateRoute' => PaginateRoute::class,
     ],
 
 ];

@@ -106,7 +106,7 @@ class Event extends Model
     protected $dates = [
         'created_at',
         'updated_at',
-        'event_date',
+//        'event_date',
     ];
     protected $casts = [
         'event_date'    => 'date:Y-m-d',

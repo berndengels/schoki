@@ -8,9 +8,6 @@
  */
 namespace App\Forms;
 
-use App\Forms\MediaForm;
-use App\Models\EventPeriodic;
-use App\Models\Images;
 use Kris\LaravelFormBuilder\Field;
 
 class ImagesForm extends MediaForm

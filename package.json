@@ -29,6 +29,7 @@
         "jsdom": "^16.4.0",
         "jstree": "^3.3.10",
         "leaflet": "^1.7.1",
+        "requirejs": "^2.3.6",
         "tinymce": "^5.10.0",
         "uglify-js": "^3.4.10",
         "utf-8-validate": "^5.0.3"

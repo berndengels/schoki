@@ -8,6 +8,7 @@
  */
 namespace App\Http\Controllers\Admin;
 
+use App\Repositories\EventPeriodicRepository;
 use Cache;
 use Exception;
 use App\Libs\EventDateTime;
@@ -34,16 +35,18 @@ class EventPeriodicController extends MainController
     public function edit( FormBuilder $formBuilder, $id = 0, $options = null ) {
         $event  = ($id > 0) ? EventPeriodic::findOrFail($id): null;
         $form   = $formBuilder->create(EventPeriodicForm::class, ['model' => $event]);
+        $repo   = new EventPeriodicRepository();
+		$dates = $repo->getAllPeriodicDates()->keys()->map(fn($item) => "'".$item."'")->implode(',');
 
-		$dates = '';
-
-		if($id > 0) {
+        if($id > 0) {
 			$eventDateTime = new EventDateTime();
-			$dates = $eventDateTime->getPeriodicEventDates($event->periodic_position, $event->periodic_weekday);
+			$dates = collect($eventDateTime
+                ->getPeriodicEventDates($event->periodic_position, $event->periodic_weekday))
+                ->map(fn($item) => "'".$item."'")
+                ->toArray()
+            ;
+
 			if($dates && count($dates) > 0) {
-                array_walk($dates, function(&$v){
-                    $v = "'$v'";
-                });
                 $dates = implode(',', $dates);
             }
 		}

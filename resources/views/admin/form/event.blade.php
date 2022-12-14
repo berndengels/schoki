@@ -7,7 +7,6 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
-    <script type="text/javascript" src="{{ mix('js/admin.js') }}" charset="UTF-8"></script>
     <link type="text/css" rel="stylesheet" href="{{ mix('vendor/dropzone/css/dropzone.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
@@ -41,7 +40,7 @@
         var reservedDates = [{!! $dates !!}];
         var tinymceOptions = {
             selector: '#tinymce',
-	        plugins: ['preview','code','advlist','link','autolink','paste','media','quickbars','help'],
+	        plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
             toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
             image_advtab: true,
             width: 800,
@@ -50,7 +49,7 @@
 	        paste_block_drop: true,
             images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
         };
-        initEditor(tinymceOptions);
+        InitEditor(tinymceOptions);
         var datepickerOptions = {
             weekStart: 1,
             startDate: new Date(),
@@ -58,36 +57,9 @@
             todayBtn: false,
             todayHighlight: true,
             language: "de-DE",
-/*
-            format: {
-                toDisplay: function (date, format, language) {
-                    var d = new Date(date);
-                    d.setDate(d.getDate());
-                    return d.toLocaleDateString("de-DE");
-                },
-                toValue: function (date, format, language) {
-                    console.info("format");
-                    console.info(format);
-                    console.info("language: " + language);
-                    // month/day/year
-                    var a = date.split('-'),
-                        day = a[2],
-                        month = a[1],
-                        year = a[0],
-                        dateEN = month + "/" + day + "/" + year
-                        ;
-
-                    var d = new Date(dateEN);
-                    return new Date(d);
-                }
-            }
- */
         };
-        var datepicker = initDatepicker(datepickerOptions, reservedDates);
-//*/
+        var datepicker = InitDatepicker(datepickerOptions, reservedDates);
         datepicker.on('changeDate', function(e, data) {
-//        $('#event_date').on('change', function(e) {
-//            var eventDate = new Date(e.date);
             var eventDate = $(this).val(),
                 $helpBlock = $('.help-block','#wrapperEventDate'),
                 $btnConfirm = $('#wrapperBtnSubmitOverride'),
@@ -152,8 +124,8 @@
             $('html, body').animate({ scrollTop: ($('#btnImageCollapse').offset().top)}, 'slow');
         });
 
-        let cropper;
-        var ID = {{ $id ?? 'null' }},
+//        const cropper;
+        const ID = {{ $id ?? 'null' }},
             uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
             maxImageHeight = {!! config('event.maxImageHeight') !!},
             cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
@@ -166,11 +138,11 @@
                 url: "/admin/file/upload",
             };
 
-        initDropzone(dropzoneOptions);
+        InitDropzone(dropzoneOptions);
 
-        var $myDate = $('input[type=date]');
+        const $myDate = $('input[type=date]');
 
-        function handleReservedDates(e){
+        const handleReservedDates = (e) => {
             var target = e.target,$target = $(target),date = $target.val(),
                 errMsg = "Sorry, dieses Datum (" + date + ") ist bereits von einem anderen Event belegt!\nBitte wähle ein anderes aus.";
 

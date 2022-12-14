@@ -30,7 +30,6 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Kris\LaravelFormBuilder\FormBuilder;
-use Intervention\Image\ImageManager;
 
 class MainController extends Controller
 {
@@ -104,16 +103,15 @@ class MainController extends Controller
 
 	public function getReservedDates()
 	{
-		$dates = Event::whereDate('event_date','>=', $this->today)
-			->orderBy('event_date','asc')
-			->pluck('event_date')
-			->toArray()
-		;
+        if(!config('event.useCache')) {
+            $actualEvents = Event::allActualMerged();
+        } else {
+            $actualEvents = Cache::remember($this->cacheEventKey, 3600, function() {
+                return Event::allActualMerged();
+            });
+        }
 
-		array_walk($dates, function(&$v){
-			$v = "'$v'";
-		});
-
+        $dates = $actualEvents->keys()->map(fn($item) => "'".$item."'")->toArray();
 		return $dates;
 	}
 
@@ -189,6 +187,7 @@ class MainController extends Controller
 
     protected function processImages( FormRequest $request, $id = 0, $override = 0, $template = 0 )
     {
+        $tempPath = config('filesystems.disks.upload.root').'/';
         $path   = config('filesystems.disks.image_upload.root').'/';
         $images = ($request->images && count($request->images) > 0) ? $request->images : null;
         $addedImages = ($request->addedImgages && count($request->addedImgages) > 0) ? $request->addedImgages : null;
@@ -201,6 +200,7 @@ class MainController extends Controller
             foreach($images as $img) {
                 $imgID = (int) $img['id'];
                 $image = Images::find($imgID);
+                $fullTempPath = realpath($tempPath . $image->internal_filename);
 
 				if($override > 0 || $template > 0 ) {
 					$attributes = $image->getAttributes();
@@ -219,7 +219,7 @@ class MainController extends Controller
 
 				if( isset($img['remove']) ) {
                     $fullPath = realpath($path . $image->internal_filename);
-                    DB::table('images')->where('id', '=', $imgID)->delete();
+                    Images::find($imgID)->delete();
                     @unlink($fullPath);
                     continue;
                 }
@@ -227,6 +227,9 @@ class MainController extends Controller
 				$image->title = $img['title'];
                 try {
                     $image->saveOrFail();
+                    if(file_exists($fullTempPath)) {
+                        @unlink($fullTempPath);
+                    }
                 } catch (Exception $e) {
                     return back()->with('error','Fehler: '.$e->getMessage());
                 }
@@ -237,7 +240,7 @@ class MainController extends Controller
         if( $addedImages && count($addedImages) > 0 ) {
             foreach($addedImages as $filename => $img) {
                 $data = json_decode($img);
-                if ($data->success) {
+                if ($data && $data->success) {
                     $image = new Images();
                     $image->internal_filename   = $filename;
                     $image->external_filename   = $data->external_filename;
@@ -245,6 +248,7 @@ class MainController extends Controller
                     $image->height              = $data->height;
                     $image->filesize            = $data->filesize;
                     $image->extension           = $data->extension;
+                    $fullTempPath = realpath($tempPath . $image->internal_filename);
 
                     switch($this->entity) {
                         case 'event':
@@ -261,19 +265,15 @@ class MainController extends Controller
                     $image->title = '';
                     try {
                         $image->saveOrFail();
+                        if(file_exists($fullTempPath)) {
+                            @unlink($fullTempPath);
+                        }
                     } catch (Exception $e) {
                         return back()->with('error','Fehler: '.$e->getMessage());
                     }
                 }
             }
         }
-    }
-
-    protected function optimizeImage($imageFile)
-    {
-        $path = config('filesystems.images');
-        $fileName = "$path/$imageFile";
-
     }
 
     protected function removeImages(Collection $images)

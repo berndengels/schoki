@@ -4,9 +4,7 @@ namespace App\Providers;
 
 use Debugbar;
 use Carbon\Carbon;
-use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
@@ -27,6 +25,7 @@ use App\View\Components\Form\Input\Time;
 use Laravel\Telescope\TelescopeServiceProvider;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
+use Barryvdh\Debugbar\ServiceProvider as DebugbarServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -39,11 +38,10 @@ class AppServiceProvider extends ServiceProvider
     {
         URL::forceScheme('https');
 		$locale = config('app.locale');
-		Carbon::setUTF8(true);
 		Carbon::setLocale($locale);
 		setlocale(LC_TIME, $locale, 'de_DE.utf8', 'de');
-        if('prod' !== config('app.env')) {
-//            Debugbar::enable();
+        if('prod' !== config('app.env') && env('DEBUGBAR_ENABLED')) {
+            Debugbar::enable();
         } else {
             Debugbar::disable();
         }
@@ -82,7 +80,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register(IdeHelperServiceProvider::class);
             $this->app->register(DebugbarServiceProvider::class);
 			$this->app->register(TelescopeServiceProvider::class);
-            $this->app->register(\PrettyRoutes\ServiceProvider::class);
+//            $this->app->register(\PrettyRoutes\ServiceProvider::class);
         }
     }
 }

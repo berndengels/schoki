@@ -109,6 +109,9 @@ class EventPeriodic extends Model
      */
     protected $appends = [
         'event_dates',
+        'position',
+        'weekday',
+        'period',
         'description_sanitized',
     ];
 
@@ -161,6 +164,24 @@ class EventPeriodic extends Model
         if('' !== $value) {
 			return collect(preg_split("/[\n\r]+/", $value));
         }
+    }
+
+    public function getPositionAttribute()
+    {
+        $position = config('event.periodicPosition');
+        return $position[$this->periodic_position] ?? null;
+    }
+
+    public function getWeekdayAttribute()
+    {
+        $weekday = config('event.periodicWeekday');
+        return $weekday[$this->periodic_weekday] ?? null;
+    }
+
+    public function getPeriodAttribute()
+    {
+//        $weekday = config('event.periodicWeekday');
+        return $this->position .' '. $this->weekday;
     }
 
 	/**

@@ -1,12 +1,6 @@
 
 @extends('layouts.admin')
 
-@section('extra-headers')
-    <script type="text/javascript" src="{{ mix('vendor/jstree/js/jstree.min.js') }}" charset="UTF-8"></script>
-    <script type="text/javascript" src="{{ mix('js/admin.js') }}" charset="UTF-8"></script>
-    <link type="text/css" rel="stylesheet" href="{{ mix('vendor/jstree/css/default/style.min.css') }}" />
-@endsection
-
 @section('content')
     <div id="treeContainer" class="col-sm-12 mh-100 sidenav" role="main">
         <form id="menuControl" class="m-0 mb-2">
@@ -28,14 +22,12 @@
 
 @section('inline-scripts')
 <script>
-    var operationRoute  = '/admin/menus/operation';
+    const operationRoute  = '/admin/menus/operation';
 
     $(function () {
         var $tree = $('#tree');
         document.getElementById('frmMenu').reset();
-
-        $tree
-                .jstree({
+        $tree.jstree({
                     'core': {
                         'data': {
                             'url': operationRoute + '/get_node',
@@ -197,7 +189,7 @@
                     html += "<tr><td>"+k+": </td><td>"+v+"<td></tr>";
                 });
                 html += '</table>';
-                myModale('show','Baum Analyse',html);
+                MyModale('show','Baum Analyse',html);
             });
         });
         $('#fixTree','#menuControl').click(function() {
@@ -206,7 +198,7 @@
                 if(0 === countFixes) {
                     text = "Alles in Ordnung, keine Reparatur notwendig.";
                 }
-                myModale('show','Baum Reparatur',text);
+                MyModale('show','Baum Reparatur',text);
             });
         });
         $('#refresh','#menuControl').click(function() {
@@ -235,7 +227,7 @@
                             html += this.tag;
                         });
                         html += '</div>';
-                        myModale('show','Icons',html);
+                        MyModale('show','Icons',html);
                         var elem = '#myModal',
                                 $modal = $(elem);
                         $modal.on('shown.bs.modal', function() {

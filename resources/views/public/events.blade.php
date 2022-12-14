@@ -14,26 +14,34 @@
 @endsection
 
 @section('content')
+    @php
+        use App\Models\Images, Carbon\Carbon;
+    @endphp
+
     <div class="eventContainer col-sm-11 col-md-9 mbs">
         @if( $data->count() )
             @foreach ($data as $event)
+                @php
+                    $domID = $event->getDomId();
+                    $eventDate = new Carbon($event->getEventDate());
+                @endphp
                 <div class="event col-12 lazy" >
                     <div class="eventContent col-12">
                         <div class="eventHeader col-12">
 
                             <div class="dateWrapper col-4 col-md-3">
                                 <div class="weekday col-12">
-                                    <a data-toggle="collapse" href="#{{ $event->getDomId() }}">{{ $event->getEventDate()->formatLocalized('%A') }}</a>
+                                    <a data-toggle="collapse" href="#{{ $domID }}">{{ __($eventDate->format('l')) }}</a>
                                 </div>
                                 @if($event->getCategory())
                                     <ion-icon name="{{ $event->getCategory()->icon }}"></ion-icon>
                                 @endif
 
                                 <div class="eventDate col-6">
-                                    <a data-toggle="collapse" href="#{{ $event->getDomId() }}">{{ $event->getEventDate()->formatLocalized('%d.%m.%Y') }}</a>
+                                    <a data-toggle="collapse" href="#{{ $domID }}">{{ $eventDate->format('d.m.Y') }}</a>
                                 </div>
                                 <div class="eventTime col-6">
-                                    <a data-toggle="collapse" href="#{{ $event->getDomId() }}">{{ $event->getEventTime() }} Uhr</a>
+                                    <a data-toggle="collapse" href="#{{ $domID }}">{{ $event->getEventTime() }} Uhr</a>
                                 </div>
                             </div>
 
@@ -42,7 +50,7 @@
                             </div>
                         </div>
 
-                        <div id="{{ $event->getDomId() }}" class="eventBody collapse col-12">
+                        <div id="{{ $domID }}" class="eventBody collapse col-12">
 
                             @if($event->getImages()->count() === 1)
                                 {? $img = $event->getImages()->first() ?}
@@ -128,7 +136,7 @@
                 next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
             },
             ajax: {
-                url: "/calendar/" + year + "/" + month,
+                url: "/calendar",
                 modal: true,
             },
             legend: false, // object array, [{type: string, label: string, classname: string}]
