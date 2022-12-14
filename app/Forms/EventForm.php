@@ -9,6 +9,7 @@
 namespace App\Forms;
 
 use App\Models\Image;
+use Carbon\Carbon;
 use Kris\LaravelFormBuilder\Field;
 
 class EventForm extends MainForm
@@ -28,6 +29,7 @@ class EventForm extends MainForm
         $categoryId = ($model && $model->category) ? $model->category->id : null;
         $themeId    = ($model && $model->theme) ? $model->theme->id : null;
 		$eventTime	= ($model && $model->event_time) ? str_replace('.',':',$model->event_time) : config('event.defaultEventTime');
+        $eventDate	= ($model && $model->event_date) ? $model->event_date->format('Y-m-d') : Carbon::today()->format('Y-m-d');
 
 		if(null === $id ) {
 			$this->add('template', Field::HIDDEN);
@@ -101,7 +103,8 @@ class EventForm extends MainForm
 //                    'data-date-format'  => 'dd.mm.yyyy',
                     'data-date-format'  => 'yyyy-mm-dd',
                     'readonly' => 'readonly',
-                ]
+                ],
+                'value' => $eventDate,
             ])
 
 			->add('btnSubmitOverride', Field::BUTTON_SUBMIT, [
