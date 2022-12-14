@@ -35,39 +35,40 @@
     {!! form_rest($form) !!}
     {!! form_end($form) !!}
     @include('components.back')
+@endsection
 
-    <script>
-//        let cropper;
-        const ID = {{ $id ?? 'null' }},
-            uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
-            maxImageHeight = {!! config('event.maxImageHeight') !!},
-            cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
-            tinymceOptions = {
-	            selector: '#tinymce',
-	            plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
-	            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
-	            image_advtab: true,
-	            width: 800,
-	            height: 600,
-	            paste_as_text: true,
-	            paste_block_drop: true,
-	            images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
-            },
-            dropzoneOptions = {
-                type: 'Image',
-                paramName: 'image',
-                maxFilesize: {!! config('event.maxImageFileSize') !!},
-                dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpg, .jpeg',
-                acceptedFiles: ".jpeg,.jpg",
-                url: "/admin/file/upload",
-            };
+@section('inline-scripts')
+<script>
+    const ID = {{ $id ?? 'null' }},
+        uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
+        maxImageHeight = {!! config('event.maxImageHeight') !!},
+        cropperMaxFilesize = {!! config('event.maxImageFileSize') !!},
+        tinymceOptions = {
+            selector: '#tinymce',
+            plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
+            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
+            image_advtab: true,
+            width: 800,
+            height: 600,
+            paste_as_text: true,
+            paste_block_drop: true,
+            images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
+        },
+        dropzoneOptions = {
+            type: 'Image',
+            paramName: 'image',
+            maxFilesize: {!! config('event.maxImageFileSize') !!},
+            dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpg, .jpeg',
+            acceptedFiles: ".jpeg,.jpg",
+            url: "/admin/file/upload",
+        };
 
-        InitEditor(tinymceOptions);
-        InitDropzone(dropzoneOptions);
+    InitEditor(tinymceOptions);
+    InitDropzone(dropzoneOptions);
 
-        $('.multi-collapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({ scrollTop: ($('#btnImageCollapse').offset().top)}, 'slow');
-        });
-    </script>
-    <script src="{{ asset('js/cropper.js') }}" type="javascript"></script>
+    $('.multi-collapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({ scrollTop: ($('#btnImageCollapse').offset().top)}, 'slow');
+    });
+</script>
+<!--script src="{{ asset('js/cropper.js') }}" type="javascript"></script-->
 @endsection

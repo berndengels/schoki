@@ -34,9 +34,10 @@
     {!! form_rest($form) !!}
     {!! form_end($form) !!}
     @include('components.back')
+@endsection
 
-    <script>
-//    let cropper;
+@section('inline-scripts')
+<script>
     const ID = {{ $id ?? 'null' }},
         uploadWebPath = "{!! config('filesystems.disks.image_upload.webRoot') !!}",
         maxImageHeight = {!! config('event.maxImageHeight') !!},
@@ -58,15 +59,15 @@
     });
 
     const tinymceOptions = {
-	    selector: '#tinymce',
-	    plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
-	    toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
-	    image_advtab: true,
-	    width: 800,
-	    height: 600,
-	    paste_as_text: true,
-	    paste_block_drop: true,
-	    images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
+        selector: '#tinymce',
+        plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
+        toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
+        image_advtab: true,
+        width: 800,
+        height: 600,
+        paste_as_text: true,
+        paste_block_drop: true,
+        images_upload_base_path: "{!! config('filesystems.disks.upload.webRoot') !!}",
     };
     InitEditor(tinymceOptions);
     const datepickerOptions = {
@@ -79,6 +80,5 @@
     };
 
     InitDatepicker(datepickerOptions, periodicDates);
-    </script>
-
+</script>
 @endsection

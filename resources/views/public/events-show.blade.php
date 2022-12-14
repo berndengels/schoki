@@ -1,20 +1,19 @@
 @extends('layouts.public')
+@php use App\Entities\EventEntity, Carbon\Carbon; @endphp
 
 @section('title', 'Event')
-
-@php
-    use App\Entities\EventEntity, Carbon\Carbon;
-/**
-* @var $event EventEntity
-*/
-    $eventDate = new Carbon($event->getEventDate());
-@endphp
 
 @section('content')
     <div class="eventShow col-12 col-lg-8 mt-2 mbs">
         @if($expired)
             <h4>Die Veranstaltung ist bereits gelaufen.</h4>
         @elseif($event)
+            @php
+            /**
+            * @var $event EventEntity
+            */
+                $eventDate = new Carbon($event->getEventDate());
+            @endphp
         <div class="eventHeader">
             <div class="">
                 <h3>{{ __($eventDate->format('l')) }} {{ $eventDate->format('d.m.Y') }} {{ $event->getEventTime() }} Uhr <span class="category">{{ $event->getCategory()->name }}</span></h3>

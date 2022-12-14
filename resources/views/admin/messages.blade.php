@@ -1,12 +1,7 @@
 @php use Illuminate\Support\Str; @endphp
 @extends('layouts.admin')
 
-@section('extra-headers')
-    <script type="text/javascript" src="{{ mix('js/admin.js') }}" charset="UTF-8"></script>
-@endsection
-
 @section('content')
-
     @include('components.add')
     @include('admin.form.filter.messages')
     <br>
@@ -48,4 +43,14 @@
         @endforeach
     </table>
     {{ $data->links() }}
+@endsection
+
+@section('inline-scripts')
+<script>
+$(document).ready(() => {
+	$('#musicStyle').change(() => {
+		document.getElementById('filter').submit()
+	});
+});
+</script>
 @endsection

@@ -6,7 +6,6 @@
     <br>
     {{ $data->links() }}
     <div class="d-inline-block mt-2 float-right">{!! form($addressCategoryForm) !!}</div>
-
     <table class="table-responsive-sm">
         <tr class="table table-striped table-sm">
             <th scope="col">ID</th>

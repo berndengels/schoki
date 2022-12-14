@@ -17,6 +17,7 @@ class MessageFilterForm extends Form {
 
 	protected $formOptions = [
 		'method'	=> 'GET',
+        'id'      => 'filter',
 		'url'		=> '/admin/messages',
 		'class'		=> 'form-horizontal',
 	];
@@ -28,6 +29,8 @@ class MessageFilterForm extends Form {
 			->add('musicStyle', Field::ENTITY, [
 				'class' => MusicStyle::class,
 				'label'	=> 'Musikstil',
+                'id'    => 'musicStyle',
+                'name'    => 'musicStyle',
 				'selected' => $data['musicStyle'],
 				'empty_value' => 'Bitte wählen ...',
 				'wrapper'       => [
@@ -37,6 +40,7 @@ class MessageFilterForm extends Form {
 					'class' => 'form-group d-inline',
 				],
 			])
+/*
 			->add('submit', Field::BUTTON_SUBMIT, [
 				'label'	=> '',
 				'wrapper'       => [
@@ -46,6 +50,7 @@ class MessageFilterForm extends Form {
 					'class' => 'form-group d-inline fa fa-search',
 				],
 			])
+*/
 		;
 	}
 }
