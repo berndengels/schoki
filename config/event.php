@@ -11,7 +11,7 @@ return [
     'defaultEventTime'  => env('DEFAULT_EVENT_TIME', '19:00'),
     'maxImageHeight'    => (int) env('MAX_IMAGE_HEIGHT', 300),
     'maxImageWidth'     => (int) env('MAX_IMAGE_WIDTH', 600),
-	'maxImageFileSize'  => (int) env('MAX_IMAGE_FILESIZE', 60000),
+	'maxImageFileSize'  => (int) env('MAX_IMAGE_FILESIZE', 1000000),
 	'paginationLimit' 	=> 10,
 	'eventsPaginationLimit'	=> 10,
     'periodicPosition'  => [

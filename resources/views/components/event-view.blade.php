@@ -10,7 +10,7 @@
             <span class="ml-1">{{ $eventDate->format('d.m.') }}</span>
             <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
 
-            @if($item->getCategory())
+        @if($item->getCategory())
                 <span class="category mr-1">
                     @if($item->getCategory()->icon)
                         <ion-icon name="{{ $item->getCategory()->icon }}"
@@ -32,13 +32,24 @@
                 {{ $item->getTitle() }}
             </div>
         </div>
-        <button class="btn-toggle off"
-                data-toggle="collapse"
-                data-target="#{{ $domID }}"
-                role="button"
-                aria-expanded="false"
-                aria-controls="{{ $domID }}">toggle
-        </button>
+
+        <div class="header-buttons d-inline-block clearfix m-0 p-0 pr-2">
+            @if($item->getTicketlink())
+                <a class="ticketlink"
+                   role="button"
+                   target="_blank"
+                   href="{{ $item->getTicketlink() }}">
+                    <ion-icon name="ticket"></ion-icon>
+                    TicketShop</a>
+            @endif
+            <button class="btn-toggle off"
+                    role="button"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    data-target="#{{ $domID }}"
+                    aria-controls="{{ $domID }}">open
+            </button>
+        </div>
     </div>
 </div>
 

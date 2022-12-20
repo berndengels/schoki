@@ -15,7 +15,7 @@
 @section('content')
     @include('components.back')
     {!! form_start($form) !!}
-    {!! form_until($form, 'links') !!}
+    {!! form_until($form, 'ticketlink') !!}
 
     <button id="btnImageCollapse" class="btn btn-primary col-12 text-left" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseImages collapseDropzoneTarget">
         Bilder @if(!$form->images) hinzufügen @else anzeigen @endif
@@ -70,10 +70,7 @@
             $override = $('#override'),
             $isPeriodic = $('#isPeriodic')
         ;
-
-        //            eventDate = eventDate.toISOString().split('T')[0];
-        console.info($(this).val());
-
+        //eventDate = eventDate.toISOString().split('T')[0];
         $.post({
             url: '/admin/events/checkForPeriodicDate',
             data: {
@@ -86,10 +83,6 @@
                 console.error(err);
             },
             success: function (result) {
-
-                console.info('event');
-                console.debug(result);
-
                 if(result.entity) {
                     $override.val(result.entity.id);
                     $isPeriodic.val(1);

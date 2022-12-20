@@ -49,12 +49,13 @@
         var scrollDelay = 0,
             history = [],
             firstLoad = true;
-
+/*
 		function logDescription(){
 			$(".collapse", ".eventContainer").each((k,el) => {
 				console.info(el.id, $(el).find(".description").is(":visible"));
             });
         }
+*/
 		function removeAllDescription() {
 			$(".collapse .description", ".eventContainer").find().each(() => $(this).html(""));
         }
@@ -72,7 +73,11 @@
             .ajaxStop(function() {
 	            if(firstLoad) {
 	                const $first = $('.collapse:first', '.eventContainer'),
-	                    $btn = $first.prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
+	                    $btn = $first.prev('.collapseToggle').find('.btn-toggle')
+                            .removeClass('off')
+                            .addClass('on')
+                            .html("close")
+                    ;
 
 	                history.push($btn);
 
@@ -93,9 +98,9 @@
 
                     history.push($btn)
 	                if($btn.hasClass('on')) {
-		                $btn.removeClass('on').addClass('off');
+		                $btn.removeClass('on').addClass('off').html('open');
                     } else {
-		                $btn.removeClass('off').addClass('on');
+		                $btn.removeClass('off').addClass('on').html('close');
                     }
 					if(history.length > 1) {
 						let $last = $(history.shift()),
@@ -118,7 +123,7 @@
                             top = parseInt($header.offset().top - 70, 10),
                             $carousel = $('.carousel', my);
 
-	                    $header.find('.btn-toggle').removeClass('off').addClass('on');
+	                    $header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
 	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
 	                    $([document.documentElement, document.body]).animate({
@@ -132,7 +137,7 @@
                     .on('show.bs.collapse', function() {
                         const my = this, $my = $(my),
                             $other = $(my).closest('.event').siblings().find('.show');
-	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
+	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
 	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
                         $other.collapse('hide');
@@ -141,7 +146,7 @@
 		                const my = this,
 			                $carousel = $('.carousel', my);
 
-	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off');
+	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off').html('open');
 		                removeAllDescription();
 		                if($carousel.length) {
 			                $carousel.carousel("dispose");

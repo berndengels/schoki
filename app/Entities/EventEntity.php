@@ -38,6 +38,7 @@ class EventEntity extends Entity {
 	 * @var null|Collection
 	 */
 	private $links;
+    private $ticketlink;
 	private $is_periodic = 0;
 	/**
 	 * @var Carbon
@@ -231,6 +232,24 @@ class EventEntity extends Entity {
 		}
 		return $this;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getTicketlink()
+    {
+        return $this->ticketlink;
+    }
+
+    /**
+     * @param mixed $ticketlink
+     * @return EventEntity
+     */
+    public function setTicketlink($ticketlink): EventEntity
+    {
+        $this->ticketlink = $ticketlink;
+        return $this;
+    }
 
 	/**
 	 * @return mixed

@@ -41,6 +41,7 @@ class EventRequest extends FormRequest
             'description'   => '',
             'images'        => '',
             'links'         => '',
+            'ticketlink'    => 'nullable|url',
             'is_published'  => 'boolean',
             'is_periodic'   => '',
         ];

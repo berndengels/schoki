@@ -141,6 +141,7 @@ const InitDropzone = (options) => {
 		fileNameOrig = null,
 		myDropzone,
 		$cropperView,
+		maxSize = options.maxFilesize ? (options.maxFilesize / 1000000) : 1,
 		dropzoneReset = false,
 		dropzoneOptions = {
 			url: options.url || "/admin/file/upload",
@@ -149,14 +150,14 @@ const InitDropzone = (options) => {
 				_token: $('meta[name="csrf-token"]').attr('content')
 			},
 			paramName: options.paramName || "image",
-			maxFilesize: options.maxFilesize / 1000000 || 10, // MB
+			maxFilesize: maxSize, // MB
 			maxFiles: 1,
 			uploadMultiple: false,
 			addRemoveLinks: true,
 			parallelUploads: 1,
 			dictFileSizeUnits: 'mb',
 			dictRemoveFile: 'Datei löschen',
-			dictFileTooBig: 'Diese Datei ist %FILE_SIZE% MB gross. Es sind aber max. 2MB erlaubt',
+			dictFileTooBig: 'Diese Datei ist %FILE_SIZE% MB gross. Es sind aber max. ' + maxSize + ' MB erlaubt',
 			dictDefaultMessage: 'Datei hier hineinziehen oder Klicken für Dateiauswahl.<br>Wenn es ein Bild ist, danach bitte korrekt beschneiden.',
 			dictMaxFilesExceeded: 'Es darf nur eine Datei gleichzeitig hochgeladen werden!',
 			//                dictInvalidFileType: 'Falscher Datei-Typ! Erlaubt sind folgende Typen: .jpeg, .jpg, .png, .gif',

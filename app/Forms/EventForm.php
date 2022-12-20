@@ -150,7 +150,15 @@ class EventForm extends MainForm
                     'tag' => 'p',
                     'attr' => ['class' => 'help-block text-info font-weight-bold']
                 ],
-            ]);
+            ])
+            ->add('ticketlink', Field::TEXT, [
+                'help_block' => [
+                    'text' => 'Für Ticketshop-Anbieter (z.B: Tickettoaster etc.)',
+                    'tag' => 'p',
+                    'attr' => ['class' => 'help-block text-info font-weight-bold']
+                ],
+            ])
+        ;
 
         if( $model && $model->images && $model->images->count() > 0 ) {
             $this->add('images', 'collection', [
