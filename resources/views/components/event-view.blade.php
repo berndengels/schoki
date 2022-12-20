@@ -41,7 +41,7 @@
                    target="_blank"
                    href="{{ $item->getTicketlink() }}">
                     <ion-icon name="ticket"></ion-icon>
-                    <span class="d-none d-md-inline-block">TicketShop</span></a>
+                    <span class="d-none d-md-inline-block">Tickets</span></a>
             @endif
             <button class="btn-toggle off"
                     role="button"

@@ -27,8 +27,8 @@ class Cors
             ->header('Access-Control-Allow-Origin', '*')
             ->header('Access-Control-Allow-Headers', '*')
             ->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS')
-//            ->header('X-Frame-Options', 'SAMEORIGIN', false)
-            ->header('P3P', 'CP=HONK')
+            ->header('X-Frame-Options', 'SAMEORIGIN', false)
+            ->header('P3P', 'CP="ALL DSP NID CURa ADMa DEVa HISa OTPa OUR NOR NAV DEM"')
         ;
     }
 }
