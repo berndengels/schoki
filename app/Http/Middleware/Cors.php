@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /**
  * Class Cors
@@ -20,12 +21,19 @@ class Cors
      * @param Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
-        return $next($request)
+        /**
+         * @var Response $response
+         */
+        $response =  $next($request);
+        $response
             ->header('Access-Control-Allow-Origin', '*')
             ->header('Access-Control-Allow-Headers', '*')
             ->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS')
-            ;
+//            ->header('X-Frame-Options', 'SAMEORIGIN', false)
+            ->header('P3P', 'CP=HONK')
+        ;
+        return $response;
     }
 }

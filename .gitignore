@@ -39,3 +39,4 @@ phpunit.dusk.xml
 /perms
 /.valet-env.php
 /public_html/fonts/
+/Envoy.blade.php

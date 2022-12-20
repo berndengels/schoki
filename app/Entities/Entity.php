@@ -9,9 +9,8 @@
 
 namespace App\Entities;
 
-use App\Entities\Newsletter\ContactEntity;
-use Illuminate\Support\Str;
 use stdClass;
+use Illuminate\Support\Str;
 
 abstract class Entity {
 

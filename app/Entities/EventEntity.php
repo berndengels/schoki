@@ -9,17 +9,10 @@
 
 namespace App\Entities;
 
-use App\Helper\MyDate;
-use App\Http\Controllers\EventController;
-use App\Models\Category;
-use App\Models\Event;
-use App\Models\Theme;
-use App\Repositories\EventEntityRepository;
-use App\Repositories\EventPeriodicRepository;
 use Carbon\Carbon;
+use App\Models\Theme;
+use App\Models\Category;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Laravelium\Feed\Feed;
 
 class EventEntity extends Entity {
 

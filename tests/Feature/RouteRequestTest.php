@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use Route;
 use Exception;
 use Tests\TestCase;
-use App\Models\User;
 use App\Libs\Routes as MyRoutes;
 use Illuminate\Routing\Route as RoutingRoute;
 use Symfony\Component\HttpFoundation\Response;

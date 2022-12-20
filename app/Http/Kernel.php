@@ -61,6 +61,7 @@ class Kernel extends HttpKernel
         'web' => [
             EncryptCookies::class,
             MyAddQueuedCookiesToResponse::class,
+            Cors::class,
             StartSession::class,
 //            \Kevinsimard\CookielessSession\Middleware\StartSession::class,
 //            \Illuminate\Session\Middleware\AuthenticateSession::class,
