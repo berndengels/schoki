@@ -224,6 +224,9 @@ html, body {
                                     padding: 0 15px 0 10px;
                                     border: 1px solid #f70;
                                     background-color: #f70;
+                                    ion-icon[name=ticket] {
+                                        margin-bottom: -3px;
+                                    }
                                 }
                                 a.ticketlink:hover {
                                     text-decoration: none;

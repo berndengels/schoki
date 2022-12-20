@@ -37,10 +37,11 @@
             @if($item->getTicketlink())
                 <a class="ticketlink"
                    role="button"
+                   title="zum Ticket Shop"
                    target="_blank"
                    href="{{ $item->getTicketlink() }}">
                     <ion-icon name="ticket"></ion-icon>
-                    TicketShop</a>
+                    <span class="d-none d-md-inline-block">TicketShop</span></a>
             @endif
             <button class="btn-toggle off"
                     role="button"
