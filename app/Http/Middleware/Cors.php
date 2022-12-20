@@ -21,19 +21,14 @@ class Cors
      * @param Closure $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle($request, Closure $next)
     {
-        /**
-         * @var Response $response
-         */
-        $response =  $next($request);
-        $response
+        return $next($request)
             ->header('Access-Control-Allow-Origin', '*')
             ->header('Access-Control-Allow-Headers', '*')
             ->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS')
 //            ->header('X-Frame-Options', 'SAMEORIGIN', false)
             ->header('P3P', 'CP=HONK')
         ;
-        return $response;
     }
 }

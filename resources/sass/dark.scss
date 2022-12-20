@@ -225,6 +225,11 @@ html, body {
                                     border: 1px solid #f70;
                                     background-color: #f70;
                                 }
+                                a.ticketlink:hover {
+                                    text-decoration: none;
+                                    border: 1px solid #f00;
+                                    background-color: #f00;
+                                }
                                 button.btn-toggle {
                                     padding: 0 10px 0 10px;
                                     border-bottom-right-radius: 10px;
