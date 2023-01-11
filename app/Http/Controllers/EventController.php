@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customer;
-use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Route;
 use Carbon\Carbon;
 use App\Models\Event;
 use App\Helper\MyDate;
 use Laravelium\Feed\Feed;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Entities\EventEntity;
 use Illuminate\Http\Response;
 use Eluceo\iCal\Property\Event\Geo;
@@ -172,15 +169,11 @@ class EventController extends BaseController
     public function calendar(Request $request)
     {
         $dates = [];
-
         /**
          * @var $event EventEntity
          */
         foreach($this->actualEvents as $date => $event) {
-//            [$y,$m] = explode('-', $date);
-//            if($year == $y && $month == $m) {
-                $dates[] = $event->toCalendarData();
-//            }
+            $dates[] = $event->toCalendarData();
         }
         return json_encode($dates);
     }
@@ -193,19 +186,7 @@ class EventController extends BaseController
 		$event = $this->actualEvents->get($date);
 		return view('public.templates.event', ['event' => $event ]);
 	}
-/*
-	public function lazyByCategory($category , $date)
-	{
-		$event = Event::MergedByDateAndCategory( $date, $category );
-		return view('public.templates.event', ['event' => $event ]);
-	}
 
-	public function lazyByTheme($theme , $date)
-	{
-		$event = $this->actualEventsByTheme->get($date);
-		return view('public.templates.event', ['event' => $event ]);
-	}
-*/
 	public function ical() {
         $tz             = config('app.timezone');
         $appName        = config('app.name');

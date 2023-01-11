@@ -112,7 +112,10 @@ class EventPeriodic extends Model
         'position',
         'weekday',
         'period',
-        'description_sanitized',
+        'descriptionSanitized',
+        'descriptionText',
+        'descriptionWithoutVideo',
+        'eventLink',
     ];
 
     /**
@@ -197,9 +200,31 @@ class EventPeriodic extends Model
 
 	public function getDescriptionSanitizedAttribute()
     {
-        $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
-        $descriptionSanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), $this->description);
-        return $descriptionSanitized;
+        if($this->description) {
+            $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
+            return preg_replace(
+                "/(<iframe[^>]+><\/iframe>)/i",
+                str_replace('%%','$1', $wrapper),
+                $this->description
+            );
+        }
+        return null;
+    }
+
+    public function getDescriptionTextAttribute()
+    {
+        if($this->description) {
+            return strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $this->description));
+        }
+    }
+
+    public function getDescriptionWithoutVideoAttribute()
+    {
+        return preg_replace(
+            "/<iframe[^>]+>(.*)<\/iframe>/i",
+            '',
+            $this->description
+        );
     }
 
     /**

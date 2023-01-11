@@ -70,16 +70,11 @@ class EventTemplate extends Model
         'links',
     ];
     protected $dates = ['created_at','updated_at'];
-	protected $eventLink;
-	public $descriptionSanitized;
-
-	public static function boot() {
-		parent::boot();
-		Event::retrieved(function($entity) {
-			$wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
-			$entity->descriptionSanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), $entity->description);
-		});
-	}
+    protected $appends = [
+        'descriptionSanitized',
+        'descriptionText',
+        'descriptionWithoutVideo',
+    ];
 
 	/**
      * @return BelongsTo
@@ -116,7 +111,14 @@ class EventTemplate extends Model
         }
     }
 
-	/**
+    public function getDescriptionTextAttribute()
+    {
+        if($this->description) {
+            return strip_tags(preg_replace('/<br[ ]?[\/]?>/i',"\n", $this->description));
+        }
+    }
+
+    /**
 	 * @param string $value
 	 * @return array
 	 */
@@ -126,4 +128,26 @@ class EventTemplate extends Model
 			return preg_replace(['/^<p>(<br[ ]?[\/]?>){1,}/i','/(<br[ ]?[\/]?>){1,}<\/p>$/i'],['<p>','</p>'], trim($value));
 		}
 	}
+
+    public function getDescriptionSanitizedAttribute()
+    {
+        if($this->description) {
+            $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
+            return preg_replace(
+                "/(<iframe[^>]+><\/iframe>)/i",
+                str_replace('%%','$1', $wrapper),
+                $this->description
+            );
+        }
+        return null;
+    }
+
+    public function getDescriptionWithoutVideoAttribute()
+    {
+        return preg_replace(
+            "/<iframe[^>]+>(.*)<\/iframe>/i",
+            '',
+            $this->description
+        );
+    }
 }

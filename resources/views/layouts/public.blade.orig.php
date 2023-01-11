@@ -20,7 +20,6 @@
     <script src="{{ asset('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
     <!--script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script-->
     @yield('extra-headers')
-
 </head>
 <body>
 
