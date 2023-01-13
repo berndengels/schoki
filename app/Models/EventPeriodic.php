@@ -115,7 +115,6 @@ class EventPeriodic extends Model
         'descriptionSanitized',
         'descriptionText',
         'descriptionWithoutVideo',
-        'eventLink',
     ];
 
     /**
@@ -167,11 +166,6 @@ class EventPeriodic extends Model
         if('' !== $value) {
 			return collect(preg_split("/[\n\r]+/", $value));
         }
-    }
-
-    public function getEventLinkAttribute()
-    {
-        return route('public.event.eventsShow', $this);
     }
 
     public function getPositionAttribute()
