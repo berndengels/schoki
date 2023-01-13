@@ -169,6 +169,11 @@ class EventPeriodic extends Model
         }
     }
 
+    public function getEventLinkAttribute()
+    {
+        return route('public.event.eventsShow', $this);
+    }
+
     public function getPositionAttribute()
     {
         $position = config('event.periodicPosition');
