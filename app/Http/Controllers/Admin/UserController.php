@@ -87,7 +87,7 @@ class UserController extends MainController
         $user->username         = $values['username'];
         $user->email            = $values['email'];
         $user->enabled          = isset($values['enabled']) ? 1 : 0;
-        $user->is_super_admin   = ($this->isAdmin && isset($values['is_super_admin'])) ? 1 : null;
+        $user->is_super_admin   = ($this->isAdmin && (bool) $values['is_super_admin']) ?? null;
 
         if( $values['password'] && '' !== $values['password'] ) {
             $user->password = Hash::make($values['password']);
