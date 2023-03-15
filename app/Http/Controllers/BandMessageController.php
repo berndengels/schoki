@@ -65,17 +65,17 @@ class BandMessageController extends Controller
         } else {
             $users = ['engels@goldenacker.de'];
         }
-        /*
-                $users = User::whereHas('musicStyles', function ($query) use ($musicStyleId) {
-                    $query->where('music_style.id', $musicStyleId);
-                })->pluck('email');
-        */
-        $notifyBooker = new NotifyBooker($message);
-        try {
-            Mail::to($users)->send($notifyBooker);
-            $content = $notifyBooker->render();
-        } catch (Exception $e ) {
-            $content = 'Error: Mail konnte nicht versand werden!<br>'. $e->getMessage();
+
+        $content = 'Anfrage wurde erfolgreich gespeichert!<br>';
+
+        if($users && count($users) > 0) {
+            $notifyBooker = new NotifyBooker($message);
+            try {
+                Mail::to($users)->send($notifyBooker);
+                $content = $notifyBooker->render();
+            } catch (Exception $e ) {
+                $content = 'Error: Mail konnte nicht versand werden!<br>'. $e->getMessage();
+            }
         }
 
         return view('public.contact', compact('content'));    }
