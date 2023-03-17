@@ -42,7 +42,7 @@ class BandMessageRequest extends FormRequest
     {
         return [
             'music_style_id'    => 'required',
-            'name'              => 'required',
+            'name'              => 'required|max:50',
             'email'             => 'required|email',
             'msg'               => 'required',
 //            'captcha'           => 'required|captcha',
@@ -55,6 +55,7 @@ class BandMessageRequest extends FormRequest
         return [
             'music_style_id.required'   => 'Bitte eine Musik-Richtung angeben!',
             'name.required'         => 'Bitte einen Name angeben!',
+            'name.max'              => 'Der Name darf max. 50 Zeichen enthalten!',
             'email.required'        => 'Bitte eine Email Adresse angeben!',
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
             'msg.required'          => 'Bitte ein Nachricht eingeben!',
