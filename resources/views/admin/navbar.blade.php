@@ -72,6 +72,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownReports">
                         <a class="dropdown-item" href="/admin/terminal/{{ $view }}">Terminal</a>
                         <a class="dropdown-item" href="/admin/services/browserTestReport">BrowserTest Result</a>
+                        <a class="dropdown-item" href="/admin/phpinfo">PHP-Info</a>
                     </div>
                 </li>
             @endif

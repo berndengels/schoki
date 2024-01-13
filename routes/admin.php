@@ -116,6 +116,9 @@ Route::prefix('admin')->group(function () {
 	Route::get('/cache/flush', 'Admin\CacheController@flush')->name('admin.service.cacheFlush');
 	Route::get('/cache/clear', 'Admin\CacheController@clear')->name('admin.service.cacheClear');
     Route::get('/cache/forget/{key}', 'Admin\CacheController@forget')->name('admin.service.cacheForget');
+	Route::get('/cache/phpinfo', function () {
+		return view('admin.phpinfo');
+	})->name('admin.phpinfo');
 
 	Route::group([
 		'prefix' => 'menus',
