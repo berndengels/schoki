@@ -23,7 +23,7 @@ URL: [https://www.schokoladen-mitte.de/](https://www.schokoladen-mitte.de/)
 ### Installationen
 virtuellen Host für die lokale Schoki-Page erstellen 
 - (Mac) am besten mit [Laravel Valet](https://laravel.com/docs/10.x/valet), setzt installiertes [Homebrew](https://brew.sh/de/) voraus.
-- (Windos) [XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe/download]
+- (Windos) [XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe/download)
 
 mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
 - composer install
