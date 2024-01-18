@@ -163,9 +163,12 @@ class ServiceController extends Controller
         $countToDownload	= count($toDownload);
 
         if( $countToDownload > 0 ) {
-            set_time_limit(0);
-            ob_implicit_flush(true);
-            ob_end_flush();
+			try {
+				set_time_limit(0);
+				ob_implicit_flush(true);
+				ob_end_flush();
+			} catch(Exception $e) {}
+
             echo "<h3>to download: $countToDownload</h3>";
 
 			foreach( $toDownload as $index => $item ) {
