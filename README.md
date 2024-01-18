@@ -26,6 +26,7 @@ virtuellen Host für die lokale Schoki-Page erstellen
 - (Windos) [XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe/download)
 
 mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
+- .env.tpl kopieren zu .env (in Letzterer Konfiguratinsdaten setzen z.b: Passworte) 
 - composer install
 - npm install
 - npm run dev (oder npm run watch, wenn man grad an Javascript oder Sass-Dateien arbeitet)
