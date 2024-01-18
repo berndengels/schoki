@@ -19,6 +19,7 @@ use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
 use Spatie\DbDumper\Compressors\GzipCompressor;
 use App\Libs\MySqlDumper;
+use Spatie\DbDumper\Databases\MySql;
 
 class ServiceController extends Controller
 {
@@ -41,29 +42,35 @@ class ServiceController extends Controller
 
 	public function dumpDb() {
 	    $dbName = env('DB_DATABASE');
-	    $file = base_path() . '/database/snapshots/' . (Carbon::now())->format('Ymd') . '_' . $dbName . '.sql.gz';
-        $dumper = MySqlDumper::create()
-            ->setDumpBinaryPath(env('DB_BINARY_PATH'))
-            ->setDbName($dbName)
-            ->setHost(env('DB_HOST'))
-            ->setUserName(env('DB_USERNAME'))
-//            ->setPassword(env('DB_PASSWORD'))
-            ->setPort(env('DB_PASSWORD') ?: 3306)
-            ->setDefaultCharacterSet('utf8')
-            ->addExtraOption('--insert-ignore')
-            ->addExtraOption('--add-drop-table')
-            ->useCompressor(new GzipCompressor())
-//            ->getDumpCommand($file, 'credentials.txt')
-        ;
-	    try {
-	        $dumper->dumpToFile($file);
-            return "dump to: $file";
+	    $file = database_path('snapshots/' . $dbName . '.sql.gz');
 
+		$binaryPath = env('DB_BINARY_PATH');
+		$user = env('DB_USERNAME');
+		$password = env('DB_PASSWORD');
+		$host = env('DB_HOST');
+
+		$dumpCommand = MySql::create()
+			->setDumpBinaryPath($binaryPath)
+			->setUserName($user)
+			->setPassword($password)
+			->setDbName($dbName)
+			->setHost($host)
+			->setDefaultCharacterSet('utf8mb3')
+			->addExtraOption('--insert-ignore --add-drop-table -eC')
+			->useCompressor(new GzipCompressor());
+
+	    try {
+			$dumpCommand->dumpToFile($file);
+			chmod($file, 0755);
+			$name = Carbon::now()->format('YmdHi') . '_schokoladen.sql.gz';
+
+			return response()->download($file, $name);
         } catch(Exception $e) {
 	        echo $e->getMessage().'<br>';
 	        return '<pre>' . $e->getTraceAsString() . '</pre>';
         }
     }
+
 
 	public function browserTestReport()
 	{

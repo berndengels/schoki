@@ -59,12 +59,12 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownMedia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMedia">
                         <!--a class="dropdown-item ajax" href="/admin/services/makeThumbs">Make Thumbs</a-->
-                        <a class="dropdown-item" href="/admin/services/dumpdb">Dump Database</a>
-                        <a class="dropdown-item ajax" href="/admin/services/syncImages">Sync Images</a>
-                        <a class="dropdown-item ajax" href="/admin/services/cropImages">Crop Images</a>
-                        <a class="dropdown-item ajax" href="/admin/services/sanitizeImageDB">Sanitize Images DB</a>
-                        <a class="dropdown-item ajax" href="/admin/services/syncAudios">Sync Audios</a>
-                        <a class="dropdown-item ajax" href="/admin/services/sanitizeFilePermissions">Set Permissions</a>
+                        <a class="dropdown-item" href="/admin/services/dumpdb" target="_blank">Download Database</a>
+                        <a class="dropdown-item ajax" href="/admin/services/syncImages" target="_blank">Sync Images</a>
+                        <a class="dropdown-item ajax" href="/admin/services/cropImages" target="_blank">Crop Images</a>
+                        <a class="dropdown-item ajax" href="/admin/services/sanitizeImageDB" target="_blank">Sanitize Images DB</a>
+                        <a class="dropdown-item ajax" href="/admin/services/syncAudios" target="_blank">Sync Audios</a>
+                        <a class="dropdown-item ajax" href="/admin/services/sanitizeFilePermissions" target="_blank">Set Permissions</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

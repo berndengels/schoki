@@ -23,12 +23,16 @@ class Cors
      */
     public function handle($request, Closure $next)
     {
-        return $next($request)
-            ->header('Access-Control-Allow-Origin', '*')
-            ->header('Access-Control-Allow-Headers', '*')
-            ->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS')
-            ->header('X-Frame-Options', 'SAMEORIGIN', false)
-            ->header('P3P', 'CP="ALL DSP NID CURa ADMa DEVa HISa OTPa OUR NOR NAV DEM"')
-        ;
+		if(method_exists($next($request), 'header')) {
+			return $next($request)
+				->header('Access-Control-Allow-Origin', '*')
+				->header('Access-Control-Allow-Headers', '*')
+				->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS')
+				->header('X-Frame-Options', 'SAMEORIGIN', false)
+				->header('P3P', 'CP="ALL DSP NID CURa ADMa DEVa HISa OTPa OUR NOR NAV DEM"')
+				;
+		}
+
+		return $next($request);
     }
 }

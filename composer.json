@@ -33,7 +33,7 @@
         "misterphilip/maintenance-mode": "^2.0",
         "nesbot/carbon": "^2.63",
         "protonemedia/laravel-form-components": "^3.6",
-        "spatie/db-dumper": "^2.18",
+        "spatie/db-dumper": "^2.21",
         "spatie/laravel-db-snapshots": "^1.7",
         "spatie/laravel-newsletter": "^4.11",
         "spatie/laravel-permission": "^3.17",
