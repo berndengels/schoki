@@ -31,6 +31,8 @@ mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
 - npm install
 - npm run dev (oder npm run watch, wenn man grad an Javascript oder Sass-Dateien arbeitet)
 - falls valet: valet use php@8.2, valet secure schoki (für https)
+- symbolischen Link von "public_html" zu "public" erstellen
+- für Linux, Mac: Schreibrechte für alle setzen für folgende Pfade: storage, public_html/media, bootstrap/cache
 - jetzt sollte man die Seite gemäss der konfigurierten URL laden können (per valet z.B: schoki.test)
 
 ### Layout für public Page
