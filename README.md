@@ -32,3 +32,11 @@ mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
 - falls valet: valet use php@8.2, valet secure schoki (für https)
 - jetzt sollte man die Seite gemäss der konfigurierten URL laden können (per valet z.B: schoki.test)
 
+### Layout für public Page
+- Grund-Layout (html): resources/views/layouts/public.blade.php
+- CSS (über Sass): resources/sass/dark.css
+- JS: resources/js/app.js 
+- views (html): resources/views/public
+- event view (html): resources/views/public/events-lazy.blade.php
+- obere navigation: resources/views/public/templates/topNavigation.blade.php
+- untere navigation: resources/views/public/templates/bottomNavigation.blade.php
