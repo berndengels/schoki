@@ -179,7 +179,7 @@ Route::group([
 	Route::get('/cache/clear', 'Admin\CacheController@clear')->name('service.cacheClear');
     Route::get('/cache/forget/{key}', 'Admin\CacheController@forget')->name('service.cacheForget');
 	Route::get('/phpinfo', function () {
-		return view('phpinfo');
+		return view('admin.phpinfo');
 	})->name('phpinfo');
 
 	Route::group([
