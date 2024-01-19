@@ -24,21 +24,6 @@ use Spatie\DbDumper\Databases\MySql;
 class ServiceController extends Controller
 {
 	protected $user = null;
-	protected $isAdmin = false;
-
-	public function __construct() {
-		parent::__construct();
-
-		$this->middleware('auth');
-		$this->middleware(function ($request, $next) {
-			$this->user = auth()->user();
-			if($this->user) {
-				$this->isAdmin = (bool) $this->user->is_super_admin;
-			}
-
-			return $next($request);
-		});
-	}
 
 	public function dumpDb() {
 	    $dbName = env('DB_DATABASE');
@@ -55,7 +40,7 @@ class ServiceController extends Controller
 			->setPassword($password)
 			->setDbName($dbName)
 			->setHost($host)
-			->setDefaultCharacterSet('utf8mb3')
+			->setDefaultCharacterSet('utf8')
 			->addExtraOption('--insert-ignore --add-drop-table -eC')
 			->useCompressor(new GzipCompressor());
 
