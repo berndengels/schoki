@@ -401,12 +401,10 @@ class ServiceController extends MainController
 		phpinfo();
 		$html = ob_get_contents();
 		ob_end_clean();
-		preg_match_all('/<style type="text\/css">[^<]+<\/style>/', $html, $matches);
-		$style = trim($matches[0][0]);
 		[,$body] = explode('<body>', $html);
 		[$body,] = explode('</body>', $body);
 		$body = trim($body);
 
-		return view('admin.phpinfo', compact('style', 'body', 'title'));
+		return view('admin.phpinfo', compact( 'body', 'title'));
 	}
 }
