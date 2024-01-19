@@ -44,3 +44,4 @@ Route::group([
     Route::get('contact/bands/fields', 'SpaContactController@fields');
     Route::post('contact/bands/send', 'SpaContactController@send');
 });
+?>

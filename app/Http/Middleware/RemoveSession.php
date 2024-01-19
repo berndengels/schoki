@@ -22,3 +22,4 @@ class RemoveSession extends Middleware
         return $next($request);
     }
 }
+?>

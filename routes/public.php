@@ -5,6 +5,9 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Auth::routes();
+Auth::routes(['register' => false]);
+
 Route::permanentRedirect('/intern', '/admin/events');
 Route::permanentRedirect('/admin', '/admin/events');
 Route::permanentRedirect('/events', '/');
@@ -60,9 +63,11 @@ Route::group([
 
 Route::get('/logout', function() {
     Auth::logout();
-    Session::invalidate();
+	session()->invalidate();
+
     return redirect()->route('public.events');
 });
 Route::fallback(function () {
     return redirect()->route('public.events');
 });
+?>

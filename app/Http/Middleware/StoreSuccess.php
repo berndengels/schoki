@@ -32,3 +32,4 @@ class StoreSuccess
         return $next($request);
     }
 }
+?>

@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Auth::routes(['register' => false]);
+Route::get('/logout', function() {
+	Auth::logout();
+	session()->invalidate();
+
+	return redirect()->route('public.events');
+});
 
 Route::prefix('admin')->group(function () {
     Route::post('/file/upload', 'Admin\FileController@upload')->name('admin.fileUpload');
@@ -131,3 +137,4 @@ Route::prefix('admin')->group(function () {
 	});
     Route::middleware('auth')->get('phpinfo', fn() => phpinfo());
 });
+?>

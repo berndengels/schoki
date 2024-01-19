@@ -35,3 +35,4 @@ class CacheResponse
 //        return parent::shouldCache($request, $response);
     }
 }
+?>

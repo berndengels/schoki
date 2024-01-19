@@ -41,3 +41,4 @@ class MyAddQueuedCookiesToResponse extends AddQueuedCookiesToResponse
         return $response;
     }
 }
+?>

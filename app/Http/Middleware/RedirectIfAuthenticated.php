@@ -13,14 +13,13 @@ class RedirectIfAuthenticated
      *
      * @param  Request  $request
      * @param Closure $next
-     * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
-        if (Auth::guard($guard)->check()) {
-//            return redirect('/intern');
-            return redirect('/');
+        if (Auth::check()) {
+//			return redirect('/');
+			return redirect($this->redirectTo());
         }
 
         return $next($request);
@@ -30,3 +29,4 @@ class RedirectIfAuthenticated
         return '/admin';
     }
 }
+?>
