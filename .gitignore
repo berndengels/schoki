@@ -40,3 +40,5 @@ phpunit.dusk.xml
 /.valet-env.php
 /public_html/fonts/
 /Envoy.blade.php
+/clearme
+/perms
