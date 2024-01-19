@@ -436,3 +436,87 @@ button {
         }
     }
 }
+#phpinfo {
+    table {
+        width: 60rem;
+        margin-bottom: 1rem;
+
+        tr {
+            background-color: #ddd;
+
+            th {
+                text-align: center;
+                background-color: #99c;
+            }
+
+            td {
+                font-size: 75%;
+                text-align: left;
+                vertical-align: baseline;
+                padding: 4px 5px;
+                border: 1px solid #666;
+
+                &.e {
+                    width: 300px;
+                    font-weight: bold;
+                    background-color: #ccf;
+                }
+
+                &.v {
+                    max-width: 300px;
+                }
+
+                a {
+                    display: block;
+                    float: right;
+                    clear: none;
+                }
+            }
+        }
+    }
+
+    h1 {
+        width: 60rem;
+        display: block;
+        font-size: 1.4rem;
+        color: #fff;
+        padding: 1.0rem 1.0rem;
+        background-color: darkblue;
+    }
+
+    h2 {
+        width: 60rem;
+        display: block;
+        text-align: center;
+        padding: 1.0rem 1.0rem;
+        font-size: 1.2rem;
+    }
+
+    table:first-child {
+        tr {
+            background-color: darkblue;
+
+            td {
+                max-width: 50rem;
+
+                a {
+                    display: block;
+                    width: 100px;
+                    float: right;
+                    clear: none;
+                    margin-right: 1.5rem;
+                }
+
+                h1 {
+                    color: #fff;
+                    display: block;
+                    height: 100%;
+                    max-width: 70%;
+                    margin: auto;
+                    float: left;
+                    clear: none;
+                }
+            }
+        }
+    }
+}

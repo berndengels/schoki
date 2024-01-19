@@ -20,6 +20,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Spatie\DbDumper\Compressors\GzipCompressor;
 use App\Libs\MySqlDumper;
 use Spatie\DbDumper\Databases\MySql;
+use Symfony\Component\DomCrawler\Crawler;
 
 class ServiceController extends Controller
 {
@@ -55,7 +56,6 @@ class ServiceController extends Controller
 	        return '<pre>' . $e->getTraceAsString() . '</pre>';
         }
     }
-
 
 	public function browserTestReport()
 	{
@@ -393,4 +393,16 @@ class ServiceController extends Controller
 			echo "<h3>nothing to convert</h3>";
 		}
     }
+
+	public function phpinfo()
+	{
+		ob_start();
+		phpinfo();
+		$phpinfo = ob_get_contents();
+		ob_end_clean();
+		$crawler = new Crawler($phpinfo);
+		$phpinfo = $crawler->filter('body > div')->first()->html();
+
+		return view('admin.phpinfo', compact('phpinfo'));
+	}
 }

@@ -2,9 +2,7 @@
 @section('title', 'PHP-Info')
 
 @section('content')
-    <div class="col-12 m-1">
-        @php
-        phpinfo();
-        @endphp
+    <div id="phpinfo" class="m-sm-2 m-md-5">
+        {!! $phpinfo !!}
     </div>
 @endsection

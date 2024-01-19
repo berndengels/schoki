@@ -37,6 +37,7 @@
         "spatie/laravel-db-snapshots": "^1.7",
         "spatie/laravel-newsletter": "^4.11",
         "spatie/laravel-permission": "^3.17",
+        "symfony/dom-crawler": "^7.0",
         "symfony/process": "^5.1"
     },
     "require-dev": {
