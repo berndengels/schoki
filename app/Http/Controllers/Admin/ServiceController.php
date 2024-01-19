@@ -18,11 +18,9 @@ use App\Helper\FilePermissions;
 use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
 use Spatie\DbDumper\Compressors\GzipCompressor;
-use App\Libs\MySqlDumper;
 use Spatie\DbDumper\Databases\MySql;
-use Symfony\Component\DomCrawler\Crawler;
 
-class ServiceController extends Controller
+class ServiceController extends MainController
 {
 	protected $user = null;
 
@@ -396,13 +394,19 @@ class ServiceController extends Controller
 
 	public function phpinfo()
 	{
+		$this->entity = 'info';
+		$title = 'PHP-Info';
+
 		ob_start();
 		phpinfo();
-		$phpinfo = ob_get_contents();
+		$html = ob_get_contents();
 		ob_end_clean();
-		$crawler = new Crawler($phpinfo);
-		$phpinfo = $crawler->filter('body > div')->first()->html();
+		preg_match_all('/<style type="text\/css">[^<]+<\/style>/', $html, $matches);
+		$style = trim($matches[0][0]);
+		[,$body] = explode('<body>', $html);
+		[$body,] = explode('</body>', $body);
+		$body = trim($body);
 
-		return view('admin.phpinfo', compact('phpinfo'));
+		return view('admin.phpinfo', compact('style', 'body', 'title'));
 	}
 }
