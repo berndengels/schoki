@@ -26,7 +26,7 @@ class RedirectIfAuthenticated
     }
 
     protected function redirectTo() {
-        return '/admin';
+        return '/admin/events';
     }
 }
 ?>

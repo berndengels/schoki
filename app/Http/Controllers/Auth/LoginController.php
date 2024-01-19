@@ -2,36 +2,23 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use Illuminate\Http\JsonResponse;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Session;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers;
+	use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/admin/events';
 
     /**
      * Create a new controller instance.
@@ -43,41 +30,23 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    /**
-     * Handle an authentication attempt.
-     * @param Request $request
-     * @return Response
-     */
-    public function authenticate( Request $request )
-    {
-        if (Auth::attempt([
-            'username'  => $request->username,
-            'password'  => $request->password,
-            'enabled'   => 1,
-        ], $request->remember)) {
-
-            return redirect()->intended('admin');
-        }
-    }
 
     function authenticated(Request $request, $user)
     {
         $user->last_login = Carbon::now()->toDateTimeString();
         $user->save();
-
-		return response()->redirectTo($this->redirectTo);
-    }
+	}
 
     public function username()
     {
         return 'username';
     }
-
+/*
     protected function guard()
     {
         return Auth::guard('web');
     }
-
+*/
 	public function login(Request $request)
 	{
 		$this->validateLogin($request);
@@ -96,7 +65,6 @@ class LoginController extends Controller
 			if ($request->hasSession()) {
 				$request->session()->put('auth.password_confirmed_at', time());
 			}
-
 			return $this->sendLoginResponse($request);
 		}
 
@@ -120,7 +88,8 @@ class LoginController extends Controller
 
 		return $request->wantsJson()
 			? new JsonResponse([], 204)
-			: redirect()->intended($this->redirectPath());
+//			: redirect()->intended($this->redirectPath());
+			: redirect()->route('admin.eventList');
 	}
 }
 ?>

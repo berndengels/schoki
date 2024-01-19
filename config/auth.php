@@ -64,22 +64,10 @@ return [
     */
 
     'providers' => [
-/*
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
-*/
         'my-users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-/*
-        'my-users' => [
-             'driver' => 'database',
-             'table' => 'my_user',
-        ],
-*/
     ],
 
     /*
@@ -104,5 +92,4 @@ return [
             'expire' => 60,
         ],
     ],
-
 ];

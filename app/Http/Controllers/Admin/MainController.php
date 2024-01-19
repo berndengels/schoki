@@ -67,6 +67,7 @@ class MainController extends Controller
 
     public function __construct()
     {
+/*
         $this->middleware('auth');
         $this->middleware('store.success');
 		$this->middleware(function ($request, $next) {
@@ -77,6 +78,7 @@ class MainController extends Controller
 
 			return $next($request);
 		});
+*/
 		$this->untilValidDate = MyDate::getUntilValidDate();
         $this->today = Carbon::today('Europe/Berlin');
 		$this->imagePath = public_path('/media/images');

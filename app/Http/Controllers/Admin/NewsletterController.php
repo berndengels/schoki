@@ -45,7 +45,7 @@ class NewsletterController extends Controller
 	protected $repository;
 
 	public function __construct() {
-
+/*
 		$this->repository = new NewsletterRepository();
 		$this->middleware('auth');
 		$this->middleware(function ($request, $next) {
@@ -66,10 +66,12 @@ class NewsletterController extends Controller
 			}
 			return $next($request);
 		});
+*/
 	}
 
 	public function index()
 	{
+/*
 		$campaigns = $this->repository->getCampaigns();
 		$newsletters = collect([]);
 
@@ -83,6 +85,7 @@ class NewsletterController extends Controller
 			'title'	=> 'Newsletter',
 			'data'	=> $newsletters,
 		]);
+*/
 	}
 
 	public function edit( FormBuilder $formBuilder, $campaignId = null )

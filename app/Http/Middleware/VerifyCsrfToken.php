@@ -8,6 +8,19 @@ use Symfony\Component\HttpFoundation\Cookie;
 
 class VerifyCsrfToken extends Middleware
 {
+	/**
+	 * The URIs that should be excluded from CSRF verification.
+	 *
+	 * @var array
+	 */
+	protected $except = [
+		'events/*',
+		'page/*',
+		'static/*',
+		'contact/*',
+		'login',
+	];
+
     /**
      * Indicates whether the XSRF-TOKEN cookie should be set on the response.
      *
@@ -32,18 +45,5 @@ class VerifyCsrfToken extends Middleware
 
 		return $response;
 	}
-
-	/**
-     * The URIs that should be excluded from CSRF verification.
-     *
-     * @var array
-     */
-    protected $except = [
-        'events/*',
-        'page/*',
-        'static/*',
-        'contact/*',
-		'login',
-    ];
 }
 ?>
