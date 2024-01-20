@@ -19,8 +19,8 @@
     <link rel="preload" as="image" href="{{ asset('img/power/batcow_bg_transp.png') }}">
     <link rel="preload" as="image" href="{{ asset('img/power/the_dark_art.png') }}">
     <link rel="preload" as="font">
-    <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}" />
-    <script src="{{ mix('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}?{{ time() }}" />
+    <script src="{{ mix('js/app.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
     @yield('extra-headers')
 </head>
 <body>
