@@ -17,9 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int|null $music_style_id
  * @property string $email
  * @property string $name
- * @property string $message
+ * @property string $msg
  * @property Carbon $created_at
- * @property-read MessageSubject $messageSubject
  * @property-read MusicStyle|null $musicStyle
  * @method static Builder|Message newModelQuery()
  * @method static Builder|Message newQuery()
@@ -28,12 +27,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Message whereCreatedAt($value)
  * @method static Builder|Message whereEmail($value)
  * @method static Builder|Message whereId($value)
- * @method static Builder|Message whereMessage($value)
+ * @method static Builder|Message whereMsg($value)
  * @method static Builder|Message whereMusicStyleId($value)
  * @method static Builder|Message whereName($value)
  * @mixin Eloquent
- * @property string $msg
- * @method static Builder|Message whereMsg($value)
  */
 class Message extends Model
 {

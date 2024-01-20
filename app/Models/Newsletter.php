@@ -25,8 +25,8 @@ use Illuminate\Support\Carbon;
  * @property int|null $updated_by
  * @property Carbon $created_at
  * @property int $created_by
- * @property-read User $createdBy
- * @property-read AddressCategory $tag
+ * @property-read User|null $createdBy
+ * @property-read AddressCategory|null $tag
  * @property-read User|null $updatedBy
  * @method static Builder|Newsletter newModelQuery()
  * @method static Builder|Newsletter newQuery()

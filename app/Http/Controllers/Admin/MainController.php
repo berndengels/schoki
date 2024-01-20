@@ -67,9 +67,6 @@ class MainController extends Controller
 
     public function __construct()
     {
-/*
-        $this->middleware('auth');
-        $this->middleware('store.success');
 		$this->middleware(function ($request, $next) {
 			$this->user = auth()->user();
 			if($this->user) {
@@ -78,7 +75,6 @@ class MainController extends Controller
 
 			return $next($request);
 		});
-*/
 		$this->untilValidDate = MyDate::getUntilValidDate();
         $this->today = Carbon::today('Europe/Berlin');
 		$this->imagePath = public_path('/media/images');
@@ -141,7 +137,7 @@ class MainController extends Controller
         return null;
     }
 
-    public function edit( FormBuilder $formBuilder, $id = 0 , $options = []) {
+    public function edit(FormBuilder $formBuilder, $id = 0 , $options = []) {
         $model  = static::$model;
         $form   = static::$form;
 

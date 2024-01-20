@@ -27,9 +27,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon $created_at
  * @property Carbon|null $updated_at
  * @property int|null $is_published
- * @property-read Collection|\App\Models\Audios[] $audios
+ * @property-read Collection<int, Audios> $audios
  * @property-read int|null $audios_count
- * @property-read User $createdBy
+ * @property-read User|null $createdBy
  * @property-read User|null $updatedBy
  * @method static Builder|Page newModelQuery()
  * @method static Builder|Page newQuery()

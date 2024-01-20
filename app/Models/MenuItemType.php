@@ -21,7 +21,7 @@ use Kalnoy\Nestedset\Collection;
  * @property int $id
  * @property string $type
  * @property string $label
- * @property-read Collection|\App\Models\Menu[] $menus
+ * @property-read Collection<int, Menu> $menus
  * @property-read int|null $menus_count
  * @method static Builder|MenuItemType newModelQuery()
  * @method static Builder|MenuItemType newQuery()

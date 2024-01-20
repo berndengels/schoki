@@ -28,23 +28,27 @@ use App\Repositories\EventPeriodicRepository;
  * @property string|null $subtitle
  * @property array $description
  * @property array $links
- * @property string $event_date
+ * @property string|null $ticketlink
+ * @property \Illuminate\Support\Carbon $event_date
  * @property string|null $event_time
  * @property int|null $price
  * @property \Illuminate\Support\Carbon $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $is_periodic
- * @property int|null $is_published
- * @property-read Collection|Audios[] $audios
+ * @property bool|null $is_periodic
+ * @property bool|null $is_published
+ * @property-read Collection<int, Audios> $audios
  * @property-read int|null $audios_count
- * @property-read Category $category
- * @property-read User $createdBy
+ * @property-read Category|null $category
+ * @property-read User|null $createdBy
+ * @property-read mixed $description_sanitized
+ * @property-read mixed $description_text
+ * @property-read mixed $description_without_video
  * @property-read mixed $event_link
- * @property-read Collection|Images[] $images
+ * @property-read Collection<int, Images> $images
  * @property-read int|null $images_count
  * @property-read Theme|null $theme
  * @property-read User|null $updatedBy
- * @property-read Collection|Videos[] $videos
+ * @property-read Collection<int, Videos> $videos
  * @property-read int|null $videos_count
  * @method static Builder|Event allActual()
  * @method static Builder|Event byCategorySlug($slug, $sinceToday = true)
@@ -71,13 +75,11 @@ use App\Repositories\EventPeriodicRepository;
  * @method static Builder|Event wherePrice($value)
  * @method static Builder|Event whereSubtitle($value)
  * @method static Builder|Event whereThemeId($value)
+ * @method static Builder|Event whereTicketlink($value)
  * @method static Builder|Event whereTitle($value)
  * @method static Builder|Event whereUpdatedAt($value)
  * @method static Builder|Event whereUpdatedBy($value)
  * @mixin Eloquent
- * @property-read mixed $description_sanitized
- * @property-read mixed $description_text
- * @property-read mixed $description_without_video
  */
 class Event extends Model
 {

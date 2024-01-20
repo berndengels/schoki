@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int|null $info_on_changes
  * @property Carbon $created_at
  * @property Carbon|null $updated_at
- * @property-read AddressCategory $addressCategory
+ * @property-read AddressCategory|null $addressCategory
  * @method static Builder|Address newModelQuery()
  * @method static Builder|Address newQuery()
  * @method static Builder|Address query()

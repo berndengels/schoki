@@ -17,7 +17,7 @@ use Illuminate\Support\Carbon;
  * @property string $guard_name
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property-read Collection|\App\Models\User[] $users
+ * @property-read Collection<int, User> $users
  * @property-read int|null $users_count
  * @method static Builder|Role newModelQuery()
  * @method static Builder|Role newQuery()

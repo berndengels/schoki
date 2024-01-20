@@ -31,30 +31,32 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon $created_at
  * @property \Illuminate\Support\Carbon $updated_at
- * @property-read Collection|EventTemplate[] $eventTemplatesCreated
+ * @property-read Collection<int, EventTemplate> $eventTemplatesCreated
  * @property-read int|null $event_templates_created_count
- * @property-read Collection|EventTemplate[] $eventTemplatesUpdated
+ * @property-read Collection<int, EventTemplate> $eventTemplatesUpdated
  * @property-read int|null $event_templates_updated_count
- * @property-read Collection|Event[] $eventsCreated
+ * @property-read Collection<int, Event> $eventsCreated
  * @property-read int|null $events_created_count
- * @property-read Collection|EventPeriodic[] $eventsPeriodicCreated
+ * @property-read Collection<int, EventPeriodic> $eventsPeriodicCreated
  * @property-read int|null $events_periodic_created_count
- * @property-read Collection|EventPeriodic[] $eventsPeriodicUpdated
+ * @property-read Collection<int, EventPeriodic> $eventsPeriodicUpdated
  * @property-read int|null $events_periodic_updated_count
- * @property-read Collection|Event[] $eventsUpdated
+ * @property-read Collection<int, Event> $eventsUpdated
  * @property-read int|null $events_updated_count
- * @property-read Collection|MusicStyle[] $musicStyles
+ * @property-read Collection<int, MusicStyle> $musicStyles
  * @property-read int|null $music_styles_count
- * @property-read Collection|Newsletter[] $newsletterCreated
+ * @property-read Collection<int, Newsletter> $newsletterCreated
  * @property-read int|null $newsletter_created_count
- * @property-read Collection|Newsletter[] $newsletterUpdated
+ * @property-read Collection<int, Newsletter> $newsletterUpdated
  * @property-read int|null $newsletter_updated_count
- * @property-read DatabaseNotificationCollection|DatabaseNotification[] $notifications
+ * @property-read DatabaseNotificationCollection<int, DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
- * @property-read Collection|Page[] $pagesCreated
+ * @property-read Collection<int, Page> $pagesCreated
  * @property-read int|null $pages_created_count
- * @property-read Collection|Page[] $pagesUpdated
+ * @property-read Collection<int, Page> $pagesUpdated
  * @property-read int|null $pages_updated_count
+ * @property-read Collection<int, PersonalAccessToken> $tokens
+ * @property-read int|null $tokens_count
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
  * @method static Builder|User query()
@@ -70,8 +72,6 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereUpdatedAt($value)
  * @method static Builder|User whereUsername($value)
  * @mixin Eloquent
- * @property-read Collection|PersonalAccessToken[] $tokens
- * @property-read int|null $tokens_count
  */
 class User extends Authenticatable
 {

@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class EventRequest extends FormRequest
+class EventRequest extends AdminRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -37,12 +35,12 @@ class EventRequest extends FormRequest
             'event_date'    => 'required|date',
             'event_time'    => 'required',
             'category_id'   => 'required',
+			'ticketlink'    => 'nullable|url',
+			'is_published'  => 'boolean',
             'theme_id'      => '',
             'description'   => '',
             'images'        => '',
             'links'         => '',
-            'ticketlink'    => 'nullable|url',
-            'is_published'  => 'boolean',
             'is_periodic'   => '',
         ];
     }

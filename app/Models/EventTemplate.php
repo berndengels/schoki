@@ -27,9 +27,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $created_by
  * @property Carbon|null $updated_at
  * @property int|null $updated_by
- * @property-read Category $category
- * @property-read User $createdBy
- * @property-read Collection|Images[] $images
+ * @property-read Category|null $category
+ * @property-read User|null $createdBy
+ * @property-read mixed $description_sanitized
+ * @property-read mixed $description_text
+ * @property-read mixed $description_without_video
+ * @property-read Collection<int, Images> $images
  * @property-read int|null $images_count
  * @property-read Theme|null $theme
  * @property-read User|null $updatedBy

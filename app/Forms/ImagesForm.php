@@ -8,6 +8,7 @@
  */
 namespace App\Forms;
 
+use App\Models\Media;
 use Kris\LaravelFormBuilder\Field;
 
 class ImagesForm extends MediaForm
@@ -26,10 +27,10 @@ class ImagesForm extends MediaForm
         $uploadWebPath = config('filesystems.disks.image_upload.webRoot');
         $uploadWebPathCropped = config('filesystems.disks.image_upload_cropped.webRoot');
 
-        $model  = ($this->getModel()) ? $this->getModel() : null;
+        $model  = $this->getModel() ? $this->getModel() : null;
         $imgUrl = '';
 
-        if ($model) {
+        if ($model instanceof Media && isset($model->internal_filename) && isset($model->internal_filename)) {
             if (file_exists($uploadPath.'/'.$model->internal_filename)) {
                 $imgUrl = $uploadWebPath .'/'. $model->internal_filename;
 

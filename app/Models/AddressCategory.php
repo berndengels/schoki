@@ -15,9 +15,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int $id
  * @property int|null $tag_id
  * @property string $name
- * @property-read Collection|AddressCategory[] $addresses
+ * @property-read Collection<int, Address> $addresses
  * @property-read int|null $addresses_count
- * @property-read Collection|Newsletter[] $newsletters
+ * @property-read Collection<int, Newsletter> $newsletters
  * @property-read int|null $newsletters_count
  * @method static Builder|AddressCategory newModelQuery()
  * @method static Builder|AddressCategory newQuery()

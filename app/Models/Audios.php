@@ -26,8 +26,10 @@ use Illuminate\Support\Carbon;
  * @property int|null $eventPeriodic_id
  * @property int $duration
  * @property int $bitrate
- * @property-read User $createdBy
+ * @property-read User|null $createdBy
+ * @property-read Event|null $event
  * @property-read EventPeriodic|null $eventPeriodic
+ * @property-read Page|null $page
  * @property-read User|null $updatedBy
  * @method static Builder|Audios newModelQuery()
  * @method static Builder|Audios newQuery()
@@ -48,8 +50,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Audios whereUpdatedAt($value)
  * @method static Builder|Audios whereUpdatedBy($value)
  * @mixin Eloquent
- * @property-read Event|null $event
- * @property-read Page|null $page
  */
 class Audios extends Media
 {

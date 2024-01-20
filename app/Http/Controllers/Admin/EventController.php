@@ -130,8 +130,10 @@ class EventController extends MainController
     public function store(EventRequest $request, $id = 0)
     {
         try {
-            if($id > 0) {
-                Event::find($id)->update($request->validated());
+            if((int) $id > 0) {
+                $event = Event::find($id);
+//				dd($event);
+				$event->update($request->validated());
             } else {
                 $saved = Event::create($request->validated());
                 $id = $saved->id;

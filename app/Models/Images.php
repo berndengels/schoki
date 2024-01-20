@@ -26,8 +26,12 @@ use Illuminate\Database\Eloquent\Builder;
  * @property int|null $eventPeriodic_id
  * @property int|null $width
  * @property int|null $height
- * @property-read User $createdBy
+ * @property-read User|null $createdBy
+ * @property-read Event|null $event
  * @property-read EventPeriodic|null $eventPeriodic
+ * @property-read int $display_height
+ * @property-read int $display_width
+ * @property-read Page|null $page
  * @property-read User|null $updatedBy
  * @method static Builder|Images newModelQuery()
  * @method static Builder|Images newQuery()
@@ -49,10 +53,6 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|Images whereUpdatedBy($value)
  * @method static Builder|Images whereWidth($value)
  * @mixin Eloquent
- * @property-read Event|null $event
- * @property-read Page|null $page
- * @property-read mixed $display_height
- * @property-read mixed $display_width
  */
 class Images extends Media
 {

@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  *
  * @property int $id
  * @property string $name
- * @property-read Collection|Message[] $messages
+ * @property-read Collection<int, Message> $messages
  * @property-read int|null $messages_count
  * @method static Builder|MessageSubject newModelQuery()
  * @method static Builder|MessageSubject newQuery()

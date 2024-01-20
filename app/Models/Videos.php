@@ -27,7 +27,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $height
  * @property int $duration
  * @property int $bitrate
- * @property-read User $createdBy
+ * @property-read User|null $createdBy
  * @property-read Event|null $event
  * @property-read EventPeriodic|null $eventPeriodic
  * @property-read Page|null $page

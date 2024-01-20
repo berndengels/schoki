@@ -21,9 +21,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $default_time
  * @property int|null $default_price
  * @property int $is_published
- * @property-read Collection|EventTemplate[] $eventTemplates
+ * @property-read Collection<int, EventPeriodic> $eventPeriodics
+ * @property-read int|null $event_periodics_count
+ * @property-read Collection<int, EventTemplate> $eventTemplates
  * @property-read int|null $event_templates_count
- * @property-read Collection|Event[] $events
+ * @property-read Collection<int, Event> $events
  * @property-read int|null $events_count
  * @method static Builder|Category newModelQuery()
  * @method static Builder|Category newQuery()
@@ -37,8 +39,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Category whereName($value)
  * @method static Builder|Category whereSlug($value)
  * @mixin Eloquent
- * @property-read Collection|EventPeriodic[] $eventPeriodics
- * @property-read int|null $event_periodics_count
  */
 class Category extends Model
 {

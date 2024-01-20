@@ -135,8 +135,22 @@ class EventForm extends MainForm
 				'default_value' => $eventTime,
             ])
             ->add('title', Field::TEXT, [
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '160',
+				]
             ])
             ->add('subtitle', Field::TEXT, [
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
             ])
             ->add('description', Field::TEXTAREA, [
                 'attr'  => ['id' => 'tinymce'],

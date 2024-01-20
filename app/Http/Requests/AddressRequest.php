@@ -3,20 +3,9 @@
 namespace App\Http\Requests;
 
 use App\Rules\ReCaptcha;
-use Illuminate\Foundation\Http\FormRequest;
 
-class AddressRequest extends FormRequest
+class AddressRequest extends AdminRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return true;
-    }
-
     public function validationData($keys = null)
     {
         return array_merge($this->all($keys), ['remove' => !!$this->post('remove') ?? false]);

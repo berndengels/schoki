@@ -17,12 +17,11 @@ use Kyslik\ColumnSortable\Sortable;
 /**
  * Class EventPeriodic
  *
- * @package App\Models
  * @property int $id
  * @property int|null $theme_id
  * @property int $category_id
- * @property int $periodic_position_id
- * @property int $periodic_weekday_id
+ * @property string $periodic_position
+ * @property string $periodic_weekday
  * @property int $created_by
  * @property int|null $updated_by
  * @property string $title
@@ -34,17 +33,23 @@ use Kyslik\ColumnSortable\Sortable;
  * @property int|null $price
  * @property Carbon $created_at
  * @property Carbon|null $updated_at
- * @property int|null $is_published
- * @property-read Collection|Audios[] $audios
+ * @property bool|null $is_published
+ * @property-read Collection<int, Audios> $audios
  * @property-read int|null $audios_count
- * @property-read Category $category
- * @property-read User $createdBy
+ * @property-read Category|null $category
+ * @property-read User|null $createdBy
+ * @property-read mixed $description_sanitized
+ * @property-read mixed $description_text
+ * @property-read mixed $description_without_video
  * @property-read mixed $event_dates
- * @property-read Collection|Images[] $images
+ * @property-read mixed $period
+ * @property-read mixed $position
+ * @property-read mixed $weekday
+ * @property-read Collection<int, Images> $images
  * @property-read int|null $images_count
  * @property-read Theme|null $theme
  * @property-read User|null $updatedBy
- * @property-read Collection|Videos[] $videos
+ * @property-read Collection<int, Videos> $videos
  * @property-read int|null $videos_count
  * @method static Builder|EventPeriodic newModelQuery()
  * @method static Builder|EventPeriodic newQuery()
@@ -59,8 +64,8 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|EventPeriodic whereId($value)
  * @method static Builder|EventPeriodic whereIsPublished($value)
  * @method static Builder|EventPeriodic whereLinks($value)
- * @method static Builder|EventPeriodic wherePeriodicPositionId($value)
- * @method static Builder|EventPeriodic wherePeriodicWeekdayId($value)
+ * @method static Builder|EventPeriodic wherePeriodicPosition($value)
+ * @method static Builder|EventPeriodic wherePeriodicWeekday($value)
  * @method static Builder|EventPeriodic wherePrice($value)
  * @method static Builder|EventPeriodic whereSubtitle($value)
  * @method static Builder|EventPeriodic whereThemeId($value)
@@ -68,11 +73,6 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|EventPeriodic whereUpdatedAt($value)
  * @method static Builder|EventPeriodic whereUpdatedBy($value)
  * @mixin Eloquent
- * @property string $periodic_position
- * @property string $periodic_weekday
- * @property-read mixed $description_sanitized
- * @method static Builder|EventPeriodic wherePeriodicPosition($value)
- * @method static Builder|EventPeriodic wherePeriodicWeekday($value)
  */
 class EventPeriodic extends Model
 {

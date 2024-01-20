@@ -29,7 +29,7 @@
     <div id="pageTitle" class="r-0 mr-3">
         <h1 class="d-inline-block text-info"><i class="ion-md-arrow-round-down mr-2"></i>{{ $title ?? null }}</h1>
     </div>
-    @include('components.flash-message')
+    <x-flash-message />
     @yield('content')
 </div>
 

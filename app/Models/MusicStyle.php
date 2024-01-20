@@ -17,9 +17,9 @@ use Kyslik\ColumnSortable\Sortable;
  * @property int $id
  * @property string $name
  * @property string $slug
- * @property-read Collection|\App\Models\Message[] $messages
+ * @property-read Collection<int, Message> $messages
  * @property-read int|null $messages_count
- * @property-read Collection|User[] $users
+ * @property-read Collection<int, User> $users
  * @property-read int|null $users_count
  * @method static Builder|MusicStyle newModelQuery()
  * @method static Builder|MusicStyle newQuery()

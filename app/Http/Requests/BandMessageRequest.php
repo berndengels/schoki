@@ -23,14 +23,8 @@ class BandMessageRequest extends FormRequest
     {
 
         if($validator->failed()) {
-//            dd($validator->errors());
             return redirect()->back()->with('errors', $validator->errors());
         }
-/*
-        if ( captcha_check($this->request->captcha) === false ) {
-            return back()->with('invalid-captcha','incorrect captcha!');
-        }
-*/
         return parent::failedValidation($validator);
     }
 

@@ -20,10 +20,12 @@ use Kyslik\ColumnSortable\Sortable;
  * @property int|null $default_price
  * @property string|null $icon
  * @property string|null $icon_orig
- * @property int $is_published
- * @property-read Collection|EventTemplate[] $eventTemplates
+ * @property int|null $is_published
+ * @property-read Collection<int, EventPeriodic> $eventPeriodics
+ * @property-read int|null $event_periodics_count
+ * @property-read Collection<int, EventTemplate> $eventTemplates
  * @property-read int|null $event_templates_count
- * @property-read Collection|Event[] $events
+ * @property-read Collection<int, Event> $events
  * @property-read int|null $events_count
  * @method static Builder|Theme newModelQuery()
  * @method static Builder|Theme newQuery()
@@ -38,8 +40,6 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static Builder|Theme whereName($value)
  * @method static Builder|Theme whereSlug($value)
  * @mixin Eloquent
- * @property-read Collection|EventPeriodic[] $eventPeriodics
- * @property-read int|null $event_periodics_count
  */
 class Theme extends Model
 {

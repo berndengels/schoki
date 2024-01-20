@@ -10,11 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\Models\Media
  *
- * @property-read User $createdBy
- * @property-read Event $event
- * @property-read EventPeriodic $eventPeriodic
- * @property-read Page $page
- * @property-read User $updatedBy
+ * @property-read User|null $createdBy
+ * @property-read Event|null $event
+ * @property-read EventPeriodic|null $eventPeriodic
+ * @property-read Page|null $page
+ * @property-read User|null $updatedBy
  * @method static Builder|Media newModelQuery()
  * @method static Builder|Media newQuery()
  * @method static Builder|Media query()
