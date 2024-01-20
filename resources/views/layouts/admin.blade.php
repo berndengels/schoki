@@ -13,10 +13,10 @@
     <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
-    <script src="{{ mix('js/app-admin.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ mix('js/app-admin.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,600" />
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{{ mix('css/app-admin.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app-admin.css') }}?{{ time() }}" />
     @yield('extra-headers')
 </head>
 <body>

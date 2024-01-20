@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <!--link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet"-->
     <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/dark.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/dark.css') }}?{{ time() }}" />
     <!--script src="https://code.jquery.com/jquery-1.12.4.js"></script-->
-    <script src="{{ asset('js/app.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
     <!--script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script-->
     @yield('extra-headers')
 </head>
