@@ -1,6 +1,7 @@
 #!/bin/bash
 
-php="/usr/local/Cellar/php@8.2/8.2.13/bin/php"
+#php="/usr/local/Cellar/php@8.2/8.2.13/bin/php"
+php="/usr/local/Cellar/php@7.4/7.4.33_5/bin/php"
 redis-cli FLUSHALL
 composer="/usr/local/bin/composer"
 

@@ -4,16 +4,6 @@ namespace App\Http\Requests;
 
 class EventRequest extends AdminRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return true;
-    }
-
     public function validationData()
     {
         return array_merge([
@@ -31,7 +21,7 @@ class EventRequest extends AdminRequest
     {
         return [
             'title'         => 'required|string|min:3|max:160',
-            'subtitle'      => 'max:100',
+            'subtitle'      => 'nullable|max:100',
             'event_date'    => 'required|date',
             'event_time'    => 'required',
             'category_id'   => 'required',

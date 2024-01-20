@@ -10,7 +10,7 @@ URL: [https://www.schokoladen-mitte.de/](https://www.schokoladen-mitte.de/)
 - git
 - Mac: Homebrew, Larel Valet
 - Windows: XAMPP
-- php => 8.2
+- php 7.4
 
 ### Datenbank
 - Mac: brew install mariadb, brew install php 
