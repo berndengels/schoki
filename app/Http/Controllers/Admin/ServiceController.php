@@ -39,7 +39,7 @@ class ServiceController extends MainController
 			->setPassword($password)
 			->setDbName($dbName)
 			->setHost($host)
-			->setDefaultCharacterSet('utf8')
+			->setDefaultCharacterSet('utf8mb4')
 			->addExtraOption('--insert-ignore --add-drop-table -eC')
 			->useCompressor(new GzipCompressor());
 
