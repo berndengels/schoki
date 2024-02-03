@@ -42,3 +42,4 @@ phpunit.dusk.xml
 /Envoy.blade.php
 /clearme
 /perms
+/public
