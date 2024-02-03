@@ -31,7 +31,7 @@ class ServiceController extends MainController
 		$user = env('DB_USERNAME');
 		$password = env('DB_PASSWORD');
 		$host = env('DB_HOST');
-/*
+
 		$dumpCommand = MySql::create()
 			->setDumpBinaryPath($binaryPath)
 			->setUserName($user)
@@ -41,11 +41,9 @@ class ServiceController extends MainController
 //			->setDefaultCharacterSet('utf8mb4')
 			->addExtraOption('--insert-ignore --add-drop-table --hex-blob --skip-comments --default-character-set=utf8 --set-charset -eC')
 			->useCompressor(new GzipCompressor());
-*/
-		$cmd = "$binaryPath/mysqldump -h $host -u $user -p$password --insert-ignore --opt --skip-comments --add-drop-table --hex-blob --default-character-set=utf8 --set-charset -eC --databases $dbName > $file";
+
 	    try {
-//			$dumpCommand->dumpToFile($file);
-			escapeshellcmd($cmd);
+			$dumpCommand->dumpToFile($file);
 			chmod($file, 0755);
 			$name = Carbon::now()->format('YmdHi') . '_schokoladen.sql.gz';
 			$content = file_get_contents($file);

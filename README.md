@@ -17,8 +17,7 @@ URL: [https://www.schokoladen-mitte.de/](https://www.schokoladen-mitte.de/)
 - Datenbank "schokoladen" erstellen
 - als User einloggen [https://www.schokoladen-mitte.de/admin](https://www.schokoladen-mitte.de/admin)
 - falls Passwort nicht bekannt, dann über [Login](https://www.schokoladen-mitte.de/login) -> "Passwort vergessen" selbiges vergeben.  
-- dort die aktuelle DB herunterladen [über Media -> Download Database](https://www.schokoladen-mitte.de/admin/services/dumpdb)
-- Datenbank-Datei (SQL-Dump) importieren in DB schokoladen
+- Datenbank-Datei von mir anfordern. Ich schicke sie dann per Mail zu.
 
 ### Installationen
 virtuellen Host für die lokale Schoki-Page erstellen 
