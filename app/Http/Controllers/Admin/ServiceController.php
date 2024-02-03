@@ -8,14 +8,13 @@
  */
 namespace App\Http\Controllers\Admin;
 
+use Exception;
 use Carbon\Carbon;
 use App\Models\Audios;
 use App\Models\Images;
-use Exception;
 use Intervention\Image\Constraint;
 use Ixudra\Curl\Facades\Curl;
 use App\Helper\FilePermissions;
-use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
 use Spatie\DbDumper\Compressors\GzipCompressor;
 use Spatie\DbDumper\Databases\MySql;
@@ -40,16 +39,19 @@ class ServiceController extends MainController
 			->setDbName($dbName)
 			->setHost($host)
 //			->setDefaultCharacterSet('utf8mb4')
-			->addExtraOption('--insert-ignore --add-drop-table -eC')
+			->addExtraOption('--insert-ignore --add-drop-table --hex-blob --default-character-set=utf8mb4 --set-charset -eC')
 			->useCompressor(new GzipCompressor());
 
 	    try {
 			$dumpCommand->dumpToFile($file);
 			chmod($file, 0755);
 			$name = Carbon::now()->format('YmdHi') . '_schokoladen.sql.gz';
+			$content = file_get_contents($file);
+			$type = 'application/gzip';
+			unlink($file);
 
-			return response()->download($file, $name);
-        } catch(Exception $e) {
+			return response()->attachment($content, $type, $name);
+		} catch(Exception $e) {
 	        echo $e->getMessage().'<br>';
 	        return '<pre>' . $e->getTraceAsString() . '</pre>';
         }

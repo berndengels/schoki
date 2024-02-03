@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Debugbar;
+use Response;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
@@ -53,7 +54,6 @@ class AppServiceProvider extends ServiceProvider
             return preg_replace('/\{\?(.+)\?\}/', '<?php ${1} ?>', $value);
         });
 		if (!Collection::hasMacro('paginate')) {
-
 			Collection::macro('paginate',
 				function ($perPage = 15, $page = null, $options = []) {
 					$page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
@@ -62,6 +62,16 @@ class AppServiceProvider extends ServiceProvider
 						->withPath('');
 				});
 		}
+
+		Response::macro('attachment', function ($content, $type, $name) {
+
+			$headers = [
+				'Content-type'        => $type,
+				'Content-Disposition' => 'attachment; filename="'.$name.'"',
+			];
+
+			return Response::make($content, 200, $headers);
+		});
     }
 
     /**
