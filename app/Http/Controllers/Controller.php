@@ -34,6 +34,7 @@ class Controller extends BaseController
     protected $cacheEventThemeKey = 'eventsByTheme';
     protected $cacheTopMenuKey = 'topMenu';
     protected $cacheBottomMenuKey = 'bottomMenu';
+	protected static $counter = 0;
 
     /**
      * @var string

@@ -41,7 +41,7 @@ class FileController extends Controller
 
     public function upload(Request $request)
     {
-        try {
+		try {
 			/**
 			 * @var $file UploadedFile
 			 */
@@ -55,33 +55,34 @@ class FileController extends Controller
 			$destPath   = $this->uploadImgTempPath.'/'.$hashName;
 			$url		= $this->uploadImgWebTempPath.'/'.$hashName;
 
-            Storage::disk('upload')->putFileAs(
-                '',
-                $tmpName,
-                $hashName
-            );
-            chmod($destPath, 0666);
-            [$width, $height] = getimagesize($destPath);
-            $response = [
-                'success'   => true,
-                'error'     => null,
-                'url'       => $url,
-                'filesize'  => $file->getSize(),
-                'width'     => $width,
-                'height'    => $height,
-                'extension' => $extension,
-                'internal_filename' => $hashName,
-                'external_filename' => $fileName,
+			Storage::disk('upload')->putFileAs(
+				'',
+				$tmpName,
+				$hashName
+			);
+			chmod($destPath, 0666);
+			[$width, $height] = getimagesize($destPath);
+			$response = [
+				'success'   => true,
+				'error'     => null,
+				'url'       => $url,
+				'filesize'  => $file->getSize(),
+				'width'     => $width,
+				'height'    => $height,
+				'extension' => $extension,
+				'internal_filename' => $hashName,
+				'external_filename' => $fileName,
 				'location'	=> $url,
-            ];
-        } catch(Exception $e) {
-            $response = [
-                'success'   => false,
-                'error'     => $e->getMessage(),
+			];
+		} catch(Exception $e) {
+			$response = [
+				'success'   => false,
+				'error'     => $e->getMessage(),
 				'location'	=> null,
-            ];
-        }
-        return response()->json($response);
+			];
+		}
+
+		return response()->json($response);
     }
 
 	public function uploadAudio(Request $request)

@@ -127,32 +127,37 @@ class EventController extends MainController
 		return view('admin.form.'.$this->entity, $formOptions);
 	}
 
-    public function store(EventRequest $request, $id = 0)
+    public function store(Request $httpRequest,EventRequest $request, $id = 0)
     {
-        try {
-            if((int) $id > 0) {
-                $event = Event::find($id);
-				$event->update($request->validated());
-            } else {
-                $saved = Event::create($request->validated());
-                $id = $saved->id;
-            }
-            Cache::forget($this->cacheEventKey);
-        } catch(Exception $e) {
-            return back()->with('error','Fehler: '.$e->getMessage());
-        }
-        $override = $request->post('override');
-        $template = $request->post('template');
+		if(!$httpRequest->session()->get('eventStored')) {
+			try {
+				if((int) $id > 0) {
+					$event = Event::find($id);
+					$event->update($request->validated());
+				} else {
+					$saved = Event::create($request->validated());
+					$id = $saved->id;
+				}
+				Cache::forget($this->cacheEventKey);
+			} catch(Exception $e) {
+				return back()->with('error','Fehler: '.$e->getMessage());
+			}
 
-        $this->processImages($request, $id, $override, $template);
+			$override = $request->post('override');
+			$template = $request->post('template');
 
-        switch($request->submit) {
-            case 'save':
-                return redirect()->route('admin.eventEdit', ['id' => $id]);
-            case 'saveAndBack':
-            default:
-                return redirect()->route('admin.eventList');
-        }
+			$this->processImages($request, $id, $override, $template);
+		}
+
+		$httpRequest->session()->flash('eventStored', 1);
+
+		switch($request->submit) {
+			case 'save':
+				return redirect()->route('admin.eventEdit', ['id' => $id]);
+			case 'saveAndBack':
+			default:
+				return redirect()->route('admin.eventList');
+		}
     }
 
 	public function template(FormBuilder $formBuilder, Request $request ) {

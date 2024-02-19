@@ -19,15 +19,6 @@ class BandMessageRequest extends FormRequest
         return true;
     }
 
-    protected function failedValidation(Validator $validator)
-    {
-
-        if($validator->failed()) {
-            return redirect()->back()->with('errors', $validator->errors());
-        }
-        return parent::failedValidation($validator);
-    }
-
     /**
      * Get the validation rules that apply to the request.
      * @return array
@@ -36,11 +27,10 @@ class BandMessageRequest extends FormRequest
     {
         return [
             'music_style_id'    => 'required',
-            'name'              => 'required|max:50',
+            'name'              => 'required|max:100',
             'email'             => 'required|email',
             'msg'               => 'required',
-//            'captcha'           => 'required|captcha',
-            'g-recaptcha-response' => ['required', new ReCaptcha()]
+			'g-recaptcha-response' => 'recaptcha',
         ];
     }
 
@@ -53,8 +43,8 @@ class BandMessageRequest extends FormRequest
             'email.required'        => 'Bitte eine Email Adresse angeben!',
             'email.email'           => 'Das ist keine korrekte Email-Adresse!.',
             'msg.required'          => 'Bitte ein Nachricht eingeben!',
-            'g-recaptcha-response.required'      => 'Bitte den Captcha-Text eingeben!',
-            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
+//            'g-recaptcha-response.required'      => 'Bitte den Captcha-Text eingeben!',
+//            'g-recaptcha-response.captcha'       => 'Der Captcha-Text ":input" stimmt nicht!',
         ];
     }
 }
