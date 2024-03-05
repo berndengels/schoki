@@ -45,9 +45,11 @@ class EventController extends BaseController
                 return Event::allActualMerged();
             });
         }
+
         $this->actualEvents = $this->actualEvents->map(function(EventEntity $item) {
-            $item->setDescription(null);
-            $item->setDescriptionSanitized(null);
+            $item->setDescription($item->getDescription());
+            $item->setDescriptionSanitized($item->getDescriptionSanitized());
+
             return $item;
         });
 	}
