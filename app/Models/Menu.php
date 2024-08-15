@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Eloquent;
-use Illuminate\Database\Eloquent\Builder;
 use Kalnoy\Nestedset\Collection;
 use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Model;
@@ -92,7 +91,7 @@ class Menu extends Model
 
     protected $table    = 'menu';
     public $timestamps  = false;
-    protected $fillable = ['parent_id','name','lvl','lft','rgt','url','menuItemType','is_published'];
+	protected $guarded = ['id'];
     protected $with     = ['menuItemType'];
 
 	public function menuItemType()

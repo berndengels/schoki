@@ -19,7 +19,7 @@
                                 @endforeach
                             </div>
                         @else
-                            <a class="nav-link" href="{{ $item->url }}" aria-haspopup="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ $item->url }}" @if('link' === $item->menuItemType->type) target="_blank" @endif aria-haspopup="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
                         @endif
                     </li>
                 @endforeach

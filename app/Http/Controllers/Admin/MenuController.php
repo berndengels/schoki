@@ -226,7 +226,7 @@ class MenuController extends Controller
 			case 'delete_node':
 				$result = [
 					'id' 		=> $id,
-					'delete'	=> Menu::with(['menuItemType','descendants','children'])->delete(),
+					'delete'	=> Menu::find($id)->delete(),
 				];
                 break;
 			case 'rename_node':
