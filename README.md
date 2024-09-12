@@ -4,7 +4,7 @@ URL: [https://www.schokoladen-mitte.de/](https://www.schokoladen-mitte.de/)
 
 ### Installations Voraussetzungen
 - Webserver (apache2, nginx)
-- Mysql-Datenbank-Server (mariadb)
+- Mysql-Datenbank-Server (mariadb, mysql)
 - composer
 - npm
 - git
@@ -13,7 +13,7 @@ URL: [https://www.schokoladen-mitte.de/](https://www.schokoladen-mitte.de/)
 - php 7.4
 
 ### Datenbank
-- Mac: brew install mariadb, brew install php 
+- Mac: brew install mariadb (oder brew install mysql), brew install php 
 - Datenbank "schokoladen" erstellen
 - als User einloggen [https://www.schokoladen-mitte.de/admin](https://www.schokoladen-mitte.de/admin)
 - falls Passwort nicht bekannt, dann über [Login](https://www.schokoladen-mitte.de/login) -> "Passwort vergessen" selbiges vergeben.  
