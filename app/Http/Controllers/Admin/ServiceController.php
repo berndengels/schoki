@@ -32,25 +32,29 @@ class ServiceController extends MainController
 		$password = env('DB_PASSWORD');
 		$host = env('DB_HOST');
 
-		$dumpCommand = MySql::create()
-			->setDumpBinaryPath($binaryPath)
-			->setUserName($user)
-			->setPassword($password)
-			->setDbName($dbName)
-			->setHost($host)
-//			->setDefaultCharacterSet('utf8mb4')
-			->addExtraOption('--insert-ignore --add-drop-table --hex-blob --skip-comments --default-character-set=utf8 --set-charset -eC')
-			->useCompressor(new GzipCompressor());
-
 	    try {
-			$dumpCommand->dumpToFile($file);
-			chmod($file, 0755);
-			$name = Carbon::now()->format('YmdHi') . '_schokoladen.sql.gz';
-			$content = file_get_contents($file);
-			$type = 'application/gzip';
-			unlink($file);
+			MySql::create()
+				->setDumpBinaryPath($binaryPath)
+				->setUserName($user)
+				->setPassword($password)
+				->setDbName($dbName)
+				->setHost($host)
+//			->setDefaultCharacterSet('utf8mb4')
+//			->addExtraOption('--insert-ignore --add-drop-table --hex-blob --skip-comments --default-character-set=utf8 --set-charset -eC')
+//				->addExtraOption('--insert-ignore --add-drop-table --hex-blob --skip-comments')
+				->useCompressor(new GzipCompressor())
+				->useExtendedInserts()
+				->dumpToFile($file);
 
-			return response()->attachment($content, $type, $name);
+			if(file_exists($file)) {
+				chmod($file, 0755);
+				$name = Carbon::now()->format('YmdHi') . '_schokoladen.sql.gz';
+				$content = file_get_contents($file);
+				$type = 'application/gzip';
+				unlink($file);
+
+				return response()->attachment($content, $type, $name);
+			}
 		} catch(Exception $e) {
 	        echo $e->getMessage().'<br>';
 	        return '<pre>' . $e->getTraceAsString() . '</pre>';

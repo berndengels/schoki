@@ -58,8 +58,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownMedia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMedia">
-                        <!--a class="dropdown-item ajax" href="/admin/services/makeThumbs">Make Thumbs</a-->
-                        <a class="dropdown-item" href="/admin/services/dumpdb" target="_blank">Download Database</a>
+                        <a class="dropdown-item" href="{{ route('admin.service.dumpDb') }}" target="_blank">Download Database</a>
                         <a class="dropdown-item ajax" href="/admin/services/syncImages" target="_blank">Sync Images</a>
                         <a class="dropdown-item ajax" href="/admin/services/cropImages" target="_blank">Crop Images</a>
                         <a class="dropdown-item ajax" href="/admin/services/sanitizeImageDB" target="_blank">Sanitize Images DB</a>
