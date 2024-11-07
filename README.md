@@ -43,3 +43,4 @@ mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
 - event view (html): resources/views/public/events-lazy.blade.php
 - obere navigation: resources/views/public/templates/topNavigation.blade.php
 - untere navigation: resources/views/public/templates/bottomNavigation.blade.php
+- Test
