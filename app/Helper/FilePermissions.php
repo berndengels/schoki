@@ -41,8 +41,14 @@ class FilePermissions {
 		echo "<h3>Set Permissions on $basePath</h3>";
 
 		$testPath = "{$basePath}/../test.schokoladen-mitte.de/repo";
-		exec ("find $testPath -type d -exec chmod 0777 {} +");
-		exec ("find $testPath -type f -exec chmod 0666 {} +");
+		$output = system("find $testPath -type d -exec chmod 0777 {} +");
+		echo "Dirs: $output<br>";
+		ob_flush();
+		flush();
+		$output = system("find $testPath -type f -exec chmod 0666 {} +");
+		echo "Files: $output<br>";
+		ob_flush();
+		flush();
 
 		ob_flush();
 		flush();
