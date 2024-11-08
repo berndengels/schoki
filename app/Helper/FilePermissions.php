@@ -41,14 +41,13 @@ class FilePermissions {
 		echo "<h3>Set Permissions on $basePath</h3>";
 
 		$testPath = "{$basePath}/../test.schokoladen-mitte.de/repo";
-		exec ("find $testPath -type d -exec chmod 0776 {} +");
+		exec ("find $testPath -type d -exec chmod 0777 {} +");
 		exec ("find $testPath -type f -exec chmod 0666 {} +");
 
 		ob_flush();
 		flush();
 
 		foreach(self::$writableDirs as $dir) {
-			$testFullPath = "$testPath/$dir";
 			$fullPath = "$basePath/$dir/";
 			echo "<h5>$fullPath</h5>";
 			ob_flush();
