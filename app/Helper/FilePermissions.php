@@ -23,11 +23,11 @@ class FilePermissions {
 		'storage/framework/testing',
 		'storage/framework/views',
 		'storage/logs',
-		'public_html/thumbs',
-		'public_html/uploads',
-		'public_html/media/images',
-		'public_html/media/audios',
-		'public_html/media/videos',
+		'public/thumbs',
+		'public/uploads',
+		'public/media/images',
+		'public/media/audios',
+		'public/media/videos',
 	];
 
 	public function __construct()

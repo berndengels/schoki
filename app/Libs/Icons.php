@@ -34,7 +34,7 @@ class Icons {
 		}
 		$basePath = app()->basePath();
         self::$iconPath = $basePath . '/node_modules/ionicons/dist/ionicons/svg';
-		self::$filePath = $basePath . '/public_html/img/icons';
+		self::$filePath = $basePath . '/public/img/icons';
 		self::$fileWebPath = '/img/icons';
 
 		return self::$instance;

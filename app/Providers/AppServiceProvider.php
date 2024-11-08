@@ -83,7 +83,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->register(DuskServiceProvider::class);
 		$this->app->bind('path.public', function() {
-			return base_path('public_html');
+			return base_path('public');
 		});
 
 		if ($this->app->environment() !== 'prod') {
