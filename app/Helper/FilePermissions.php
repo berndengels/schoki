@@ -42,7 +42,10 @@ class FilePermissions {
 		echo "<h5>$repoPath</h5>";
 		ob_flush();
 		flush();
-		chmod($storagePath, 0777);
+
+		if(is_writable($storagePath)) {
+			@chmod($storagePath, 0777);
+		}
 
 		$output = system("find $repoPath -type d -exec chmod 0777 {} +");
 		echo "Dirs: $output<br>";
