@@ -35,10 +35,14 @@ class FilePermissions {
 		set_time_limit(0);
 	}
 
-
 	public static function makeWritable()
 	{
-		$testPath = '/home/schoki/web/schokoladen-mitte.de/test.schokoladen-mitte.de/';
+		$testPath = '/home/schoki/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo';
+		$output = system("chmod -R 777 $testPath");
+		echo "Test $output<br>";
+		ob_flush();
+		flush();
+
 		$basePath = App::basePath();
 
 		echo "<h3>Set Permissions</h3>";
