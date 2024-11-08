@@ -1,5 +1,14 @@
 /node_modules/
 /components/
+/public/css
+/public/js
+/public/fonts
+/public/vendor
+/public_html/js/
+/public_html/css/
+/public_html/vendor/
+/public_html/mix-manifest.json
+/public_html/page-cache
 /public_html/docs/
 /public_html/css/
 /public_html/js/
@@ -42,4 +51,3 @@ phpunit.dusk.xml
 /Envoy.blade.php
 /clearme
 /perms
-/public
