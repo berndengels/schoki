@@ -1,7 +1,7 @@
 @servers(['schoki' => 'schoki@schokoladen-mitte.de'])
 
 @setup
-	$npm = '/home/schoki/.nvm/versions/node/v14.15.2/bin/npm';
+	$npm = './npm.sh';
 @endsetup
 
 @task('test', ['on' => 'schoki'])
