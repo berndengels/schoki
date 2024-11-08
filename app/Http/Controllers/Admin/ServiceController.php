@@ -23,6 +23,16 @@ class ServiceController extends MainController
 {
 	protected $user = null;
 
+	/**
+	 * @param null $user
+	 */
+	public function __construct()
+	{
+		parent::__construct();
+		set_time_limit(0);
+	}
+
+
 	public function dumpDb() {
 	    $dbName = env('DB_DATABASE');
 	    $file = database_path('snapshots/' . $dbName . '.sql.gz');
@@ -109,6 +119,8 @@ class ServiceController extends MainController
 		ob_implicit_flush(true);
 		ob_end_flush();
 		echo "<h3>Thumbs to generate: $count</h3>";
+		ob_flush();
+		flush();
 
 		foreach($toHandle as $index => $img) {
 			$fullPathImages = $path . '/' . $img;
@@ -121,9 +133,13 @@ class ServiceController extends MainController
 				$myImg->save($fullPathThumbs, 70);
 				chmod($fullPathThumbs, 0666);
 				echo "$index: Thumb from $img generated<br>";
+				ob_flush();
+				flush();
 			} catch(Exception $e) {
 				$msg = $e->getMessage();
 				echo "$index: ERROR -> $img ($msg)<br>";
+				ob_flush();
+				flush();
 			}
 			usleep(10000);
 		}
@@ -152,13 +168,9 @@ class ServiceController extends MainController
         $countToDownload	= count($toDownload);
 
         if( $countToDownload > 0 ) {
-			try {
-				set_time_limit(0);
-				ob_implicit_flush(true);
-				ob_end_flush();
-			} catch(Exception $e) {}
-
             echo "<h3>to download: $countToDownload</h3>";
+			ob_flush();
+			flush();
 
 			foreach( $toDownload as $index => $item ) {
 				$url	= "$remotePath/$item";
@@ -166,7 +178,6 @@ class ServiceController extends MainController
 
 				try {
 					$response = Curl::to($url)->get();
-//					dd($response);
 					file_put_contents($dest, $response);
 					chmod($dest, 0666);
 
@@ -180,13 +191,19 @@ class ServiceController extends MainController
 					}
 
 					echo "$index: $item<br>";
+					ob_flush();
+					flush();
 					usleep(5000);
 				} catch (Exception $e) {
 					echo 'error: ('.$index.' '.$item.'): '.$e->getMessage().'<br>';
+					ob_flush();
+					flush();
 				}
 			}
 		} else {
             echo "<h3>nothing to download</h3>";
+			ob_flush();
+			flush();
         }
     }
 
@@ -217,10 +234,9 @@ class ServiceController extends MainController
 		$countToDownload	= count($toDownload);
 
 		if( $countToDownload > 0 ) {
-			set_time_limit(0);
-			ob_implicit_flush(true);
-			ob_end_flush();
 			echo "<h3>to download: $countToDownload</h3>";
+			ob_flush();
+			flush();
 
 			foreach( $toDownload as $index => $item ) {
 				$url	= "$remotePath/$item";
@@ -232,13 +248,19 @@ class ServiceController extends MainController
 					file_put_contents($dest, $response);
 					chmod($dest, 0666);
 					echo "$index: $item<br>";
+					ob_flush();
+					flush();
 					usleep(5000);
 				} catch (Exception $e) {
 					echo 'error: ('.$index.' '.$item.'): '.$e->getMessage().'<br>';
+					ob_flush();
+					flush();
 				}
 			}
 		} else {
 			echo "<h3>nothing to download</h3>";
+			ob_flush();
+			flush();
 		}
 	}
 
@@ -250,16 +272,14 @@ class ServiceController extends MainController
 		$count	= $images->count();
 
 		if($count > 0) {
-			set_time_limit(0);
-			ob_implicit_flush(true);
-			ob_end_flush();
-			echo "<h3>images zo sanitize: $count</h3>\n<pre>";
+			echo "<h3>images zo sanitize: $count</h3>";
+			ob_flush();
+			flush();
 
 			/**
 			 * @var $img Images
 			 */
 			foreach( $images as $index => $img ) {
-				$id			= $img->id;
 				$fileName	= $img->internal_filename;
 				$file		= "$path/$fileName";
 
@@ -275,17 +295,27 @@ class ServiceController extends MainController
 					try {
 						$img->save();
 						echo "$index save $fileName\n";
+						ob_flush();
+						flush();
 					} catch(Exception $e) {
 						echo "$index error: can't save $fileName: " . $e->getMessage() . "\n";
+						ob_flush();
+						flush();
 					}
 				} else {
 					echo "$index file not exist: $fileName\n";
+					ob_flush();
+					flush();
 				}
 			}
 		} else {
 			echo "no image data to sanitize!\n";
+			ob_flush();
+			flush();
 		}
-		echo "</pre><h3>fertig!</h3>\n";
+		echo "<h3>fertig!</h3>";
+		ob_flush();
+		flush();
     }
 
     public function cropImages()
@@ -296,10 +326,6 @@ class ServiceController extends MainController
         $path			= config('filesystems.images');
 		$toCropped 		= [];
 		$toConverted	= [];
-
-		set_time_limit(0);
-		ob_implicit_flush(true);
-		ob_end_flush();
 
         foreach(scandir($path) as $item) {
             if(preg_match('/\.jp[e]?g$|\.png$|\.gif$/', $item)) {
@@ -321,7 +347,9 @@ class ServiceController extends MainController
 		$countToConverted	= count($toConverted);
 
         if( $countToCropped > 0 ) {
-            echo "<h3>to cropped files: $countToCropped</h3><pre>";
+            echo "<h3>to cropped files: $countToCropped</h3>";
+			ob_flush();
+			flush();
 
             foreach($toCropped as $index => $fileName) {
                 $source = "$path/$fileName";
@@ -344,23 +372,29 @@ class ServiceController extends MainController
                     }
 
                     echo "$index crop: $fileName\n";
+					ob_flush();
+					flush();
                 } catch( Exception $e ) {
 					$msg = $e->getMessage();
 					logger($msg);
 					echo "error: $index can't crop: $fileName: $msg\n";
+					ob_flush();
+					flush();
                     Images::where('internal_filename','=',$fileName)->delete();
                     unlink($source);
 					continue;
                 }
             }
-
-            echo '<pre>';
         } else {
             echo "<h3>nothing to crop</h3>";
+			ob_flush();
+			flush();
         }
 
 		if($countToConverted > 0) {
 			echo "<h3>to converted files: $countToConverted</h3><pre>";
+			ob_flush();
+			flush();
 
 			foreach($toConverted as $index => $fileName) {
 				try {
@@ -384,10 +418,14 @@ class ServiceController extends MainController
 						$dbImage->save();
 					}
 					echo "$index converted: $fileName\n";
+					ob_flush();
+					flush();
 				} catch(Exception $e){
 					$msg = $e->getMessage();
 					logger($msg);
 					echo "error: $index can't convert: $fileName: $msg\n";
+					ob_flush();
+					flush();
 					Images::where('internal_filename','=',$fileName)->delete();
 					unlink($source);
 					continue;
@@ -395,6 +433,8 @@ class ServiceController extends MainController
 			}
 		} else {
 			echo "<h3>nothing to convert</h3>";
+			ob_flush();
+			flush();
 		}
     }
 

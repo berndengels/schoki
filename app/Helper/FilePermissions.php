@@ -10,6 +10,7 @@
 namespace App\Helper;
 
 use App;
+use function PHPUnit\Framework\directoryExists;
 
 class FilePermissions {
 
@@ -29,21 +30,39 @@ class FilePermissions {
 		'public_html/media/videos',
 	];
 
+	public function __construct()
+	{
+		set_time_limit(0);
+	}
+
+
 	public static function makeWritable()
 	{
+		$testPath = '/home/schoki/web/schokoladen-mitte.de/test.schokoladen-mitte.de/';
 		$basePath = App::basePath();
 
-		set_time_limit(0);
-		ob_implicit_flush(true);
-		ob_end_flush();
-		echo "<h3>Set Permissions</h3><pre>";
+		echo "<h3>Set Permissions</h3>";
+		ob_flush();
+		flush();
 
 		foreach(self::$writableDirs as $dir) {
+			$testFullPath = "$testPath/$dir";
 			$fullPath = "$basePath/$dir/";
 			echo "<h5>$fullPath</h5>";
+			ob_flush();
+			flush();
+
+			if(file_exists($testFullPath) && is_dir($testFullPath)) {
+				$output = system("chmod -R 777 $testFullPath");
+				echo "Test $dir: $output<br>";
+				ob_flush();
+				flush();
+			}
+
 			$output = system("chmod -R 777 $fullPath");
-			echo "$dir: $output\n";
+			echo "$dir: $output<br>";
+			ob_flush();
+			flush();
 		}
-		echo '</pre>';
 	}
 }
