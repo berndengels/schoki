@@ -37,15 +37,13 @@ class FilePermissions {
 
 	public static function makeWritable()
 	{
-		$testPath = '/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo';
-		$output = system("chmod -R 777 $testPath");
-		echo "Test $output<br>";
-		ob_flush();
-		flush();
-
 		$basePath = App::basePath();
+		echo "<h3>Set Permissions on $basePath</h3>";
 
-		echo "<h3>Set Permissions</h3>";
+		$testPath = "{$basePath}/../test.schokoladen-mitte.de/repo";
+		exec ("find $testPath -type d -exec chmod 0776 {} +");
+		exec ("find $testPath -type f -exec chmod 0666 {} +");
+
 		ob_flush();
 		flush();
 
@@ -55,13 +53,6 @@ class FilePermissions {
 			echo "<h5>$fullPath</h5>";
 			ob_flush();
 			flush();
-
-			if(file_exists($testFullPath) && is_dir($testFullPath)) {
-				$output = system("chmod -R 777 $testFullPath");
-				echo "Test $dir: $output<br>";
-				ob_flush();
-				flush();
-			}
 
 			$output = system("chmod -R 777 $fullPath");
 			echo "$dir: $output<br>";
