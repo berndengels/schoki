@@ -37,17 +37,19 @@ class FilePermissions {
 
 	public static function makeWritable()
 	{
-		$testPath = realpath("/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo");
-		echo "<h5>$testPath</h5>";
+		$repoPath = realpath("/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo");
+		$storagePath = realpath("/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo/storage");
+		echo "<h5>$repoPath</h5>";
 		ob_flush();
 		flush();
+		chmod($storagePath, 0777);
 
-		$output = system("find $testPath -type d -exec chmod 0777 {} +");
+		$output = system("find $repoPath -type d -exec chmod 0777 {} +");
 		echo "Dirs: $output<br>";
 		ob_flush();
 		flush();
 
-		$output = system("find $testPath -type f -exec chmod 0666 {} +");
+		$output = system("find $repoPath -type f -exec chmod 0666 {} +");
 		echo "Files: $output<br>";
 		ob_flush();
 		flush();
