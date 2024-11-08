@@ -37,7 +37,7 @@ class FilePermissions {
 
 	public static function makeWritable()
 	{
-		$testPath = '/home/schoki/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo';
+		$testPath = '/web/schokoladen-mitte.de/test.schokoladen-mitte.de/repo';
 		$output = system("chmod -R 777 $testPath");
 		echo "Test $output<br>";
 		ob_flush();
