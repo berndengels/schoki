@@ -82,7 +82,10 @@ class Images extends Media
      */
     public function getDisplayWidthAttribute()
     {
-        return round(config('event.maxImageHeight') * $this->width / $this->height);
+		if($this->height > 0) {
+			return round(config('event.maxImageHeight') * $this->width / $this->height);
+		}
+		return null;
     }
 
     /**
