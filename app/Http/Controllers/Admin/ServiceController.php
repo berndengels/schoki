@@ -12,16 +12,17 @@ use Exception;
 use Carbon\Carbon;
 use App\Models\Audios;
 use App\Models\Images;
-use Intervention\Image\Constraint;
 use Ixudra\Curl\Facades\Curl;
 use App\Helper\FilePermissions;
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Spatie\DbDumper\Compressors\GzipCompressor;
 use Spatie\DbDumper\Databases\MySql;
 
 class ServiceController extends MainController
 {
-	protected $user = null;
+	protected $user;
+	private $imageManager;
 
 	/**
 	 * @param null $user
@@ -30,6 +31,7 @@ class ServiceController extends MainController
 	{
 		parent::__construct();
 		set_time_limit(0);
+		$this->imageManager = new ImageManager(new GdDriver());
 	}
 
 
@@ -126,10 +128,8 @@ class ServiceController extends MainController
 			$fullPathImages = $path . '/' . $img;
 			$fullPathThumbs = $pathThumbs . '/' . $img;
 			try {
-				$myImg = Image::make($fullPathImages);
-				$myImg->fit(100,100, function(Constraint $constraint){
-					$constraint->aspectRatio();
-				},'center');
+				$myImg = $this->imageManager->read($fullPathImages);
+				$myImg->cover(100,100, 'center');
 				$myImg->save($fullPathThumbs, 70);
 				chmod($fullPathThumbs, 0666);
 				echo "$index: Thumb from $img generated<br>";
@@ -180,13 +180,13 @@ class ServiceController extends MainController
 					$response = Curl::to($url)->get();
 					file_put_contents($dest, $response);
 					chmod($dest, 0666);
+					$fileSize = filesize($dest);
 
 					if( !preg_match('/\.jp[e]?g$/', $item) ) {
-						$myImg = Image::make($dest)->encode('jpg');
-						$size = $myImg->filesize();
+						$myImg = $this->imageManager->read($dest);
 						unlink($dest);
-						$compression = $size > 80000 ? 70 : 90;
-						$myImg->save(null, $compression);
+						$compression = $fileSize > 80000 ? 70 : 90;
+						$myImg->toJpeg($compression)->save($dest);
 						chmod($dest, 0666);
 					}
 
@@ -356,16 +356,19 @@ class ServiceController extends MainController
                 $dest   = $source;
 
                 try {
-                    $img			= Image::make($source);
-                    $size			= $img->filesize();
+                    $img			= $this->imageManager->read($source);
+                    $size			= filesize($source);
                     $compression	= ($size > 80000) ? 70 : 90;
-                    $img->heighten($maxHeight)->save($dest, $compression);
+                    $img->resize(null, $maxHeight)
+						->toJpeg($compression)
+						->save($dest)
+					;
 
                     chmod($dest, 0666);
 
                     list($width,) = getimagesize($dest);
                     if($width > $maxWidth) {
-                        Image::make($dest)
+						$this->imageManager->read($dest)
                             ->crop($maxWidth,$maxHeight)
                             ->save()
                         ;
@@ -401,20 +404,20 @@ class ServiceController extends MainController
 					$source 	= "$path/$fileName";
 					$dest   	= $source;
 					$extension	= substr($fileName, strrpos($fileName,'.') + 1);
-					$myImg		= Image::make($dest)->encode('jpg');
-					$size 		= $myImg->filesize();
+					$myImg		= $this->imageManager->read($dest);
+					$size 		= filesize($dest);
 					$newName	= preg_replace("/\.$extension$/",'',$fileName) . '.jpg';
 					$dest		= "$path/$newName";
 					$cmpression = $size > 80000 ? 70 : 90;
-					$myImg->save($dest, $cmpression);
+					$myImg->toJpeg($cmpression)->save($dest);
 					unlink($source);
 					$dbImage = Images::where('internal_filename', $fileName)->first();
 					if($dbImage) {
 						$dbImage->internal_filename = $newName;
 						$dbImage->extension = 'jpg';
 						$dbImage->filesize = $size;
-						$dbImage->width = $myImg->getWidth();
-						$dbImage->height = $myImg->getHeight();
+						$dbImage->width = $myImg->width();
+						$dbImage->height = $myImg->height();
 						$dbImage->save();
 					}
 					echo "$index converted: $fileName\n";

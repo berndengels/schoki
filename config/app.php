@@ -1,7 +1,6 @@
 <?php
 
 use Spatie\GoogleFonts\GoogleFontsServiceProvider;
-use Intervention\Image\ImageServiceProviderLaravelRecent;
 
 return [
 
@@ -197,7 +196,6 @@ return [
 //        MisterPhilip\MaintenanceMode\MaintenanceModeServiceProvider::class,
 //        MisterPhilip\MaintenanceMode\MaintenanceCommandServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
-        ImageServiceProviderLaravelRecent::class,
     ],
 
     /*
@@ -257,5 +255,4 @@ return [
 		'Newsletter' 	=> Spatie\Newsletter\NewsletterFacade::class,
         'ReCaptcha'     => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
     ],
-
 ];
