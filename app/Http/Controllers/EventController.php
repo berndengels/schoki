@@ -6,7 +6,6 @@ use Route;
 use Carbon\Carbon;
 use App\Models\Event;
 use App\Helper\MyDate;
-use Laravelium\Feed\Feed;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Entities\EventEntity;
@@ -75,12 +74,10 @@ class EventController extends BaseController
 			'event' 	=> $expired ? null : $event,
 		]);
 	}
-
+/*
+ * @todo:new feed handling
 	public function feed()
 	{
-		/**
-		 * @var $feed Feed
-		 */
 		$feed = App::make('feed');
 //		$feed->setCache(180, 'laravelFeed');
 		$feed->setCustomView('public.templates.rss');
@@ -107,7 +104,7 @@ class EventController extends BaseController
 		header('Content-Type: application/rss+xml; charset=UTF-8', true);
 		return $feed->render('rss');
 	}
-
+*/
 	/**
 	 * @return Collection
 	 */

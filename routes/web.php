@@ -36,7 +36,7 @@ if($staticPages->count() > 0)  {
 }
 
 Route::group(['middleware' => 'web'], function () {
-	Route::get('/feed', 'EventController@feed')->name('public.feed');
+//	Route::get('/feed', 'EventController@feed')->name('public.feed');
 	Route::get('/ical', 'EventController@ical')->name('public.ical');
 	Route::get('/', 'EventController@getActualMergedEvents')->name('public.events');
 	Route::get('show/{date}', 'EventController@show')->name('public.event.eventsShow');
