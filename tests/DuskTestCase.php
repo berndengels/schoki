@@ -11,8 +11,8 @@ use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\WebDriverCapabilityType;
-use Intervention\Image\ImageManagerStatic as StaticImage;
-use Intervention\Image\Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver as ImageDriver;
 
 abstract class DuskTestCase extends TestCase
 {
@@ -27,6 +27,7 @@ abstract class DuskTestCase extends TestCase
 	 */
 	private $adminUser;
 	public static $screenshotWidth 			= 800;
+	public static $screenshotHeigth 		= 600;
 	public static $screenshotThumbWidth 	= 200;
 	public static $screenshotCompression	= 60;
 	/**
@@ -121,9 +122,11 @@ abstract class DuskTestCase extends TestCase
 		$thumbPath		= $publicPath . '/thumbs';
 		$fileToSave 	= $publicPath.'/'.$screenName.'.jpg';
 
-		$img = StaticImage::make($screenFullPath)
-			->widen(static::$screenshotWidth)
-			->encode('jpg', static::$screenshotCompression)
+		$manager = new ImageManager(new ImageDriver());
+		$img = $manager
+			->read($screenFullPath)
+			->cover(height: static::$screenshotHeigth, width: static::$screenshotWidth)
+			->encode('jpg')
 			->save($fileToSave)
 		;
 
@@ -143,6 +146,13 @@ abstract class DuskTestCase extends TestCase
 			->widen(static::$screenshotThumbWidth)
 			->save($file)
 		;
+		$manager = new ImageManager(new ImageDriver());
+		$img = $manager
+			->read($img->basePath())
+			->cover(height: static::$screenshotHeigth, width: static::$screenshotWidth)
+			->encode('jpg')
+			->save($file);
+
 		@chmod($file, 0666);
 		return $img;
 	}
