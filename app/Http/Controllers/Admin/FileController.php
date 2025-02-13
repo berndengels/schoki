@@ -14,7 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver as ImageDriver;
 
 class FileController extends Controller
 {
@@ -141,7 +142,7 @@ class FileController extends Controller
          * @var $file UploadedFile
          */
         $file       = $request->file('croppedImage');
-        $extension  = $file->getClientOriginalExtension();
+        $extension  = $file->getExtension();
         $fileName   = $request->filenameOrig;
         $hashName   = $request->filename;
         $tmpName    = new File($file->getPathname());
@@ -159,12 +160,14 @@ class FileController extends Controller
             // pre resize image
             if($height > $this->maxImageHeight) {
                 try {
-                    $file = Image::make($destPath)->heighten($this->maxImageHeight);
+					$manager = new ImageManager(new ImageDriver());
+					$file = $manager
+						->read($destPath)
+						->cover(height: $this->maxImageHeight, width: $this->maxImageWidth)
+					;
                     $file->save(null, 70);
-                    $width      = $file->getWidth();
-                    $height     = $file->getHeight();
-                    $fileSize   = $file->filesize();
-
+                    $width      = $file->width();
+                    $height     = $file->height();
                 } catch( Exception $e ) {
                     logger($e->getMessage());
                 }

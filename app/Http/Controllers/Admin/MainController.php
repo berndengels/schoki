@@ -182,7 +182,7 @@ class MainController extends Controller
         return null;
     }
 
-    protected function processImages( FormRequest $request, $id = 0, $override = 0, $template = 0 )
+    protected function processImages( FormRequest $request, int $id = 0, $override = 0, $template = 0 )
     {
         $tempPath = config('filesystems.disks.upload.root').'/';
         $path   = config('filesystems.disks.image_upload.root').'/';
@@ -234,34 +234,30 @@ class MainController extends Controller
         }
 
         // new image files
+
         if( $addedImages && count($addedImages) > 0 ) {
             foreach($addedImages as $filename => $img) {
-                $data = json_decode($img);
-                if ($data && $data->success) {
-                    $image = new Images();
-                    $image->internal_filename   = $filename;
-                    $image->external_filename   = $data->external_filename;
-                    $image->width               = $data->width;
-                    $image->height              = $data->height;
-                    $image->filesize            = $data->filesize;
-                    $image->extension           = $data->extension;
-                    $fullTempPath = realpath($tempPath . $image->internal_filename);
+                $data = json_decode($img, true);
+
+                if ($data && $data['success']) {
+                    $fullTempPath = realpath($tempPath . $filename);
 
                     switch($this->entity) {
                         case 'event':
-                            $image->event_id = $id;
+							$data['event_id'] = $id;
                             break;
 						case 'eventTemplate':
-							$image->event_template_id = $id;
+							$data['event_template_id'] = $id;
 							break;
                         case 'eventPeriodic':
-                            $image->event_periodic_id = $id;
+							$data['event_periodic_id'] = $id;
                             break;
                     }
 
-                    $image->title = '';
+					unset($data['success'], $data['error']);
                     try {
-                        $image->saveOrFail();
+                        Images::create($data);
+
                         if(file_exists($fullTempPath)) {
                             @unlink($fullTempPath);
                         }

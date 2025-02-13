@@ -24,7 +24,7 @@ class Media extends Model
 {
 	use HasUser;
 
-    protected $fillable = ['title'];
+    protected $guarded = ['id'];
 
 	public function page()
 	{

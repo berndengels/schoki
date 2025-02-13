@@ -63,10 +63,6 @@ class Images extends Media
     /**
      * @var string[]
      */
-    protected $guarded = ['id'];
-    /**
-     * @var string[]
-     */
     protected $casts = [
         'width'     => 'integer',
         'height'    => 'integer',
