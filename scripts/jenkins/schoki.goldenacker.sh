@@ -15,13 +15,13 @@ git fetch origin
 git pull
 
 if ${COPY_SCRIPTS}; then
-    cp -f ./scripts/public-htaccess.tpl ./public_html/.htaccess
+    cp -f ./scripts/public-htaccess.tpl ./public/.htaccess
     cp -f ./scripts/phpunit.dusk.xml.goldenacker phpunit.dusk.xml
     cp -f .env.goldenacker .env
 fi
 
 if ${CHMOD}; then
-    chmod -R ugo+rwx storage/logs public_html/media public_html/uploads storage/framework storage/app bootstrap/cache tests/Browser/screenshots
+    chmod -R ugo+rwx storage/logs public/media public/uploads storage/framework storage/app bootstrap/cache tests/Browser/screenshots
 fi
 
 if ${COMPOSER_INSTALL}; then

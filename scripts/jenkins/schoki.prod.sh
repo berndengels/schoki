@@ -16,7 +16,7 @@ echo "git pull ;-)"
 git pull
 
 if ${COPY_SCRIPTS}; then
-    cp -f ./scripts/public-htaccess.tpl ./public_html/.htaccess
+    cp -f ./scripts/public-htaccess.tpl ./public/.htaccess
     cp -f ./scripts/phpunit.dusk.xml.schoki phpunit.dusk.xml
     cp -f .env.prod .env
 fi

@@ -20,6 +20,5 @@ class GlobalsComposer {
 		$view->with('today', MyDate::getToday());
 		$view->with('untilValidDate', MyDate::getUntilValidDate());
 		$view->with('agend', new Agent());
-
 	}
 }

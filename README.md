@@ -30,8 +30,7 @@ mit Terminal ins Projektverzeichnis wechseln und dort folgene Befehle ausführen
 - npm install
 - npm run dev (oder npm run watch, wenn man grad an Javascript oder Sass-Dateien arbeitet)
 - falls valet: valet use php@8.2, valet secure schoki (für https)
-- symbolischen Link von "public_html" zu "public" erstellen
-- für Linux, Mac: Schreibrechte für alle setzen für folgende Pfade: storage, public_html/media, bootstrap/cache
+- für Linux, Mac: Schreibrechte für alle setzen für folgende Pfade: storage, public/media, bootstrap/cache
 - Über [https://www.schokoladen-mitte.de/admin/services/syncImages](Media -> sync Images) kannst Du alle Event-Grafiken lokal synchronisieren.
 - jetzt sollte man die Seite gemäss der konfigurierten URL laden können (per valet z.B: schoki.test)
 
