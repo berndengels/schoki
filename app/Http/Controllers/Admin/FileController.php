@@ -142,7 +142,7 @@ class FileController extends Controller
          * @var $file UploadedFile
          */
         $file       = $request->file('croppedImage');
-        $extension  = $file->getExtension();
+        $extension  = $file->getClientOriginalExtension();
         $fileName   = $request->filenameOrig;
         $hashName   = $request->filename;
         $tmpName    = new File($file->getPathname());
@@ -157,17 +157,16 @@ class FileController extends Controller
             $fileSize = $file->getSize();
             chmod($destPath, 0666);
             [$width, $height] = getimagesize($destPath);
-            // pre resize image
+
             if($height > $this->maxImageHeight) {
                 try {
 					$manager = new ImageManager(new ImageDriver());
-					$file = $manager
+					$img = $manager
 						->read($destPath)
-						->cover(height: $this->maxImageHeight, width: $this->maxImageWidth)
-					;
-                    $file->save(null, 70);
-                    $width      = $file->width();
-                    $height     = $file->height();
+						->scale(height: $this->maxImageHeight);
+                    $width      = $img->width();
+                    $height     = $img->height();
+					$img->toJpeg($this->imageQuality)->save('');
                 } catch( Exception $e ) {
                     logger($e->getMessage());
                 }
