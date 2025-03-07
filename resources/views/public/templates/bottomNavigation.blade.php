@@ -1,4 +1,4 @@
-<!--div id="bottom-navigation"-->
+<div id="bottom-navigation">
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0 m-0">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,4 +44,4 @@
             </ul>
         </div>
     </nav>
-<!--/div-->
+</div>

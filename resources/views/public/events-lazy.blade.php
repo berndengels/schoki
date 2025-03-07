@@ -13,15 +13,27 @@
 @endsection
 
 @section('content')
-    <div class="eventContainer col-sm-11 col-md-6 mt-1 ml-lg-4">
-        <h3 class="events-header d-block">Veranstaltungen</h3>
-        @if( $data->count() )
-            <div class="row ml-0 p-0">
-                {{ $data->links() }}
+    @if( $data->count() )
+        @foreach ($data as $event)
+            <div class="event">
+                <div class="eventContent mb-4">
+                    <x-event-view :item="$event" :index="$loop->index" />
+                </div>
             </div>
+        @endforeach
+        <div class="pages">{{ $data->links() }}</div>
+    @else
+        <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
+    @endif
+@endsection
+
+@section('contentBackup')
+    <div class="eventContainer col-sm-11- col-md-6- mt-1 ml-lg-4- m-4">
+        <h3 class="events-header d-block mb-4">Veranstaltungen</h3>
+        @if( $data->count() )
             @foreach ($data as $event)
                 <div class="event col-12">
-                    <div class="eventContent container col-12 mb-2">
+                    <div class="eventContent mb-4">
                         <x-event-view :item="$event" :index="$loop->index" />
                     </div>
                 </div>
@@ -34,12 +46,14 @@
 @endsection
 
 @section('sidebarRight')
-    <div class="sidebar-right d-none d-md-block col-md-4 ml-0 ml-lg-2">
+    <div style="display: none;">
+    <div class="sidebar-right d-md-block ml-0 ml-lg-2">
         <div class="header">
             <ion-icon name="calendar"></ion-icon>
             <span>Event Kalender</span>
         </div>
         <div id="calendar" class="m-0 p-0"></div>
+    </div>
     </div>
 @endsection
 
@@ -71,6 +85,7 @@
                 $(".collapse").unbind('show.bs.collapse');
             })
             .ajaxStop(function() {
+                firstLoad = false;
 	            if(firstLoad) {
 	                const $first = $('.collapse:first', '.eventContainer'),
 	                    $btn = $first.prev('.collapseToggle').find('.btn-toggle')
@@ -98,9 +113,11 @@
 
                     history.push($btn)
 	                if($btn.hasClass('on')) {
-		                $btn.removeClass('on').addClass('off').html('open');
+		                //$btn.removeClass('on').addClass('off').html('open');
+                        $btn.removeClass('on').addClass('off');
                     } else {
-		                $btn.removeClass('off').addClass('on').html('close');
+		                //$btn.removeClass('off').addClass('on').html('close');
+                        $btn.removeClass('off').addClass('on');
                     }
 					if(history.length > 1) {
 						let $last = $(history.shift()),
@@ -120,11 +137,13 @@
                     .on('shown.bs.collapse', function() {
                         const my = this, $my = $(my),
                             $header = $(my).prev('.collapseToggle'),
-                            top = parseInt($header.offset().top - 70, 10),
+                            //top = parseInt($header.offset().top - 70, 10),
+                            top = parseInt($header.offset().top - 125, 10),
                             $carousel = $('.carousel', my);
 
-	                    $header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
-	                    loadDescription($my.attr('id'), $my.data("event-date"));
+	                    //$header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
+                        $header.find('.btn-toggle').removeClass('off').addClass('on');
+                        loadDescription($my.attr('id'), $my.data("event-date"));
 
 	                    $([document.documentElement, document.body]).animate({
                             scrollTop: top
@@ -136,8 +155,9 @@
                     })
                     .on('show.bs.collapse', function() {
                         const my = this, $my = $(my),
-                            $other = $(my).closest('.event').siblings().find('.show');
-	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
+                        $other = $(my).closest('.event').siblings().find('.show');
+	                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
+                        $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
 	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
                         $other.collapse('hide');
@@ -146,8 +166,9 @@
 		                const my = this,
 			                $carousel = $('.carousel', my);
 
-	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off').html('open');
-		                removeAllDescription();
+	                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off').html('open');
+                        $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off');
+                        removeAllDescription();
 		                if($carousel.length) {
 			                $carousel.carousel("dispose");
 		                }
@@ -174,5 +195,30 @@
             legend: false, // object array, [{type: string, label: string, classname: string}]
         });
     });
+    document.querySelectorAll('.event').forEach(el => {
+        el.addEventListener('mouseover', e => {
+            el.lastElementChild.classList.add('show');
+        });
+        el.addEventListener('mouseleave', e => {
+            el.lastElementChild.classList.remove('show');
+        });
+    });
 </script>
+@endsection
+
+@section('svg-filters')
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
+        <defs>
+            <filter id="turbulence">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+            </filter>
+            <filter id="displacement">
+                <feDisplacementMap in="SourceGraphic" scale="4" />
+            </filter>
+            <filter id="combined">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+                <feDisplacementMap in="SourceGraphic" scale="4" />
+            </filter>
+        </defs>
+    </svg>
 @endsection
