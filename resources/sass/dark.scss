@@ -11,6 +11,7 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+//@import  url('../fonts/nohemi/nohemi.css');
 
 // Variables
 @import 'variables';
@@ -74,13 +75,17 @@ h2 {
 .date {
     min-width: 120px;
     @media (min-width: 1200px) {
-        min-width: 300px;
+        min-width: 320px;
+    }
+    br {
+        display: none;
+        @media (min-width: 768px) { display: block; }
     }
 }
 
 .date .h3 {
     font-size: 3rem;
-    font-size: clamp(24px, 20px + 1.25vw, 52px);
+    font-size: clamp(24px, 20px + 1vw, 52px);
     //font-size: clamp(32px, 22.118px + 3.088vw, 74px);
     font-weight: 700;
 }
@@ -153,7 +158,11 @@ nav a {
     }
     .navbar-collapse {
         text-align: center;
+        &.show .navbar-nav {
+            height: calc(100dvh - 135px);
+        }
     }
+
 
     .navbar:hover .blog-header-logo {
         background: url("/img/schokoladen-logo-spitting-cow-spit.svg") center center no-repeat;
@@ -218,8 +227,36 @@ nav a {
     min-width: 100%;
     gap: var(--gap);
 }
+.event:nth-child(odd) {
+    .marquee {
+        &:hover .marquee__content {
+            @media (min-width: 769px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+        .marquee__content {
+            @media (max-width: 768px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+    }
+}
+.event:nth-child(even) {
+    .marquee {
+        &:hover .marquee__content {
+            @media (min-width: 769px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+        .marquee__content {
+            @media (max-width: 768px) {
+                animation: scroll 25s linear infinite reverse;
+            }
+        }
+    }
+}
 .marquee:hover .marquee__content {
-    animation: scroll 25s linear infinite;
+    //animation: scroll 25s linear infinite;
 }
 @keyframes scroll {
     from {
@@ -237,7 +274,11 @@ nav a {
 
 .promoter {
     color: #dd0000;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) { font-size: 1.25rem; }
+    @media (min-width: 1200px) { font-size: 1.5rem; }
 }
 .ribbon {
     position: absolute;
@@ -250,6 +291,10 @@ nav a {
     text-align: right;
     border-top: 1px solid black;
     border-right: 1px solid black;
+    @media (max-width: 576px) {
+        transform: scale(50%);
+        transform-origin: top right;
+    }
 }
 .ribbon span {
     font-size: 1rem;
@@ -305,6 +350,9 @@ nav a {
     .info {
         font-size: 1.2rem !important;
     }
+}
+.event-description {
+    //p > br { display: none; }
 }
 
 nav.navbar {

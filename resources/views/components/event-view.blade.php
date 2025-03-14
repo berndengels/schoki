@@ -17,9 +17,9 @@
                </span>
             @endif
         </div>
-        <div class="d-flex align-items-center" style="border: 1px solid black">
+        <div class="d-flex flex-column flex-md-row align-items-center" style="border: 1px solid black">
             <div class="date mb-0">
-                <div class="text-center m-4 font-weight-bold">
+                <div class="text-center m2 m-lg-4 font-weight-bold">
                     <p class="h3 mb-0" style="white-space: nowrap;">
                         <span class="">{{ __($eventDate->format('l')) }}</span><br />
                         <span class="">{{ $eventDate->format('d.m.') }}</span><br />
@@ -45,7 +45,27 @@
         </div>
     </div>
 
-    <div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info collapse p-3 p-lg-5">
+    <div class="links">
+        <div class="d-flex ">
+            <div class="flex-fill">
+                <a class="d-block p-2 text-center font-weight-bold border border-dark border-top-0" href="#{{ $domID }}" style="font-size: 1.25rem;" data-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}">
+                    <span class="d-none d-md-inline-block">More</span> Info
+                </a>
+            </div>
+            <div class="flex-fill">
+                @if($item->getTicketlink())
+                    <a class="d-block p-2 text-center font-weight-bold border border-dark border-top-0 border-left-0 border-right-0" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">Tickets</a>
+                @else
+                    <span class="d-block p-2 text-center font-weight-bold border border-dark border-top-0 border-left-0 border-right-0" style="font-size: 1.25rem;">Tickets <span class="d-none d-md-inline-block">soon</span></span>
+                @endif
+            </div>
+            <div class="flex-fill">
+                <a class="previewFlyer d-block p-2 text-center font-weight-bold border border-dark border-top-0" href="" style="font-size: 1.25rem;">Flyer <span class="d-none d-md-inline-block">Preview</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info collapse p-3 p-lg-5 border border-dark border-top-0">
          <div class="d-flex" style="gap: 3rem;">
             <div class="row">
             <div class="col-lg-6 fira-sans-regular">
@@ -54,15 +74,9 @@
                         <h6>{{ $item->getSubtitle() }}</h6>
                     </div>
                 @endif
-                {!! $item->getDescriptionSanitized() !!}
-
-                @if ( $item->getLinksArray()->count() )
-                    <p>
-                        @foreach($item->getLinksArray() as $link)
-                            <a href="{{ $link }}" target="_blank">{{ $link }}</a><br>
-                        @endforeach
-                    </p>
-                @endif
+                <div class="event-description">
+                    {!! $item->getDescriptionSanitized() !!}
+                </div>
             </div>
             <div class="col-lg-6 fira-sans-regular">
                 @if($item->getImages()->count() === 1)
@@ -72,7 +86,7 @@
                         */
                         $img = $item->getImages()->first()
                     @endphp
-                    <div class="col-12 col-lg-6 text-center m-0 p-0 imageWrapper">
+                    <div class="text-center m-0 p-0 imageWrapper">
                         <img src="/media/images/{{ $img->internal_filename }}"
                              class="mx-auto"
                              width="{{ $img->displayWidth }}"
@@ -124,7 +138,15 @@
                     </div>
                 @endif
 
-                <div class="embed-responsive embed-responsive-16by9 d-none">
+                @if ( $item->getLinksArray()->count() )
+                    <p class="event-links mt-3">
+                        @foreach($item->getLinksArray() as $link)
+                            <a href="{{ $link }}" target="_blank" class="d-block">{{ $link }}</a>
+                        @endforeach
+                    </p>
+                @endif
+
+                    <div class="embed-responsive embed-responsive-16by9 d-none">
                     <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/QG5Wf0KR7Qk?si=i0HLna0QzSlaVGw9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
@@ -132,23 +154,6 @@
         </div>
     </div>
 
-    <div class="links">
-        <div class="d-flex ">
-            <div class="flex-fill">
-                <a class="d-block p-2 text-center font-weight-bold border border-dark border-top-0" href="#{{ $domID }}" style="font-size: 1.25rem;" data-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}"><span class="d-none d-md-inline-block">More</span> Info</a>
-            </div>
-            <div class="flex-fill">
-                @if($item->getTicketlink())
-                    <a class="d-block p-2 text-center font-weight-bold border border-dark border-top-0" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">Tickets</a>
-                @else
-                    <span class="d-block p-2 text-center font-weight-bold border border-dark border-top-0" style="font-size: 1.25rem;">Tickets <span class="d-none d-md-inline-block">soon</span></span>
-                @endif
-            </div>
-            <div class="flex-fill">
-                <a class="previewFlyer d-block p-2 text-center font-weight-bold border border-dark border-top-0" href="" style="font-size: 1.25rem;">Flyer <span class="d-none d-md-inline-block">Preview</span></a>
-            </div>
-        </div>
-    </div>
     <div class="preview_img">
         @if ($item->getImages()->count() > 0 )
             @php
