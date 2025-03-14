@@ -18,7 +18,7 @@
         <link rel="preconnect" href="https://schoki.test">
         <link rel="preload" as="font">
         <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}?{{ time() }}" />
-        <link rel="stylesheet" type="text/css" media="screen" href="https://schoki.test/fonts/nohemi/nohemi.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="fonts/nohemi/nohemi.css" /><s></s>
         <script src="{{ mix('js/app.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
         @yield('extra-headers')
     </head>
