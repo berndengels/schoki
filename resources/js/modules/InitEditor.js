@@ -28,7 +28,7 @@ const InitEditor = function (options) {
 			},
 			mobile: {
 				theme: 'mobile',
-				plugins: 'preview code autolink link paste media image preview imagetools help',
+				plugins: 'preview autolink link paste media image preview imagetools code help',
 				toolbar: 'undo redo | bold italic | link autolink paste image code help',
 			},
 			font_css: [

@@ -43,7 +43,7 @@
     var tinymceOptions = {
         selector: '#tinymce',
         plugins: ['preview','code','lists','advlist','link','autolink','paste','media','quickbars','help'],
-        toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help',
+        toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link media quickbars preview help code',
         image_advtab: true,
         width: 800,
         height: 600,
