@@ -25,7 +25,7 @@
                             @endforeach
                         </div>
                     @else
-                        <a class="nav-link p-0 mt-2 mr-3" href="{{ $item->url }}" aria-haspopup="false">
+                        <a class="nav-link p-0 mt-2 mr-3" href="{{ $item->url }}" aria-haspopup="false" @if('link' === $item->menuItemType->type) target="_blank" @endif>
                             @if($item->icon)
                                 @if(false === strrpos($item->icon,'.'))
                                     <ion-icon name="{{ $item->icon }}" title="{{ $item->name }}"></ion-icon>
