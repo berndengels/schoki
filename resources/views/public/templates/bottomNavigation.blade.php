@@ -33,7 +33,7 @@
                                     <img src="/img/icons/{{ $item->icon }}" title="{{ $item->name }}" alt="{{ $item->name }}">
                                 @endif
                             @elseif($item->fa_icon)
-                                <i class="{{ $item->fa_icon }}" title="{{ $item->name }}"></i>
+                                <i class="icn {{ $item->fa_icon }}" title="{{ $item->name }}"></i>
                             @else
                                 {{ $item->name }}<span class="ml-2 sr-only">(current)</span>
                             @endif
