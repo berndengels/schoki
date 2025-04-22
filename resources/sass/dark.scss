@@ -635,3 +635,16 @@ pre {
         }
     }
 }
+#bottomNavbar {
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                i {
+                    &.icn {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
