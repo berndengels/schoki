@@ -24,9 +24,6 @@
                     </li>
                 @endforeach
             </ul>
-            <!--form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Suchen">
-            </form-->
         </div>
 
         <div class="d-sm-none d-lg-block float-end my-auto mr-3">
