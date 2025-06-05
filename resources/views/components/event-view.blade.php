@@ -43,7 +43,7 @@
 						<div class="marquee">
 							@if($item->getPromoter())
 								<div class="marquee__content">
-									<h2 class="font-weight-bold">{{ $item->getPromoter() }}</h2>
+									<h2 class="font-weight-bold">Promoter: {{ $item->getPromoter() }}</h2>
 								</div>
 							@endif
 							<div class="marquee__content" aria-hidden="true">
