@@ -34,7 +34,6 @@ class ServiceController extends MainController
 		$this->imageManager = new ImageManager(new GdDriver());
 	}
 
-
 	public function dumpDb() {
 	    $dbName = env('DB_DATABASE');
 	    $file = database_path('snapshots/' . $dbName . '.sql.gz');
