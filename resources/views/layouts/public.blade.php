@@ -15,7 +15,7 @@
         <meta name="description" content="Schokoladen-Mitte Berlin" />
         <meta name="keywords" content="Schokoladen,Berlin,Musik,Musik Cafe,Kneipe,Kultur,Szene,Subkultur,Konzerte,Livemusik,live music,Veranstaltungs-Kneipe,Veranstaltungen,Lesung,alternativ" />
         <meta http-equiv="imagetoolbar" content="no" />
-        <link rel="preconnect" href="https://schoki.test">
+        <link rel="preconnect" href="{{ config('app.url') }}">
         <link rel="preload" as="font">
         <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}?{{ time() }}" />
         <link rel="stylesheet" type="text/css" media="screen" href="fonts/nohemi/nohemi.css" /><s></s>

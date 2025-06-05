@@ -156,10 +156,9 @@ nav a {
     .navbar-collapse {
         text-align: center;
         &.show .navbar-nav {
-            height: calc(100dvh - 135px);
+//            height: calc(100dvh - 135px);
         }
     }
-
 
     .navbar:hover .blog-header-logo {
         background: url("/img/schokoladen-logo-spitting-cow-spit.svg") center center no-repeat;
@@ -354,27 +353,27 @@ nav a {
 
 nav.navbar {
     &.bg-black {
-        background-color: #000 !important;
+//        background-color: #000 !important;
     }
     .dropdown-menu {
         &.show {
             box-shadow: 5px 5px 10px #000;
-            background-color: #000;
+//            background-color: #000;
             z-index: 10000;
             .dropdown-item {
                 color: $sFontColor;
             }
             .dropdown-item:hover {
-                background-color: #900;
+                background-color: #f00;
             }
             @include media("<tablet") {
                 box-shadow: none;
-                background-color: $sRed;
+                background-color: #f00;
                 .dropdown-item {
                     color: $sFontColor;
                 }
                 .dropdown-item:hover {
-                    background-color: #900;
+                    background-color: #f00;
                 }
             }
         }
