@@ -3,8 +3,8 @@
 @section('title', 'Events')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
-    <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
+    <!--link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
+    <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 @endsection
@@ -28,7 +28,7 @@
 @endsection
 
 @section('contentBackup')
-    <div class="eventContainer col-sm-11- col-md-6- mt-1 ml-lg-4- m-4">
+    <div class="eventContainer col-sm-11- col-md-6- mt-1 ms-lg-4- m-4">
         <h3 class="events-header d-block mb-4">Veranstaltungen</h3>
         @if( $data->count() )
             @foreach ($data as $event)
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             @endforeach
-            <div class="row ml-0 mt-2 pl-0">{{ $data->links() }}</div>
+            <div class="row ml-0 mt-2 ps-0">{{ $data->links() }}</div>
         @else
             <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
         @endif
@@ -47,13 +47,13 @@
 
 @section('sidebarRight')
     <div style="display: none;">
-    <div class="sidebar-right d-md-block ml-0 ml-lg-2">
-        <div class="header">
-            <ion-icon name="calendar"></ion-icon>
-            <span>Event Kalender</span>
-        </div>
-        <div id="calendar" class="m-0 p-0"></div>
-    </div>
+		<div class="sidebar-right d-md-block ms-0 ms-lg-2">
+			<div class="header">
+				<ion-icon name="calendar"></ion-icon>
+				<span>Event Kalender</span>
+			</div>
+			<div id="calendar" class="m-0 p-0"></div>
+		</div>
     </div>
 @endsection
 
