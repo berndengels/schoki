@@ -44,7 +44,7 @@
                 @foreach ($topMenu as $item)
                     <li class="nav-item dropdown">
                         @if($item->children->count())
-                            <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->name }}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
+                            <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->name }}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ms-2 sr-only">(current)</span></a>
                             <div class="dropdown-menu" aria-labelledby="dropdown{{ $item->name }}">
                                 @foreach ($item->children as $child)
                                     <a class="dropdown-item" href="{{ $child->url }}">{{ $child->name }}</a>
@@ -58,7 +58,7 @@
             </ul>
         </div>
 
-        <div class="d-sm-none d-lg-block float-end my-auto mr-3">
+        <div class="d-sm-none d-lg-block float-end my-auto me-3">
             <img src="{{ asset('img/power/address.png') }}" width="183" height="14" alt="Schokoladen, Ackerstraße 169, 10115 Berlin" title="Schokoladen, Ackerstraße 169, 10115 Berlin" />
         </div>
     </nav>
