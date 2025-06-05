@@ -1,12 +1,7 @@
 // Fonts/Icons
 // see media queries: https://include-media.com/
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
-//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
-
-@import '~@fortawesome/fontawesome-free/scss/regular';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
@@ -37,6 +32,8 @@ html, body {
     font-family: 'Nohemi';
     font-weight: normal;
     height: 100vh;
+    font-family: $font-family-sans-serif;
+    font-weight: 200;
     margin: 0;
     background-color: $body-bg-dark;
 }
@@ -561,7 +558,7 @@ pre {
     min-height: 100%;
     background-color: $body-bg-dark;
     .events-header {
-        //color: #ffeb00;
+        color: #ffeb00;
     }
     .card {
         margin-top: 20px;

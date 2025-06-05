@@ -3,7 +3,12 @@
     $domID = $item->getDomId();
     $eventDate = new Carbon($item->getEventDate());
 @endphp
-
+<div class="collapseToggle mbs">
+    <div class="eventHeader col-12">
+        <div class="subHeader m-0 p-0">
+            <span class="ml-2">{{ __($eventDate->format('l')) }}</span>
+            <span class="ml-1">{{ $eventDate->format('d.m.') }}</span>
+            <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
 
 
     <div class="title position-relative mt-4">
@@ -41,6 +46,19 @@
                         <h2 class="font-weight-bold">{{ $item->getTitle() }}</h2>
                     </div>
                 </div>
+        @endif
+
+        @if($item->getPromoter())
+            <div class="title m-0 p-0">
+                <div class="ml-2 p-0">
+                    Promoter: {{ $item->getPromoter() }}
+                </div>
+            </div>
+        @endif
+
+        <div class="title m-0 p-0">
+            <div class="ml-2 p-0">
+                {{ $item->getTitle() }}
             </div>
         </div>
     </div>

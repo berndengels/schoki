@@ -90,6 +90,26 @@ class EventPeriodicForm extends MainForm
             ])
             ->add('subtitle', Field::TEXT, [
             ])
+			->add('promoter', Field::TEXT, [
+				'label'	=> 'Promoter',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
+			])
+			->add('dj', Field::TEXT, [
+				'label'	=> 'DJ / Party',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
+			])
             ->add('description', Field::TEXTAREA, [
 				'attr'  => ['id' => 'tinymce'],
             ])

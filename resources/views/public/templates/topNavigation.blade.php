@@ -9,7 +9,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="topNavbar">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav me-auto">
                 @foreach ($topMenu as $item)
                        @if($item->children->count())
                             @foreach ($item->children as $child)
@@ -53,14 +53,14 @@
                 @foreach ($topMenu as $item)
                     <li class="nav-item dropdown text-uppercase">
                         @if($item->children->count())
-                            <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
+                            <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->name }}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
                             <div class="dropdown-menu" aria-labelledby="dropdown{{ $item->name }}">
                                 @foreach ($item->children as $child)
                                     <a class="dropdown-item" href="{{ $child->url }}">{{ $child->name }}</a>
                                 @endforeach
                             </div>
                         @else
-                            <a class="nav-link" href="{{ $item->url }}" @if('link' === $item->menuItemType->type) target="_blank" @endif aria-haspopup="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ $item->url }}" @if('link' === $item->menuItemType->type) target="_blank" @endif aria-haspopup="false">{{ $item->name }}<span class="ms-2 sr-only">(current)</span></a>
                         @endif
                     </li>
                 @endforeach
@@ -70,6 +70,8 @@
             </form-->
         </div>
 
+        <div class="d-sm-none d-lg-block float-end my-auto mr-3">
+            <img src="{{ asset('img/power/address.png') }}" width="183" height="14" alt="Schokoladen, Ackerstraße 169, 10115 Berlin" title="Schokoladen, Ackerstraße 169, 10115 Berlin" />
         <div class="d-sm-none d-lg-block float-right my-auto mr-3">
             <p>Ackerstraße 169, 10115 Berlin-Mitte</p>
             <img class="d-none" src="{{ asset('img/power/address.png') }}" width="183" height="14" alt="Schokoladen, Ackerstraße 169, 10115 Berlin" title="Schokoladen, Ackerstraße 169, 10115 Berlin" />

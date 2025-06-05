@@ -10,12 +10,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\EventTemplateRequest;
 use Exception;
-use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Request;
 use App\Models\EventTemplate;
 use App\Forms\EventTemplateForm;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 
 class EventTemplateController extends MainController
