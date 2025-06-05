@@ -27,6 +27,14 @@
             </div>
         @endif
 
+        @if($item->getPromoter())
+            <div class="title m-0 p-0">
+                <div class="ml-2 p-0">
+                    Promoter: {{ $item->getPromoter() }}
+                </div>
+            </div>
+        @endif
+
         <div class="title m-0 p-0">
             <div class="ml-2 p-0">
                 {{ $item->getTitle() }}
@@ -115,9 +123,9 @@
         </div>
     @endif
 
-    @if ('' !== $item->getSubtitle())
+    @if ($item->getDj())
         <div class="subtitle col-12 m-0 p-2">
-            <h6>{{ $item->getSubtitle() }}</h6>
+            <h6>{{ $item->getDj() }}</h6>
         </div>
     @endif
 

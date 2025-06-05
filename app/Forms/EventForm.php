@@ -143,7 +143,8 @@ class EventForm extends MainForm
 //					'maxlength' => '160',
 				]
             ])
-            ->add('subtitle', Field::TEXT, [
+			->add('subtitle', Field::TEXT, [
+				'label'	=> 'Untertitel',
 				'wrapper' => [
 					'class' => 'form-group'
 				],
@@ -151,7 +152,27 @@ class EventForm extends MainForm
 					'class' => 'form-control',
 //					'maxlength' => '100',
 				]
-            ])
+			])
+			->add('promoter', Field::TEXT, [
+				'label'	=> 'Promoter',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
+			])
+			->add('dj', Field::TEXT, [
+				'label'	=> 'DJ / Party',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
+			])
             ->add('description', Field::TEXTAREA, [
                 'attr'  => ['id' => 'tinymce'],
             ])

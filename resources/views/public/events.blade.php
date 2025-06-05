@@ -15,15 +15,19 @@
 
 @section('content')
     @php
-        use App\Models\Images, Carbon\Carbon;
+        use App\Models\Images, Carbon\Carbon, App\Entities\EventEntity;
+
     @endphp
 
     <div class="eventContainer col-sm-11 col-md-9 mbs">
         @if( $data->count() )
             @foreach ($data as $event)
                 @php
-                    $domID = $event->getDomId();
-                    $eventDate = new Carbon($event->getEventDate());
+					/**
+                    * @var $event EventEntity
+                    */
+					$domID = $event->getDomId();
+					$eventDate = new Carbon($event->getEventDate());
                 @endphp
                 <div class="event col-12 lazy" >
                     <div class="eventContent col-12">
@@ -46,6 +50,9 @@
                             </div>
 
                             <div class="title col-8 col-md-9">
+                                @if($event->getPromoter())
+                                    <div class="col-12">{{ $event->getPromoter() }}</div>
+                                @endif
                                 <div class="col-12">{{ $event->getTitle() }}</div>
                             </div>
                         </div>
@@ -88,8 +95,8 @@
                                 </div>
                             @endif
 
-                            @if ('' !== $event->getSubtitle())
-                                <div class="subtitle col-12">{{ $event->getSubtitle() }}</div>
+                            @if ($event->getDj())
+                                <div class="dj col-12">{{ $event->getDj() }}</div>
                             @endif
                             <div class="text col-12">{!! $event->getDescription() !!}</div>
                             @if ( $event->getLinks() && $event->getLinks()->count() )

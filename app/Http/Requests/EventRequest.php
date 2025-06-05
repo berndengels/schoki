@@ -21,7 +21,9 @@ class EventRequest extends AdminRequest
     {
         return [
             'title'         => 'required|string|min:3|max:160',
-            'subtitle'      => 'nullable|max:100',
+            'promoter'      => 'nullable|max:100',
+			'dj'      		=> 'nullable|max:100',
+			'subtitle'      => 'nullable|max:100',
             'event_date'    => 'required|date',
             'event_time'    => 'required',
             'category_id'   => 'required',

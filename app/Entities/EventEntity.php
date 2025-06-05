@@ -22,6 +22,8 @@ class EventEntity extends Entity {
 	private $id;
 	private $domId;
 	private $title;
+	private $promoter;
+	private $dj;
 	private $subtitle;
 	private $description;
 	private $descriptionSanitized;
@@ -170,6 +172,42 @@ class EventEntity extends Entity {
 	 */
 	public function setSubtitle($subtitle) {
 		$this->subtitle = $subtitle;
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getPromoter()
+	{
+		return $this->promoter;
+	}
+
+	/**
+	 * @param mixed $promoter
+	 * @return EventEntity
+	 */
+	public function setPromoter($promoter)
+	{
+		$this->promoter = $promoter;
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getDj()
+	{
+		return $this->dj;
+	}
+
+	/**
+	 * @param mixed $dj
+	 * @return EventEntity
+	 */
+	public function setDj($dj)
+	{
+		$this->dj = $dj;
 		return $this;
 	}
 
@@ -417,8 +455,8 @@ class EventEntity extends Entity {
 	public function toCalendarData(){
 
 		$body = $this->descriptionWithoutVideo;
-		if ($this->subtitle && '' !== $this->subtitle) {
-			$body = "<div class='subtitle'>{$this->subtitle}</div>$body";
+		if ($this->promoter && '' !== $this->promoter) {
+			$body = "<div class='promoter'>{$this->promoter}</div>$body";
 		}
         $eventDate = Carbon::make($this->event_date);
 		return [
@@ -459,6 +497,8 @@ class EventEntity extends Entity {
             'id'			=> $this->id,
             'title'			=> $this->title,
             'subtitle'	    => $this->subtitle,
+			'promoter'	    => $this->promoter,
+			'dj'	    => $this->dj,
             'category_id'	=> $this->category->id,
             'theme_id'	    => $this->theme->id,
             'description'	=> $this->description,

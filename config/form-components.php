@@ -7,7 +7,7 @@ use ProtoneMedia\LaravelFormComponents\Components;
 return [
     'prefix' => '',
     /** tailwind | tailwind-2 | tailwind-forms-simple | bootstrap-4 | bootstrap-5 */
-    'framework' => 'bootstrap-4',
+    'framework' => 'bootstrap-5',
     'use_eloquent_date_casting' => true,
     /** bool | string */
     'default_wire' => false,

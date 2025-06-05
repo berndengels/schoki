@@ -19,6 +19,8 @@ class EventTemplateRequest extends AdminRequest
         return [
             'title'         => 'required|string|min:3|max:160',
             'subtitle'      => 'max:100',
+			'promoter'      => 'nullable|max:100',
+			'dj'      		=> 'nullable|max:100',
             'category_id'   => 'required',
             'theme_id'      => '',
             'description'   => '',
