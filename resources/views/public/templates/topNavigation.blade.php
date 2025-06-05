@@ -18,10 +18,10 @@
                             </li>
                             @endforeach
                        @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ $item->url }}" @if('link' === $item->menuItemType->type) target="_blank" @endif aria-haspopup="false">{{ $item->name }}<span class="ml-2 sr-only">(current)</span></a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="{{ $item->url }}" @if('link' === $item->menuItemType->type) target="_blank" @endif aria-haspopup="false">{{ $item->name }}<span class="mS-2 sr-only">(current)</span></a>
+                            </li>
                        @endif
-                    </li>
                 @endforeach
             </ul>
             <!--form class="d-none form-inline my-2 my-md-0">
