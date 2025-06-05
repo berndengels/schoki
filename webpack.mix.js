@@ -23,6 +23,7 @@ mix.autoload({
     .sass('resources/sass/red.scss', 'css/red.css')
     .sass('resources/sass/dark.scss', 'css/dark.css')
     .sass('resources/sass/tiny.scss', 'css/tiny.css')
+    .copy('resources/fonts', 'public/fonts')
     .copy('resources/vendor/calendar/zabuto_calendar.min.css', 'public/vendor/calendar/css')
     .copy('resources/vendor/calendar/zabuto_calendar.min.js', 'public/vendor/calendar/js')
     .copy('node_modules/bootstrap-datepicker/dist', 'public/vendor/bootstrap-datepicker')
