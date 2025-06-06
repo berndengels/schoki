@@ -53,3 +53,4 @@ phpunit.dusk.xml
 /clearme
 /perms
 /public/mix-manifest.json
+/public/demo/

@@ -45,7 +45,8 @@ class ApiEventController extends Controller
 		} else {
 			$result = EventResource::collection($this->actualEvents->values());
 		}
-        return $result;
+
+		return response()->json($result);
     }
 
     public function event(int $id)
@@ -70,7 +71,7 @@ class ApiEventController extends Controller
         /**
          * @var $event EventEntity
          */
-        $event = $this->actualEvents->first(fn (EventEntity $e) => $e->getEventDate() === $date);
+        $event = $this->actualEvents->first(fn (EventEntity $e) => $date === $e->getEventDate());
 
         if($event) {
             return response()->make($event->getDescriptionSanitized());

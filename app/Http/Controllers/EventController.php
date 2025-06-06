@@ -174,7 +174,8 @@ class EventController extends BaseController
         foreach($this->actualEvents as $date => $event) {
             $dates[] = $event->toCalendarData();
         }
-        return json_encode($dates);
+
+        return response()->json($dates);
     }
 
     public function lazy($date)

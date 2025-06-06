@@ -654,3 +654,39 @@ pre {
         }
     }
 }
+
+#calendar {
+    padding: 10px;
+    .tblCalendar {
+        margin: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        thead {
+            tr {
+                &.zabuto-calendar__navigation {
+                    line-height: 3.0rem;
+                    td {
+                        font-size: 1.3rem;
+                    }
+                }
+                &.zabuto-calendar__days-of-week {
+                    line-height: 3.0rem;
+                    th {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td, th {
+                    color: #fff;
+                    padding: 10px 10px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .calendar-event {
+        cursor: pointer;
+    }
+}

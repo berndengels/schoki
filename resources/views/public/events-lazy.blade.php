@@ -3,8 +3,8 @@
 @section('title', 'Events')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
-    <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('vendor/calendar/zabuto_calendar.min.css') }}">
+    <script src="{{ mix('vendor/calendar/zabuto_calendar.min.js') }}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 @endsection
@@ -31,6 +31,7 @@
             <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
         @endif
     </div>
+	<x-event-modal />
 @endsection
 
 @section('sidebarRight')
@@ -59,10 +60,12 @@
 		function removeAllDescription() {
 			$(".collapse .description", ".eventContainer").find().each(() => $(this).html(""));
         }
+/*
 		function loadDescription(domId, date) {
 			removeAllDescription();
 			$("#" + domId + " .description", ".eventContent").load("/api/eventDescriptionByDate/" + date);
         }
+*/
         $([document.documentElement, document.body]).animate({
             scrollTop: 0
         }, 0);
@@ -82,7 +85,7 @@
 	                history.push($btn);
 
                     $first.collapse('show');
-
+/*
 	                $first.on('shown.bs.collapse', function() {
 	                    loadDescription($first.attr('id'), $first.data("event-date"));
 		                var $carousel = $('.carousel', this);
@@ -90,6 +93,7 @@
 			                $carousel.carousel("cycle");
 		                }
 	                });
+*/
                     firstLoad = false;
                 }
 
@@ -124,7 +128,7 @@
                             $carousel = $('.carousel', my);
 
 	                    $header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
-	                    loadDescription($my.attr('id'), $my.data("event-date"));
+//	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
 	                    $([document.documentElement, document.body]).animate({
                             scrollTop: top
@@ -138,7 +142,7 @@
                         const my = this, $my = $(my),
                             $other = $(my).closest('.event').siblings().find('.show');
 	                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
-	                    loadDescription($my.attr('id'), $my.data("event-date"));
+//	                    loadDescription($my.attr('id'), $my.data("event-date"));
 
                         $other.collapse('hide');
                     })
@@ -155,24 +159,46 @@
 	                })
                 ;
         });
-        $("#calendar").zabuto_calendar({
-            language: 'de',
-            show_previous: false,
-            show_next: 6,
-            cell_border: false,
-            today: true,
-            show_days: true,
-            weekstartson: 1,
-            nav_icon: {
-	            prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
-	            next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
-            },
-            ajax: {
-                url: "/calendar",
-                modal: true,
-            },
-            legend: false, // object array, [{type: string, label: string, classname: string}]
-        });
     });
+
+	$(document).ready(() => {
+		$calendar = $("#calendar");
+		$calendar.zabuto_calendar({
+			classname: 'tblCalendar lightgrey-weekends',
+			language: 'de',
+			show_previous: false,
+			show_next: 6,
+			cell_border: false,
+			today: true,
+			today_markup: '<span class="badge bg-primary">[day]</span>',
+			show_days: true,
+			weekstartson: 1,
+			nav_icon: {
+				prev: '<i class="fas fa-chevron-circle-left"></i>',
+				next: '<i class="fas fa-chevron-circle-right"></i>',
+			},
+			ajax: "/calendar",
+			legend: false, // object array, [{type: string, label: string, classname: string}]
+		});
+
+		let modal = document.getElementById('eventModal'), $modal = $(modal);
+
+		$modal.on('show.bs.modal', e => {
+			let $trigger = $(e.relatedTarget),
+				id = $trigger.data('eventId');
+
+			$.getJSON('/api/event/' + id, resp => {
+				$modal.find('.eventDate').text(moment(resp.date).format('dddd DD.MM.YYYY') + ' ' + resp.time)
+				$modal.find('.title').text(resp.title)
+				$modal.find('.body').html(resp.description)
+				if(resp.promoter) {
+					$modal.find('.promoter').removeClass('d-none').text(resp.promoter)
+				}
+				if(resp.dj) {
+					$modal.find('.dj').removeClass('d-none').text(resp.dj)
+				}
+			})
+		});
+	});
 </script>
 @endsection
