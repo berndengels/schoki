@@ -1,12 +1,12 @@
 // Fonts/Icons
 // see media queries: https://include-media.com/
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-//@import  url('../fonts/nohemi/nohemi.css');
+@import  url('../fonts/nohemi/nohemi.css');
 
 // Variables
 @import 'variables';
@@ -44,7 +44,7 @@ html, body {
 .main {
     margin-top: 5rem;
     @media (min-width: 1200px) {
-        margin-top: 7rem;
+        margin-top: 5rem;
     }
 }
 .fira-sans-regular {
@@ -66,14 +66,17 @@ h1 {
     }
 }
 h2 {
-    font-size: 3.5rem;
-    font-size: clamp(32px, 22.118px + 3.088vw, 74px);
+    font-size: 3.25rem;
+    //font-size: clamp(24px, 22.118px + 3.088vw, 52px);
+    font-size: clamp(24px, 20px + 1vw, 52px);
 }
 .date {
-    min-width: 120px;
+    /*
+    min-width: 210px;
     @media (min-width: 1200px) {
         min-width: 320px;
     }
+    */
     br {
         display: none;
         @media (min-width: 768px) { display: block; }
@@ -105,7 +108,7 @@ nav a {
 #top-navigation {
     .navbar {
         padding: 0 1rem;
-        @media (min-width: 768px) { padding: 0.5rem 1rem; }
+        @media (min-width: 768px) { padding: 0.5rem 0; }
         .nav-item {
             .nav-link {
                 text-transform: capitalize;
@@ -264,11 +267,11 @@ nav a {
 }
 
 .info {
-    border: 1px solid black;
+    //border: 1px solid black;
     font-size: 1.2rem;
 }
 
-.promoter {
+.promoter, .category, .subtitle {
     color: #dd0000;
     font-size: 1rem;
     @media (min-width: 576px) {}
@@ -285,8 +288,6 @@ nav a {
     width: 150px;
     height: 150px;
     text-align: right;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
     @media (max-width: 576px) {
         transform: scale(50%);
         transform-origin: top right;
@@ -321,6 +322,9 @@ nav a {
 }
 
 .event {
+    position: relative;
+    //border-bottom: 3px solid black;
+    background: url("/img/line-004.svg") no-repeat center top;
     .preview_img {
         display: none !important;
         opacity: 0;
@@ -344,11 +348,14 @@ nav a {
 
 .event {
     .info {
-        font-size: 1.2rem !important;
+        font-size: 1rem !important;
     }
 }
 .event-description {
     //p > br { display: none; }
+    letter-spacing: 0.0275rem;
+    font-size: 1.125rem;
+    font-weight: 400;
 }
 
 nav.navbar {

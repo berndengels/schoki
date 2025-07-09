@@ -15,10 +15,8 @@
 @section('content')
     @if( $data->count() )
         @foreach ($data as $event)
-            <div class="event">
-                <div class="eventContent mb-5">
-                    <x-event-view :item="$event" :index="$loop->index" />
-                </div>
+            <div class="event pt-4 pb-4">
+                <x-event-view :item="$event" :index="$loop->index" />
             </div>
         @endforeach
         <div class="pages">{{ $data->links() }}</div>
@@ -46,14 +44,14 @@
 @endsection
 
 @section('sidebarRight')
-    <div style="display: none;">
-		<div class="sidebar-right d-md-block ms-0 ms-lg-2">
-			<div class="header">
-				<ion-icon name="calendar"></ion-icon>
-				<span>Event Kalender</span>
-			</div>
-			<div id="calendar" class="m-0 p-0"></div>
-		</div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Event Kalender</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="calendar"></div>
+        </div>
     </div>
 @endsection
 
@@ -80,129 +78,129 @@
         $([document.documentElement, document.body]).animate({
             scrollTop: 0
         }, 0);
-        $(document)
-            .ajaxStart(function() {
-                $(".collapse").unbind('show.bs.collapse');
-            })
-            .ajaxStop(function() {
-                firstLoad = false;
-	            if(firstLoad) {
-	                const $first = $('.collapse:first', '.eventContainer'),
-	                    $btn = $first.prev('.collapseToggle').find('.btn-toggle')
-                            .removeClass('off')
-                            .addClass('on')
-                            .html("close")
-                    ;
+    $(document)
+        .ajaxStart(function() {
+            $(".collapse").unbind('show.bs.collapse');
+        })
+        .ajaxStop(function() {
+            firstLoad = false;
+            if(firstLoad) {
+                const $first = $('.collapse:first', '.eventContainer'),
+                    $btn = $first.prev('.collapseToggle').find('.btn-toggle')
+                        .removeClass('off')
+                        .addClass('on')
+                        .html("close")
+                ;
 
-	                history.push($btn);
+                history.push($btn);
 
-                    $first.collapse('show');
+                $first.collapse('show');
 
-	                $first.on('shown.bs.collapse', function() {
-	                    loadDescription($first.attr('id'), $first.data("event-date"));
-		                var $carousel = $('.carousel', this);
-		                if($carousel.length) {
-			                $carousel.carousel("cycle");
-		                }
-	                });
-                    firstLoad = false;
-                }
-
-                $('.btn-toggle', '.eventContainer').click((e) => {
-                    const $btn = $(e.target);
-
-                    history.push($btn)
-	                if($btn.hasClass('on')) {
-		                //$btn.removeClass('on').addClass('off').html('open');
-                        $btn.removeClass('on').addClass('off');
-                    } else {
-		                //$btn.removeClass('off').addClass('on').html('close');
-                        $btn.removeClass('off').addClass('on');
-                    }
-					if(history.length > 1) {
-						let $last = $(history.shift()),
-                            $other = $last
-    							.parent('.eventHeader')
-    							.parent('.collapseToggle')
-    							.next('.collapse')
-                                .closest('.event')
-                                .find('.show');
-
-						$other.collapse('hide');
-						$last.removeClass('on').addClass('off')
+                $first.on('shown.bs.collapse', function() {
+                    loadDescription($first.attr('id'), $first.data("event-date"));
+                    var $carousel = $('.carousel', this);
+                    if($carousel.length) {
+                        $carousel.carousel("cycle");
                     }
                 });
+                firstLoad = false;
+            }
 
-                $('.collapse', '.eventContainer')
-                    .on('shown.bs.collapse', function() {
-                        const my = this, $my = $(my),
-                            $header = $(my).prev('.collapseToggle'),
-                            //top = parseInt($header.offset().top - 70, 10),
-                            top = parseInt($header.offset().top - 125, 10),
-                            $carousel = $('.carousel', my);
+            $('.btn-toggle', '.eventContainer').click((e) => {
+                const $btn = $(e.target);
 
-	                    //$header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
-                        $header.find('.btn-toggle').removeClass('off').addClass('on');
-                        loadDescription($my.attr('id'), $my.data("event-date"));
+                history.push($btn)
+                if($btn.hasClass('on')) {
+                    //$btn.removeClass('on').addClass('off').html('open');
+                    $btn.removeClass('on').addClass('off');
+                } else {
+                    //$btn.removeClass('off').addClass('on').html('close');
+                    $btn.removeClass('off').addClass('on');
+                }
+                if(history.length > 1) {
+                    let $last = $(history.shift()),
+                        $other = $last
+                            .parent('.eventHeader')
+                            .parent('.collapseToggle')
+                            .next('.collapse')
+                            .closest('.event')
+                            .find('.show');
 
-	                    $([document.documentElement, document.body]).animate({
-                            scrollTop: top
-                        }, scrollDelay);
+                    $other.collapse('hide');
+                    $last.removeClass('on').addClass('off')
+                }
+            });
 
-                        if($carousel.length) {
-                            $carousel.carousel("cycle");
-                        }
-                    })
-                    .on('show.bs.collapse', function() {
-                        const my = this, $my = $(my),
-                        $other = $(my).closest('.event').siblings().find('.show');
-	                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
-                        $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
-	                    loadDescription($my.attr('id'), $my.data("event-date"));
+            $('.collapse', '.eventContainer')
+                .on('shown.bs.collapse', function() {
+                    const my = this, $my = $(my),
+                        $header = $(my).prev('.collapseToggle'),
+                        //top = parseInt($header.offset().top - 70, 10),
+                        top = parseInt($header.offset().top - 125, 10),
+                        $carousel = $('.carousel', my);
 
-                        $other.collapse('hide');
-                    })
-	                .on('hide.bs.collapse', function() {
-		                const my = this,
-			                $carousel = $('.carousel', my);
+                    //$header.find('.btn-toggle').removeClass('off').addClass('on').html('close');
+                    $header.find('.btn-toggle').removeClass('off').addClass('on');
+                    loadDescription($my.attr('id'), $my.data("event-date"));
 
-	                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off').html('open');
-                        $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off');
-                        removeAllDescription();
-		                if($carousel.length) {
-			                $carousel.carousel("dispose");
-		                }
-		                console.clear()
-	                })
-                ;
-        });
-        $("#calendar").zabuto_calendar({
-            language: 'de',
-            show_previous: false,
-            show_next: 6,
-            cell_border: false,
-            today: true,
-            show_days: true,
-            weekstartson: 1,
-            nav_icon: {
-	            prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
-	            next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
-            },
-            ajax: {
-                url: "/calendar",
-                modal: true,
-            },
-            legend: false, // object array, [{type: string, label: string, classname: string}]
-        });
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: top
+                    }, scrollDelay);
+
+                    if($carousel.length) {
+                        $carousel.carousel("cycle");
+                    }
+                })
+                .on('show.bs.collapse', function() {
+                    const my = this, $my = $(my),
+                    $other = $(my).closest('.event').siblings().find('.show');
+                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
+                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on');
+                    loadDescription($my.attr('id'), $my.data("event-date"));
+
+                    $other.collapse('hide');
+                })
+                .on('hide.bs.collapse', function() {
+                    const my = this,
+                        $carousel = $('.carousel', my);
+
+                    //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off').html('open');
+                    $(my).prev('.collapseToggle').find('.btn-toggle').removeClass('on').addClass('off');
+                    removeAllDescription();
+                    if($carousel.length) {
+                        $carousel.carousel("dispose");
+                    }
+                    console.clear()
+                })
+            ;
     });
-    document.querySelectorAll('.event').forEach(el => {
+    $("#calendar").zabuto_calendar({
+        language: 'de',
+        show_previous: false,
+        show_next: 6,
+        cell_border: false,
+        today: true,
+        show_days: true,
+        weekstartson: 1,
+        nav_icon: {
+            prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
+            next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
+        },
+        ajax: {
+            url: "/calendar",
+            modal: true,
+        },
+        legend: false, // object array, [{type: string, label: string, classname: string}]
+    });
+});
+    /*document.querySelectorAll('.event').forEach(el => {
         el.addEventListener('mouseover', e => {
             el.lastElementChild.classList.add('show');
         });
         el.addEventListener('mouseleave', e => {
             el.lastElementChild.classList.remove('show');
         });
-    });
+    });*/
 </script>
 @endsection
 

@@ -1,4 +1,4 @@
-<div id="top-navigation" class="container-fluid">
+<div id="top-navigation" class="container-fluid-">
     <nav class="navbar bg-white navbar-expand-md">
         <a class="navbar-brand blog-header-logo text-decoration-none" href="/">
             <img src="{{ asset('img/schokoladen-logo-spitting-cow-01.svg') }}" height="90" alt="Schokoladen">

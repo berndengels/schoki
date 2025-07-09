@@ -18,7 +18,8 @@
         <link rel="preconnect" href="{{ config('app.url') }}">
         <link rel="preload" as="font">
         <link type="text/css" rel="stylesheet" href="{{ mix('css/dark.css') }}?{{ time() }}" />
-        <link rel="stylesheet" type="text/css" media="screen" href="fonts/nohemi/nohemi.css" /><s></s>
+        <link type="text/css" rel="stylesheet" href="/fonts/nohemi/nohemi.css" media="screen" />
+        <link type="text/css" rel="stylesheet" href="/fonts/nohemi/nohemi.css" media="screen" />
         <script src="{{ mix('js/app.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
         @yield('extra-headers')
     </head>
@@ -37,10 +38,14 @@
         </div>
     </div>
 
-    <div class="container -fluid" style="">
+    <div class="container- -fluid" style="">
         <div class="main">
             @yield('content') <!-- contentNew -->
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+            </button>
         </div>
+        @yield('sidebarRight')
     </div>
 
     <div class="footer row">
