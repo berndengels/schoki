@@ -29,6 +29,7 @@ class EventEntityRepository {
 		$entity
 //            ->setEventDate($dateObj)
 			->setEventDate($date)
+			->setTitle($event->title)
 			->setDomId('e' . $dateObj->format('Ymd'))
 			->setDescriptionSanitized($event->descriptionSanitized)
             ->setDescriptionWithoutVideo($event->descriptionWithoutVideo)
@@ -36,6 +37,8 @@ class EventEntityRepository {
 			->setIsPeriodic($event instanceof EventPeriodic ? 1 : 0)
 			->setCategory($event->category ? $event->category : null)
 			->setTheme($event->theme ? $event->theme : null)
+			->setDj($event->dj)
+			->setPromoter($event->promoter)
 //			->setCreatedBy($event->createdBy)
 //			->setUpdatedBy($event->updatedBy ? $event->updatedBy : $event->createdBy)
 		;
@@ -63,6 +66,7 @@ class EventEntityRepository {
 
 				$event
 //					->setEventDate($dateObj)
+					->setTitle($item->title)
                     ->setEventDate($date)
 					->setDomId('e' . $dateObj->format('Ymd'))
                     ->setDescriptionSanitized($item->descriptionSanitized)
@@ -71,6 +75,8 @@ class EventEntityRepository {
 					->setIsPeriodic($item instanceof EventPeriodic ? 1 : 0)
 					->setCategory($item->category ? $item->category : null)
 					->setTheme($item->theme ? $item->theme : null)
+					->setDj($item->dj)
+					->setPromoter($item->promoter)
 //					->setCreatedBy($item->createdBy)
 //					->setUpdatedBy($item->updatedBy ? $item->updatedBy : $item->createdBy)
 				;

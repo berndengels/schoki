@@ -459,13 +459,22 @@ class EventEntity extends Entity {
 			$body = "<div class='promoter'>{$this->promoter}</div>$body";
 		}
         $eventDate = Carbon::make($this->event_date);
+		$date = $eventDate->clone()->format('Y-m-d');
+		$day = $eventDate->clone()->format('j');
 		return [
-            'date'		=> $eventDate->format('Y-m-d'),
+			'id'		=> $this->id,
+//			'classname' => 'grade-' . random_int(1, 4),
+            'date'		=> $date,
 			'badge' 	=> true,
 			'title'		=> $this->title,
 			'body' 		=> $body,
-			'footer'	=> ($this->getHtmlLinks() && $this->getHtmlLinks()->count()) ? $this->getHtmlLinks()->join('<br>') : '',
+			'footer'	=> ($this->getHtmlLinks() && $this->getHtmlLinks()->count() > 0 ) ? $this->getHtmlLinks()->join('<br>') : null,
 			'classname'	=> 'calendar-event',
+			'markup' 	=> '<span class="badge bg-danger cursor-pointer" 
+					data-bs-toggle="modal" 
+					data-bs-target="#eventModal"
+					data-event-id="'.$this->id.'"
+				>'.$day.'</span>',
 		];
 	}
 

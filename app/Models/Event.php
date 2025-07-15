@@ -233,6 +233,7 @@ class Event extends Model
 		$datedEvents	= self::allActual()
             ->get()
             ->keyBy(fn($item) => $item['event_date']->format('Y-m-d'));
+
 		$mapped	= $repoEntity->mapToEventEntityCollection($datedEvents);
 		$merged	= $periodicEvents->merge($mapped)->sortKeys();
 

@@ -43,13 +43,14 @@ class EventResource extends JsonResource
 				$imageEntities[] = $img->toObject();
 			}
 		}
+
         return [
 			'id'            => $this->getId(),
 			'date'    		=> (string) $this->getEventDate(),
 			'time'    		=> (string) $this->getEventTime(),
 			'title'         => $this->getTitle(),
 			'subtitle'      => $this->getSubtitle(),
-			'description'   => $this->getDescriptionText(),
+			'description'   => $this->getDescriptionWithoutVideo(),
             'category'      => $category ? $category->name : null,
             'theme'      	=> $theme ? $theme->name : null,
 //			'links'         => ($links && $links->count()) ? implode("\n", $links->toArray()): null,

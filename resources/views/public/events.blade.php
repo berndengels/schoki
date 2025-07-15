@@ -3,8 +3,8 @@
 @section('title', 'Eventsss')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ mix('vendor/calendar/css/zabuto_calendar.min.css') }}">
-    <script src="{{ mix('vendor/calendar/js/zabuto_calendar.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('vendor/calendar@2/zabuto_calendar.min.css') }}">
+    <script src="{{ mix('vendor/calendar@2/zabuto_calendar.min.js') }}"></script>
 @endsection
 
 @section('header-content')
@@ -16,7 +16,6 @@
 @section('content')
     @php
         use App\Models\Images, Carbon\Carbon, App\Entities\EventEntity;
-
     @endphp
 
     <div class="eventContainer col-sm-11 col-md-9 mbs">

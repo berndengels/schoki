@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Eloquent;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -68,27 +69,21 @@ class Images extends Media
         'height'    => 'integer',
         'filesize'  => 'integer',
     ];
-    /**
-     * @var string[]
-     */
-    protected $appends = ['displayWidth', 'displayHeight'];
 
     /**
      * @return int
      */
-    public function getDisplayWidthAttribute()
-    {
-		if($this->height > 0) {
-			return round(config('event.maxImageHeight') * $this->width / $this->height);
-		}
-		return null;
-    }
+	protected function displayWidth(): Attribute
+	{
+		return Attribute::make(
+			get: fn () => round(config('event.maxImageHeight') * $this->width / $this->height),
+		);
+	}
 
-    /**
-     * @return int
-     */
-    public function getDisplayHeightAttribute()
-    {
-        return config('event.maxImageHeight');
-    }
+	protected function displayHeight(): Attribute
+	{
+		return Attribute::make(
+			get: fn () => config('event.maxImageHeight'),
+		);
+	}
 }

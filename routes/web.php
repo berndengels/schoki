@@ -191,7 +191,5 @@ Route::group([
 	});
 });
 
-Route::fallback(function () {
-	return redirect()->route('public.events');
-});
+Route::fallback(fn() => redirect()->route('public.events'));
 ?>

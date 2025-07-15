@@ -2,8 +2,8 @@
 
 namespace App\View\Components;
 
-use App\Entities\EventEntity;
 use Closure;
+use App\Entities\EventEntity;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
