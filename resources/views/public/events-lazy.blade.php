@@ -3,8 +3,8 @@
 @section('title', 'Events')
 
 @section('extra-headers')
-    <link rel="stylesheet" href="{{ mix('vendor/calendar/zabuto_calendar.min.css') }}">
-    <script src="{{ mix('vendor/calendar/zabuto_calendar.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('vendor/calendar@2/zabuto_calendar.min.css') }}">
+    <script src="{{ mix('vendor/calendar@2/zabuto_calendar.min.js') }}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 @endsection
@@ -13,10 +13,10 @@
 @endsection
 
 @section('content')
-    <div class="eventContainer col-sm-11 col-md-6 mt-1 ml-lg-4">
+    <div class="eventContainer col-sm-11 col-md-6 mt-1 ms-lg-4">
         <h3 class="events-header d-block">Veranstaltungen</h3>
         @if( $data->count() )
-            <div class="row ml-0 p-0">
+            <div class="row ms-0 p-0">
                 {{ $data->links() }}
             </div>
             @foreach ($data as $event)

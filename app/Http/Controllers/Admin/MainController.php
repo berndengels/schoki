@@ -101,14 +101,14 @@ class MainController extends Controller
 	public function getReservedDates()
 	{
         if(!config('event.useCache')) {
-            $actualEvents = Event::allActualMerged();
+            $actualEvents = Event::allActual()->get();
         } else {
             $actualEvents = Cache::remember($this->cacheEventKey, 3600, function() {
-                return Event::allActualMerged();
+                return Event::allActual()->get();
             });
         }
+        $dates =  $actualEvents->map(fn(Event $item) => "'".($item->event_date->format('Y-m-d'))."'")->toArray();
 
-        $dates = $actualEvents->keys()->map(fn($item) => "'".$item."'")->toArray();
 		return $dates;
 	}
 

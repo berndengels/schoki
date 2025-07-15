@@ -6,11 +6,11 @@
 <div class="collapseToggle mbs">
     <div class="eventHeader col-12">
         <div class="subHeader m-0 p-0">
-            <span class="ml-2">{{ __($eventDate->format('l')) }}</span>
-            <span class="ml-1">{{ $eventDate->format('d.m.') }}</span>
-            <span class="ml-1">{{ $item->getEventTime() }} Uhr</span>
+            <span class="ms-2">{{ __($eventDate->format('l')) }}</span>
+            <span class="ms-1">{{ $eventDate->format('d.m.') }}</span>
+            <span class="ms-1">{{ $item->getEventTime() }} Uhr</span>
 
-        @if($item->getCategory())
+            @if($item->getCategory())
                 <span class="category mr-1">
                     @if($item->getCategory()->icon)
                         <ion-icon name="{{ $item->getCategory()->icon }}"
@@ -22,26 +22,26 @@
         </div>
 
         @if ($item->getTheme())
-            <div class="theme p-0 pl-2 m-0">
+            <div class="theme p-0 ms-2 m-0">
                 <h7>{{ $item->getTheme()->name }}</h7>
             </div>
         @endif
 
         @if($item->getPromoter())
             <div class="title m-0 p-0">
-                <div class="ml-2 p-0">
+                <div class="ms-2 p-0">
                     Promoter: {{ $item->getPromoter() }}
                 </div>
             </div>
         @endif
 
         <div class="title m-0 p-0">
-            <div class="ml-2 p-0">
+            <div class="ms-2 p-0">
                 {{ $item->getTitle() }}
             </div>
         </div>
 
-        <div class="header-buttons d-inline-block clearfix m-0 p-0 pr-2">
+        <div class="header-buttons">
             @if($item->getTicketlink())
                 <a class="ticketlink"
                    role="button"
@@ -53,9 +53,9 @@
             @endif
             <button class="btn-toggle off"
                     role="button"
-                    data-toggle="collapse"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#{{ $domID }}"
                     aria-expanded="false"
-                    data-target="#{{ $domID }}"
                     aria-controls="{{ $domID }}">open
             </button>
         </div>
@@ -82,13 +82,13 @@
     @elseif ($item->getImages()->count() > 1 )
         <div id="imgCarousel{{ $domID }}"
              class="carousel slide text-center col-12"
-             data-ride="carousel"
-             data-interval="4000"
+             data-bs-ride="carousel"
+             data-bs-interval="4000"
         >
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 @foreach($item->getImages() as $index => $img)
-                    <li data-target="imgCarousel{{ $domID }}" data-slide-to="{{ $index }}"
+                    <li data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide-to="{{ $index }}"
                         @if($index == 0) class="active" @endif></li>
                 @endforeach()
             </ul>
@@ -96,7 +96,7 @@
             <div class="carousel-inner text-center col-12 m-0 p-0">
                 @foreach($item->getImages() as $index => $img)
                     <div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
-                        <img src="/media/images/{{ $img->internal_filename }}"
+                        <img src="{{ asset('media/images/' . $img->internal_filename) }}"
                              class="mx-auto"
                              width="{{ $img->displayWidth }}"
                              height="{{ $img->displayHeight }}"
@@ -112,14 +112,14 @@
                 @endforeach()
             </div>
 
-            <a class="carousel-control-prev" href="#imgCarousel{{ $domID }}" role="button" data-slide="prev">
+            <button type="button" class="carousel-control-prev" data-bs-target="#imgCarousel{{ $domID }}" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Zurück</span>
-            </a>
-            <a class="carousel-control-next" href="#imgCarousel{{ $domID }}" role="button" data-slide="next">
+            </button>
+            <button type="button" class="carousel-control-next" data-bs-target="#imgCarousel{{ $domID }}" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Weiter</span>
-            </a>
+            </button>
         </div>
     @endif
 
