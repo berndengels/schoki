@@ -5,7 +5,9 @@
     @include('components.add')
 
     @if(isset($templateSelectForm) && null !== $templateSelectForm)
-    {!! form($templateSelectForm) !!}
+        <div class="w-25">
+            {!! form($templateSelectForm) !!}
+        </div>
     @endif
 
     <br>
