@@ -35,7 +35,8 @@ html, body {
     font-family: $font-family-sans-serif;
     font-weight: 200;
     margin: 0;
-    background-color: $body-bg-dark;
+    //background-color: $body-bg-dark;
+    background: white url("/img/bg-black-edit.svg") repeat;
 }
 
 .container {
@@ -272,12 +273,12 @@ nav a {
 }
 
 .promoter, .category, .subtitle {
-    color: #dd0000;
+    color: #c34535;
     font-size: 1rem;
     @media (min-width: 576px) {}
     @media (min-width: 768px) {}
-    @media (min-width: 992px) { font-size: 1.25rem; }
-    @media (min-width: 1200px) { font-size: 1.5rem; }
+    @media (min-width: 992px) { font-size: 1.125rem; }
+    @media (min-width: 1200px) { font-size: 1.25rem; }
 }
 .ribbon {
     position: absolute;
@@ -303,7 +304,7 @@ nav a {
     transform: rotate(45deg);
     width: 275px;
     display: block;
-    background: #dd0000;
+    background: #c34535;
     position: absolute;
     top: 44px;
     right: -75px;
@@ -323,8 +324,11 @@ nav a {
 
 .event {
     position: relative;
+    background: transparent url("/img/line-004.svg") no-repeat center top;
+    background-color: transparent;
+    transition: background-color 500ms ease-in-out;
     //border-bottom: 3px solid black;
-    background: url("/img/line-004.svg") no-repeat center top;
+
     .preview_img {
         display: none !important;
         opacity: 0;
@@ -344,6 +348,11 @@ nav a {
             opacity: 0;
         }
     }
+    &:hover {
+        //background-color: cornsilk;
+        transition: background-color 500ms ease-in-out;
+        background: cornsilk url("/img/line-004.svg") no-repeat center top;
+    }
 }
 
 .event {
@@ -353,9 +362,13 @@ nav a {
 }
 .event-description {
     //p > br { display: none; }
+    font-size: 1rem;
     letter-spacing: 0.0275rem;
-    font-size: 1.125rem;
     font-weight: 400;
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) { font-size: 1.125rem; }
+    @media (min-width: 1200px) { font-size: 1.25rem; }
 }
 
 nav.navbar {

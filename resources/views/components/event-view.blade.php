@@ -16,14 +16,14 @@
 </div>
 <div class="container">
 		<div class="title position-relative">
-			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}">
+			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
 			<div class="d-flex flex-column flex-md-row">
 				<div class="date col-sm-3 mb-0">
 					@if($item->getCategory())
 						<h7 class="category">
-                    @if($item->getCategory()->icon)
-						<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
-					@endif
+						@if($item->getCategory()->icon)
+							<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
+						@endif
 						{{ $item->getCategory()->name }}
                			</h7>
 					@endif
@@ -41,22 +41,15 @@
 						<h7>
 							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
 						</h7>
+					@else
+						<h7><span class="promoter p-0 m-0">&nbsp;</span></h7>
 					@endif
 					<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
 					@if ('' !== $item->getSubtitle())
 						<div class="m-0">
-							<h6 class="subtitle">Party: {{ $item->getSubtitle() }}</h6>
+							<h6 class="subtitle">{{ $item->getSubtitle() }}</h6>
 						</div>
 					@endif
-
-					<div class="marquee d-none">
-						<div class="marquee__content">
-							<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
-						</div>
-						<div class="marquee__content" aria-hidden="true">
-							<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
-						</div>
-					</div>
 				</div>
 			</div>
 			</a>
@@ -82,7 +75,7 @@
 						@endphp
 						<div class="text-center m-0 p-0 imageWrapper">
 							<img src="/media/images/{{ $img->internal_filename }}"
-								 class="mx-auto"
+								 class="img-fluid"
 								 width="{{ $img->displayWidth }}"
 								 height="{{ $img->displayHeight }}"
 								 title="{{ $img->title ?? 'Event Bild' }}"
@@ -106,7 +99,7 @@
 								@foreach($item->getImages() as $index => $img)
 									<div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
 										<img src="/media/images/{{ $img->internal_filename }}"
-											 class="mx-auto"
+											 class="img-fluid"
 											 width="{{ $img->displayWidth }}"
 											 height="{{ $img->displayHeight }}"
 											 title="{{ $img->title ?? 'Event Bild' }}"
@@ -141,7 +134,7 @@
 					@endif
 
 					<div class="embed-responsive embed-responsive-16by9 d-none">
-						<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/QG5Wf0KR7Qk?si=i0HLna0QzSlaVGw9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/QG5Wf0KR7Qk?si=i0HLna0QzSlaVGw9" title="YouTube video player" border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
