@@ -310,7 +310,26 @@ nav a {
     right: -75px;
     letter-spacing: 2px;
 }
+.tickets {
+    background: transparent url("/img/tickets.svg") no-repeat center top;
+    overflow: visible;
+    position: absolute;
+    width: 140px;
+    z-index: 1;
+    right: 3vw;
+    @media (min-width: 576px) {  }
+    @media (min-width: 768px) {  }
+    @media (min-width: 992px) { font-size: 1.125rem; }
+    @media (min-width: 1200px) { font-size: 1.25rem; width: 180px; }
 
+    span {
+        color: white;
+        font-size: 1rem;
+        @media (min-width: 992px) { font-size: 1.125rem; }
+        @media (min-width: 1200px) { font-size: 1.25rem; }
+    }
+
+}
 .torn {
     height: 4px;
     top: 100px;

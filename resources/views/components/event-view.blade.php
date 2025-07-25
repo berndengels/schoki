@@ -7,7 +7,7 @@
 */
 @endphp
 
-<div class="ribbon">
+<div class="ribbon d-none">
 	@if($item->getTicketlink())
 		<a class="d-block p-2 text-center fw-bold" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">
 			<span class="category">Tickets</span>
@@ -54,7 +54,15 @@
 			</div>
 			</a>
 		</div>
-	</div>
+
+		<div class="tickets">
+			@if($item->getTicketlink())
+				<a class="d-block p-2 text-center fw-bold" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">
+					<span>Tickets</span>
+				</a>
+			@endif
+		</div>
+</div>
 
 <div class="container">
 	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
