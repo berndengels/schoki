@@ -39,7 +39,7 @@
 				<div class="col-sm-9" style="overflow: hidden;">
 					@if ($item->getTheme())
 						<h7>
-							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
+							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }} {{ $item->getPromoter() }}</span>
 						</h7>
 					@else
 						<h7><span class="promoter p-0 m-0">&nbsp;</span></h7>
@@ -81,35 +81,30 @@
                             */
                             $img = $item->getImages()->first()
 						@endphp
-						<div class="text-center m-0 p-0 imageWrapper">
+						<div class="m-0 p-0 imageWrapper">
 							<img src="/media/images/{{ $img->internal_filename }}"
 								 class="img-fluid"
-								 width="{{ $img->displayWidth }}"
-								 height="{{ $img->displayHeight }}"
 								 title="{{ $img->title ?? 'Event Bild' }}"
 								 alt="{{ $img->title ?? 'Event Bild' }}"
 							>
 						</div>
 					@elseif ($item->getImages()->count() > 1 )
 						<div id="imgCarousel{{ $domID }}"
-							 class="carousel slide text-center col-12 col-lg-6"
+							 class="carousel slide carousel-fade"
 							 data-interval="false"
 						>
 							<!-- Indicators -->
-							<ul class="carousel-indicators">
+							<div class="carousel-indicators">
 								@foreach($item->getImages() as $index => $img)
-									<li data-target="imgCarousel{{ $domID }}" data-slide-to="{{ $index }}"
-										@if($index == 0) class="active" @endif></li>
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" @if($index == 0) class="active" aria-current="true"@endif aria-label="Slide {{ $index }}"></button>
 								@endforeach()
-							</ul>
+							</div>
 
-							<div class="carousel-inner text-center col-12 m-0 p-0">
+							<div class="carousel-inner">
 								@foreach($item->getImages() as $index => $img)
-									<div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
+									<div class="carousel-item @if($index == 0) active @endif">
 										<img src="/media/images/{{ $img->internal_filename }}"
 											 class="img-fluid"
-											 width="{{ $img->displayWidth }}"
-											 height="{{ $img->displayHeight }}"
 											 title="{{ $img->title ?? 'Event Bild' }}"
 											 alt="{{ $img->title ?? 'Event Bild' }}"
 										>
@@ -122,14 +117,16 @@
 								@endforeach()
 							</div>
 
-							<a class="carousel-control-prev" href="#imgCarousel{{ $domID }}" role="button" data-slide="prev">
+							<button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Zurück</span>
-							</a>
-							<a class="carousel-control-next" href="#imgCarousel{{ $domID }}" role="button" data-slide="next">
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button class="carousel-control-next" type="button" data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Weiter</span>
-							</a>
+								<span class="visually-hidden">Next</span>
+							</button>
+
 						</div>
 					@endif
 
