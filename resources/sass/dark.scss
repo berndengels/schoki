@@ -36,7 +36,7 @@ html, body {
     font-weight: 200;
     margin: 0;
     //background-color: $body-bg-dark;
-    background: white url("/img/bg-black-edit.svg") repeat;
+    background: white url("/img/bg-black-edit.svg") repeat fixed;
 }
 
 .container {
@@ -314,24 +314,20 @@ nav a {
     letter-spacing: 2px;
 }
 .tickets {
-    background: transparent url("/img/tickets.svg") no-repeat center top;
+    margin-top: -10px;
     overflow: visible;
-    position: absolute;
-    width: 140px;
+    //position: absolute;
+    //width: 140px;
     z-index: 1;
-    right: 3vw;
-    @media (min-width: 576px) {  }
-    @media (min-width: 768px) {  }
-    @media (min-width: 992px) { font-size: 1.125rem; }
-    @media (min-width: 1200px) { font-size: 1.25rem; width: 180px; }
 
     span {
         color: white;
         font-size: 1rem;
+        @media (min-width: 576px) {  }
+        @media (min-width: 768px) {  }
         @media (min-width: 992px) { font-size: 1.125rem; }
-        @media (min-width: 1200px) { font-size: 1.25rem; }
+        @media (min-width: 1200px) { font-size: 1.5rem; }
     }
-
 }
 .torn {
     height: 4px;
@@ -382,7 +378,7 @@ nav a {
         font-size: 1rem !important;
     }
 }
-.event-description {
+.event-description, .event-facts {
     //p > br { display: none; }
     font-size: 1rem;
     letter-spacing: 0.0275rem;

@@ -7,25 +7,18 @@
 */
 @endphp
 
-<div class="ribbon d-none">
-	@if($item->getTicketlink())
-		<a class="d-block p-2 text-center fw-bold" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">
-			<span class="category">Tickets</span>
-		</a>
-	@endif
-</div>
 <div class="container">
 		<div class="title position-relative">
 			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
 			<div class="d-flex flex-column flex-md-row">
 				<div class="date col-sm-3 mb-0">
 					@if($item->getCategory())
-						<h7 class="category">
+						<h6 class="category">
 						@if($item->getCategory()->icon)
 							<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
 						@endif
 						{{ $item->getCategory()->name }}
-               			</h7>
+               			</h6>
 					@endif
 
 					<div class="fw-bold">
@@ -38,29 +31,21 @@
 				</div>
 				<div class="col-sm-9" style="overflow: hidden;">
 					@if ($item->getTheme())
-						<h7>
+						<h6>
 							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }} {{ $item->getPromoter() }}</span>
-						</h7>
+						</h6>
 					@else
-						<h7><span class="promoter p-0 m-0">&nbsp;</span></h7>
+						<h6><span class="promoter p-0 m-0">&nbsp;</span></h6>
 					@endif
 					<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
-					@if ('' !== $item->getSubtitle())
+					@if ('' !== $item->getDj())
 						<div class="m-0">
-							<h6 class="subtitle">{{ $item->getSubtitle() }}</h6>
+							<h6 class="subtitle">{{ $item->getDj() }}</h6>
 						</div>
 					@endif
 				</div>
 			</div>
 			</a>
-		</div>
-
-		<div class="tickets">
-			@if($item->getTicketlink())
-				<a class="d-block p-2 text-center fw-bold" href="{{ $item->getTicketlink() }}" style="font-size: 1.25rem;">
-					<span>Tickets</span>
-				</a>
-			@endif
 		</div>
 </div>
 
@@ -68,7 +53,25 @@
 	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
 		<div class="d-flex">
 			<div class="row">
-				<div class="col-sm-9 offset-sm-3">
+				<div class="col-sm-3">
+					<div class="event-facts">
+						@if($item->getTicketlink())
+							<p><strong>Tickets</strong><br>
+							<a href="{{ $item->getTicketlink() }}">Tickettoaster</a></p>
+						@endif
+
+						@if ( $item->getLinksArray()->count() )
+							<p class="mb-0"><strong>Links</strong></p>
+							<p class="event-links">
+								@foreach($item->getLinksArray() as $link)
+									<a href="{{ $link }}" target="_blank" class="d-block">{{ $link }}</a>
+								@endforeach
+							</p>
+						@endif
+					</div>
+				</div>
+
+				<div class="col-sm-9 offset-sm-3-">
 					<div class="event-description">
 						{!! $item->getDescriptionSanitized() !!}
 					</div>
@@ -130,17 +133,6 @@
 						</div>
 					@endif
 
-					@if ( $item->getLinksArray()->count() )
-						<p class="event-links mt-3">
-							@foreach($item->getLinksArray() as $link)
-								<a href="{{ $link }}" target="_blank" class="d-block">{{ $link }}</a>
-							@endforeach
-						</p>
-					@endif
-
-					<div class="embed-responsive embed-responsive-16by9 d-none">
-						<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/QG5Wf0KR7Qk?si=i0HLna0QzSlaVGw9" title="YouTube video player" border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					</div>
 				</div>
 			</div>
 		</div>
