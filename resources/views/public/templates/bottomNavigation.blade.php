@@ -1,11 +1,11 @@
 <div id="bottom-navigation">
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0 m-0">
-        <a class="navbar-brand" href="#"></a>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0">
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse m-0 p-0" id="bottomNavbar">
+        <div class="collapse navbar-collapse m-0 p-1" id="bottomNavbar">
             <ul class="navbar-nav me-auto p-0">
                 @foreach ($bottomMenu as $item)
                 <li class="nav-item p-0 m-0 @if($item->children->count()) dropup @endif">
@@ -42,6 +42,7 @@
                 </li>
                 @endforeach
             </ul>
+            <div class="pr-4" style="color: white;">Ackerstraße 169, 10115 Berlin-Mitte</div>
         </div>
     </nav>
 </div>

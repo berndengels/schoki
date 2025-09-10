@@ -29,21 +29,17 @@
         @include('debug.bootstrap.display')
     @endif
 
-    <div class="container">
-        <div class="header">
-            @section('header')
-                @include('public.templates.topNavigation')
-            @show
-            @yield('header-content')
-        </div>
+    <div class="header fixed-top">
+        @section('header')
+            @include('public.templates.topNavigation')
+        @show
+        @yield('header-content')
     </div>
 
-    <div class="container- -fluid" style="">
-        <div class="main">
-            @yield('content') <!-- contentNew -->
-        </div>
-        @yield('sidebarRight')
+    <div class="main">
+        @yield('content') <!-- contentNew -->
     </div>
+    @yield('sidebarRight')
 
     <div class="footer row">
         @section('bottom-navigation')

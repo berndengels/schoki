@@ -5,6 +5,30 @@
 /**
 * @var $item EventEntity
 */
+
+	if (! function_exists('trim_url_to_domain')) {
+		/**
+		 * Extract only the domain from a given URL.
+		 *
+		 * @param string $url
+		 * @return string|null
+		 */
+		function trim_url_to_domain(string $url): ?string
+		{
+			$url = trim($url);
+
+			// Ensure it has a scheme, otherwise parse_url may fail
+			if (! preg_match('~^https?://~i', $url)) {
+				$url = "http://{$url}";
+			}
+
+			$host = parse_url($url, PHP_URL_HOST);
+
+			// Remove "www." if you want cleaner output
+			return $host ? preg_replace('/^www\./', '', $host) : null;
+		}
+	}
+
 @endphp
 
 <div class="container">
@@ -13,7 +37,7 @@
 			<div class="d-flex flex-column flex-md-row">
 				<div class="date col-sm-3 mb-0">
 					@if($item->getCategory())
-						<h6 class="category">
+						<h6 class="category mt-2 mt-0-sm mb-1 mb-2-sm">
 						@if($item->getCategory()->icon)
 							<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
 						@endif
@@ -31,17 +55,17 @@
 				</div>
 				<div class="col-sm-9" style="overflow: hidden;">
 					@if ($item->getTheme())
-						<h6>
+						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
 							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }} {{ $item->getPromoter() }}</span>
 						</h6>
 					@else
-						<h6><span class="promoter p-0 m-0">&nbsp;</span></h6>
+						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
+							<span class="promoter">{{ $item->getPromoter() }} &nbsp;</span>
+						</h6>
 					@endif
 					<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
 					@if ('' !== $item->getDj())
-						<div class="m-0">
-							<h6 class="subtitle">{{ $item->getDj() }}</h6>
-						</div>
+						<h6 class="subtitle mt-2 mt-0-sm mb-1 mb-2-sm">{{ $item->getDj() }}</h6>
 					@endif
 				</div>
 			</div>
@@ -60,18 +84,29 @@
 							<a href="{{ $item->getTicketlink() }}">Tickettoaster</a></p>
 						@endif
 
+						@if($item->getSubtitle())
+							<p><strong>Time</strong><br>
+							<span>{{ $item->getSubtitle() }}</span>
+						@else
+							<p><strong>Time</strong><br>
+							<span>Doors 19h / Show 20h</span>
+						@endif
+
 						@if ( $item->getLinksArray()->count() )
 							<p class="mb-0"><strong>Links</strong></p>
 							<p class="event-links">
 								@foreach($item->getLinksArray() as $link)
-									<a href="{{ $link }}" target="_blank" class="d-block">{{ $link }}</a>
+									@php
+										$shorturl = trim_url_to_domain($link);
+									@endphp
+									<a href="{{ $link }}" target="_blank" class="d-block" title="{{ $link }}">{{ $shorturl }}</a>
 								@endforeach
 							</p>
 						@endif
 					</div>
 				</div>
 
-				<div class="col-sm-9 offset-sm-3-">
+				<div class="col-sm-9">
 					<div class="event-description">
 						{!! $item->getDescriptionSanitized() !!}
 					</div>
@@ -132,7 +167,6 @@
 
 						</div>
 					@endif
-
 				</div>
 			</div>
 		</div>

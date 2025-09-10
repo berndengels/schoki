@@ -1,4 +1,4 @@
-<div id="top-navigation" class="container-fluid-">
+<div id="top-navigation" class="container">
     <nav class="navbar bg-white navbar-expand-md">
         <a class="navbar-brand blog-header-logo text-decoration-none" href="/">
             <img src="{{ asset('img/schokoladen-logo-spitting-cow-01.svg') }}" height="90" alt="Schokoladen">
@@ -8,8 +8,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="topNavbar">
-            <ul class="navbar-nav me-auto">
+        <div class="collapse navbar-collapse justify-content-end" id="topNavbar">
+            <ul class="navbar-nav">
                 <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Calendar</a>
                 @foreach ($topMenu as $item)
                     @if($item->children->count() > 0)
@@ -24,9 +24,6 @@
                     @endif
                 @endforeach
             </ul>
-            <div>
-                <p class="mb-0">Ackerstraße 169, 10115 Berlin-Mitte</p>
-            </div>
         </div>
     </nav>
 </div>
