@@ -15,7 +15,7 @@
 @section('content')
     @if( $data->count() )
         @foreach ($data as $event)
-            <div class="event pt-4 pb-4">
+            <div class="event">
                 <x-event-view :item="$event" :index="$loop->index" />
             </div>
         @endforeach

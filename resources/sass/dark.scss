@@ -105,7 +105,7 @@ nav a {
 .header {
     padding: 1rem 0 1rem 0;
     height: 138px ;
-    background: white;
+    background: white url("/img/line-004.svg") no-repeat center bottom;
 }
 #top-navigation {
     .navbar {
@@ -340,9 +340,10 @@ nav a {
 
 .event {
     position: relative;
-    background: transparent url("/img/line-004.svg") no-repeat center top;
+    background: transparent url("/img/line-004.svg") no-repeat center bottom;
     background-color: transparent;
     transition: background-color 500ms ease-in-out;
+    padding: 2rem 0;
     //border-bottom: 3px solid black;
 
     .preview_img {
@@ -367,7 +368,7 @@ nav a {
     &:hover {
         //background-color: cornsilk;
         transition: background-color 500ms ease-in-out;
-        background: cornsilk url("/img/line-004.svg") no-repeat center top;
+        background: cornsilk url("/img/line-004.svg") no-repeat center bottom;
     }
 }
 
