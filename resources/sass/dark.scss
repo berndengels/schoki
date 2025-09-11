@@ -1,7 +1,5 @@
 // Fonts/Icons
 // see media queries: https://include-media.com/
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
-//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
@@ -29,7 +27,6 @@ Breakpoints xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px
 html, body {
     font-family: $font-family-sans-serif;
     font-weight: normal;
-    //height: 100vh;
     margin: 0;
     background: white url("/img/bg-black-edit.svg") repeat fixed;
 }
@@ -44,19 +41,8 @@ html, body {
         margin-top: 8.625rem;
     }
 }
-/*
-.fira-sans-regular {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.fira-sans-regular-italic {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}*/
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     @media (min-width: 1200px) {
         font-size: 3rem;
@@ -90,9 +76,9 @@ a {
     color: black;
 }
 nav a {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 700;
 }
 .nav-link {
     display: block;
@@ -104,10 +90,26 @@ nav a {
 
 .header {
     padding: 1rem 0 1rem 0;
-    height: 138px ;
+    height: 135px;
     background: white url("/img/line-004.svg") no-repeat center bottom;
 }
 #top-navigation {
+    .navbar-nav {
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-padding-y: 0.5rem;
+        --bs-nav-link-font-weight: ;
+        --bs-nav-link-color: var(--bs-black);
+        --bs-nav-link-hover-color: #c34535;
+        --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: #c34535;
+    }
+
+    .navbar-nav {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
     .navbar {
         padding: 0 1rem;
         @media (min-width: 768px) { padding: 0.5rem 0; }
@@ -311,6 +313,10 @@ nav a {
     right: -75px;
     letter-spacing: 2px;
 }
+.ticket-bg {
+    background: transparent url("/img/tickets.svg") no-repeat center center;
+    overflow: visible;
+}
 .tickets {
     margin-top: -10px;
     overflow: visible;
@@ -427,6 +433,7 @@ nav.navbar {
             height: 20px;
         }
     }
+    .navbar-text { color: var(--bs-white); }
 }
 
 .img-responsive {
@@ -521,25 +528,50 @@ pre {
     color: #fff;
 }
 .pagination {
-    background-color: #000;
+    --bs-pagination-font-size: 1.4rem;
+    --bs-pagination-color: var(--bs-white);
+    --bs-pagination-bg: transparent;
+    --bs-pagination-border-width: 0;
+    --bs-pagination-border-color: transparent;
+    --bs-pagination-border-radius: 0;
+    --bs-pagination-hover-color: #c34535;
+    --bs-pagination-hover-bg: tranparent;
+    --bs-pagination-hover-border-color: none;
+    --bs-pagination-focus-color: white;
+    --bs-pagination-focus-bg: none;
+    --bs-pagination-focus-box-shadow: none;
+    --bs-pagination-active-color: #c34535;
+    --bs-pagination-active-bg: transparent;
+    --bs-pagination-active-border-color: transparent;
+    --bs-pagination-disabled-color: #999;
+    --bs-pagination-disabled-bg: transparent;
+    --bs-pagination-disabled-border-color: none;
+
+    font-width: 700;
+    margin: 3rem 0 5rem;
+    justify-content: center;
+    background: transparent url("/img/tickets.svg") no-repeat center center;
+    overflow: visible;
+
     margin-left: 0;
     li {
         margin-left: 0;
         &.page-item {
+            font-size: 1.4rem;
             .page-link {
-                background-color: #000;
-                color: #fff;
-                border: 1px solid #666;
+                //background-color: #000;
+                //color: #000;
+                //border: 1px solid #666;
             }
             &.disabled {
                 .page-link {
-                    color: #999;
+                    //color: #999;
                 }
             }
             &.active {
                 .page-link {
-                    background-color: #f00;
-                    color: #fff;
+                    //background-color: transparent;
+                //color: #f00;
                 }
             }
         }
@@ -945,17 +977,3 @@ pre {
     }
 }
 */
-
-#bottomNavbar {
-    .navbar-nav {
-        .nav-item {
-            .nav-link {
-                i {
-                    &.icn {
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-    }
-}

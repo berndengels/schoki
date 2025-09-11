@@ -80,7 +80,7 @@
 				<div class="col-sm-3">
 					<div class="event-facts">
 						@if($item->getTicketlink())
-							<p><strong>Tickets</strong><br>
+							<p class="ticket-bg"><strong>Tickets</strong><br>
 							<a href="{{ $item->getTicketlink() }}">Tickettoaster</a></p>
 						@endif
 
