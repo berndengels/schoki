@@ -374,7 +374,7 @@ nav a {
     &:hover {
         //background-color: cornsilk;
         transition: background-color 500ms ease-in-out;
-        background: cornsilk url("/img/line-004.svg") no-repeat center bottom;
+        background: rgba(195, 69, 53, 0.3) url("/img/line-004.svg") no-repeat center bottom;
     }
 }
 
@@ -397,6 +397,22 @@ nav a {
         padding-right: 0 !important;
         padding-left: 0 !important;
     }
+}
+.ticket-btn {
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    background: black;
+    color: white;
+    width: 50%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    &:hover {
+        background: #c34535;
+        color: white;
+    }
+    transition: background-color 200ms ease-in-out;
 }
 
 nav.navbar {
@@ -547,7 +563,8 @@ pre {
     --bs-pagination-disabled-bg: transparent;
     --bs-pagination-disabled-border-color: none;
 
-    font-width: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin: 3rem 0 5rem;
     justify-content: center;
     background: transparent url("/img/tickets.svg") no-repeat center center;

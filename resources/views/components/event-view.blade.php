@@ -80,8 +80,7 @@
 				<div class="col-sm-3">
 					<div class="event-facts">
 						@if($item->getTicketlink())
-							<p><strong>Tickets</strong><br>
-							<a href="{{ $item->getTicketlink() }}">Tickettoaster</a></p>
+							<a role="button" class="d-block ticket-btn py-2 mb-4" href="{{ $item->getTicketlink() }}">Tickets</a>
 						@endif
 
 						@if($item->getSubtitle())
