@@ -42,7 +42,7 @@
         "barryvdh/laravel-ide-helper": "^2.15",
         "fakerphp/faker": "*",
         "laravel/dusk": "*",
-        "laravel/envoy": "*",
+        "laravel/envoy": "^2.10",
         "laravel/telescope": "*",
         "mockery/mockery": "*",
         "nunomaduro/collision": "*",
