@@ -1,7 +1,11 @@
-@servers(['schokitest' => 'schoki@schokoladen-mitte.de','prod' => 'schoki@schokoladen-mitte.de','test' => 'goldenacker@goldenacker.de'])
+@servers([
+	'schokitest' => 'schoki@schokoladen-mitte.de',
+	'prod' => 'schoki@schokoladen-mitte.de',
+	'staging' => 'goldenacker@goldenacker.de'
+])
 
-@task('test', ['on' => 'test'])
-echo "testing...";
+@task('staging', ['on' => 'staging'])
+echo "staging on goldenacker...";
 cd ./schoki.goldenacker.de
 pwd
 git pull origin frontend
