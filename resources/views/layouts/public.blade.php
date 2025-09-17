@@ -29,24 +29,17 @@
         @include('debug.bootstrap.display')
     @endif
 
-    <div class="container">
-        <div class="header">
-            @section('header')
-                @include('public.templates.topNavigation')
-            @show
-            @yield('header-content')
-        </div>
+    <div class="header fixed-top">
+        @section('header')
+            @include('public.templates.topNavigation')
+        @show
+        @yield('header-content')
     </div>
 
-    <div class="container- -fluid" style="">
-        <div class="main">
-            @yield('content') <!-- contentNew -->
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                Button with data-bs-target
-            </button>
-        </div>
-        @yield('sidebarRight')
+    <div class="main">
+        @yield('content') <!-- contentNew -->
     </div>
+    @yield('sidebarRight')
 
     <div class="footer row">
         @section('bottom-navigation')

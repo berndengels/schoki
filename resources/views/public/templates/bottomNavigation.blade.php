@@ -1,11 +1,11 @@
 <div id="bottom-navigation">
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0 m-0">
-        <a class="navbar-brand" href="#"></a>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0">
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse m-0 p-0" id="bottomNavbar">
+        <div class="collapse navbar-collapse m-0 py-2 px-4" id="bottomNavbar">
             <ul class="navbar-nav me-auto p-0">
                 @foreach ($bottomMenu as $item)
                 <li class="nav-item p-0 m-0 @if($item->children->count()) dropup @endif">
@@ -25,7 +25,7 @@
                             @endforeach
                         </div>
                     @else
-                        <a class="nav-link p-0 mt-2 me-3" href="{{ $item->url }}" aria-haspopup="false" @if('link' === $item->menuItemType->type) target="_blank" @endif>
+                        <a class="nav-link" href="{{ $item->url }}" aria-haspopup="false" @if('link' === $item->menuItemType->type) target="_blank" @endif>
                             @if($item->icon)
                                 @if(false === strrpos($item->icon,'.'))
                                     <ion-icon name="{{ $item->icon }}" title="{{ $item->name }}"></ion-icon>
@@ -42,6 +42,7 @@
                 </li>
                 @endforeach
             </ul>
+            <span class="navbar-text pr-4">Ackerstraße 169, 10115 Berlin-Mitte</span>
         </div>
     </nav>
 </div>
