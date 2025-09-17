@@ -179,20 +179,6 @@ Route::group([
 	Route::get('/cache/clear', 'Admin\CacheController@clear')->name('service.cacheClear');
     Route::get('/cache/forget/{key}', 'Admin\CacheController@forget')->name('service.cacheForget');
 	Route::get('/phpinfo','Admin\ServiceController@phpinfo' )->name('phpinfo');
-/*
-	Route::get('/git_pull', function() {
-		echo '<pre>';
-		putenv( 'COMPOSER_ALLOW_XDEBUG=1' );
-		putenv( 'COMPOSER_DISABLE_XDEBUG_WARN=1' );
-		$npm = getenv('NPM');
-		$npmCmd = "$npm run prod";
-		echo 'Pull new changes:' . PHP_EOL;
-		echo shell_exec( 'git pull 2>&1' );
-		echo $npmCmd . PHP_EOL;
-		echo shell_exec( $npmCmd ) . PHP_EOL;
-		echo '</pre>';
-	})->name('git_pull');
-*/
 	Route::group([
 		'prefix' => 'menus',
 	], function () {
