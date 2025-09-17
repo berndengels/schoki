@@ -5,30 +5,6 @@
 /**
 * @var $item EventEntity
 */
-
-	if (! function_exists('trim_url_to_domain')) {
-		/**
-		 * Extract only the domain from a given URL.
-		 *
-		 * @param string $url
-		 * @return string|null
-		 */
-		function trim_url_to_domain(string $url): ?string
-		{
-			$url = trim($url);
-
-			// Ensure it has a scheme, otherwise parse_url may fail
-			if (! preg_match('~^https?://~i', $url)) {
-				$url = "http://{$url}";
-			}
-
-			$host = parse_url($url, PHP_URL_HOST);
-
-			// Remove "www." if you want cleaner output
-			return $host ? preg_replace('/^www\./', '', $host) : null;
-		}
-	}
-
 @endphp
 
 <div class="container">
@@ -95,10 +71,7 @@
 							<p class="mb-0"><strong>Links</strong></p>
 							<p class="event-links">
 								@foreach($item->getLinksArray() as $link)
-									@php
-										$shorturl = trim_url_to_domain($link);
-									@endphp
-									<a href="{{ $link }}" target="_blank" class="d-block" title="{{ $link }}">{{ $shorturl }}</a>
+									<a href="{{ $link }}" target="_blank" class="d-block" title="{{ $link }}">{{ trimUrlToDomain($link) }}</a>
 								@endforeach
 							</p>
 						@endif
