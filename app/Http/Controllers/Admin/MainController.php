@@ -102,9 +102,7 @@ class MainController extends Controller
 	{
         if(!config('event.useCache')) {
             $actualEvents = Event::allActual()->get();
-			dd('useCache');
         } else {
-			dd('dont useCache');
             $actualEvents = Cache::remember($this->cacheEventKey, 3600, function() {
                 return Event::allActual()->get();
             });
