@@ -167,6 +167,9 @@ nav a {
         }
     }
 
+    @include media-breakpoint-up(sm) {
+
+    }
     .navbar:hover .blog-header-logo {
         background: url("/img/schokoladen-logo-spitting-cow-spit.svg") center center no-repeat;
     }
@@ -191,8 +194,20 @@ nav a {
         .nav-item {
             .nav-link {
                 color: white;
-                font-size: 1rem;
+                font-size: 0.875rem;
+                @include media-breakpoint-up(md) {
+                    font-size: 1rem;
+                }
                 font-weight: 400;
+                .icn {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        .navbar-text {
+            font-size: 0.875rem;
+            @include media-breakpoint-up(md) {
+                font-size: 1rem;
             }
         }
     }

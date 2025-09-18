@@ -1,12 +1,12 @@
 <div id="bottom-navigation">
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-black p-0">
+    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-black px-2 px-lg-4">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse m-0 py-2 px-4" id="bottomNavbar">
-            <ul class="navbar-nav me-auto p-0">
+        <div class="collapse navbar-collapse m-0" id="bottomNavbar">
+            <ul class="navbar-nav align-items-center me-auto p-0">
                 @foreach ($bottomMenu as $item)
                 <li class="nav-item p-0 m-0 @if($item->children->count()) dropup @endif">
                     @if($item->children->count())
@@ -42,7 +42,7 @@
                 </li>
                 @endforeach
             </ul>
-            <span class="navbar-text pr-4">Ackerstraße 169, 10115 Berlin-Mitte</span>
+            <span class="d-none d-sm-block navbar-text">Ackerstraße 169, 10115 Berlin-Mitte</span>
         </div>
     </nav>
 </div>
