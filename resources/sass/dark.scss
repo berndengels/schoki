@@ -1,436 +1,473 @@
 // Fonts/Icons
 // see media queries: https://include-media.com/
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap');
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+@import  url('../fonts/nohemi/nohemi.css');
 
 // Variables
 @import 'variables';
 @import 'mixins';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-//@import 'bootstrap';
 @import '~include-media/dist/_include-media';
 
-html, body {
-    height: 100vh;
-    font-family: $font-family-sans-serif;
-    font-weight: 200;
-    margin: 0;
-    background-color: $body-bg-dark;
-}
+/*
+Breakpoints xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px
 
-.background_right {
-    position: fixed;
-    clear: both;
-    top: 70px;
-    right: 20px;
-    width: auto;
-    height: auto;
-    max-height: 80%;
-    opacity: 0.6;
-    z-index: 10;
-    img {
-        display: flex;
-    }
-    @include media("<tablet") {
-        display: none;
-    }
+@media (min-width: 576px) {}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+*/
+
+html, body {
+    font-family: $font-family-sans-serif;
+    font-weight: normal;
+    margin: 0;
+    background: white url("/img/bg-black-edit.svg") repeat fixed;
 }
 
 .container {
-    //position: fixed;
-    height: auto;
-    min-height: 100%;
-    background-color: $body-bg-dark;
-//    background-image: url("/img/house.jpg");
-    background-image: url("/img/power/batcow_bg_transp.png");
-    background-position: center 70px;
-    background-repeat: no-repeat;
-    background-size: 65%;
-    background-attachment: fixed;
-
-    @include media("<tablet") {
-        background-position-y: 55px;
+    max-width: 1440px;
+}
+.main {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    @media (min-width: 768px) {
+        margin-top: 8.625rem;
     }
-    .events-header {
-        color: #ffeb00;
+}
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    @include media-breakpoint-up(md) {
+        font-size: 2.25rem;
     }
-    .card {
-        margin-top: 20px;
-        background-color: transparent;
-        border-radius: 20px;
-
-        .card-header {
-            background: linear-gradient( #000, rgba(100, 100, 100, 0.7) );
-            color: $sFontColor;
-        }
-        .card-body {
-            color: $sFontColor;
-            form {
-                a.btn-link {
-                    color: $sYellow;
-                }
-            }
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
     }
-    .footer {
-        .pager {
-            position: fixed;
-            bottom: 8px;
-            right: 10px;
-            @include media("<tablet") {
-                left: 10px;
-                right: auto;
-                max-width: 50%;
-            }
-            border: 1px solid yellow;
-        }
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+    }
+}
+h2 {
+    font-size: 3.25rem;
+    font-size: clamp(24px, 20px + 1vw, 52px);
+}
+.date {
+    br {
+        display: none;
+        @media (min-width: 768px) { display: block; }
+    }
+}
+
+.date .h3 {
+    font-size: 3rem;
+    font-size: clamp(24px, 20px + 1vw, 52px);
+    font-weight: 700;
+}
+a { color: black; }
+.fwb { font-weight: 700; }
+
+nav a {
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 700;
+}
+.nav-link {
+    display: block;
+    padding: .5rem .5rem;
+}
+
+.display-5 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.display-6 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+.display-7 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.display-8 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.header {
+    padding: 1rem 0 1rem 0;
+    height: 135px;
+    background: white url("/img/line-004.svg") no-repeat center bottom;
+}
+
+#top-navigation {
+    .navbar-nav {
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-padding-y: 0.5rem;
+        --bs-nav-link-font-weight: ;
+        --bs-nav-link-color: var(--bs-black);
+        --bs-nav-link-hover-color: #c34535;
+        --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: #c34535;
     }
 
-    .content {
-        color: $sFontColor;
-        display: flex;
-        height: auto;
-        margin-top: 60px;
-        min-height: 100vh;
-        padding: 10px 0 20px 0;
-
-        .page {
-            h3 {
-                color: inherit;
-            }
-            .page-body {
-                color: inherit !important;
-                font-family: $font-family-sans-serif !important;
-                *:not(a) {
-                    color: inherit !important;
-                    font-family: $font-family-sans-serif !important;
-                }
-                a {
-                    color: $sYellow;
-                }
-            }
-        }
-        .static-page {
-            #map {
-                height: 60%;
-                border: 1px solid #7adddd;
-            }
-        }
-        .eventContainer {
-            .event {
-                float: left;
-                clear: none;
-                height: auto;
-                padding: 0;
-                margin: 0;
-
-                .eventContent {
-                    float: left;
-                    clear: both;
-                    height: auto;
-                    min-height: 100px;
-                    padding: 0;
-                    border: 1px solid #666;
-                    border-radius: 10px;
-                    border-bottom-left-radius: 0;
-                    background-color: #000;
-                    color: #fff;
-                    overflow: hidden;
-                    .collapseToggle {
-                        color: #fff;
-                        .eventHeader {
-                            position: relative;
-                            float: left;
-                            clear: none;
-                            height: auto;
-                            min-height: 100px;
-//                            max-height: 150px;
-                            padding: 0;
-                            margin: 0;
-                            background: linear-gradient( #000, rgba(100, 100, 100, 0.7) );
-                            border-bottom-right-radius: 10px;
-                            .subHeader {
-                                color: #00ffe0;
-                                font-weight: bold;
-
-                                @include media("<tablet") {
-                                    font-size: 80%;
-                                }
-                                .category {
-                                    display: inline-block;
-                                    float: right;
-                                    clear: none;
-                                    color: #f00;
-                                    font-weight: bold;
-                                    letter-spacing: 0.2rem;
-                                    text-transform: uppercase;
-                                    ion-icon {
-                                        display: inline-block;
-                                        font-size: 0.9rem;
-                                        font-weight: bold;
-                                        color: inherit;
-                                        vertical-align: middle;
-                                        margin: -3px -1px 0 0;
-                                    }
-                                }
-                            }
-                            .theme {
-                                h7 {
-                                    color: $sYellow;
-                                }
-                            }
-                            .title {
-                                div {
-                                    margin: 0;
-                                    padding: 5px 5px 0 10px;
-                                    color: $sFontColor;
-/*
-                                    @include media("<desktop") {
-                                        font-size: 100%;
-                                    }
-*/
-                                    @include media("<tablet") {
-                                        font-size: 80%;
-                                    }
-                                }
-
-                                div.subtitle {
-                                    font-size: 90%;
-                                    @include media("<tablet") {
-                                        font-size: 70%;
-                                    }
-                                }
-                            }
-                            .header-buttons {
-                                position: absolute;
-                                bottom: 0;
-                                right: 0;
-                                padding: 0 5px 0 0;
-                                margin: 0;
-                                a.ticketlink, button.btn-toggle {
-                                    display: inline-block;
-                                    height: 1.5rem;
-                                    margin: 0 -10px 0 0;
-                                    color: #fff;
-                                    border-right: none;
-                                    border-bottom: none;
-                                    font-weight: bold;
-                                    border-top-left-radius: 10px;
-                                    border-top-right-radius: 0;
-                                    border-bottom-left-radius: 0;
-                                }
-                                a.ticketlink {
-                                    padding: 0 15px 0 10px;
-                                    border: 1px solid #f70;
-                                    background-color: #f70;
-                                    ion-icon[name=ticket] {
-                                        margin-bottom: -3px;
-                                    }
-                                }
-                                a.ticketlink:hover {
-                                    text-decoration: none;
-                                    border: 1px solid #f00;
-                                    background-color: #f00;
-                                }
-                                button.btn-toggle {
-                                    padding: 0 10px 0 10px;
-                                    border-bottom-right-radius: 10px;
-                                    border: 1px solid #090;
-                                    background-color: #090;
-                                }
-                                button.btn-toggle:hover {
-                                    color: $sYellow;
-                                }
-                                button.btn-toggle {
-                                    &.on {
-                                        border: 1px solid #f00;
-                                        background-color: #f00;
-                                    }
-                                    &.off {
-                                        border: 1px solid #090;
-                                        background-color: #090;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .loaderWrapper {
-                        height: 100%;
-                        width: 100%;
-                        vertical-align: middle;
-                        img.loader {
-                            width: 80px;
-                            height: 80px;
-                            margin: auto;
-                            margin-top: 10px;
-                        }
-                    }
-                    .eventBody {
-                        width: 100%;
-                        height: auto;
-                        float: left;
-                        clear: left;
-                        padding: 0;
-                        margin: 10px 0 0 0;
-                        overflow: hidden;
-                        div.subtitle {
-                            color: #fff;
-                        }
-                        div.promoter {
-                            color: #fff;
-                        }
-                        div.dj {
-                            color: #fff;
-                        }
-                        .text {
-                            color: $sFontColor;
-                            font-size: 100%;
-                            img {
-                                width: auto;
-                                height: auto;
-                                max-width: 100%;
-                            }
-                        }
-                        .links {
-                            @include media("<tablet") {
-                                font-size: 80%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        form {
-            .g-recaptcha {
-                float: right;
-                clear: none;
-                _margin-top: -10px;
-            }
-            .captcha-error {
+    .navbar-nav {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .navbar {
+        padding: 0 1rem;
+        @media (min-width: 768px) { padding: 0.5rem 0; }
+        .nav-item {
+            .nav-link {
+                text-transform: capitalize;
                 font-size: 1.5rem;
+                font-weight: 700;
+                vertical-align: middle;
+                color: black;
+                text-decoration: none;
+
+                ion-icon {
+                    font-size: 1.5rem;
+                }
+
+                i {
+                    margin-right: 0.5rem;
+                }
             }
         }
-
-        .sidebar-right {
-            position: fixed;
-            right: 100px;
-
-            @include media("<desktop") {
-                display: none;
+        .navbar-brand {
+            transition: transform .2s;
+            font-size: 2.725rem;
+            font-weight: 700;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-right: 0;
+            color: black;
+            &:hover {
+                color: black;
             }
+            img {
+                width: auto;
+                height: 45px;
+                @media (min-width: 375px) { height: 50px; }
+                @media (min-width: 768px) {}
+                @media (min-width: 992px) {}
+                @media (min-width: 1200px) { height: 90px; }
+            }
+        }
+    }
+    .navbar-collapse {
+        text-align: center;
+        &.show .navbar-nav {
+//            height: calc(100dvh - 135px);
+        }
+    }
+    .navbar:hover .blog-header-logo {
+        background: url("/img/schokoladen-logo-spitting-cow-spit.svg") center center no-repeat;
+    }
+    .navbar:hover .navbar-brand {
+        transform: scale(1.2) rotate(-7deg);
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml; charset=utf-8, <svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <path stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    .navbar-toggler {
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+}
 
-            .header {
-                span {
-                    display: inline-block;
-                    vertical-align: middle;
-                    font-size: 2.0rem;
-                    font-weight: bold;
-                    color: $sYellow;
+#bottom-navigation {
+    .navbar {
+        .nav-item {
+            .nav-link {
+                color: white;
+                font-size: 0.875rem;
+                @include media-breakpoint-up(md) {
+                    font-size: 1rem;
                 }
-                ion-icon {
-                    display: inline-block;
-                    font-size: 2.0rem;
-                    color: $sYellow;
-                    vertical-align: middle;
-                    margin: -3px 5px 0 0;
+                font-weight: 400;
+                .icn {
+                    font-size: 1.25rem;
                 }
             }
-
-            .zabuto_calendar {
-                width: 80%;
-                min-width: 280px;
-                max-width: 100%;
-                height: auto;
-                margin-top: 5px;
-                border: 2px solid #666;
-                border-radius: 15px;
-                box-shadow: 5px 5px 10px rgba(100,100,100, 0.7);
-                table {
-                    width: 100%;
-                    border: none;
-                    border-collapse: collapse;
-
-                    tr {
-                        border: none;
-
-                        td, th {
-                            background-color: transparent;
-                            color: $sFontColor;
-                            font-weight: 400;
-                            font-size: 100%;
-                            border: none;
-                        }
-                        td {
-                            border: 1px solid #666;
-                            .badge {
-                                font-size: 100%;
-                            }
-                            .badge-event {
-                                color: #fff;
-                                border: 1px solid #fff;
-                                background-color: transparent;
-                            }
-                            .today {
-                                .badge {
-                                    font-size: 100%;
-                                }
-                                .badge-event {
-                                    color: #fff;
-                                    font-weight: bold;
-                                    background-color: #f00;
-                                }
-                            }
-
-                        }
-                    }
-
-                    .calendar-month-header {
-                        padding: 0;
-                        margin: 0;
-                        td {
-                            border: none;
-                            padding-top: 10px;
-                            margin: 0;
-                            span {
-                                padding: 0;
-                                margin: 0;
-                                line-height: 1;
-                            }
-                            .calendar-month-navigation {
-                                padding: 0;
-                                margin: 0;
-                                ion-icon {
-                                    font-size: 150%;
-                                }
-                            }
-                        }
-                    }
-                    .calendar-dow-header {
-                        th {
-                            background-color: #000;
-                            color: $sFontColor;
-                        }
-                    }
-                }
+        }
+        .navbar-text {
+            font-size: 0.875rem;
+            @include media-breakpoint-up(md) {
+                font-size: 1rem;
             }
         }
     }
 }
+
+/*
+.marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+}
+.event:nth-child(odd) {
+    .marquee {
+        &:hover .marquee__content {
+            @media (min-width: 769px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+        .marquee__content {
+            @media (max-width: 768px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+    }
+}
+.event:nth-child(even) {
+    .marquee {
+        &:hover .marquee__content {
+            @media (min-width: 769px) {
+                animation: scroll 25s linear infinite;
+            }
+        }
+        .marquee__content {
+            @media (max-width: 768px) {
+                animation: scroll 25s linear infinite reverse;
+            }
+        }
+    }
+}
+.marquee:hover .marquee__content {
+    //animation: scroll 25s linear infinite;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+*/
+
+.info {
+    //border: 1px solid black;
+    font-size: 1.2rem;
+}
+
+.promoter, .category, .subtitle {
+    color: #c34535;
+    font-size: 1rem;
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) { font-size: 1.125rem; }
+    @media (min-width: 1200px) { font-size: 1.25rem; }
+}
+.ribbon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    text-align: right;
+    @media (max-width: 576px) {
+        transform: scale(50%);
+        transform-origin: top right;
+    }
+}
+.ribbon span {
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 35px;
+    transform: rotate(45deg);
+    width: 275px;
+    display: block;
+    background: #c34535;
+    position: absolute;
+    top: 44px;
+    right: -75px;
+    letter-spacing: 2px;
+}
+.ticket-bg {
+    background: transparent url("/img/tickets.svg") no-repeat center center;
+    overflow: visible;
+}
+.tickets {
+    margin-top: -10px;
+    overflow: visible;
+    //position: absolute;
+    //width: 140px;
+    z-index: 1;
+
+    span {
+        color: white;
+        font-size: 1rem;
+        @media (min-width: 576px) {  }
+        @media (min-width: 768px) {  }
+        @media (min-width: 992px) { font-size: 1.125rem; }
+        @media (min-width: 1200px) { font-size: 1.5rem; }
+    }
+}
+.torn {
+    height: 4px;
+    top: 100px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    background-color: black;
+    filter: url(#combined);
+    z-index: 1040;
+}
+
+.event {
+    position: relative;
+    background: transparent url("/img/line-004.svg") no-repeat center bottom;
+    background-color: transparent;
+    transition: background-color 500ms ease-in-out;
+    padding: 2rem 0;
+    border-bottom: 3px solid black;
+
+    .preview_img {
+        display: none !important;
+        opacity: 0;
+        transition: opacity .3s ease, display .3s ease allow-discrete;
+
+        &.show {
+            opacity: 1;
+            display: inline-block;
+            position: absolute;
+            top: -50%;
+            right: 4rem;
+        }
+    }
+
+    @starting-style {
+        .preview_img.show {
+            opacity: 0;
+        }
+    }
+    &:hover {
+        //background-color: cornsilk;
+        transition: background-color 500ms ease-in-out;
+        background: rgba(195, 69, 53, 0.3) url("/img/line-004.svg") no-repeat center bottom;
+    }
+}
+
+.event {
+    .info {
+        font-size: 1rem !important;
+    }
+}
+.event-description, .event-facts {
+    //p > br { display: none; }
+    font-size: 1rem;
+    letter-spacing: 0.0275rem;
+    font-weight: 400;
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) { font-size: 1.125rem; }
+    @media (min-width: 1200px) { font-size: 1.25rem; }
+
+    &.text.col-12.m-0.p-2 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    & iframe { width: 100%; }
+}
+.event-links { word-break: break-all; }
+
+.ticket-btn {
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    background: black;
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+        background: #c34535;
+        color: white;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 180px;
+        font-size: 1.5rem;
+    }
+    > span {
+        transform: translateY( 1px );
+    }
+}
+
+nav.navbar {
+    .dropdown-menu {
+        &.show {
+            box-shadow: 5px 5px 10px #000;
+            z-index: 10000;
+            .dropdown-item {
+                color: $sFontColor;
+            }
+            .dropdown-item:hover {
+                background-color: #f00;
+            }
+            @include media("<tablet") {
+                box-shadow: none;
+                background-color: #f00;
+                .dropdown-item {
+                    color: $sFontColor;
+                }
+                .dropdown-item:hover {
+                    background-color: #f00;
+                }
+            }
+        }
+    }
+    .nav-link {
+        img {
+            clear: none;
+            width: auto;
+            height: 20px;
+        }
+    }
+    .navbar-text { color: var(--bs-white); }
+}
+
 .img-responsive {
     display: inline-block;
 }
 a {
-    color: $sYellow;
+    //color: $sYellow;
+    text-decoration: none;
 }
 a:hover {
-    color: #ff0;
+    color: black;
+    text-decoration: none;
 }
 .pager {
     display: inline-flex;
@@ -452,7 +489,7 @@ a:hover {
             }
             span {
                 color: #fff;
-                font-weight: bold;
+                font-weight: 800;
             }
         }
     }
@@ -473,7 +510,7 @@ img {
                     position: absolute;
                     right: 10px;
                     top: 5px;
-                    font-weight: bold;
+                    font-weight: 800;
                     color: $sFontColor;
                 }
             }
@@ -504,68 +541,7 @@ img {
         }
     }
 }
-nav.navbar {
-    &.bg-black {
-        background-color: #000 !important;
-    }
-    &.navbar-dark {
-        .nav-item {
-            .nav-link {
-                vertical-align: middle;
-                color: $sFontColor;
-                ion-icon {
-                    font-size: 1.5rem;
-                }
-                i {
-                    margin-right: 0.5rem;
-                }
-            }
-        }
-    }
-    .dropdown-menu {
-        &.show {
-            box-shadow: 5px 5px 10px #000;
-            background-color: #000;
-            z-index: 10000;
-            .dropdown-item {
-                color: $sFontColor;
-            }
-            .dropdown-item:hover {
-                background-color: #900;
-            }
-            @include media("<tablet") {
-                box-shadow: none;
-                background-color: $sRed;
-                .dropdown-item {
-                    color: $sFontColor;
-                }
-                .dropdown-item:hover {
-                    background-color: #900;
-                }
-            }
-        }
-    }
-    .navbar-brand {
-        img {
-            width: auto;
-            height: 40px;
-            @include media("<=tablet") {
-                max-height: 18px;
-            }
 
-        }
-        img:last-child {
-            margin-left: 10px;
-        }
-    }
-    .nav-link {
-        img {
-            clear: none;
-            width: auto;
-            height: 20px;
-        }
-    }
-}
 .embed-responsive-wrapper {
     margin: 0 -10px 0 -10px;
     padding: 0;
@@ -574,25 +550,51 @@ pre {
     color: #fff;
 }
 .pagination {
-    background-color: #000;
+    --bs-pagination-font-size: 1.4rem;
+    --bs-pagination-color: var(--bs-black);
+    --bs-pagination-bg: transparent;
+    --bs-pagination-border-width: 0;
+    --bs-pagination-border-color: transparent;
+    --bs-pagination-border-radius: 0;
+    --bs-pagination-hover-color: #c34535;
+    --bs-pagination-hover-bg: tranparent;
+    --bs-pagination-hover-border-color: none;
+    --bs-pagination-focus-color: black;
+    --bs-pagination-focus-bg: none;
+    --bs-pagination-focus-box-shadow: none;
+    --bs-pagination-active-color: #c34535;
+    --bs-pagination-active-bg: transparent;
+    --bs-pagination-active-border-color: transparent;
+    --bs-pagination-disabled-color: #999;
+    --bs-pagination-disabled-bg: transparent;
+    --bs-pagination-disabled-border-color: none;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 3rem 0 5rem;
+    justify-content: center;
+    //background: transparent url("/img/tickets.svg") no-repeat center center;
+    overflow: visible;
+
     margin-left: 0;
     li {
         margin-left: 0;
         &.page-item {
+            font-size: 1.4rem;
             .page-link {
-                background-color: #000;
-                color: #fff;
-                border: 1px solid #666;
+                //background-color: #000;
+                //color: #000;
+                //border: 1px solid #666;
             }
             &.disabled {
                 .page-link {
-                    color: #999;
+                    //color: #999;
                 }
             }
             &.active {
                 .page-link {
-                    background-color: #f00;
-                    color: #fff;
+                    //background-color: transparent;
+                //color: #f00;
                 }
             }
         }
@@ -601,7 +603,7 @@ pre {
 .imageWrapper {
     background-color: transparent;
     img {
-        height: 300px;
+        //height: 300px;
         @include media("<tablet") {
             height: auto;
             max-width: 100%;
@@ -610,7 +612,7 @@ pre {
 }
 .carousel {
     width: 100%;
-    height: 300px !important;
+    height: auto !important;
     padding: 0;
     margin: 0;
     background-color: transparent;
@@ -629,8 +631,8 @@ pre {
         .carousel-item {
             clear: none;
             img {
-                height: 300px;
-                width: auto;
+                width: 100%;
+                height: auto;
                 clear: none;
                 z-index: 10000;
                 @include media("<tablet") {
@@ -643,56 +645,5 @@ pre {
                 text-shadow: 0 0 3px #f00, 0 0 5px #00f;
             }
         }
-    }
-}
-#bottomNavbar {
-    .navbar-nav {
-        .nav-item {
-            .nav-link {
-                i {
-                    &.icn {
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
-#calendar {
-    padding: 10px;
-    width: auto;
-    max-width: 400px;
-    .tblCalendar {
-        margin: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
-        thead {
-            tr {
-                &.zabuto-calendar__navigation {
-                    line-height: 3.0rem;
-                    td {
-                        font-size: 1.3rem;
-                    }
-                }
-                &.zabuto-calendar__days-of-week {
-                    line-height: 3.0rem;
-                    th {
-                        font-size: 1.3rem;
-                    }
-                }
-            }
-        }
-        tbody {
-            tr {
-                td, th {
-                    color: #fff;
-                    padding: 5px 5px;
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }
-    .calendar-event {
-        cursor: pointer;
     }
 }

@@ -1,142 +1,148 @@
 @php
-    use App\Models\Images, Carbon\Carbon;
-    $domID = $item->getDomId();
-    $eventDate = new Carbon($item->getEventDate());
+	use App\Models\Images, Carbon\Carbon, App\Entities\EventEntity;
+	$domID = $item->getDomId();
+	$eventDate = new Carbon($item->getEventDate());
+/**
+* @var $item EventEntity
+*/
 @endphp
-<div class="collapseToggle mbs">
-    <div class="eventHeader col-12">
-        <div class="subHeader m-0 p-0">
-            <span class="ms-2">{{ __($eventDate->format('l')) }}</span>
-            <span class="ms-1">{{ $eventDate->format('d.m.') }}</span>
-            <span class="ms-1">{{ $item->getEventTime() }} Uhr</span>
 
-            @if($item->getCategory())
-                <span class="category mr-1">
-                    @if($item->getCategory()->icon)
-                        <ion-icon name="{{ $item->getCategory()->icon }}"
-                                  title="{{ $item->getCategory()->name }}"></ion-icon>
-                    @endif
-                    {{ $item->getCategory()->name }}
-                </span>
-            @endif
-        </div>
+<div class="container gx-4 gx-md-5">
+		<div class="title position-relative">
+			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
+			<div class="d-flex flex-column flex-md-row">
+				<div class="date col-md-3 mb-0">
+					@if($item->getCategory())
+						<h6 class="category mt-2 mt-0-sm mb-1 mb-2-sm">
+						@if($item->getCategory()->icon)
+							<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
+						@endif
+						{{ $item->getCategory()->name }}
+               			</h6>
+					@endif
 
-        @if ($item->getTheme())
-            <div class="theme p-0 ms-2 m-0">
-                <h7>{{ $item->getTheme()->name }}</h7>
-            </div>
-        @endif
-
-        @if($item->getPromoter())
-            <div class="title m-0 p-0">
-                <div class="ms-2 p-0">
-                    Promoter: {{ $item->getPromoter() }}
-                </div>
-            </div>
-        @endif
-
-        <div class="title m-0 p-0">
-            <div class="ms-2 p-0">
-                {{ $item->getTitle() }}
-            </div>
-        </div>
-
-        <div class="header-buttons">
-            @if($item->getTicketlink())
-                <a class="ticketlink"
-                   role="button"
-                   title="zum Ticket Shop"
-                   target="_blank"
-                   href="{{ $item->getTicketlink() }}">
-                    <ion-icon name="ticket"></ion-icon>
-                    <span class="d-none d-md-inline-block">Tickets</span></a>
-            @endif
-            <button class="btn-toggle off"
-                    role="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#{{ $domID }}"
-                    aria-expanded="false"
-                    aria-controls="{{ $domID }}">open
-            </button>
-        </div>
-    </div>
+					<div class="fw-bold">
+						<p class="h3 mb-0" style="white-space: nowrap;">
+							<span class="">{{ __($eventDate->format('l')) }}</span><br />
+							<span class="">{{ $eventDate->format('d.m.') }}</span><br />
+							<span class="d-none">{{ $item->getEventTime() }} Uhr</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-9" style="overflow: hidden;">
+					@if ($item->getTheme())
+						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
+							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
+						</h6>
+					@else
+						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
+							<span class="promoter">{{ $item->getPromoter() }} &nbsp;</span>
+						</h6>
+					@endif
+					<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
+					@if ('' !== $item->getDj())
+						<h6 class="subtitle mt-2 mt-0-sm mb-1 mb-2-sm">{{ $item->getDj() }}</h6>
+					@endif
+				</div>
+			</div>
+			</a>
+		</div>
 </div>
 
-<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="eventBody collapse col-12 mt-0 pt-0">
-    @if($item->getImages()->count() === 1)
-        @php
-            /**
-            * @var $img Images
-            */
-            $img = $item->getImages()->first()
-        @endphp
-        <div class="col-12 text-center m-0 p-0 imageWrapper">
-            <img src="/media/images/{{ $img->internal_filename }}"
-                 class="mx-auto"
-                 width="{{ $img->displayWidth }}"
-                 height="{{ $img->displayHeight }}"
-                 title="{{ $img->title ?? 'Event Bild' }}"
-                 alt="{{ $img->title ?? 'Event Bild' }}"
-            >
-        </div>
-    @elseif ($item->getImages()->count() > 1 )
-        <div id="imgCarousel{{ $domID }}"
-             class="carousel slide text-center col-12"
-             data-bs-ride="carousel"
-             data-bs-interval="4000"
-        >
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                @foreach($item->getImages() as $index => $img)
-                    <li data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide-to="{{ $index }}"
-                        @if($index == 0) class="active" @endif></li>
-                @endforeach()
-            </ul>
+<div class="container gx-4 gx-md-5">
+	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
+		<div class="d-flex">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="event-facts">
+						@if($item->getTicketlink())
+							<a role="button" class="d-block ticket-btn py-2 mb-4" href="{{ $item->getTicketlink() }}"><span>Tickets</span></a>
+						@endif
 
-            <div class="carousel-inner text-center col-12 m-0 p-0">
-                @foreach($item->getImages() as $index => $img)
-                    <div class="carousel-item w-100 m-0 p-0 @if($index == 0) active @endif">
-                        <img src="{{ asset('media/images/' . $img->internal_filename) }}"
-                             class="mx-auto"
-                             width="{{ $img->displayWidth }}"
-                             height="{{ $img->displayHeight }}"
-                             title="{{ $img->title ?? 'Event Bild' }}"
-                             alt="{{ $img->title ?? 'Event Bild' }}"
-                        >
-                        @if('' != $img->title)
-                            <div class="carousel-caption">
-                                <h3>{{ $img->title }}</h3>
-                            </div>
-                        @endif
-                    </div>
-                @endforeach()
-            </div>
+						@if($item->getSubtitle())
+							<p><strong>Time</strong><br>
+							<span>{{ $item->getSubtitle() }}</span>
+						@else
+							<p><strong>Time</strong><br>
+							<span>Doors 19h / Show 20h</span>
+						@endif
 
-            <button type="button" class="carousel-control-prev" data-bs-target="#imgCarousel{{ $domID }}" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Zurück</span>
-            </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#imgCarousel{{ $domID }}" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Weiter</span>
-            </button>
-        </div>
-    @endif
+						@if ( $item->getLinksArray()->count() )
+							<p class="mb-0"><strong>Links</strong></p>
+							<p class="event-links">
+								@foreach($item->getLinksArray() as $link)
+									<a href="{{ $link }}" target="_blank" class="d-block" title="{{ $link }}">{{ trimUrlToDomain($link) }}</a>
+								@endforeach
+							</p>
+						@endif
+					</div>
+				</div>
 
-    @if ($item->getDj())
-        <div class="subtitle col-12 m-0 p-2">
-            <h6>{{ $item->getDj() }}</h6>
-        </div>
-    @endif
+				<div class="col-sm-9">
+					<div class="event-description">
+						{!! $item->getDescriptionSanitized() !!}
+					</div>
+				</div>
+				<div class="col-sm-9 offset-sm-3">
+					@if($item->getImages()->count() === 1)
+						@php
+							/**
+                            * @var $img Images
+                            */
+                            $img = $item->getImages()->first()
+						@endphp
+						<div class="m-0 p-0 imageWrapper">
+							<img src="/media/images/{{ $img->internal_filename }}"
+								 class="img-fluid"
+								 title="{{ $img->title ?? 'Event Bild' }}"
+								 alt="{{ $img->title ?? 'Event Bild' }}"
+							>
+						</div>
+					@elseif ($item->getImages()->count() > 1 )
+						<div id="imgCarousel{{ $domID }}"
+							 class="carousel slide carousel-fade"
+							 data-interval="false"
+						>
+							<!-- Indicators -->
+							<div class="carousel-indicators">
+								@foreach($item->getImages() as $index => $img)
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" @if($index == 0) class="active" aria-current="true"@endif aria-label="Slide {{ $index }}"></button>
+								@endforeach()
+							</div>
 
-    <div class="description text col-12 m-0 p-2">
-        {!! $item->getDescriptionSanitized() !!}
-    </div>
-    @if ( $item->getLinksArray()->count() )
-        <div class="links col-12 m-0 p-2">
-            @foreach($item->getLinksArray() as $link)
-                <a href="{{ $link }}" target="_blank">{{ $link }}</a><br>
-            @endforeach
-        </div>
-    @endif
+							<div class="carousel-inner">
+								@foreach($item->getImages() as $index => $img)
+									<div class="carousel-item @if($index == 0) active @endif">
+										<img src="/media/images/{{ $img->internal_filename }}"
+											 class="img-fluid"
+											 title="{{ $img->title ?? 'Event Bild' }}"
+											 alt="{{ $img->title ?? 'Event Bild' }}"
+										>
+										@if('' != $img->title)
+											<div class="carousel-caption">
+												<h3>{{ $img->title }}</h3>
+											</div>
+										@endif
+									</div>
+								@endforeach()
+							</div>
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button class="carousel-control-next" type="button" data-bs-target="#imgCarousel{{ $domID }}" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+
+						</div>
+					@endif
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+
