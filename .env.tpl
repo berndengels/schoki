@@ -9,8 +9,6 @@ LOG_CHANNEL=stack
 REDIRECT_HTTPS=true
 WEB_TERMINAL=false
 TELESCOPE_ENABLED=false
-COMPOSER="/usr/local/bin/composer"
-NPM="/usr/local/bin/npm"
 
 DB_CONNECTION=mysql
 DB_HOST=localhost
