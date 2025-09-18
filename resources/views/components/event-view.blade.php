@@ -7,7 +7,7 @@
 */
 @endphp
 
-<div class="container">
+<div class="container gx-4 gx-md-5">
 		<div class="title position-relative">
 			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
 			<div class="d-flex flex-column flex-md-row">
@@ -32,7 +32,7 @@
 				<div class="col-md-9" style="overflow: hidden;">
 					@if ($item->getTheme())
 						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
-							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }} {{ $item->getPromoter() }}</span>
+							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
 						</h6>
 					@else
 						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
@@ -49,14 +49,14 @@
 		</div>
 </div>
 
-<div class="container">
+<div class="container gx-4 gx-md-5">
 	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
 		<div class="d-flex">
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="event-facts">
 						@if($item->getTicketlink())
-							<a role="button" class="d-block ticket-btn py-2 mb-4" href="{{ $item->getTicketlink() }}">Tickets</a>
+							<a role="button" class="d-block ticket-btn py-2 mb-4" href="{{ $item->getTicketlink() }}"><span>Tickets</span></a>
 						@endif
 
 						@if($item->getSubtitle())
