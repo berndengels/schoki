@@ -1,5 +1,5 @@
 <div id="bottom-navigation">
-    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-black px-2 px-lg-4">
+    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-black py-1 px-2 px-lg-4">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
