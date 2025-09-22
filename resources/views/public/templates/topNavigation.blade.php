@@ -18,11 +18,11 @@
 @endphp
 
 <div id="top-navigation" class="container">
-    <nav class="navbar bg-white navbar-expand-md">
+    <nav class="navbar bg-white navbar-expand-lg">
         <a class="navbar-brand blog-header-logo text-decoration-none" href="/">
             <img src="{{ asset('img/schokoladen-logo-spitting-cow-01.svg') }}" height="90" alt="Schokoladen">
         </a>
-        <a class="ps-4 pe-4" href="/"><h1 class="m-0">Schokoladen Mitte</h1></a>
+        <a class="px-md-4" href="/"><h1 class="m-0">Schokoladen Mitte</h1></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

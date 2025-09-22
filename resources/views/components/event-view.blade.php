@@ -53,7 +53,7 @@
 	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
 		<div class="d-flex">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-md-3">
 					<div class="event-facts">
 						@if($item->getTicketlink())
 							<a role="button" class="d-block ticket-btn py-2 mb-4" href="{{ $item->getTicketlink() }}"><span>Tickets</span></a>
@@ -78,12 +78,12 @@
 					</div>
 				</div>
 
-				<div class="col-sm-9">
+				<div class="col-md-9">
 					<div class="event-description">
 						{!! $item->getDescriptionSanitized() !!}
 					</div>
 				</div>
-				<div class="col-sm-9 offset-sm-3">
+				<div class="col-md-9 offset-md-3">
 					@if($item->getImages()->count() === 1)
 						@php
 							/**
@@ -144,5 +144,3 @@
 		</div>
 	</div>
 </div>
-
-

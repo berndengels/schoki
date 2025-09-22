@@ -12,17 +12,19 @@
 @endsection
 
 @section('content')
-
-    <div class="static-page col-12">
-        <h3 class="page-header mt-2">Adresse</h3>
-        <div class="address col-12">
-            <span>Ackerstrasse 169, 10115 Berlin</span><br>
-            <span>Fon: 030 - 282 65 27</span><br>
-            <span>Email: <a href="mailto:info@schokoladen-mitte.de" target="_blank">info@schokoladen-mitte.de</a></span>
+    <div class="container">
+        <div class="row">
+            <div class="static-page col-12">
+                <h2 class="page-header mt-2">Adresse</h2>
+                <div class="address col-12">
+                    <span>Ackerstrasse 169, 10115 Berlin</span><br>
+                    <span>Fon: 030 - 282 65 27</span><br>
+                    <span>Email: <a href="mailto:info@schokoladen-mitte.de" target="_blank">info@schokoladen-mitte.de</a></span>
+                </div>
+                <div id="map" class="mt-2 col-12 col-md-6"></div>
+            </div>
         </div>
-        <div id="map" class="mt-2 col-12 col-md-6"></div>
     </div>
-
 @endsection
 
 @section('sidebar-right')

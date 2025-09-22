@@ -18,7 +18,7 @@
             <div class="event">
                 <x-event-view :item="$event" :index="$loop->index" />
             </div>
-        @endforeach
+         @endforeach
         <div class="pages">{{ $data->links() }}</div>
     @else
         <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
@@ -202,21 +202,4 @@
         });
     });*/
 </script>
-@endsection
-
-@section('svg-filters')
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
-        <defs>
-            <filter id="turbulence">
-                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
-            </filter>
-            <filter id="displacement">
-                <feDisplacementMap in="SourceGraphic" scale="4" />
-            </filter>
-            <filter id="combined">
-                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
-                <feDisplacementMap in="SourceGraphic" scale="4" />
-            </filter>
-        </defs>
-    </svg>
 @endsection

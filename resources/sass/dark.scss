@@ -15,12 +15,6 @@
 
 /*
 Breakpoints xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px
-
-@media (min-width: 576px) {}
-@media (min-width: 768px) {}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {}
-
 */
 
 html, body {
@@ -42,7 +36,10 @@ html, body {
 }
 h1 {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 1.7rem;
+    }
     @include media-breakpoint-up(md) {
         font-size: 2.25rem;
     }
@@ -100,9 +97,15 @@ nav a {
 }
 
 .header {
-    padding: 1rem 0 1rem 0;
-    height: 135px;
+    padding: 0.5rem 0 0.3125rem 0;
+    @include media-breakpoint-up(sm) {
+        padding: 1rem 0 0.625rem 0;
+    }
     background: white url("/img/line-004.svg") no-repeat center bottom;
+    border-bottom: 2px solid black;
+    @include media-breakpoint-up(xl) {
+        border-bottom: none;
+    }
 }
 
 #top-navigation {
@@ -123,7 +126,7 @@ nav a {
         font-weight: 700;
     }
     .navbar {
-        padding: 0 1rem;
+        //padding: 0 1rem;
         @media (min-width: 768px) { padding: 0.5rem 0; }
         .nav-item {
             .nav-link {
@@ -350,7 +353,10 @@ nav a {
     background-color: transparent;
     transition: background-color 500ms ease-in-out;
     padding: 2rem 0;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid black;
+    @include media-breakpoint-up(xl) {
+        border-bottom: none;
+    }
 
     .preview_img {
         display: none !important;
@@ -405,7 +411,7 @@ nav a {
     border: none;
     border-radius: 50px;
     text-align: center;
-    background: black;
+    background: #c34535;
     color: white;
     width: 100%;
     font-weight: 700;
@@ -413,7 +419,7 @@ nav a {
     letter-spacing: 0.05rem;
     transition: background-color 200ms ease-in-out;
     &:hover {
-        background: #c34535;
+        background: black;
         color: white;
     }
     @include media-breakpoint-up(lg) {
@@ -421,7 +427,10 @@ nav a {
         font-size: 1.5rem;
     }
     > span {
-        transform: translateY( 1px );
+        display: inline-block;
+        @include media-breakpoint-up(lg) {
+            transform: translateY(1px);
+        }
     }
 }
 
@@ -618,14 +627,14 @@ pre {
     background-color: transparent;
     overflow: hidden;
     @include media("<tablet") {
-        height: 200px !important;
+        //height: 200px !important;
     }
     .carousel-inner {
         height: 100%;
         white-space: nowrap;
         overflow: hidden;
         @include media("<tablet") {
-            height: 200px !important;
+            //height: 200px !important;
             max-width: 100%;
         }
         .carousel-item {
@@ -636,7 +645,7 @@ pre {
                 clear: none;
                 z-index: 10000;
                 @include media("<tablet") {
-                    height: 200px;
+                    //height: 200px;
                     max-width: 100%;
                 }
             }
