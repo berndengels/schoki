@@ -37,7 +37,7 @@
     </div>
 
     <div class="main">
-        @yield('content') <!-- contentNew -->
+        @yield('content')
     </div>
     @yield('sidebarRight')
 
@@ -49,7 +49,6 @@
     </div>
 
     @yield('inline-scripts')
-    @yield('svg-filters')
 
     @if(config('piwik.url'))
         @include('public.analytic.piwik')

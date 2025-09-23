@@ -5,8 +5,6 @@
 @section('extra-headers')
     <link rel="stylesheet" href="{{ mix('vendor/calendar@2/zabuto_calendar.min.css') }}">
     <script src="{{ mix('vendor/calendar@2/zabuto_calendar.min.js') }}"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 @endsection
 
 @section('header-content')
@@ -25,28 +23,10 @@
     @endif
 @endsection
 
-@section('contentBackup')
-    <div class="eventContainer col-sm-11- col-md-6- mt-1 ms-lg-4- m-4">
-        <h3 class="events-header d-block mb-4">Veranstaltungen</h3>
-        @if( $data->count() )
-            @foreach ($data as $event)
-                <div class="event col-12">
-                    <div class="eventContent mb-4">
-                        <x-event-view :item="$event" :index="$loop->index" />
-                    </div>
-                </div>
-            @endforeach
-            <div class="row ml-0 mt-2 ps-0">{{ $data->links() }}</div>
-        @else
-            <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
-        @endif
-    </div>
-@endsection
-
 @section('sidebarRight')
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCalendar" aria-labelledby="offcanvasCalendarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Event Kalender</h5>
+            <h4 class="offcanvas-title" id="offcanvasCalendarLabel">Event Kalender</h4>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">

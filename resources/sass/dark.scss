@@ -30,21 +30,22 @@ html, body {
 .main {
     margin-top: 5rem;
     margin-bottom: 2rem;
-    @media (min-width: 768px) {
-        margin-top: 8.625rem;
+    @include media-breakpoint-up(sm) {
+        margin-top: 5.625rem;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-top: 8.125rem;
     }
 }
 h1 {
+    transform: translateY(1px);
     font-weight: 700;
     font-size: 1.5rem;
     @include media-breakpoint-up(sm) {
-        font-size: 1.7rem;
-    }
-    @include media-breakpoint-up(md) {
         font-size: 2.25rem;
     }
     @include media-breakpoint-up(lg) {
-        font-size: 2.5rem;
+        font-size: 2.125rem;
     }
     @include media-breakpoint-up(xl) {
         font-size: 3rem;
@@ -127,7 +128,7 @@ nav a {
     }
     .navbar {
         //padding: 0 1rem;
-        @media (min-width: 768px) { padding: 0.5rem 0; }
+        @include media-breakpoint-up(md) { padding: 0.5rem 0; }
         .nav-item {
             .nav-link {
                 text-transform: capitalize;
@@ -161,9 +162,9 @@ nav a {
                 width: auto;
                 height: 45px;
                 @media (min-width: 375px) { height: 50px; }
-                @media (min-width: 768px) {}
-                @media (min-width: 992px) {}
-                @media (min-width: 1200px) { height: 90px; }
+                @include media-breakpoint-up(md) { height: 55px; }
+                @include media-breakpoint-up(lg) { height: 65px; }
+                @include media-breakpoint-up(xl) { height: 85px; }
             }
         }
     }
@@ -281,10 +282,10 @@ nav a {
 .promoter, .category, .subtitle {
     color: #c34535;
     font-size: 1rem;
-    @media (min-width: 576px) {}
-    @media (min-width: 768px) {}
-    @media (min-width: 992px) { font-size: 1.125rem; }
-    @media (min-width: 1200px) { font-size: 1.25rem; }
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) { font-size: 1.125rem; }
+    @include media-breakpoint-up(xl) { font-size: 1.25rem; }
 }
 .ribbon {
     position: absolute;
@@ -295,7 +296,7 @@ nav a {
     width: 150px;
     height: 150px;
     text-align: right;
-    @media (max-width: 576px) {
+    @include media-breakpoint-up(sm) {
         transform: scale(50%);
         transform-origin: top right;
     }
@@ -330,10 +331,10 @@ nav a {
     span {
         color: white;
         font-size: 1rem;
-        @media (min-width: 576px) {  }
-        @media (min-width: 768px) {  }
-        @media (min-width: 992px) { font-size: 1.125rem; }
-        @media (min-width: 1200px) { font-size: 1.5rem; }
+        @include media-breakpoint-up(sm) {  }
+        @include media-breakpoint-up(md) {  }
+        @include media-breakpoint-up(lg) { font-size: 1.125rem; }
+        @include media-breakpoint-up(xl) { font-size: 1.5rem; }
     }
 }
 .torn {
@@ -354,7 +355,7 @@ nav a {
     transition: background-color 500ms ease-in-out;
     padding: 2rem 0;
     border-bottom: 2px solid black;
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
         border-bottom: none;
     }
 
@@ -394,10 +395,10 @@ nav a {
     font-size: 1rem;
     letter-spacing: 0.0275rem;
     font-weight: 400;
-    @media (min-width: 576px) {}
-    @media (min-width: 768px) {}
-    @media (min-width: 992px) { font-size: 1.125rem; }
-    @media (min-width: 1200px) { font-size: 1.25rem; }
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) { font-size: 1.125rem; }
+    @include media-breakpoint-up(xl) { font-size: 1.25rem; }
 
     &.text.col-12.m-0.p-2 {
         padding-right: 0 !important;

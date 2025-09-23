@@ -8,17 +8,17 @@
 @endphp
 
 <div class="container gx-4 gx-md-5">
-		<div class="title position-relative">
-			<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
+	<div class="title position-relative">
+		<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
 			<div class="d-flex flex-column flex-md-row">
 				<div class="date col-md-3 mb-0">
 					@if($item->getCategory())
 						<h6 class="category mt-2 mt-0-sm mb-1 mb-2-sm">
-						@if($item->getCategory()->icon)
-							<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
-						@endif
-						{{ $item->getCategory()->name }}
-               			</h6>
+							@if($item->getCategory()->icon)
+									<?php /* <ion-icon name="{{ $item->getCategory()->icon }}" title="{{ $item->getCategory()->name }}"></ion-icon> */ ?>
+							@endif
+							{{ $item->getCategory()->name }}
+						</h6>
 					@endif
 
 					<div class="fw-bold">
@@ -45,8 +45,8 @@
 					@endif
 				</div>
 			</div>
-			</a>
-		</div>
+		</a>
+	</div>
 </div>
 
 <div class="container gx-4 gx-md-5">
@@ -61,13 +61,13 @@
 
 						@if($item->getSubtitle())
 							<p><strong>Time</strong><br>
-							<span>{{ $item->getSubtitle() }}</span>
+								<span>{{ $item->getSubtitle() }}</span>
 						@else
 							<p><strong>Time</strong><br>
-							<span>Doors 19h / Show 20h</span>
+								<span>Doors 19h / Show 20h</span>
 						@endif
 
-						@if ( $item->getLinksArray()->count() )
+						@if ( $item->getLinksArray()->isNotEmpty() && $item->getLinksArray()->filter()->isNotEmpty() )
 							<p class="mb-0"><strong>Links</strong></p>
 							<p class="event-links">
 								@foreach($item->getLinksArray() as $link)
@@ -106,7 +106,7 @@
 							<!-- Indicators -->
 							<div class="carousel-indicators">
 								@foreach($item->getImages() as $index => $img)
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" @if($index == 0) class="active" aria-current="true"@endif aria-label="Slide {{ $index }}"></button>
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" @if($index == 0) class="active" aria-current="true" @endif aria-label="Slide {{ $index }}"></button>
 								@endforeach()
 							</div>
 

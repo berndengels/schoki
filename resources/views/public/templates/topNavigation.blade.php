@@ -28,8 +28,9 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="topNavbar">
-            <ul class="navbar-nav">
-                <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Calendar</a>
+            <ul class="navbar-nav pt-5 pb-4 pt-lg-2 pb-lg-0">
+
+                <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasCalendar" role="button" aria-controls="offcanvasCalendar">Calendar</a>
                 @foreach ($topMenu as $item)
                     @if($item->children->count() > 0)
                         <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->id }}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ms-2 sr-only">(current)</span></a>
