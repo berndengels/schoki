@@ -11,7 +11,7 @@
 	<div class="title position-relative">
 		<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
 			<div class="d-flex flex-column flex-md-row">
-				<div class="date col-md-3 mb-0">
+				<div class="event-date col-md-3 mb-0">
 					@if($item->getCategory())
 						<h6 class="category mt-2 mt-0-sm mb-1 mb-2-sm">
 							@if($item->getCategory()->icon)
@@ -29,7 +29,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-9" style="overflow: hidden;">
+				<div class="col-md-9 event-header" style="overflow: hidden;">
 					@if ($item->getTheme())
 						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
 							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
@@ -50,7 +50,7 @@
 </div>
 
 <div class="container gx-4 gx-md-5">
-	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="info mt-5 collapse">
+	<div id="{{ $domID }}" data-event-date="{{ $item->getEventDate() }}" class="event-info mt-5 collapse">
 		<div class="d-flex">
 			<div class="row">
 				<div class="col-md-3">
