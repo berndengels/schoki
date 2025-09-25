@@ -10,7 +10,7 @@
 <div class="container gx-4 gx-md-5">
 	<div class="title position-relative">
 		<a href="#{{ $domID }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="{{ $domID }}" role="button">
-			<div class="d-flex flex-column flex-md-row">
+			<div class="row">
 				<div class="event-date col-md-3 mb-0">
 					@if($item->getCategory())
 						<h6 class="category mt-2 mt-0-sm mb-1 mb-2-sm">
