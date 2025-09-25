@@ -23,7 +23,7 @@
         <script src="{{ mix('js/app.js') }}?{{ time() }}" type="text/javascript" charset="utf-8"></script>
         @yield('extra-headers')
     </head>
-    <body>
+    <body class="month-{{ strtolower(date('F')) }}">
 
     @if(env('BOOTSTRAP_DEBUG'))
         @include('debug.bootstrap.display')

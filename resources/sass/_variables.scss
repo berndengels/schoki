@@ -23,7 +23,6 @@ $h4-font-size: 1rem;
 $h5-font-size: 1rem;
 $h6-font-size: 1rem;
 
-
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;
@@ -41,3 +40,93 @@ $sYellow: #fee934;
 $sRed: #aa0000;
 $sBlue: #3d4969;
 $sFontColor: #000000;
+
+
+// Monthly Color Themes
+
+.monthly-theme {
+  /* Base styles - fallback colors if variables aren't defined */
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --accent-color: #c34535;
+  --background: #ffffff;
+  --foreground: #333333;
+  --border: #bdc3c7;
+}
+
+.month-january {
+  --primary-color: #4a90e2;    /* Cool winter blue */
+  --secondary-color: #7b68ee;   /* Indigo for fresh starts */
+  --accent-color: #ffffff;      /* Snowy white */
+}
+
+.month-february {
+  --primary-color: #e91e63;     /* Valentine's pink */
+  --secondary-color: #f8bbd9;   /* Soft rose */
+  --accent-color: #c2185b;      /* Deep red */
+}
+
+.month-march {
+  --primary-color: #4caf50;     /* Spring green */
+  --secondary-color: #81c784;   /* Light green */
+  --accent-color: #388e3c;      /* Forest green */
+}
+
+.month-april {
+  --primary-color: #ffeb3b;     /* Sunny yellow */
+  --secondary-color: #fff176;   /* Pale yellow */
+  --accent-color: #fbc02d;      /* Golden yellow */
+}
+
+.month-may {
+  --primary-color: #9c27b0;     /* Floral purple */
+  --secondary-color: #ce93d8;   /* Lavender */
+  --accent-color: #7b1fa2;      /* Deep violet */
+}
+
+.month-june {
+  --primary-color: #2196f3;     /* Summer sky blue */
+  --secondary-color: #64b5f6;   /* Light blue */
+  --accent-color: #1976d2;      /* Ocean blue */
+}
+
+.month-july {
+  --primary-color: #ff9800;     /* Sunny orange */
+  --secondary-color: #ffb74d;   /* Peach */
+  --accent-color: #f57c00;      /* Fiery orange */
+}
+
+.month-august {
+  --primary-color: #ff5722;     /* Warm red */
+  --secondary-color: #ff8a65;   /* Coral */
+  --accent-color: #d84315;      /* Rust */
+}
+
+.month-september {
+  --primary-color: #082b37;
+  --secondary-color: #d5cab0;
+  --accent-color: #df4888;
+}
+
+.month-october {
+  --primary-color: #f44336;     /* Halloween red */
+  --secondary-color: #ffcdd2;   /* Pumpkin orange fallback */
+  --accent-color: #ff9800;      /* Orange */
+}
+
+.month-november {
+  --primary-color: #607d8b;     /* Autumn gray-blue */
+  --secondary-color: #90a4ae;   /* Slate */
+  --accent-color: #455a64;      /* Dark slate */
+}
+
+.month-december {
+  --primary-color: #c62828;     /* Holiday red */
+  --secondary-color: #e57373;   /* Light red */
+  --accent-color: #d32f2f;      /* Deep crimson */
+}
+
+/* Example usage in components */
+.bg-background { background-color: var(--background); }
+.text-foreground { color: var(--foreground); }
+.border-border { border-color: var(--border); }
