@@ -30,16 +30,17 @@
 					</div>
 				</div>
 				<div class="col-md-9 event-header" style="overflow: hidden;">
-					@if ($item->getTheme())
-						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
-							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
-						</h6>
-					@else
+					@if (!empty($item->getPromoter()))
 						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
 							<span class="promoter">{{ $item->getPromoter() }} &nbsp;</span>
 						</h6>
+					@elseif ($item->getTheme())
+						<h6 class="mt-2 mt-0-sm mb-1 mb-2-sm">
+							<span class="promoter p-0 m-0">{{ $item->getTheme()->name }}</span>
+						</h6>
 					@endif
-					<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
+
+						<h2 class="fw-bold">{{ $item->getTitle() }}</h2>
 					@if ('' !== $item->getDj())
 						<h6 class="subtitle mt-2 mt-0-sm mb-1 mb-2-sm">{{ $item->getDj() }}</h6>
 					@endif
