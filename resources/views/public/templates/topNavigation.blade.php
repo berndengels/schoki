@@ -47,3 +47,4 @@
         </div>
     </nav>
 </div>
+<img class="header-separator" src="/img/line-005.svg" />

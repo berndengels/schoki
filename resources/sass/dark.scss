@@ -26,7 +26,7 @@ html, body {
     font-family: $font-family-sans-serif;
     font-weight: normal;
     margin: 0;
-    background: url("/img/bg-black-edit.svg") repeat fixed;
+    background: url("/img/bg-black-edit.svg") repeat;
     background-color: var(--primary-color);
 }
 
@@ -101,14 +101,15 @@ nav a {
 }
 
 .header {
+    background-color: var(--primary-color);
     padding: 0.5rem 0 0.3125rem 0;
     @include media-breakpoint-up(sm) {
-        padding: 1rem 0 0.625rem 0;
+        padding: 1rem 0;
     }
-    background: white url("/img/line-004.svg") no-repeat center bottom;
-    border-bottom: 2px solid black;
-    @include media-breakpoint-up(xl) {
-        border-bottom: none;
+    .header-separator {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(1px);
     }
 }
 
@@ -231,26 +232,13 @@ nav a {
     @include media-breakpoint-up(xl) { font-size: 1.25rem; }
 }
 .event {
-    padding: 2rem 0;
+    padding-top: 2rem;
     position: relative;
-    transition: background-color 500ms ease-in-out;
-    //background: transparent url("/img/line-004.svg") no-repeat center -1px;
-    //border-bottom: 2px solid rgba(0,0,0, 0.85);
-    @include media-breakpoint-up(lg) {
-        border-bottom: none;
-    }
-    &:first-child {
-        background-image: none;
-    }
-    &:nth-last-of-type(2) {
-        //background-image: url("/img/line-004.svg"), url("/img/line-004.svg");
-        background-repeat: no-repeat, no-repeat;
-        background-position: center -1px, center bottom;
-    }
+    transition: all 500ms ease-in-out;
     &:hover {
-        transition: background-color 500ms ease-in-out;
-        background-color: var(--secondary-color);
-        a { color: var(--primary-color); }
+        //transition: all 500ms ease-in-out;
+        background-color: var(--hover-color);
+        a { color: var(--primary-color); transition: color 150ms ease-in-out; }
         .event-date {
             //transform: translateX(20px);
             //transition: all 300ms cubic-bezier(0.20, 0.95, 0.6, 1);
@@ -315,6 +303,14 @@ nav a {
             @include media-breakpoint-up(lg) {
                 transform: translateY(1px);
             }
+        }
+    }
+    .event-separator {
+        display: block;
+        margin-top: 2rem;
+        transform: translateY(2px);
+        svg {
+            fill: currentColor;
         }
     }
 }

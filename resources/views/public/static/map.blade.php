@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="static-page col-12">
-                <h2 class="page-header mt-2">Adresse</h2>
+                <h2 class="mt-5 page-header mt-2">Adresse</h2>
                 <div class="address col-12">
                     <span>Ackerstrasse 169, 10115 Berlin</span><br>
                     <span>Fon: 030 - 282 65 27</span><br>
