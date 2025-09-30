@@ -44,17 +44,29 @@ html, body {
     }
 }
 h1 {
-    transform: translateY(1px);
     font-weight: 700;
-    font-size: 1.5rem;
+    transform: translateY(3px);
+    font-size: 1.7rem;
+    @media (min-width: 375px) {
+        font-size: 2rem;
+        transform: translateY(2px);
+    }
     @include media-breakpoint-up(sm) {
         font-size: 2.25rem;
+        transform: translateY(3px);
     }
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+        //  transform: translateY(1px);
+    }
+
     @include media-breakpoint-up(lg) {
-        font-size: 2.125rem;
+        font-size: 2.5rem;
+        //  transform: translateY(1px);
     }
     @include media-breakpoint-up(xl) {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        //  transform: translateY(1px);
     }
 }
 h2 {
@@ -107,10 +119,13 @@ nav a {
         padding: 1rem 0;
     }
     .header-separator {
-        min-height: 5px;
         position: absolute;
         bottom: 0;
-        transform: translateY(1px);
+        transform: translateY(2px);
+        min-height: 5px;
+        @include media-breakpoint-up(lg) { min-height: 6px; }
+        @include media-breakpoint-up(xl) { min-height: 8px; }
+        @include media-breakpoint-up(xxl) { min-height: 10px; }
     }
 }
 
@@ -144,11 +159,7 @@ nav a {
                 vertical-align: middle;
                 color: black;
                 text-decoration: none;
-
-                ion-icon {
-                    font-size: 1.5rem;
-                }
-
+                // ion-icon { font-size: 1.5rem; }
                 i {
                     margin-right: 0.5rem;
                 }
@@ -257,7 +268,7 @@ nav a {
         }
         br {
             display: none;
-            @media (min-width: 768px) { display: block; }
+            @include media-breakpoint-up(md) { display: block; }
         }
     }
     .event-info {
@@ -277,6 +288,12 @@ nav a {
             padding-left: 0 !important;
         }
         & iframe { width: 100%; }
+        a {
+            word-break: break-all;
+            @include media-breakpoint-up(lg) {
+                word-break: break-word;
+            }
+        }
     }
     .event-links { word-break: break-all; }
 
@@ -307,10 +324,13 @@ nav a {
         }
     }
     .event-separator {
-        min-height: 5px;
         display: block;
         margin-top: 2rem;
         transform: translateY(2px);
+        min-height: 5px;
+        @include media-breakpoint-up(lg) { min-height: 6px; }
+        @include media-breakpoint-up(xl) { min-height: 8px; }
+        @include media-breakpoint-up(xxl) { min-height: 10px; }
         svg {
             fill: currentColor;
         }
@@ -460,8 +480,6 @@ pre {
     justify-content: center;
     //background: transparent url("/img/tickets.svg") no-repeat center center;
     overflow: visible;
-
-    margin-left: 0;
     li {
         margin-left: 0;
         &.page-item {
