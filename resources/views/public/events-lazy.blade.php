@@ -21,7 +21,7 @@
     @else
         <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
     @endif
-    <x-event-modal id="eventModal" />
+    <x-event-modal />
 @endsection
 
 @section('sidebarRight')

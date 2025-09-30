@@ -404,12 +404,8 @@ img {
 }
 .modal {
     .modal-dialog {
-        border: 1px solid #fff;
-        border-radius: 20px;
         .modal-content {
-            background-color: #000;
             color: $sFontColor;
-            border-radius: 20px;
             .modal-header {
                 button.close {
                     position: absolute;
@@ -556,4 +552,11 @@ pre {
     min-width: 600px;
     min-height: 400px;
     border: 1px solid grey;
+}
+#calendar {
+    .calendar-event {
+        span {
+            cursor: pointer;
+        }
+    }
 }
