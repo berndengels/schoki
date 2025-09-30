@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col mt-5">
-                <div id="map" class=""></div>
+                <div id="map"></div>
             </div>
         </div>
     </div>

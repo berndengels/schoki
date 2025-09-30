@@ -112,7 +112,7 @@
             });
 
             $('.collapse', '.eventContainer')
-                .on('shown.bs.collapse', function() {
+                .on('shown.bs.collapse', () => {
                     const my = this, $my = $(my),
                         $header = $(my).prev('.collapseToggle'),
                         //top = parseInt($header.offset().top - 70, 10),
@@ -131,7 +131,7 @@
                         $carousel.carousel("cycle");
                     }
                 })
-                .on('show.bs.collapse', function() {
+                .on('show.bs.collapse', () => {
                     const my = this, $my = $(my),
                     $other = $(my).closest('.event').siblings().find('.show');
                     //$(my).prev('.collapseToggle').find('.btn-toggle').removeClass('off').addClass('on').html('close');
@@ -140,7 +140,7 @@
 
                     $other.collapse('hide');
                 })
-                .on('hide.bs.collapse', function() {
+                .on('hide.bs.collapse', () => {
                     const my = this,
                         $carousel = $('.carousel', my);
 
