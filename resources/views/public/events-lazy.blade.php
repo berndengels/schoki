@@ -21,6 +21,7 @@
     @else
         <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
     @endif
+    <x-event-modal />
 @endsection
 
 @section('sidebarRight')
@@ -154,24 +155,24 @@
                 })
             ;
     });
-    $("#calendar").zabuto_calendar({
-        language: 'de',
-        show_previous: false,
-        show_next: 6,
-        cell_border: false,
-        today: true,
-        show_days: true,
-        weekstartson: 1,
-        nav_icon: {
-            prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
-            next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
-        },
-        ajax: {
-            url: "/calendar",
-            modal: true,
-        },
-        legend: false, // object array, [{type: string, label: string, classname: string}]
-    });
+        $("#calendar").zabuto_calendar({
+            language: 'de',
+            show_previous: false,
+            show_next: 6,
+            cell_border: false,
+            today: true,
+            show_days: true,
+            weekstartson: 1,
+            nav_icon: {
+                prev: '<ion-icon name="caret-back-circle-outline"></ion-icon>',
+                next: '<ion-icon name="caret-forward-circle-outline"></ion-icon>'
+            },
+            ajax: {
+                url: "/calendar",
+//            modal: true,
+            },
+            legend: false, // object array, [{type: string, label: string, classname: string}]
+        });
 });
     /*document.querySelectorAll('.event').forEach(el => {
         el.addEventListener('mouseover', e => {

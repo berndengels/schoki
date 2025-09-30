@@ -36,11 +36,11 @@
         @yield('header-content')
     </div>
 
-    @yield('sidebarRight')
-
     <div class="main">
         @yield('content')
     </div>
+
+    @yield('sidebarRight')
 
     <div class="footer row">
         @section('bottom-navigation')
