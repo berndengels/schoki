@@ -21,7 +21,7 @@
     @else
         <h5 class="w-100 text-center mt-5 mbs">Sorry, keine Daten vorhanden</h5>
     @endif
-    <x-event-modal />
+    <x-event-modal id="eventModal" />
 @endsection
 
 @section('sidebarRight')
@@ -155,6 +155,17 @@
                 })
             ;
     });
+});
+    /*document.querySelectorAll('.event').forEach(el => {
+        el.addEventListener('mouseover', e => {
+            el.lastElementChild.classList.add('show');
+        });
+        el.addEventListener('mouseleave', e => {
+            el.lastElementChild.classList.remove('show');
+        });
+    });*/
+
+    $(document).ready(() => {
         $("#calendar").zabuto_calendar({
             language: 'de',
             show_previous: false,
@@ -169,18 +180,29 @@
             },
             ajax: {
                 url: "/calendar",
-//            modal: true,
+                modal: true,
             },
             legend: false, // object array, [{type: string, label: string, classname: string}]
         });
-});
-    /*document.querySelectorAll('.event').forEach(el => {
-        el.addEventListener('mouseover', e => {
-            el.lastElementChild.classList.add('show');
+
+        let modal = document.getElementById('eventModal'), $modal = $(modal);
+
+        $modal.on('show.bs.modal', e => {
+            let $trigger = $(e.relatedTarget),
+                    id = $trigger.data('eventId');
+
+            $.getJSON('/api/event/' + id, resp => {
+                $modal.find('.eventDate').text(moment(resp.date).format('dddd DD.MM.YYYY') + ' ' + resp.time)
+                $modal.find('.title').text(resp.title)
+                $modal.find('.body').html(resp.description)
+                if(resp.promoter) {
+                    $modal.find('.promoter').removeClass('d-none').text(resp.promoter)
+                }
+                if(resp.dj) {
+                    $modal.find('.dj').removeClass('d-none').text(resp.dj)
+                }
+            })
         });
-        el.addEventListener('mouseleave', e => {
-            el.lastElementChild.classList.remove('show');
-        });
-    });*/
+    })
 </script>
 @endsection

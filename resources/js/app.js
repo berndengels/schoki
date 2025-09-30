@@ -1,8 +1,5 @@
 require('./bootstrap');
 require('@fortawesome/fontawesome-free')
-import MyModale from "./modules/MyModale";
-
-window.MyModale = MyModale;
 
 var isMobile = false; //initiate as false
 // device detection
