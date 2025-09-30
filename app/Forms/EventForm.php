@@ -135,6 +135,7 @@ class EventForm extends MainForm
 				'default_value' => $eventTime,
             ])
             ->add('title', Field::TEXT, [
+				'label'	=> 'Titel',
 				'wrapper' => [
 					'class' => 'form-group'
 				],
@@ -144,7 +145,7 @@ class EventForm extends MainForm
 				]
             ])
 			->add('subtitle', Field::TEXT, [
-				'label'	=> 'Untertitel',
+				'label'	=> 'Untertitel (Zeitangaben)',
 				'wrapper' => [
 					'class' => 'form-group'
 				],

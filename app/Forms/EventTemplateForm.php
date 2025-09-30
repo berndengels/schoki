@@ -49,10 +49,24 @@ class EventTemplateForm extends MainForm
                 'empty_value'  => 'Bitte wählen ...',
             ])
             ->add('title', Field::TEXT, [
-//                'rules' => 'required|min:5|max:160'
+				'label'	=> 'Titel',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '160',
+				]
             ])
             ->add('subtitle', Field::TEXT, [
-//                'rules' => 'max:100'
+				'label'	=> 'Untertitel (Zeitangaben)',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
             ])
 			->add('promoter', Field::TEXT, [
 				'label'	=> 'Promoter',
