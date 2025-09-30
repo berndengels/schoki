@@ -14,7 +14,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col mt-5">
+            <div class="col-lg-4 mt-5">
                 <h2 class="page-header">Adresse</h2>
                 <div class="address">
                     <span>Ackerstrasse 169, 10115 Berlin</span><br>
@@ -22,7 +22,7 @@
                     <span><a href="mailto:info@schokoladen-mitte.de" target="_blank">info@schokoladen-mitte.de</a></span>
                 </div>
             </div>
-            <div class="col mt-5">
+            <div class="col-lg-8 mt-5">
                 <div id="map"></div>
             </div>
         </div>

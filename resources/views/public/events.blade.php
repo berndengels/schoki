@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Eventsss')
+@section('title', 'Events')
 
 @section('extra-headers')
     <link rel="stylesheet" href="{{ mix('vendor/calendar@2/zabuto_calendar.min.css') }}">

@@ -18,19 +18,19 @@
 @endphp
 
 <div id="top-navigation" class="container">
-    <nav class="navbar bg-white navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand blog-header-logo text-decoration-none" href="/">
             <img src="{{ asset('img/schokoladen-logo-spitting-cow-01.svg') }}" height="90" alt="Schokoladen">
         </a>
-        <a class="px-md-4" href="/"><h1 class="m-0">Schokoladen Mitte</h1></a>
+        <a class="px-md-4" href="/"><h1 class="m-0 text-uppercase">Schokoladen</h1></a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="topNavbar">
             <ul class="navbar-nav pt-5 pb-4 pt-lg-2 pb-lg-0">
-
-                <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasCalendar" role="button" aria-controls="offcanvasCalendar">Calendar</a>
+                <a class="nav-link calendar-link" data-bs-toggle="offcanvas" href="#offcanvasCalendar" role="button" aria-controls="offcanvasCalendar">Calendar</a>
                 @foreach ($topMenu as $item)
                     @if($item->children->count() > 0)
                         <a class="nav-link dropdown-toggle" href="{{ $item->url }}" id="dropdown{{ $item->id }}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $item->name }}<span class="ms-2 sr-only">(current)</span></a>
