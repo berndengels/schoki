@@ -87,8 +87,24 @@ class EventPeriodicForm extends MainForm
 				]
 			])
             ->add('title', Field::TEXT, [
+				'label'	=> 'Titel',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '160',
+				]
             ])
             ->add('subtitle', Field::TEXT, [
+				'label'	=> 'Untertitel (Zeitangaben)',
+				'wrapper' => [
+					'class' => 'form-group'
+				],
+				'attr'  => [
+					'class' => 'form-control',
+//					'maxlength' => '100',
+				]
             ])
 			->add('promoter', Field::TEXT, [
 				'label'	=> 'Promoter',
