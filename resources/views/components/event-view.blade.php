@@ -80,7 +80,7 @@
 
 				<div class="col-md-9">
 					<div class="event-description">
-						{!! $item->getDescriptionSanitized() !!}
+						{!! $item->getDescription() !!}
 					</div>
 				</div>
 				<div class="col-md-9 offset-md-3">
