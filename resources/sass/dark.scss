@@ -121,13 +121,17 @@ nav a {
     .header-separator {
         position: absolute;
         bottom: 0;
-        transform: translateY(2px);
+        transform: translateY(3px);
         min-height: 5px;
         @include media-breakpoint-up(lg) { min-height: 6px; }
         @include media-breakpoint-up(xl) { min-height: 8px; }
         @include media-breakpoint-up(xxl) { min-height: 10px; }
     }
 }
+
+// Hide calendar other pages
+.navbar-nav .calendar-link { display: none; }
+body.page-Events .navbar-nav .calendar-link { display: block; }
 
 #top-navigation {
     .navbar-nav {
@@ -189,7 +193,7 @@ nav a {
     .navbar-collapse {
         text-align: center;
         &.show .navbar-nav {
-//            height: calc(100dvh - 135px);
+        // height: calc(100dvh - 135px);
         }
     }
     .navbar:hover .blog-header-logo {
@@ -326,7 +330,7 @@ nav a {
     .event-separator {
         display: block;
         margin-top: 2rem;
-        transform: translateY(2px);
+        transform: translateY(3px);
         min-height: 5px;
         @include media-breakpoint-up(lg) { min-height: 6px; }
         @include media-breakpoint-up(xl) { min-height: 8px; }
@@ -335,6 +339,35 @@ nav a {
             fill: currentColor;
         }
     }
+}
+.pill-btn {
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    background: var(--accent-color);
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+        background: black;
+        color: white;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 180px;
+        font-size: 1.5rem;
+    }
+    > span {
+        display: inline-block;
+        @include media-breakpoint-up(lg) {
+            transform: translateY(1px);
+        }
+    }
+}
+.booking-form label {
+    margin-top: 1rem;
 }
 .svg-separator {
     fill: var(--secondary-color);
