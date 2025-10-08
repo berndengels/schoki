@@ -104,16 +104,16 @@ $sFontColor: #000000;
 }
 
 .month-september {
+  --primary-color: #f44336;     /* Halloween red */
+  --secondary-color: #ffcdd2;   /* Pumpkin orange fallback */
+  --accent-color: #ff9800;      /* Orange */
+}
+
+.month-october {
   --primary-color: #082b37;
   --secondary-color: #d5cab0;
   --accent-color: #df4888;
   --hover-color: #d5cab0;
-}
-
-.month-october {
-  --primary-color: #f44336;     /* Halloween red */
-  --secondary-color: #ffcdd2;   /* Pumpkin orange fallback */
-  --accent-color: #ff9800;      /* Orange */
 }
 
 .month-november {
