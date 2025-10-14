@@ -214,7 +214,6 @@ body.page-Events .navbar-nav .calendar-link { display: block; }
         border-radius: 0;
     }
 }
-
 #bottom-navigation {
     .navbar {
         .nav-item {
@@ -434,6 +433,11 @@ nav.navbar {
 }
 img {
     @extend .img-fluid;
+}
+.modal .text-info {
+    color: var(--accent-color) !important;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 .modal {
     .modal-dialog {
