@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* Webfont: Nohemi-Regular */
+@font-face {
+    font-family: 'Nohemi';
+    src: url('Nohemi-Regular.woff2') format('woff2'),
+         url('Nohemi-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Nohemi-Bold */
+@font-face {
+    font-family: 'Nohemi';
+    src: url('Nohemi-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('Nohemi-Bold.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+

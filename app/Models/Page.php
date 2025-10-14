@@ -94,7 +94,7 @@ class Page extends Model
 	public function getBodyAttribute($value = '')
 	{
 		if('' !== $value) {
-            $wrapper = '<div class="row embed-responsive-wrapper text-center"><div class="embed-responsive embed-responsive-16by9 m-0 p-0">%%</div></div>';
+            $wrapper = '<div class="ratio ratio-16x9 m-0 p-0">%%</div>';
             $sanitized = preg_replace("/(<iframe[^>]+><\/iframe>)/i", str_replace('%%','$1', $wrapper), trim($value));
 			return preg_replace(['/^<p>(<br[ ]?[\/]?>){1,}/i','/(<br[ ]?[\/]?>){1,}<\/p>$/i'],['<p>','</p>'], $sanitized);
 		}

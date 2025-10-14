@@ -89,6 +89,7 @@ class EventEntityRepository {
 
 				$events[$date] = $event;
 			}
+
 			return collect($events);
 		}
 
